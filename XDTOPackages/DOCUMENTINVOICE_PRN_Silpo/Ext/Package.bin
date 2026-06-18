@@ -1,0 +1,91 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://silpo-documentinvoice_prn.com.ua">
+	<objectType name="Document-Invoice">
+		<property xmlns:d3p1="http://silpo-documentinvoice_prn.com.ua" name="Invoice_Header" type="d3p1:Invoice-Header" lowerBound="0" upperBound="-1" localName="Invoice-Header"/>
+		<property xmlns:d3p1="http://silpo-documentinvoice_prn.com.ua" name="Invoice_Reference" type="d3p1:Invoice-Reference" lowerBound="0" upperBound="-1" localName="Invoice-Reference"/>
+		<property xmlns:d3p1="http://silpo-documentinvoice_prn.com.ua" name="Invoice_Parties" type="d3p1:Invoice-Parties" lowerBound="0" upperBound="-1" localName="Invoice-Parties"/>
+		<property xmlns:d3p1="http://silpo-documentinvoice_prn.com.ua" name="Invoice_Lines" type="d3p1:Invoice-Lines" lowerBound="0" upperBound="-1" localName="Invoice-Lines"/>
+		<property xmlns:d3p1="http://silpo-documentinvoice_prn.com.ua" name="Invoice_Summary" type="d3p1:Invoice-Summary" lowerBound="0" upperBound="-1" localName="Invoice-Summary"/>
+	</objectType>
+	<objectType name="Invoice-Header">
+		<property name="InvoiceNumber" type="xs:string"/>
+		<property name="InvoiceDate" type="xs:date"/>
+		<property name="DocumentFunctionCode" type="xs:string"/>
+		<property name="ContractNumber" type="xs:string"/>
+		<property name="ContractDate" type="xs:date"/>
+		<property name="InvoiceQuantity" type="xs:byte"/>
+		<property name="InvoiceSequences" type="xs:byte"/>
+	</objectType>
+	<objectType name="Invoice-Reference">
+		<property xmlns:d3p1="http://silpo-documentinvoice_prn.com.ua" name="Order" type="d3p1:Order" lowerBound="0" upperBound="-1"/>
+		<property xmlns:d3p1="http://silpo-documentinvoice_prn.com.ua" name="Invoice" type="d3p1:Invoice" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="Order">
+		<property name="BuyerOrderNumber" type="xs:string"/>
+		<property name="BuyerOrderDate" type="xs:date"/>
+	</objectType>
+	<objectType name="Invoice">
+		<property name="OriginalInvoiceNumber" type="xs:string"/>
+		<property name="OriginalInvoiceDate" type="xs:date"/>
+	</objectType>
+	<objectType name="Invoice-Parties">
+		<property xmlns:d3p1="http://silpo-documentinvoice_prn.com.ua" name="Buyer" type="d3p1:Buyer" lowerBound="0" upperBound="-1"/>
+		<property xmlns:d3p1="http://silpo-documentinvoice_prn.com.ua" name="Seller" type="d3p1:Seller" lowerBound="0" upperBound="-1"/>
+		<property xmlns:d3p1="http://silpo-documentinvoice_prn.com.ua" name="DeliveryPoint" type="d3p1:DeliveryPoint" lowerBound="0" upperBound="-1"/>
+		<property xmlns:d3p1="http://silpo-documentinvoice_prn.com.ua" name="Payer" type="d3p1:Payer" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="Buyer">
+		<property name="ILN" type="xs:long"/>
+		<property name="TaxID" type="xs:long"/>
+		<property name="UtilizationRegisterNumber" type="xs:int"/>
+		<property name="Name" type="xs:string"/>
+	</objectType>
+	<objectType name="Seller">
+		<property name="ILN" type="xs:long"/>
+		<property name="TaxID" type="xs:long"/>
+		<property name="CodeByBuyer" type="xs:string"/>
+		<property name="UtilizationRegisterNumber" type="xs:int"/>
+		<property name="Name" type="xs:string"/>
+	</objectType>
+	<objectType name="DeliveryPoint">
+		<property name="ILN" type="xs:long"/>
+		<property name="Name" type="xs:string"/>
+		<property name="CityName" type="xs:string"/>
+		<property name="StreetAndNumber" type="xs:string"/>
+		<property name="PostalCode" type="xs:int"/>
+	</objectType>
+	<objectType name="Payer">
+		<property name="ILN" type="xs:long"/>
+		<property name="Name" type="xs:string"/>
+		<property name="CityName" type="xs:string"/>
+		<property name="StreetAndNumber" type="xs:string"/>
+		<property name="PostalCode" type="xs:short"/>
+	</objectType>
+	<objectType name="Invoice-Lines" open="false" abstract="false">
+		<property xmlns:d3p1="http://silpo-documentinvoice_prn.com.ua" name="Line" type="d3p1:Line" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="Line">
+		<property xmlns:d3p1="http://silpo-documentinvoice_prn.com.ua" name="Line_Item" type="d3p1:Line-Item" lowerBound="0" upperBound="-1" localName="Line-Item"/>
+	</objectType>
+	<objectType name="Line-Item">
+		<property name="LineNumber" type="xs:byte"/>
+		<property name="EAN" type="xs:string"/>
+		<property name="BuyerItemCode" type="xs:string"/>
+		<property name="ExternalItemCode" type="xs:string"/>
+		<property name="ItemDescription" type="xs:string"/>
+		<property name="InvoiceQuantity" type="xs:float"/>
+		<property name="BuyerUnitOfMeasure" type="xs:string"/>
+		<property name="InvoiceUnitGrossPrice" type="xs:float"/>
+		<property name="InvoiceUnitNetPrice" type="xs:float"/>
+		<property name="TaxRate" type="xs:byte"/>
+		<property name="TaxCategoryCode" type="xs:string"/>
+		<property name="GrossAmount" type="xs:float"/>
+		<property name="TaxAmount" type="xs:float"/>
+		<property name="NetAmount" type="xs:float"/>
+	</objectType>
+	<objectType name="Invoice-Summary">
+		<property name="TotalLines" type="xs:byte"/>
+		<property name="TotalNetAmount" type="xs:float"/>
+		<property name="TotalTaxAmount" type="xs:float"/>
+		<property name="TotalGrossAmount" type="xs:float"/>
+	</objectType>
+</package>

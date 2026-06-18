@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Report uuid="2c6ac03d-1539-4e5a-87b5-f151aaafef32">
+		<InternalInfo>
+			<xr:GeneratedType name="ReportObject.umk_ОтчетОСуммахВозвтратаОтПокупателейИ_Приложения_2" category="Object">
+				<xr:TypeId>379e2638-4e28-4c7d-b0f6-fd331f4631ff</xr:TypeId>
+				<xr:ValueId>a90ddcd5-2331-465e-9367-439c18830876</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="ReportManager.umk_ОтчетОСуммахВозвтратаОтПокупателейИ_Приложения_2" category="Manager">
+				<xr:TypeId>71c41c73-3c9b-4eaf-abd7-b1f5033ca033</xr:TypeId>
+				<xr:ValueId>8d3f562d-145a-4c60-ae60-8cf295ffdb57</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>umk_ОтчетОСуммахВозвтратаОтПокупателейИ_Приложения_2</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отчет об итоговых суммах Возвратных накладных и Приложения 2 (УМК)</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<UseStandardCommands>false</UseStandardCommands>
+			<DefaultForm/>
+			<AuxiliaryForm/>
+			<MainDataCompositionSchema>Report.umk_ОтчетОСуммахВозвтратаОтПокупателейИ_Приложения_2.Template.ОсновнаяСхемаКомпоновкиДанных</MainDataCompositionSchema>
+			<DefaultSettingsForm/>
+			<AuxiliarySettingsForm/>
+			<DefaultVariantForm/>
+			<VariantsStorage/>
+			<SettingsStorage/>
+			<IncludeHelpInContents>false</IncludeHelpInContents>
+			<ExtendedPresentation/>
+			<Explanation/>
+		</Properties>
+		<ChildObjects>
+			<Template>ОсновнаяСхемаКомпоновкиДанных</Template>
+		</ChildObjects>
+	</Report>
+</MetaDataObject>

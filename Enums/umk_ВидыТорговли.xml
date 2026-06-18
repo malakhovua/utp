@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Enum uuid="d6447e0c-73ad-422a-95b5-3032d86a091b">
+		<InternalInfo>
+			<xr:GeneratedType name="EnumRef.umk_ВидыТорговли" category="Ref">
+				<xr:TypeId>38e57b7a-fbd0-4e68-ad7c-417c52fa130a</xr:TypeId>
+				<xr:ValueId>9975a1be-6d90-4526-8dc0-fe418767f48c</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumManager.umk_ВидыТорговли" category="Manager">
+				<xr:TypeId>9748e084-f88c-4e17-9065-b1ea2617cd96</xr:TypeId>
+				<xr:ValueId>91c2dd7a-0d86-49bb-9155-6bbd9c4066fa</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumList.umk_ВидыТорговли" category="List">
+				<xr:TypeId>846f22c8-2a00-4293-bb31-d1a5285a9ebb</xr:TypeId>
+				<xr:ValueId>5815337b-60e7-4379-8dcc-bd722aa02cff</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>umk_ВидыТорговли</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Виды торговли</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<UseStandardCommands>false</UseStandardCommands>
+			<Characteristics/>
+			<QuickChoice>true</QuickChoice>
+			<ChoiceMode>BothWays</ChoiceMode>
+			<DefaultListForm/>
+			<DefaultChoiceForm/>
+			<AuxiliaryListForm/>
+			<AuxiliaryChoiceForm/>
+			<ListPresentation/>
+			<ExtendedListPresentation/>
+			<Explanation/>
+			<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+		</Properties>
+		<ChildObjects>
+			<EnumValue uuid="14af762a-78ee-4f95-904a-c191100dcbe2">
+				<Properties>
+					<Name>Нал</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>За наличные</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>За наличные</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="37ceea8a-a1ff-4e6f-aaaa-3a152a4005b6">
+				<Properties>
+					<Name>Предоплата</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Безналичный расчет</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Безналичный расчет</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="bc26a9c6-1a75-432b-9e0c-1fba8f79f6ed">
+				<Properties>
+					<Name>Бартер</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Бартер</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+		</ChildObjects>
+	</Enum>
+</MetaDataObject>

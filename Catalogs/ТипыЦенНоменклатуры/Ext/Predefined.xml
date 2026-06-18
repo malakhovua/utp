@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<PredefinedData xmlns="http://v8.1c.ru/8.3/xcf/predef" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CatalogPredefinedItems" version="2.11">
+	<Item id="f00097a3-7843-4608-9f04-001aeafe0ee0">
+		<Name>Вупаковке</Name>
+		<Code>000000005</Code>
+		<Description>В упаковке</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="a9f2f3d0-5406-4a66-9fa2-ec824223b3f1">
+		<Name>Закупочная</Name>
+		<Code>000000006</Code>
+		<Description>Закупочная</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="05d792fd-322a-4cd7-80ba-d1356b812085">
+		<Name>Оптовая</Name>
+		<Code>000000002</Code>
+		<Description>Оптовая</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="66ec46f8-4ed8-4aee-bb36-55215ee37e61">
+		<Name>Отпускная</Name>
+		<Code>000000004</Code>
+		<Description>Отпускная</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="0013561e-b4a5-4e4c-9e89-ba4ac050fbe9">
+		<Name>Плановая</Name>
+		<Code>000000001</Code>
+		<Description>Плановая</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="693d8f90-5823-44c8-8777-14d06339bdb7">
+		<Name>Розничная</Name>
+		<Code>000000003</Code>
+		<Description>Розничная</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+</PredefinedData>

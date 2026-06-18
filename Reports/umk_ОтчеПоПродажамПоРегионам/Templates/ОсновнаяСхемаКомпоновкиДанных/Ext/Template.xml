@@ -1,0 +1,425 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Сумма</dataPath>
+			<field>Сумма</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Контрагент</dataPath>
+			<field>Контрагент</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаНДС</dataPath>
+			<field>СуммаНДС</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Количество</dataPath>
+			<field>Количество</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаБезНДС</dataPath>
+			<field>СуммаБезНДС</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма без НДС</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Регион</dataPath>
+			<field>Регион</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Регион</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КонтактноеЛицо</dataPath>
+			<field>КонтактноеЛицо</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контактное лицо</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИНН</dataPath>
+			<field>ИНН</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ИНН</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаВключаетНДС</dataPath>
+			<field>СуммаВключаетНДС</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РегионАдрес</dataPath>
+			<field>РегионАдрес</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Регион адрес</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Ссылка</dataPath>
+			<field>Ссылка</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	РеализацияТоваровУслугТовары.Ссылка.Контрагент,
+	РеализацияТоваровУслугТовары.Ссылка.Контрагент.ИНН КАК ИНН,
+	ВЫБОР
+		КОГДА РеализацияТоваровУслугТовары.Ссылка.umk_Регион = НЕОПРЕДЕЛЕНО
+			ТОГДА РеализацияТоваровУслугТовары.Ссылка.Контрагент.Регион
+		ИНАЧЕ РеализацияТоваровУслугТовары.Ссылка.umk_Регион
+	КОНЕЦ КАК РегионАдрес,
+	ВложенныйЗапрос.КонтактноеЛицо,
+	СУММА(РеализацияТоваровУслугТовары.Количество) КАК Количество,
+	СУММА(ВЫБОР
+			КОГДА РеализацияТоваровУслугТовары.Ссылка.СуммаВключаетНДС
+				ТОГДА РеализацияТоваровУслугТовары.Сумма
+			ИНАЧЕ РеализацияТоваровУслугТовары.Сумма + РеализацияТоваровУслугТовары.СуммаНДС
+		КОНЕЦ) КАК Сумма,
+	СУММА(РеализацияТоваровУслугТовары.СуммаНДС) КАК СуммаНДС,
+	СУММА(ВЫБОР
+			КОГДА РеализацияТоваровУслугТовары.Ссылка.СуммаВключаетНДС
+				ТОГДА РеализацияТоваровУслугТовары.Сумма - РеализацияТоваровУслугТовары.СуммаНДС
+			ИНАЧЕ РеализацияТоваровУслугТовары.Сумма
+		КОНЕЦ) КАК СуммаБезНДС,
+	РеализацияТоваровУслугТовары.Ссылка.СуммаВключаетНДС,
+	ВЫБОР
+		КОГДА РеализацияТоваровУслугТовары.Ссылка.umk_Регион = НЕОПРЕДЕЛЕНО
+			ТОГДА РеализацияТоваровУслугТовары.Ссылка.Контрагент.Регион
+		ИНАЧЕ ВЫБОР
+				КОГДА ТИПЗНАЧЕНИЯ(РеализацияТоваровУслугТовары.Ссылка.umk_Регион) = ТИП(Справочник.umk_РегионыКонтрагентов)
+					ТОГДА РеализацияТоваровУслугТовары.Ссылка.umk_Регион.Регион
+				ИНАЧЕ РеализацияТоваровУслугТовары.Ссылка.umk_Регион
+			КОНЕЦ
+	КОНЕЦ КАК Регион,
+	РеализацияТоваровУслугТовары.Ссылка
+ИЗ
+	Документ.РеализацияТоваровУслуг.Товары КАК РеализацияТоваровУслугТовары
+		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+			МАКСИМУМ(КонтактныеЛицаКонтрагентов.Ссылка) КАК КонтактноеЛицо,
+			КонтактныеЛицаКонтрагентов.Владелец КАК ВладелецКонтрагент
+		ИЗ
+			Справочник.КонтактныеЛицаКонтрагентов КАК КонтактныеЛицаКонтрагентов
+		
+		СГРУППИРОВАТЬ ПО
+			КонтактныеЛицаКонтрагентов.Владелец) КАК ВложенныйЗапрос
+		ПО РеализацияТоваровУслугТовары.Ссылка.Контрагент = ВложенныйЗапрос.ВладелецКонтрагент
+ГДЕ
+	РеализацияТоваровУслугТовары.Ссылка.Дата МЕЖДУ &amp;НачалоПериода И &amp;ОкончаниеПериода
+	И РеализацияТоваровУслугТовары.Ссылка.ПометкаУдаления = ЛОЖЬ
+
+СГРУППИРОВАТЬ ПО
+	РеализацияТоваровУслугТовары.Ссылка.Контрагент,
+	ВложенныйЗапрос.КонтактноеЛицо,
+	РеализацияТоваровУслугТовары.Ссылка.Контрагент.ИНН,
+	РеализацияТоваровУслугТовары.Ссылка.СуммаВключаетНДС,
+	ВЫБОР
+		КОГДА РеализацияТоваровУслугТовары.Ссылка.umk_Регион = НЕОПРЕДЕЛЕНО
+			ТОГДА РеализацияТоваровУслугТовары.Ссылка.Контрагент.Регион
+		ИНАЧЕ ВЫБОР
+				КОГДА ТИПЗНАЧЕНИЯ(РеализацияТоваровУслугТовары.Ссылка.umk_Регион) = ТИП(Справочник.umk_РегионыКонтрагентов)
+					ТОГДА РеализацияТоваровУслугТовары.Ссылка.umk_Регион.Регион
+				ИНАЧЕ РеализацияТоваровУслугТовары.Ссылка.umk_Регион
+			КОНЕЦ
+	КОНЕЦ,
+	ВЫБОР
+		КОГДА РеализацияТоваровУслугТовары.Ссылка.umk_Регион = НЕОПРЕДЕЛЕНО
+			ТОГДА РеализацияТоваровУслугТовары.Ссылка.Контрагент.Регион
+		ИНАЧЕ РеализацияТоваровУслугТовары.Ссылка.umk_Регион
+	КОНЕЦ,
+	РеализацияТоваровУслугТовары.Ссылка
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	РеализацияТоваровУслугУслуги.Ссылка.Контрагент,
+	РеализацияТоваровУслугУслуги.Ссылка.Контрагент.ИНН,
+	РеализацияТоваровУслугУслуги.Ссылка.umk_Регион,
+	ВложенныйЗапрос.КонтактноеЛицо,
+	СУММА(РеализацияТоваровУслугУслуги.Количество),
+	СУММА(ВЫБОР
+			КОГДА РеализацияТоваровУслугУслуги.Ссылка.СуммаВключаетНДС
+				ТОГДА РеализацияТоваровУслугУслуги.Сумма
+			ИНАЧЕ РеализацияТоваровУслугУслуги.Сумма + РеализацияТоваровУслугУслуги.СуммаНДС
+		КОНЕЦ),
+	СУММА(РеализацияТоваровУслугУслуги.СуммаНДС),
+	СУММА(ВЫБОР
+			КОГДА РеализацияТоваровУслугУслуги.Ссылка.СуммаВключаетНДС
+				ТОГДА РеализацияТоваровУслугУслуги.Сумма - РеализацияТоваровУслугУслуги.СуммаНДС
+			ИНАЧЕ РеализацияТоваровУслугУслуги.Сумма
+		КОНЕЦ),
+	РеализацияТоваровУслугУслуги.Ссылка.СуммаВключаетНДС,
+	ВЫБОР
+		КОГДА РеализацияТоваровУслугУслуги.Ссылка.umk_Регион = НЕОПРЕДЕЛЕНО
+			ТОГДА РеализацияТоваровУслугУслуги.Ссылка.Контрагент.Регион
+		ИНАЧЕ ВЫБОР
+				КОГДА ТИПЗНАЧЕНИЯ(РеализацияТоваровУслугУслуги.Ссылка.umk_Регион) = ТИП(Справочник.umk_РегионыКонтрагентов)
+					ТОГДА РеализацияТоваровУслугУслуги.Ссылка.umk_Регион.Регион
+				ИНАЧЕ РеализацияТоваровУслугУслуги.Ссылка.umk_Регион
+			КОНЕЦ
+	КОНЕЦ,
+	РеализацияТоваровУслугУслуги.Ссылка
+ИЗ
+	Документ.РеализацияТоваровУслуг.Услуги КАК РеализацияТоваровУслугУслуги
+		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+			МАКСИМУМ(КонтактныеЛицаКонтрагентов.Ссылка) КАК КонтактноеЛицо,
+			КонтактныеЛицаКонтрагентов.Владелец КАК ВладелецКонтрагент
+		ИЗ
+			Справочник.КонтактныеЛицаКонтрагентов КАК КонтактныеЛицаКонтрагентов
+		
+		СГРУППИРОВАТЬ ПО
+			КонтактныеЛицаКонтрагентов.Владелец) КАК ВложенныйЗапрос
+		ПО РеализацияТоваровУслугУслуги.Ссылка.Контрагент = ВложенныйЗапрос.ВладелецКонтрагент
+ГДЕ
+	РеализацияТоваровУслугУслуги.Ссылка.Дата МЕЖДУ &amp;НачалоПериода И &amp;ОкончаниеПериода
+	И РеализацияТоваровУслугУслуги.Ссылка.ПометкаУдаления = ЛОЖЬ
+
+СГРУППИРОВАТЬ ПО
+	РеализацияТоваровУслугУслуги.Ссылка.Контрагент,
+	РеализацияТоваровУслугУслуги.Ссылка.umk_Регион,
+	ВложенныйЗапрос.КонтактноеЛицо,
+	РеализацияТоваровУслугУслуги.Ссылка.Контрагент.ИНН,
+	РеализацияТоваровУслугУслуги.Ссылка.СуммаВключаетНДС,
+	ВЫБОР
+		КОГДА РеализацияТоваровУслугУслуги.Ссылка.umk_Регион = НЕОПРЕДЕЛЕНО
+			ТОГДА РеализацияТоваровУслугУслуги.Ссылка.Контрагент.Регион
+		ИНАЧЕ ВЫБОР
+				КОГДА ТИПЗНАЧЕНИЯ(РеализацияТоваровУслугУслуги.Ссылка.umk_Регион) = ТИП(Справочник.umk_РегионыКонтрагентов)
+					ТОГДА РеализацияТоваровУслугУслуги.Ссылка.umk_Регион.Регион
+				ИНАЧЕ РеализацияТоваровУслугУслуги.Ссылка.umk_Регион
+			КОНЕЦ
+	КОНЕЦ,
+	РеализацияТоваровУслугУслуги.Ссылка</query>
+	</dataSet>
+	<calculatedField>
+		<dataPath>ГлавныйРегион</dataPath>
+		<expression>umk_Доработки.ПолучитьРодителяВерхнегоУровня("Регионы", Регион)</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Главный регион</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<totalField>
+		<dataPath>Количество</dataPath>
+		<expression>Сумма(Количество)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Сумма</dataPath>
+		<expression>Сумма(Сумма)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаБезНДС</dataPath>
+		<expression>Сумма(СуммаБезНДС)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаНДС</dataPath>
+		<expression>Сумма(СуммаНДС)</expression>
+	</totalField>
+	<parameter>
+		<name>НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>Date</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ОкончаниеПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Окончание периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>Date</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+		<expression>КонецПериода( &amp;ОкончаниеПериода,"День")</expression>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:userFields>
+				<dcsset:item xsi:type="dcsset:UserFieldExpression">
+					<dcsset:dataPath>ПользовательскиеПоля.Поле1</dcsset:dataPath>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Цена</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:detailExpression>Сумма / Количество</dcsset:detailExpression>
+					<dcsset:detailExpressionPresentation>Сумма / Количество</dcsset:detailExpressionPresentation>
+					<dcsset:totalExpression>Сумма / Количество</dcsset:totalExpression>
+					<dcsset:totalExpressionPresentation>Сумма / Количество</dcsset:totalExpressionPresentation>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:UserFieldExpression">
+					<dcsset:dataPath>ПользовательскиеПоля.Поле2</dcsset:dataPath>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЦенаБезНДС</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:detailExpression>СуммаБезНДС / Количество</dcsset:detailExpression>
+					<dcsset:detailExpressionPresentation>[Сумма без НДС] / Количество</dcsset:detailExpressionPresentation>
+					<dcsset:totalExpression>СуммаБезНДС / Количество</dcsset:totalExpression>
+					<dcsset:totalExpressionPresentation>[Сумма без НДС] / Количество</dcsset:totalExpressionPresentation>
+				</dcsset:item>
+			</dcsset:userFields>
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>РегионАдрес</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Контрагент</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ИНН</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КонтактноеЛицо</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Количество</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПользовательскиеПоля.Поле1</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Сумма</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СуммаНДС</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПользовательскиеПоля.Поле2</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СуммаБезНДС</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">КонтактноеЛицо.Наименование</dcsset:left>
+					<dcsset:comparisonType>Contains</dcsset:comparisonType>
+					<dcsset:right xsi:type="xs:string"/>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ИНН</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="xs:string"/>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">КонтактноеЛицо.Наименование</dcsset:left>
+					<dcsset:comparisonType>Contains</dcsset:comparisonType>
+					<dcsset:right xsi:type="xs:string"/>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:conditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>ПользовательскиеПоля.Поле1</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ПользовательскиеПоля.Поле2</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Формат</dcscor:parameter>
+							<dcscor:value xsi:type="v8:LocalStringType">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧЦ=15; ЧДЦ=2</v8:content>
+								</v8:item>
+							</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+			</dcsset:conditionalAppearance>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МакетОформления</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Зеленый</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Заголовок</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отчет о реализации ТМЦ за период.</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>ГлавныйРегион</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

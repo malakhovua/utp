@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>false</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<UsualGroup name="ГруппаШапка" id="1">
+			<ShowTitle>false</ShowTitle>
+			<Group>AlwaysHorizontal</Group>
+			<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаДатаНомер" id="3">
+					<ShowTitle>false</ShowTitle>
+					<Group>AlwaysHorizontal</Group>
+					<ExtendedTooltip name="ГруппаДатаНомерРасширеннаяПодсказка" id="4"/>
+					<ChildItems>
+						<InputField name="Номер" id="5">
+							<DataPath>Объект.Number</DataPath>
+							<DefaultItem>true</DefaultItem>
+							<ContextMenu name="НомерКонтекстноеМеню" id="6"/>
+							<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="7"/>
+						</InputField>
+						<InputField name="Дата" id="8">
+							<DataPath>Объект.Date</DataPath>
+							<ContextMenu name="ДатаКонтекстноеМеню" id="9"/>
+							<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="10"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаОтветственные" id="11">
+					<ShowTitle>false</ShowTitle>
+					<Group>AlwaysHorizontal</Group>
+					<ExtendedTooltip name="ГруппаОтветственныеРасширеннаяПодсказка" id="12"/>
+					<ChildItems>
+						<InputField name="Технолог" id="13">
+							<DataPath>Объект.Технолог</DataPath>
+							<ContextMenu name="ТехнологКонтекстноеМеню" id="14"/>
+							<ExtendedTooltip name="ТехнологРасширеннаяПодсказка" id="15"/>
+						</InputField>
+						<InputField name="ВетВрач" id="16">
+							<DataPath>Объект.ВетВрач</DataPath>
+							<ContextMenu name="ВетВрачКонтекстноеМеню" id="17"/>
+							<ExtendedTooltip name="ВетВрачРасширеннаяПодсказка" id="18"/>
+						</InputField>
+						<InputField name="Кладовщик" id="19">
+							<DataPath>Объект.Кладовщик</DataPath>
+							<ContextMenu name="КладовщикКонтекстноеМеню" id="20"/>
+							<ExtendedTooltip name="КладовщикРасширеннаяПодсказка" id="21"/>
+						</InputField>
+						<InputField name="ПН" id="22">
+							<DataPath>Объект.ПН</DataPath>
+							<ContextMenu name="ПНКонтекстноеМеню" id="23"/>
+							<ExtendedTooltip name="ПНРасширеннаяПодсказка" id="24"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="ТМЦ" id="25">
+			<DataPath>Объект.ТМЦ</DataPath>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<CommandBarLocation>Auto</CommandBarLocation>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<ContextMenu name="ТМЦКонтекстноеМеню" id="26"/>
+			<AutoCommandBar name="ТМЦКоманднаяПанель" id="27"/>
+			<ExtendedTooltip name="ТМЦРасширеннаяПодсказка" id="28"/>
+			<ChildItems>
+				<InputField name="ТМЦНомерСтроки" id="29">
+					<DataPath>Объект.ТМЦ.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТМЦНомерСтрокиКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="ТМЦНомерСтрокиРасширеннаяПодсказка" id="31"/>
+				</InputField>
+				<InputField name="ТМЦТМЦПоле" id="32">
+					<DataPath>Объект.ТМЦ.ТМЦ</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТМЦТМЦПолеКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="ТМЦТМЦПолеРасширеннаяПодсказка" id="34"/>
+				</InputField>
+				<InputField name="ТМЦКеоПоле" id="35">
+					<DataPath>Объект.ТМЦ.Кео</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТМЦКеоПолеКонтекстноеМеню" id="36"/>
+					<ExtendedTooltip name="ТМЦКеоПолеРасширеннаяПодсказка" id="37"/>
+				</InputField>
+				<InputField name="ТМЦЕдПоле" id="38">
+					<DataPath>Объект.ТМЦ.Ед</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТМЦЕдПолеКонтекстноеМеню" id="39"/>
+					<ExtendedTooltip name="ТМЦЕдПолеРасширеннаяПодсказка" id="40"/>
+				</InputField>
+				<InputField name="ТМЦКоэффициентПоле" id="41">
+					<DataPath>Объект.ТМЦ.Коэффициент</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТМЦКоэффициентПолеКонтекстноеМеню" id="42"/>
+					<ExtendedTooltip name="ТМЦКоэффициентПолеРасширеннаяПодсказка" id="43"/>
+				</InputField>
+				<InputField name="ТМЦВНПоле" id="44">
+					<DataPath>Объект.ТМЦ.ВН</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТМЦВНПолеКонтекстноеМеню" id="45"/>
+					<ExtendedTooltip name="ТМЦВНПолеРасширеннаяПодсказка" id="46"/>
+				</InputField>
+				<InputField name="ТМЦВНВПоле" id="47">
+					<DataPath>Объект.ТМЦ.ВНВ</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТМЦВНВПолеКонтекстноеМеню" id="48"/>
+					<ExtendedTooltip name="ТМЦВНВПолеРасширеннаяПодсказка" id="49"/>
+				</InputField>
+				<InputField name="ТМЦВНКПоле" id="50">
+					<DataPath>Объект.ТМЦ.ВНК</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТМЦВНКПолеКонтекстноеМеню" id="51"/>
+					<ExtendedTooltip name="ТМЦВНКПолеРасширеннаяПодсказка" id="52"/>
+				</InputField>
+				<InputField name="ТМЦЦПоле" id="53">
+					<DataPath>Объект.ТМЦ.Ц</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТМЦЦПолеКонтекстноеМеню" id="54"/>
+					<ExtendedTooltip name="ТМЦЦПолеРасширеннаяПодсказка" id="55"/>
+				</InputField>
+				<InputField name="ТМЦЦВПоле" id="56">
+					<DataPath>Объект.ТМЦ.ЦВ</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТМЦЦВПолеКонтекстноеМеню" id="57"/>
+					<ExtendedTooltip name="ТМЦЦВПолеРасширеннаяПодсказка" id="58"/>
+				</InputField>
+				<InputField name="ТМЦЦКПоле" id="59">
+					<DataPath>Объект.ТМЦ.ЦК</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТМЦЦКПолеКонтекстноеМеню" id="60"/>
+					<ExtendedTooltip name="ТМЦЦКПолеРасширеннаяПодсказка" id="61"/>
+				</InputField>
+				<InputField name="ТМЦЗПоле" id="62">
+					<DataPath>Объект.ТМЦ.З</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТМЦЗПолеКонтекстноеМеню" id="63"/>
+					<ExtendedTooltip name="ТМЦЗПолеРасширеннаяПодсказка" id="64"/>
+				</InputField>
+				<InputField name="ТМЦЗВПоле" id="65">
+					<DataPath>Объект.ТМЦ.ЗВ</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТМЦЗВПолеКонтекстноеМеню" id="66"/>
+					<ExtendedTooltip name="ТМЦЗВПолеРасширеннаяПодсказка" id="67"/>
+				</InputField>
+				<InputField name="ТМЦЗКПоле" id="68">
+					<DataPath>Объект.ТМЦ.ЗК</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТМЦЗКПолеКонтекстноеМеню" id="69"/>
+					<ExtendedTooltip name="ТМЦЗКПолеРасширеннаяПодсказка" id="70"/>
+				</InputField>
+				<InputField name="ТМЦКПоле" id="71">
+					<DataPath>Объект.ТМЦ.К</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТМЦКПолеКонтекстноеМеню" id="72"/>
+					<ExtendedTooltip name="ТМЦКПолеРасширеннаяПодсказка" id="73"/>
+				</InputField>
+				<InputField name="ТМЦКВПоле" id="74">
+					<DataPath>Объект.ТМЦ.КВ</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТМЦКВПолеКонтекстноеМеню" id="75"/>
+					<ExtendedTooltip name="ТМЦКВПолеРасширеннаяПодсказка" id="76"/>
+				</InputField>
+				<InputField name="ТМЦККПоле" id="77">
+					<DataPath>Объект.ТМЦ.КК</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТМЦККПолеКонтекстноеМеню" id="78"/>
+					<ExtendedTooltip name="ТМЦККПолеРасширеннаяПодсказка" id="79"/>
+				</InputField>
+				<InputField name="ТМЦВПоле" id="80">
+					<DataPath>Объект.ТМЦ.В</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТМЦВПолеКонтекстноеМеню" id="81"/>
+					<ExtendedTooltip name="ТМЦВПолеРасширеннаяПодсказка" id="82"/>
+				</InputField>
+				<InputField name="ТМЦВВПоле" id="83">
+					<DataPath>Объект.ТМЦ.ВВ</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТМЦВВПолеКонтекстноеМеню" id="84"/>
+					<ExtendedTooltip name="ТМЦВВПолеРасширеннаяПодсказка" id="85"/>
+				</InputField>
+				<InputField name="ТМЦВКПоле" id="86">
+					<DataPath>Объект.ТМЦ.ВК</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТМЦВКПолеКонтекстноеМеню" id="87"/>
+					<ExtendedTooltip name="ТМЦВКПолеРасширеннаяПодсказка" id="88"/>
+				</InputField>
+				<InputField name="ТМЦСПоле" id="89">
+					<DataPath>Объект.ТМЦ.С</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТМЦСПолеКонтекстноеМеню" id="90"/>
+					<ExtendedTooltip name="ТМЦСПолеРасширеннаяПодсказка" id="91"/>
+				</InputField>
+				<InputField name="ТМЦСВПоле" id="92">
+					<DataPath>Объект.ТМЦ.СВ</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТМЦСВПолеКонтекстноеМеню" id="93"/>
+					<ExtendedTooltip name="ТМЦСВПолеРасширеннаяПодсказка" id="94"/>
+				</InputField>
+				<InputField name="ТМЦСКПоле" id="95">
+					<DataPath>Объект.ТМЦ.СК</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТМЦСКПолеКонтекстноеМеню" id="96"/>
+					<ExtendedTooltip name="ТМЦСКПолеРасширеннаяПодсказка" id="97"/>
+				</InputField>
+				<InputField name="ТМЦСредТПоле" id="98">
+					<DataPath>Объект.ТМЦ.СредТ</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТМЦСредТПолеКонтекстноеМеню" id="99"/>
+					<ExtendedTooltip name="ТМЦСредТПолеРасширеннаяПодсказка" id="100"/>
+				</InputField>
+				<InputField name="ТМЦСредВПоле" id="101">
+					<DataPath>Объект.ТМЦ.СредВ</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТМЦСредВПолеКонтекстноеМеню" id="102"/>
+					<ExtendedTooltip name="ТМЦСредВПолеРасширеннаяПодсказка" id="103"/>
+				</InputField>
+				<InputField name="ТМЦСредКПоле" id="104">
+					<DataPath>Объект.ТМЦ.СредК</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТМЦСредКПолеКонтекстноеМеню" id="105"/>
+					<ExtendedTooltip name="ТМЦСредКПолеРасширеннаяПодсказка" id="106"/>
+				</InputField>
+				<InputField name="ТМЦСредОПоле" id="107">
+					<DataPath>Объект.ТМЦ.СредО</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТМЦСредОПолеКонтекстноеМеню" id="108"/>
+					<ExtendedTooltip name="ТМЦСредОПолеРасширеннаяПодсказка" id="109"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.ЗаписьЖРОИГП</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

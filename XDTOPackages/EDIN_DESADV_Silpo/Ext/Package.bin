@@ -1,0 +1,49 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://silpo.com.ua">
+	<objectType name="DESADV">
+		<property name="NUMBER" type="xs:string"/>
+		<property name="DATE" type="xs:date"/>
+		<property name="DELIVERYDATE" type="xs:date"/>
+		<property name="DELIVERYTIME" type="xs:string"/>
+		<property name="ORDERNUMBER" type="xs:string"/>
+		<property name="ORDERDATE" type="xs:date"/>
+		<property name="ORDRSPNUMBER" type="xs:string"/>
+		<property name="ORDRSPDATE" type="xs:date"/>
+		<property name="DELIVERYNOTENUMBER" type="xs:string"/>
+		<property name="DELIVERYNOTEDATE" type="xs:date"/>
+		<property name="CAMPAIGNNUMBER" type="xs:string"/>
+		<property name="TRANSPORTQUANTITY" type="xs:decimal"/>
+		<property name="TRANSPORTID" type="xs:decimal"/>
+		<property name="PACKAGEWEIGHT" type="xs:float"/>
+		<property xmlns:d3p1="http://silpo.com.ua" name="HEAD" type="d3p1:HEAD" upperBound="-1"/>
+	</objectType>
+	<objectType name="HEAD">
+		<property name="SUPPLIER" type="xs:long"/>
+		<property name="BUYER" type="xs:long"/>
+		<property name="DELIVERYPLACE" type="xs:long"/>
+		<property name="SENDER" type="xs:long"/>
+		<property name="RECIPIENT" type="xs:long"/>
+		<property name="FINALRECIPIENT" type="xs:long"/>
+		<property name="EDIINTERCHANGEID" type="xs:long"/>
+		<property xmlns:d3p1="http://silpo.com.ua" name="PACKINGSEQUENCE" type="d3p1:PACKINGSEQUENCE" upperBound="-1"/>
+	</objectType>
+	<objectType name="PACKINGSEQUENCE">
+		<property name="HIERARCHICALID" type="xs:byte"/>
+		<property xmlns:d3p1="http://silpo.com.ua" name="POSITION" type="d3p1:POSITION" upperBound="-1"/>
+	</objectType>
+	<objectType name="POSITION">
+		<property name="POSITIONNUMBER" type="xs:byte"/>
+		<property name="PRODUCT" type="xs:string"/>
+		<property name="PRODUCTIDBUYER" type="xs:string"/>
+		<property name="BUYERNUMBER" type="xs:decimal"/>
+		<property name="DELIVEREDQUANTITY" type="xs:float"/>
+		<property name="ORDEREDQUANTITY" type="xs:float"/>
+		<property name="BOXESQUANTITY" type="xs:decimal"/>
+		<property name="ADVICEPRICE" type="xs:float"/>
+		<property name="AMOUNT" type="xs:float"/>
+		<property name="PRICE" type="xs:string"/>
+		<property name="TAXRATE" type="xs:long"/>
+		<property name="GOODDATE" type="xs:date"/>
+		<property name="BRUTTOWEIGHT" type="xs:float"/>
+		<property name="DELIVEREDUNIT" type="xs:string"/>
+	</objectType>
+</package>

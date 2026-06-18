@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<DataProcessor uuid="d0534bb7-c8a2-4b40-a240-2996a6ffc659">
+		<InternalInfo>
+			<xr:GeneratedType name="DataProcessorObject.umk_КонсольЗаданий" category="Object">
+				<xr:TypeId>5b3f12c5-a1c4-4b39-8020-2c99f693bc0a</xr:TypeId>
+				<xr:ValueId>4917d603-bd97-4b45-a3df-8dd6f0d515a3</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DataProcessorManager.umk_КонсольЗаданий" category="Manager">
+				<xr:TypeId>e69632f3-6139-4649-a725-9125ae7791ac</xr:TypeId>
+				<xr:ValueId>64490a49-4d46-4310-87a2-b1f111d1a47c</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>umk_КонсольЗаданий</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Консоль заданий</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment>Консоль заданий 1С:Предприятия 8.1</Comment>
+			<UseStandardCommands>false</UseStandardCommands>
+			<DefaultForm>DataProcessor.umk_КонсольЗаданий.Form.ФормаКонсоли</DefaultForm>
+			<AuxiliaryForm/>
+			<IncludeHelpInContents>false</IncludeHelpInContents>
+			<ExtendedPresentation/>
+			<Explanation/>
+		</Properties>
+		<ChildObjects>
+			<Form>ФормаКонсоли</Form>
+			<Form>ДиалогРегламентногоЗадания</Form>
+			<Form>ДиалогФоновогоЗадания</Form>
+			<Form>ДиалогОтбораФоновогоЗадания</Form>
+			<Form>ДиалогОтбораРегламентногоЗадания</Form>
+			<Form>ДиалогНастроекСписка</Form>
+		</ChildObjects>
+	</DataProcessor>
+</MetaDataObject>

@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Table name="Список" id="1">
+			<Representation>List</Representation>
+			<CommandBarLocation>None</CommandBarLocation>
+			<DefaultItem>true</DefaultItem>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<InitialTreeView>ExpandTopLevel</InitialTreeView>
+			<EnableStartDrag>true</EnableStartDrag>
+			<DataPath>Список</DataPath>
+			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<ContextMenu name="СписокКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="3">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="4"/>
+			<SearchStringAddition name="СписокСтрокаПоиска" id="5">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="6"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="7"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="8">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="9"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="10"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокУправлениеПоиском" id="11">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="13"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<CheckBoxField name="ОтражатьВБухгалтерскомУчете" id="23">
+					<DataPath>Список.ОтражатьВБухгалтерскомУчете</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>БУ</v8:content>
+						</v8:item>
+					</Title>
+					<FixingInTable>Left</FixingInTable>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ОтражатьВБухгалтерскомУчетеКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="ОтражатьВБухгалтерскомУчетеРасширеннаяПодсказка" id="25"/>
+				</CheckBoxField>
+				<CheckBoxField name="ОтражатьВУправленческомУчете" id="20">
+					<DataPath>Список.ОтражатьВУправленческомУчете</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>УУ</v8:content>
+						</v8:item>
+					</Title>
+					<FixingInTable>Left</FixingInTable>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ОтражатьВУправленческомУчетеКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="ОтражатьВУправленческомУчетеРасширеннаяПодсказка" id="22"/>
+				</CheckBoxField>
+				<CheckBoxField name="umk_Импортирована" id="62">
+					<DataPath>Список.umk_Импортирована</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Импорт</v8:content>
+						</v8:item>
+					</Title>
+					<FixingInTable>Left</FixingInTable>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="umk_ИмпортированаКонтекстноеМеню" id="63"/>
+					<ExtendedTooltip name="umk_ИмпортированаРасширеннаяПодсказка" id="64"/>
+				</CheckBoxField>
+				<CheckBoxField name="umk_ЕстьОригинал" id="65">
+					<DataPath>Список.umk_ЕстьОригинал</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ориг.</v8:content>
+						</v8:item>
+					</Title>
+					<FixingInTable>Left</FixingInTable>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="umk_ЕстьОригиналКонтекстноеМеню" id="66"/>
+					<ExtendedTooltip name="umk_ЕстьОригиналРасширеннаяПодсказка" id="67"/>
+				</CheckBoxField>
+				<CheckBoxField name="umk_ОтложенноеПроведение" id="71">
+					<DataPath>Список.umk_ОтложенноеПроведение</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Провести</v8:content>
+						</v8:item>
+					</Title>
+					<FixingInTable>Left</FixingInTable>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="umk_ОтложенноеПроведениеКонтекстноеМеню" id="72"/>
+					<ExtendedTooltip name="umk_ОтложенноеПроведениеРасширеннаяПодсказка" id="73"/>
+				</CheckBoxField>
+				<LabelField name="Дата" id="14">
+					<DataPath>Список.Date</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="16"/>
+				</LabelField>
+				<LabelField name="Номер" id="17">
+					<DataPath>Список.Number</DataPath>
+					<ContextMenu name="НомерКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="19"/>
+				</LabelField>
+				<LabelField name="umk_номерФ2" id="53">
+					<DataPath>Список.umk_номерФ2</DataPath>
+					<ContextMenu name="umk_номерФ2КонтекстноеМеню" id="54"/>
+					<ExtendedTooltip name="umk_номерФ2РасширеннаяПодсказка" id="55"/>
+				</LabelField>
+				<LabelField name="Контрагент" id="38">
+					<DataPath>Список.Контрагент</DataPath>
+					<ContextMenu name="КонтрагентКонтекстноеМеню" id="39"/>
+					<ExtendedTooltip name="КонтрагентРасширеннаяПодсказка" id="40"/>
+				</LabelField>
+				<LabelField name="Организация" id="26">
+					<DataPath>Список.Организация</DataPath>
+					<ContextMenu name="ОрганизацияКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="28"/>
+				</LabelField>
+				<LabelField name="СкладОрдер" id="29">
+					<DataPath>Список.СкладОрдер</DataPath>
+					<ContextMenu name="СкладОрдерКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="СкладОрдерРасширеннаяПодсказка" id="31"/>
+				</LabelField>
+				<LabelField name="ТипЦен" id="32">
+					<DataPath>Список.ТипЦен</DataPath>
+					<ContextMenu name="ТипЦенКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="ТипЦенРасширеннаяПодсказка" id="34"/>
+				</LabelField>
+				<LabelField name="СуммаДокумента" id="35">
+					<DataPath>Список.СуммаДокумента</DataPath>
+					<ContextMenu name="СуммаДокументаКонтекстноеМеню" id="36"/>
+					<ExtendedTooltip name="СуммаДокументаРасширеннаяПодсказка" id="37"/>
+				</LabelField>
+				<LabelField name="ДоговорКонтрагента" id="41">
+					<DataPath>Список.ДоговорКонтрагента</DataPath>
+					<ContextMenu name="ДоговорКонтрагентаКонтекстноеМеню" id="42"/>
+					<ExtendedTooltip name="ДоговорКонтрагентаРасширеннаяПодсказка" id="43"/>
+				</LabelField>
+				<LabelField name="Подразделение" id="44">
+					<DataPath>Список.Подразделение</DataPath>
+					<ContextMenu name="ПодразделениеКонтекстноеМеню" id="45"/>
+					<ExtendedTooltip name="ПодразделениеРасширеннаяПодсказка" id="46"/>
+				</LabelField>
+				<LabelField name="Комментарий" id="47">
+					<DataPath>Список.Комментарий</DataPath>
+					<ContextMenu name="КомментарийКонтекстноеМеню" id="48"/>
+					<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="49"/>
+				</LabelField>
+				<LabelField name="Ответственный" id="50">
+					<DataPath>Список.Ответственный</DataPath>
+					<ContextMenu name="ОтветственныйКонтекстноеМеню" id="51"/>
+					<ExtendedTooltip name="ОтветственныйРасширеннаяПодсказка" id="52"/>
+				</LabelField>
+				<LabelField name="umk_Регион" id="56">
+					<DataPath>Список.umk_Регион</DataPath>
+					<ContextMenu name="umk_РегионКонтекстноеМеню" id="57"/>
+					<ExtendedTooltip name="umk_РегионРасширеннаяПодсказка" id="58"/>
+				</LabelField>
+				<LabelField name="umk_НомерДокПокупателя" id="59">
+					<DataPath>Список.umk_НомерДокПокупателя</DataPath>
+					<ContextMenu name="umk_НомерДокПокупателяКонтекстноеМеню" id="60"/>
+					<ExtendedTooltip name="umk_НомерДокПокупателяРасширеннаяПодсказка" id="61"/>
+				</LabelField>
+				<LabelField name="umk_АдресДоставки" id="68">
+					<DataPath>Список.umk_АдресДоставки</DataPath>
+					<ContextMenu name="umk_АдресДоставкиКонтекстноеМеню" id="69"/>
+					<ExtendedTooltip name="umk_АдресДоставкиРасширеннаяПодсказка" id="70"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>Document.ВозвратТоваровОтПокупателя</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+</Form>

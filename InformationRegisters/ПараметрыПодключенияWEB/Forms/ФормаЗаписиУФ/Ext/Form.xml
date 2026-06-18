@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="http" id="1">
+			<DataPath>Запись.http</DataPath>
+			<ContextMenu name="httpКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="httpРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="port" id="4">
+			<DataPath>Запись.port</DataPath>
+			<ContextMenu name="portКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="portРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="key" id="7">
+			<DataPath>Запись.key</DataPath>
+			<ListChoiceMode>true</ListChoiceMode>
+			<ChoiceList>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>1с77_work</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>uk</v8:lang>
+								<v8:content>1с77_work</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">1с77_work</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>pos_server</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>uk</v8:lang>
+								<v8:content>pos_server</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">pos_server</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>siteUMK</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>uk</v8:lang>
+								<v8:content>siteUMK</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">siteUMK</Value>
+					</xr:Value>
+				</xr:Item>
+			</ChoiceList>
+			<ContextMenu name="keyКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="keyРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="user" id="10">
+			<DataPath>Запись.user</DataPath>
+			<ContextMenu name="userКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="userРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<InputField name="password" id="13">
+			<DataPath>Запись.password</DataPath>
+			<PasswordMode>true</PasswordMode>
+			<ContextMenu name="passwordКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="passwordРасширеннаяПодсказка" id="15"/>
+		</InputField>
+		<InputField name="base_name" id="16">
+			<DataPath>Запись.base_name</DataPath>
+			<ContextMenu name="base_nameКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="base_nameРасширеннаяПодсказка" id="18"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.ПараметрыПодключенияWEB</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

@@ -1,0 +1,396 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/"
+		xmlns:soap12bind="http://schemas.xmlsoap.org/wsdl/soap12/"
+		xmlns:soapbind="http://schemas.xmlsoap.org/wsdl/soap/"
+		xmlns:tns="http://soap.edi.service.org"
+		xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy"
+		xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+		xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+		xmlns:xsd1="http://soap.edi.service.org"
+		targetNamespace="http://soap.edi.service.org">
+	<types>
+		<xs:schema xmlns:sch="http://soap.edi.service.org"
+				xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+				xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+				xmlns:xs="http://www.w3.org/2001/XMLSchema"
+				targetNamespace="http://soap.edi.service.org"
+				version="1.0">
+			<xs:element name="archiveDocRequest">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0"
+								name="user"
+								type="xsd1:ediLogin"/>
+						<xs:element minOccurs="0"
+								name="fileName"
+								type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="archiveDocResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0"
+								name="result"
+								type="xsd1:ediResponse"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getDocRequest">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0"
+								name="user"
+								type="xsd1:ediLogin"/>
+						<xs:element minOccurs="0"
+								name="fileName"
+								type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getDocResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0"
+								name="result"
+								type="xsd1:ediFile"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getListRequest">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0"
+								name="user"
+								type="xsd1:ediLogin"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getListResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0"
+								name="result"
+								type="xsd1:ediFileList"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="sendDocRequest">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0"
+								name="user"
+								type="xsd1:ediLogin"/>
+						<xs:element minOccurs="0"
+								name="fileName"
+								type="xs:string"/>
+						<xs:element minOccurs="0"
+								name="content"
+								nillable="true"
+								type="xs:base64Binary"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="sendDocResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0"
+								name="result"
+								type="xsd1:ediResponse"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="uploadDocRequest">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0"
+								name="user"
+								type="xsd1:ediLogin"/>
+						<xs:element minOccurs="0"
+								name="fileName"
+								type="xs:string"/>
+						<xs:element minOccurs="0"
+								name="content"
+								nillable="true"
+								type="xs:base64Binary"/>
+						<xs:element minOccurs="0"
+								name="remoteFolder"
+								type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="uploadDocResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0"
+								name="result"
+								type="xsd1:ediResponse"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="archiveDocumentsRequest">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0"
+								name="user"
+								type="xsd1:ediLogin"/>
+						<xs:element maxOccurs="unbounded"
+								minOccurs="0"
+								name="fileName"
+								nillable="true"
+								type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="archiveDocumentsResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0"
+								name="result"
+								type="xsd1:ediResponse"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getDocumentsRequest">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0"
+								name="user"
+								type="xsd1:ediLogin"/>
+						<xs:element maxOccurs="unbounded"
+								minOccurs="0"
+								name="fileName"
+								nillable="true"
+								type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="getDocumentsResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element minOccurs="0"
+								name="result"
+								type="xsd1:ediFile"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:complexType name="ediLogin">
+				<xs:sequence>
+					<xs:element minOccurs="0"
+							name="login"
+							type="xs:string"/>
+					<xs:element minOccurs="0"
+							name="pass"
+							type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="ediResponse">
+				<xs:sequence>
+					<xs:element name="errorCode"
+							type="xs:int"/>
+					<xs:element minOccurs="0"
+							name="errorMessage"
+							type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="ediFile">
+				<xs:complexContent>
+					<xs:extension base="xsd1:ediResponse">
+						<xs:sequence>
+							<xs:element minOccurs="0"
+									name="content"
+									type="xs:base64Binary"/>
+						</xs:sequence>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:complexType name="ediFileList">
+				<xs:complexContent>
+					<xs:extension base="xsd1:ediResponse">
+						<xs:sequence>
+							<xs:element maxOccurs="unbounded"
+									minOccurs="0"
+									name="list"
+									nillable="true"
+									type="xs:string"/>
+						</xs:sequence>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+		</xs:schema>
+	</types>
+	<message name="getDocumentsResponse">
+		<part name="getDocumentsResponse"
+				element="tns:getDocumentsResponse"/>
+	</message>
+	<message name="uploadDocRequest">
+		<part name="uploadDocRequest"
+				element="tns:uploadDocRequest"/>
+	</message>
+	<message name="uploadDocResponse">
+		<part name="uploadDocResponse"
+				element="tns:uploadDocResponse"/>
+	</message>
+	<message name="archiveDocumentsResponse">
+		<part name="archiveDocumentsResponse"
+				element="tns:archiveDocumentsResponse"/>
+	</message>
+	<message name="getListRequest">
+		<part name="getListRequest"
+				element="tns:getListRequest"/>
+	</message>
+	<message name="getDocResponse">
+		<part name="getDocResponse"
+				element="tns:getDocResponse"/>
+	</message>
+	<message name="archiveDocRequest">
+		<part name="archiveDocRequest"
+				element="tns:archiveDocRequest"/>
+	</message>
+	<message name="sendDocResponse">
+		<part name="sendDocResponse"
+				element="tns:sendDocResponse"/>
+	</message>
+	<message name="archiveDocumentsRequest">
+		<part name="archiveDocumentsRequest"
+				element="tns:archiveDocumentsRequest"/>
+	</message>
+	<message name="sendDocRequest">
+		<part name="sendDocRequest"
+				element="tns:sendDocRequest"/>
+	</message>
+	<message name="getDocumentsRequest">
+		<part name="getDocumentsRequest"
+				element="tns:getDocumentsRequest"/>
+	</message>
+	<message name="getListResponse">
+		<part name="getListResponse"
+				element="tns:getListResponse"/>
+	</message>
+	<message name="getDocRequest">
+		<part name="getDocRequest"
+				element="tns:getDocRequest"/>
+	</message>
+	<message name="archiveDocResponse">
+		<part name="archiveDocResponse"
+				element="tns:archiveDocResponse"/>
+	</message>
+	<portType name="ServiceWs">
+		<operation name="getDocuments">
+			<input name="getDocumentsRequest"
+					message="tns:getDocumentsRequest"/>
+			<output name="getDocumentsResponse"
+					message="tns:getDocumentsResponse"/>
+		</operation>
+		<operation name="uploadDoc">
+			<input name="uploadDocRequest"
+					message="tns:uploadDocRequest"/>
+			<output name="uploadDocResponse"
+					message="tns:uploadDocResponse"/>
+		</operation>
+		<operation name="archiveDocuments">
+			<input name="archiveDocumentsRequest"
+					message="tns:archiveDocumentsRequest"/>
+			<output name="archiveDocumentsResponse"
+					message="tns:archiveDocumentsResponse"/>
+		</operation>
+		<operation name="getList">
+			<input name="getListRequest"
+					message="tns:getListRequest"/>
+			<output name="getListResponse"
+					message="tns:getListResponse"/>
+		</operation>
+		<operation name="getDoc">
+			<input name="getDocRequest"
+					message="tns:getDocRequest"/>
+			<output name="getDocResponse"
+					message="tns:getDocResponse"/>
+		</operation>
+		<operation name="archiveDoc">
+			<input name="archiveDocRequest"
+					message="tns:archiveDocRequest"/>
+			<output name="archiveDocResponse"
+					message="tns:archiveDocResponse"/>
+		</operation>
+		<operation name="sendDoc">
+			<input name="sendDocRequest"
+					message="tns:sendDocRequest"/>
+			<output name="sendDocResponse"
+					message="tns:sendDocResponse"/>
+		</operation>
+	</portType>
+	<binding name="ServiceWsSoap11"
+			type="tns:ServiceWs">
+		<soapbind:binding style="document"
+				transport="http://schemas.xmlsoap.org/soap/http"/>
+		<operation name="getDocuments">
+			<soapbind:operation style="document"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="uploadDoc">
+			<soapbind:operation style="document"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="archiveDocuments">
+			<soapbind:operation style="document"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getList">
+			<soapbind:operation style="document"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="getDoc">
+			<soapbind:operation style="document"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="archiveDoc">
+			<soapbind:operation style="document"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="sendDoc">
+			<soapbind:operation style="document"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+	</binding>
+	<service name="ServiceWsService">
+		<port name="ServiceWsSoap11"
+				binding="tns:ServiceWsSoap11">
+			<soapbind:address location="http://soap.edin.ua/soap/service.wsdl"/>
+		</port>
+	</service>
+</definitions>

@@ -1,0 +1,59 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://umk2.com.ua">
+	<objectType name="HEAD">
+		<property name="SUPPLIER" type="xs:long"/>
+		<property name="SUPPLIERNAME" type="xs:string"/>
+		<property name="SUPPLIERADRESS" type="xs:string"/>
+		<property name="SUPPLIERCITY" type="xs:string"/>
+		<property name="SUPPLIERZIP" type="xs:string"/>
+		<property name="BUYER" type="xs:long"/>
+		<property name="BUYERNAME" type="xs:string"/>
+		<property name="BUYERADRESS" type="xs:string"/>
+		<property name="BUYERCITY" type="xs:string"/>
+		<property name="BUYERZIP" type="xs:string"/>
+		<property name="BUYERKPP" type="xs:string"/>
+		<property name="BUYERINN" type="xs:string"/>
+		<property name="DELIVERYPLACE" type="xs:long"/>
+		<property name="INVOICEPARTNER" type="xs:long"/>
+		<property name="SENDER" type="xs:long"/>
+		<property name="RECIPIENT" type="xs:long"/>
+		<property xmlns:d3p1="http://umk2.com.ua" name="POSITION" type="d3p1:POSITION" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="INVOICE">
+		<property name="DOCUMENTNAME" type="xs:short"/>
+		<property name="NUMBER" type="xs:string"/>
+		<property name="DATE" type="xs:date"/>
+		<property name="INVOICETYPE" type="xs:byte"/>
+		<property name="DELIVERYDATE" type="xs:date"/>
+		<property name="DELIVERYTIME" type="xs:string"/>
+		<property name="CURRENCY" type="xs:string"/>
+		<property name="ORDERNUMBER" type="xs:string"/>
+		<property name="ORDERDATE" type="xs:date"/>
+		<property name="DELIVERYNOTENUMBER" type="xs:string"/>
+		<property name="DELIVERYNOTEDATE" type="xs:date"/>
+		<property name="VATSUM" type="xs:float"/>
+		<property name="INVOICETOTALAMOUNT" type="xs:float"/>
+		<property name="TAXABLEAMOUNT" type="xs:float"/>
+		<property name="VAT" type="xs:byte"/>
+		<property xmlns:d3p1="http://umk2.com.ua" name="HEAD" type="d3p1:HEAD" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="POSITION">
+		<property name="POSITIONNUMBER" type="xs:byte"/>
+		<property name="PRODUCT" type="xs:string"/>
+		<property name="PRODUCTIDBUYER" type="xs:string"/>
+		<property name="INVOICEDQUANTITY" type="xs:float"/>
+		<property name="INVOICEUNIT" type="xs:string"/>
+		<property name="UNITPRICE" type="xs:float"/>
+		<property name="GROSSPRICE" type="xs:float"/>
+		<property name="AMOUNTWITHVAT" type="xs:float"/>
+		<property name="AMOUNT" type="xs:float"/>
+		<property name="DESCRIPTION" type="xs:string"/>
+		<property name="AMOUNTTYPE" type="xs:short"/>
+		<property xmlns:d3p1="http://umk2.com.ua" name="TAX" type="d3p1:TAX" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="TAX">
+		<property name="TAXTYPECODE" type="xs:string"/>
+		<property name="TAXRATE" type="xs:byte"/>
+		<property name="TAXAMOUNT" type="xs:float"/>
+		<property name="CATEGORY" type="xs:string"/>
+	</objectType>
+</package>

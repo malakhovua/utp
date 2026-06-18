@@ -1,0 +1,336 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РТиУ_СуммаДокумента</dataPath>
+			<field>РТиУ_СуммаДокумента</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Реализация товаров и услуг</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВН_СуммаДокумента</dataPath>
+			<field>ВН_СуммаДокумента</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Возврат товара от покупателей</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НН_СуммаДокумента</dataPath>
+			<field>НН_СуммаДокумента</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Налоговая накладная</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>П2_СуммаДокумента</dataPath>
+			<field>П2_СуммаДокумента</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Приложение №2</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Контрагент</dataPath>
+			<field>Контрагент</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	СУММА(ВозвратТоваровОтПокупателя.СуммаДокумента) КАК ВН_СуммаДокумента,
+	ВозвратТоваровОтПокупателя.Контрагент
+ПОМЕСТИТЬ ВТ_ВН
+ИЗ
+	Документ.ВозвратТоваровОтПокупателя КАК ВозвратТоваровОтПокупателя
+ГДЕ
+	ВозвратТоваровОтПокупателя.Дата МЕЖДУ &amp;ДатаНачала И &amp;ДатаКонца
+	И ВозвратТоваровОтПокупателя.Проведен = ИСТИНА
+	И ВозвратТоваровОтПокупателя.Организация = &amp;Организация
+
+СГРУППИРОВАТЬ ПО
+	ВозвратТоваровОтПокупателя.Контрагент
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	СУММА(ННакладная.СуммаДокумента) КАК НН_СуммаДокумента,
+	ННакладная.Контрагент
+ПОМЕСТИТЬ ВТ_НН
+ИЗ
+	Документ.НалоговаяНакладная КАК ННакладная
+ГДЕ
+	ННакладная.Дата МЕЖДУ &amp;ДатаНачала И &amp;ДатаКонца
+	И ННакладная.Проведен = ИСТИНА
+	И ННакладная.Организация = &amp;Организация
+
+СГРУППИРОВАТЬ ПО
+	ННакладная.Контрагент
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	СУММА(Приложение2КНалоговойНакладной.СуммаДокумента) КАК П2_СуммаДокумента,
+	Приложение2КНалоговойНакладной.Контрагент
+ПОМЕСТИТЬ ВТ_П2
+ИЗ
+	Документ.Приложение2КНалоговойНакладной КАК Приложение2КНалоговойНакладной
+ГДЕ
+	Приложение2КНалоговойНакладной.Дата МЕЖДУ &amp;ДатаНачала И &amp;ДатаКонца
+	И Приложение2КНалоговойНакладной.Проведен = ИСТИНА
+	И Приложение2КНалоговойНакладной.Организация = &amp;Организация
+
+СГРУППИРОВАТЬ ПО
+	Приложение2КНалоговойНакладной.Контрагент
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	СУММА(РеализацияТоваровУслуг.СуммаДокумента) КАК РТиУ_СуммаДокумента,
+	РеализацияТоваровУслуг.Контрагент
+ПОМЕСТИТЬ ВТ_РТУ
+ИЗ
+	Документ.РеализацияТоваровУслуг КАК РеализацияТоваровУслуг
+ГДЕ
+	РеализацияТоваровУслуг.Дата МЕЖДУ &amp;ДатаНачала И &amp;ДатаКонца
+	И РеализацияТоваровУслуг.Проведен = ИСТИНА
+	И РеализацияТоваровУслуг.Организация = &amp;Организация
+
+СГРУППИРОВАТЬ ПО
+	РеализацияТоваровУслуг.Контрагент
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	0 КАК ВН_СуммаДокумента,
+	0 КАК НН_СуммаДокумента,
+	0 КАК П2_СуммаДокумента,
+	ВТ_РТУ.РТиУ_СуммаДокумента,
+	ВТ_РТУ.Контрагент КАК Контрагент
+ИЗ
+	ВТ_РТУ КАК ВТ_РТУ
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	0,
+	ВТ_НН.НН_СуммаДокумента,
+	0,
+	0,
+	ВТ_НН.Контрагент
+ИЗ
+	ВТ_НН КАК ВТ_НН
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	0,
+	0,
+	ВТ_П2.П2_СуммаДокумента,
+	0,
+	ВТ_П2.Контрагент
+ИЗ
+	ВТ_П2 КАК ВТ_П2
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ВТ_ВН.ВН_СуммаДокумента,
+	0,
+	0,
+	0,
+	ВТ_ВН.Контрагент
+ИЗ
+	ВТ_ВН КАК ВТ_ВН
+
+УПОРЯДОЧИТЬ ПО
+	Контрагент</query>
+	</dataSet>
+	<totalField>
+		<dataPath>ВН_СуммаДокумента</dataPath>
+		<expression>Сумма(ВН_СуммаДокумента)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>РТиУ_СуммаДокумента</dataPath>
+		<expression>Сумма(РТиУ_СуммаДокумента)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>П2_СуммаДокумента</dataPath>
+		<expression>Сумма(П2_СуммаДокумента)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>НН_СуммаДокумента</dataPath>
+		<expression>Сумма(НН_СуммаДокумента)</expression>
+	</totalField>
+	<parameter>
+		<name>ДатаКонца</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата конца</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>КонецПериода(&amp;ДатаОкончания,"День")</expression>
+	</parameter>
+	<parameter>
+		<name>ДатаНачала</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата начала</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>Date</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ДатаОкончания</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата окончания</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>Date</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Организация</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Организация</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Организации</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+		<expression>Справочники.Организации.НайтиПоКоду("00001")</expression>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:userFields>
+				<dcsset:item xsi:type="dcsset:UserFieldExpression">
+					<dcsset:dataPath>ПользовательскиеПоля.Поле1</dcsset:dataPath>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Разница (1)-(2)</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:detailExpression/>
+					<dcsset:detailExpressionPresentation/>
+					<dcsset:totalExpression>РТиУ_СуммаДокумента - НН_СуммаДокумента</dcsset:totalExpression>
+					<dcsset:totalExpressionPresentation>[Реализация товаров и услуг] - [Налоговая накладная]</dcsset:totalExpressionPresentation>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:UserFieldExpression">
+					<dcsset:dataPath>ПользовательскиеПоля.Поле2</dcsset:dataPath>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма (4)+(5)</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:detailExpression/>
+					<dcsset:detailExpressionPresentation/>
+					<dcsset:totalExpression>ВН_СуммаДокумента + П2_СуммаДокумента</dcsset:totalExpression>
+					<dcsset:totalExpressionPresentation>[Возврат товара от покупателей] + [Приложение №2]</dcsset:totalExpressionPresentation>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:UserFieldExpression">
+					<dcsset:dataPath>ПользовательскиеПоля.Поле3</dcsset:dataPath>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Разница (3)-(6)</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:detailExpression/>
+					<dcsset:detailExpressionPresentation/>
+					<dcsset:totalExpression>РТиУ_СуммаДокумента - НН_СуммаДокумента - (ВН_СуммаДокумента + П2_СуммаДокумента)</dcsset:totalExpression>
+					<dcsset:totalExpressionPresentation>[Реализация товаров и услуг] - [Налоговая накладная] - ([Возврат товара от покупателей] + [Приложение №2])</dcsset:totalExpressionPresentation>
+				</dcsset:item>
+			</dcsset:userFields>
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Контрагент</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>РТиУ_СуммаДокумента</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НН_СуммаДокумента</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПользовательскиеПоля.Поле1</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВН_СуммаДокумента</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>П2_СуммаДокумента</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПользовательскиеПоля.Поле2</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПользовательскиеПоля.Поле3</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Контрагент</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

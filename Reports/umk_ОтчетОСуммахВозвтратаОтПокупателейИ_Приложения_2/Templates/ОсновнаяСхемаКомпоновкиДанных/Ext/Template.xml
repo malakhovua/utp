@@ -1,0 +1,319 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаНДС</dataPath>
+			<field>СуммаНДС</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Ссылка</dataPath>
+			<field>Ссылка</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаСНДС</dataPath>
+			<field>СуммаСНДС</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма СНДС</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаБезНДС</dataPath>
+			<field>СуммаБезНДС</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма без НДС</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаВключаетНДС</dataPath>
+			<field>СуммаВключаетНДС</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Контрагент</dataPath>
+			<field>Контрагент</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контрагент</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	СУММА(ВозвратТоваровОтПокупателяТовары.СуммаНДС) КАК СуммаНДС,
+	ВозвратТоваровОтПокупателяТовары.Ссылка,
+	СУММА(ВЫБОР
+			КОГДА ВозвратТоваровОтПокупателяТовары.Ссылка.СуммаВключаетНДС
+				ТОГДА ВозвратТоваровОтПокупателяТовары.Сумма - ВозвратТоваровОтПокупателяТовары.СуммаНДС
+			ИНАЧЕ ВозвратТоваровОтПокупателяТовары.Сумма
+		КОНЕЦ) КАК СуммаБезНДС,
+	ВозвратТоваровОтПокупателяТовары.Ссылка.СуммаВключаетНДС,
+	СУММА(ВЫБОР
+			КОГДА ВозвратТоваровОтПокупателяТовары.Ссылка.СуммаВключаетНДС
+				ТОГДА ВозвратТоваровОтПокупателяТовары.Сумма
+			ИНАЧЕ ВозвратТоваровОтПокупателяТовары.Сумма + ВозвратТоваровОтПокупателяТовары.СуммаНДС
+		КОНЕЦ) КАК СуммаСНДС,
+	ВозвратТоваровОтПокупателяТовары.Ссылка.Контрагент
+ИЗ
+	Документ.ВозвратТоваровОтПокупателя.Товары КАК ВозвратТоваровОтПокупателяТовары
+ГДЕ
+	ВозвратТоваровОтПокупателяТовары.Ссылка.ПометкаУдаления = ЛОЖЬ
+	И ВозвратТоваровОтПокупателяТовары.Ссылка.Дата МЕЖДУ &amp;НачалоПериода И &amp;ОкончаниеПериода
+
+СГРУППИРОВАТЬ ПО
+	ВозвратТоваровОтПокупателяТовары.Ссылка,
+	ВозвратТоваровОтПокупателяТовары.Ссылка.СуммаВключаетНДС,
+	ВозвратТоваровОтПокупателяТовары.Ссылка.Контрагент</query>
+	</dataSet>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных2</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>П2_Ссылка</dataPath>
+			<field>П2_Ссылка</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ссылка</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>П2_СуммаНДС</dataPath>
+			<field>П2_СуммаНДС</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма НДС</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>П2_СуммаСНДС</dataPath>
+			<field>П2_СуммаСНДС</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма СНДС</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>П2_СуммаБезНДС</dataPath>
+			<field>П2_СуммаБезНДС</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма без НДС</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>П2_СуммаВключаетНДС</dataPath>
+			<field>П2_СуммаВключаетНДС</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма включает НДС</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>П2_Контрагент</dataPath>
+			<field>П2_Контрагент</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контрагент</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	Приложение2КНалоговойНакладнойТовары.Ссылка КАК П2_Ссылка,
+	СУММА(ВЫБОР
+			КОГДА Приложение2КНалоговойНакладнойТовары.Ссылка.СуммаВключаетНДС
+				ТОГДА Приложение2КНалоговойНакладнойТовары.ИзменениеСуммы - Приложение2КНалоговойНакладнойТовары.ИзменениеСуммыНДС
+			ИНАЧЕ Приложение2КНалоговойНакладнойТовары.ИзменениеСуммы
+		КОНЕЦ) КАК П2_СуммаБезНДС,
+	Приложение2КНалоговойНакладнойТовары.Ссылка.СуммаВключаетНДС КАК П2_СуммаВключаетНДС,
+	СУММА(ВЫБОР
+			КОГДА Приложение2КНалоговойНакладнойТовары.Ссылка.СуммаВключаетНДС
+				ТОГДА Приложение2КНалоговойНакладнойТовары.ИзменениеСуммы
+			ИНАЧЕ Приложение2КНалоговойНакладнойТовары.ИзменениеСуммы + Приложение2КНалоговойНакладнойТовары.ИзменениеСуммыНДС
+		КОНЕЦ) КАК П2_СуммаСНДС,
+	Приложение2КНалоговойНакладнойТовары.Ссылка.Контрагент КАК П2_Контрагент,
+	СУММА(Приложение2КНалоговойНакладнойТовары.ИзменениеСуммыНДС) КАК П2_СуммаНДС
+ИЗ
+	Документ.Приложение2КНалоговойНакладной.Товары КАК Приложение2КНалоговойНакладнойТовары
+ГДЕ
+	Приложение2КНалоговойНакладнойТовары.Ссылка.ПометкаУдаления = ЛОЖЬ
+	И Приложение2КНалоговойНакладнойТовары.Ссылка.Дата МЕЖДУ &amp;НачалоПериода И &amp;ОкончаниеПериода
+
+СГРУППИРОВАТЬ ПО
+	Приложение2КНалоговойНакладнойТовары.Ссылка,
+	Приложение2КНалоговойНакладнойТовары.Ссылка.СуммаВключаетНДС,
+	Приложение2КНалоговойНакладнойТовары.Ссылка.Контрагент</query>
+	</dataSet>
+	<totalField>
+		<dataPath>П2_СуммаБезНДС</dataPath>
+		<expression>Сумма(П2_СуммаБезНДС)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>П2_СуммаНДС</dataPath>
+		<expression>Сумма(П2_СуммаНДС)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>П2_СуммаСНДС</dataPath>
+		<expression>Сумма(П2_СуммаСНДС)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаБезНДС</dataPath>
+		<expression>Сумма(СуммаБезНДС)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаНДС</dataPath>
+		<expression>Сумма(СуммаНДС)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаСНДС</dataPath>
+		<expression>Сумма(СуммаСНДС)</expression>
+	</totalField>
+	<parameter>
+		<name>НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>Date</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ОкончаниеПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Окончание периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>Date</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+		<expression>КонецПериода(&amp;ОкончаниеПериода, "День")</expression>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МакетОформления</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Зеленый</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Заголовок</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отчет об итоговых суммах Возвратных накладных и Приложения 2</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto">
+						<dcsset:use>false</dcsset:use>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Контрагент</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Ссылка</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>СуммаБезНДС</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>СуммаНДС</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>СуммаСНДС</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:outputParameters>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Заголовок</dcscor:parameter>
+						<dcscor:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Возврат товара от покупателя</v8:content>
+							</v8:item>
+						</dcscor:value>
+					</dcscor:item>
+				</dcsset:outputParameters>
+			</dcsset:item>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto">
+						<dcsset:use>false</dcsset:use>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>П2_Контрагент</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>П2_Ссылка</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>П2_СуммаБезНДС</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>П2_СуммаНДС</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>П2_СуммаСНДС</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:outputParameters>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Заголовок</dcscor:parameter>
+						<dcscor:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Приложение 2</v8:content>
+							</v8:item>
+						</dcscor:value>
+					</dcscor:item>
+				</dcsset:outputParameters>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

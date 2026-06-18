@@ -1,0 +1,75 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://www.comdoc_006-package.org">
+	<objectType name="ЕлектроннийДокумент">
+		<property xmlns:d3p1="http://www.comdoc_006-package.org" name="Заголовок" type="d3p1:Заголовок"/>
+		<property xmlns:d3p1="http://www.comdoc_006-package.org" name="Сторони" type="d3p1:Сторони"/>
+		<property xmlns:d3p1="http://www.comdoc_006-package.org" name="Параметри" type="d3p1:Параметри"/>
+		<property xmlns:d3p1="http://www.comdoc_006-package.org" name="Таблиця" type="d3p1:Таблиця"/>
+		<property xmlns:d3p1="http://www.comdoc_006-package.org" name="ВсьогоПоДокументу" type="d3p1:ВсьогоПоДокументу"/>
+	</objectType>
+	<objectType name="Заголовок">
+		<property name="НомерДокументу" type="xs:string"/>
+		<property name="ТипДокументу" type="xs:string"/>
+		<property name="КодТипуДокументу" type="xs:string"/>
+		<property name="ДатаДокументу" type="xs:date"/>
+		<property name="НомерЗамовлення" type="xs:string"/>
+		<property name="ДатаЗамовлення" type="xs:date"/>
+		<property name="МісцеСкладання" type="xs:string"/>
+		<property xmlns:d3p1="http://www.comdoc_006-package.org" name="ДокПідстава" type="d3p1:ДокПідстава"/>
+	</objectType>
+	<objectType name="ДокПідстава">
+		<property name="НомерДокументу" type="xs:string"/>
+		<property name="ТипДокументу" type="xs:string"/>
+		<property name="КодТипуДокументу" type="xs:string"/>
+		<property name="ДатаДокументу" type="xs:date"/>
+	</objectType>
+	<objectType name="Сторони">
+		<property xmlns:d3p1="http://www.comdoc_006-package.org" name="Контрагент" type="d3p1:Контрагент" upperBound="-1"/>
+	</objectType>
+	<objectType name="Контрагент">
+		<property name="СтатусКонтрагента" type="xs:string"/>
+		<property name="ВидОсоби" type="xs:string"/>
+		<property name="НазваКонтрагента" type="xs:string"/>
+		<property name="КодКонтрагента" type="xs:string"/>
+		<property name="ІПН" type="xs:string"/>
+		<property name="GLN" type="xs:integer"/>
+	</objectType>
+	<objectType name="Параметри">
+		<property xmlns:d3p1="http://www.comdoc_006-package.org" name="Параметр" type="d3p1:Параметр" upperBound="-1" form="Element"/>
+	</objectType>
+	<objectType name="Таблиця">
+		<property xmlns:d3p1="http://www.comdoc_006-package.org" name="Рядок" type="d3p1:Рядок" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="Рядок">
+		<property name="ІД" form="Attribute"/>
+		<property name="НомПоз" type="xs:integer"/>
+		<property xmlns:d3p1="http://www.comdoc_006-package.org" name="Штрихкод" type="d3p1:Штрихкод"/>
+		<property name="АртикулПокупця" type="xs:string"/>
+		<property name="Найменування" type="xs:string"/>
+		<property name="ПрийнятаКількість" type="xs:decimal"/>
+		<property name="ОдиницяВиміру" type="xs:string"/>
+		<property name="БазоваЦіна" type="xs:decimal"/>
+		<property name="ПДВ" type="xs:decimal"/>
+		<property name="Ціна" type="xs:decimal"/>
+		<property xmlns:d3p1="http://www.comdoc_006-package.org" name="ВсьогоПоРядку" type="d3p1:ВсьогоПоРядку"/>
+		<property name="СтавкаПДВ" type="xs:string"/>
+	</objectType>
+	<objectType name="ВсьогоПоДокументу">
+		<property name="СумаБезПДВ" type="xs:decimal"/>
+		<property name="ПДВ" type="xs:decimal"/>
+		<property name="Сума" type="xs:decimal"/>
+	</objectType>
+	<objectType name="ВсьогоПоРядку">
+		<property name="СумаБезПДВ" type="xs:decimal"/>
+		<property name="СумаПДВ" type="xs:decimal"/>
+		<property name="Сума" type="xs:decimal"/>
+	</objectType>
+	<objectType name="Параметр">
+		<property name="ІД" form="Attribute"/>
+		<property name="назва" form="Attribute"/>
+		<property name="Значение" form="Text"/>
+	</objectType>
+	<objectType name="Штрихкод">
+		<property name="ІД" form="Attribute"/>
+		<property name="Значение" form="Text"/>
+	</objectType>
+</package>

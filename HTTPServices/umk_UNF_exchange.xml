@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<HTTPService uuid="7c0a9f33-dadb-4b2b-9f9b-19f241bbf73d">
+		<Properties>
+			<Name>umk_UNF_exchange</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>UNF exchange</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<RootURL>unf-api</RootURL>
+			<ReuseSessions>AutoUse</ReuseSessions>
+			<SessionMaxAge>20</SessionMaxAge>
+		</Properties>
+		<ChildObjects>
+			<URLTemplate uuid="ec792d2f-57be-449d-bcf1-c362aea285d5">
+				<Properties>
+					<Name>QualityCertificate</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Quality certificate</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/{status}/{node}/</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="f95f2dcd-92e2-4640-95cb-c3ee9040e81a">
+						<Properties>
+							<Name>GET</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>GET</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>GET</HTTPMethod>
+							<Handler>QualityCertificateGET</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="aee71f30-eb81-480d-8b45-8ddb3e73aa5c">
+				<Properties>
+					<Name>PeriodicValuesNomenclature</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Periodic values nomenclature</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/periodic_values_nomen/{status}/{node}/{product_code}</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="f9c5ea3a-4b14-4a07-bad7-4a2bf38904ad">
+						<Properties>
+							<Name>GET</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>GET</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>GET</HTTPMethod>
+							<Handler>PeriodicValuesNomenclatureGET</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="9fe36c41-0b41-4b60-9caa-db66d615a9e0">
+				<Properties>
+					<Name>LoadInvoice</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Load invoice</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/load_invoice/*</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="8e6c2fa6-0a32-4191-8d54-912f0bc01f03">
+						<Properties>
+							<Name>POST</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>POST</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>POST</HTTPMethod>
+							<Handler>LoadInvoicePOST</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="404806da-0989-4c7c-887d-fc8a659a82a4">
+				<Properties>
+					<Name>LoadReturnableInvoice</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Load returnable invoice</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/load_returnable_invoice/*</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="c1553416-02b2-4d25-9692-af2a6197bb68">
+						<Properties>
+							<Name>POST</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>POST</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>POST</HTTPMethod>
+							<Handler>LoadReturnableInvoicePOST</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="b87a7fc1-62ae-4d41-a8e4-a9dc6bf7c62d">
+				<Properties>
+					<Name>AllCodesSyncNomen</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>all_codes_sync_nomen</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/all_codes_sync_nomen/{status}/{node}/</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="5414d10b-33fd-41e2-8565-678a8862bc17">
+						<Properties>
+							<Name>GET</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>GET</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>GET</HTTPMethod>
+							<Handler>AllCodesSyncNomenGET</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="32eca71b-0407-4d0a-96e2-0ec74fdf4273">
+				<Properties>
+					<Name>AllCodesSyncNomen_2</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>all_codes_sync_nomen_2</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/all_codes_sync_nomen_2/</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="46c95181-6c55-48e1-bdcd-d57665198a53">
+						<Properties>
+							<Name>GET</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>GET</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>GET</HTTPMethod>
+							<Handler>AllCodesSyncNomenGET_2</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+		</ChildObjects>
+	</HTTPService>
+</MetaDataObject>
