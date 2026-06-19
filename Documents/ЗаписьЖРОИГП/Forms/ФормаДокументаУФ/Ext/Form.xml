@@ -57,10 +57,29 @@
 				</UsualGroup>
 			</ChildItems>
 		</UsualGroup>
+		<CommandBar name="КоманднаяПанельПечать" id="119">
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="КоманднаяПанельПечатьРасширеннаяПодсказка" id="120"/>
+			<ChildItems>
+				<Button name="КнопкаЗаполнить" id="121">
+					<CommandName>КомандаЗаполнить</CommandName>
+					<ExtendedTooltip name="КнопкаЗаполнитьРасширеннаяПодсказка" id="122"/>
+				</Button>
+				<Button name="КнопкаПечать" id="123">
+					<CommandName>КомандаПечать</CommandName>
+					<ExtendedTooltip name="КнопкаПечатьРасширеннаяПодсказка" id="124"/>
+				</Button>
+				<Button name="КнопкаПечатьОбщая" id="125">
+					<CommandName>КомандаПечатьОбщая</CommandName>
+					<ExtendedTooltip name="КнопкаПечатьОбщаяРасширеннаяПодсказка" id="126"/>
+				</Button>
+			</ChildItems>
+		</CommandBar>
 		<Table name="ТМЦ" id="25">
 			<UseAlternationRowColor>true</UseAlternationRowColor>
 			<AutoInsertNewRow>true</AutoInsertNewRow>
 			<DataPath>Объект.ТМЦ</DataPath>
+			<AfterEditEnd>ТМЦПослеОкончанияРедактирования</AfterEditEnd>
 			<RowFilter xsi:nil="true"/>
 			<ContextMenu name="ТМЦКонтекстноеМеню" id="26"/>
 			<AutoCommandBar name="ТМЦКоманднаяПанель" id="27"/>
@@ -99,18 +118,20 @@
 				<InputField name="ТМЦТМЦПоле" id="32">
 					<DataPath>Объект.ТМЦ.ТМЦ</DataPath>
 					<EditMode>EnterOnInput</EditMode>
+					<ChangeEventHandler>ТМЦТМЦПриИзменении</ChangeEventHandler>
 					<ContextMenu name="ТМЦТМЦПолеКонтекстноеМеню" id="33"/>
 					<ExtendedTooltip name="ТМЦТМЦПолеРасширеннаяПодсказка" id="34"/>
 				</InputField>
-				<InputField name="ТМЦКеоПоле" id="35">
-					<DataPath>Объект.ТМЦ.Кео</DataPath>
+				<InputField name="ТМЦКвоПоле" id="35">
+					<DataPath>Объект.ТМЦ.Кво</DataPath>
 					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="ТМЦКеоПолеКонтекстноеМеню" id="36"/>
-					<ExtendedTooltip name="ТМЦКеоПолеРасширеннаяПодсказка" id="37"/>
+					<ContextMenu name="ТМЦКвоПолеКонтекстноеМеню" id="36"/>
+					<ExtendedTooltip name="ТМЦКвоПолеРасширеннаяПодсказка" id="37"/>
 				</InputField>
 				<InputField name="ТМЦЕдПоле" id="38">
 					<DataPath>Объект.ТМЦ.Ед</DataPath>
 					<EditMode>EnterOnInput</EditMode>
+					<ChangeEventHandler>ТМЦЕдПриИзменении</ChangeEventHandler>
 					<ContextMenu name="ТМЦЕдПолеКонтекстноеМеню" id="39"/>
 					<ExtendedTooltip name="ТМЦЕдПолеРасширеннаяПодсказка" id="40"/>
 				</InputField>
@@ -255,6 +276,50 @@
 			</ChildItems>
 		</Table>
 	</ChildItems>
+	<Commands>
+		<Command name="КомандаЗаполнить" id="127">
+			<Action>КомандаЗаполнить</Action>
+			<Representation>Text</Representation>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Заповнити</v8:content>
+				</v8:item>
+			</Title>
+		</Command>
+		<Command name="КомандаПечать" id="128">
+			<Action>КомандаПечать</Action>
+			<Representation>Text</Representation>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Печать</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Друк</v8:content>
+				</v8:item>
+			</Title>
+		</Command>
+		<Command name="КомандаПечатьОбщая" id="129">
+			<Action>КомандаПечатьОбщая</Action>
+			<Representation>Text</Representation>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Печать общая</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Друк загальний</v8:content>
+				</v8:item>
+			</Title>
+		</Command>
+	</Commands>
 	<Attributes>
 		<Attribute name="Объект" id="1">
 			<Type>
