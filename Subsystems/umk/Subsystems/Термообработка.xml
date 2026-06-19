@@ -21,6 +21,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ВидыПроцессов</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ПрограммыТермообработки</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ПодПрограммыТермообработки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ЗаписьЖРОИГП</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects/>

@@ -42,6 +42,12 @@
 		<Description>ЕСВ (мобилизованные)</Description>
 		<ActionPeriodIsBase>false</ActionPeriodIsBase>
 	</Item>
+	<Item id="e9815df6-b86b-4b6c-92b3-592a434b063d">
+		<Name>ЕСВФОТМобилизованные</Name>
+		<Code>00023     </Code>
+		<Description>ЕСВ (мобилизованные)</Description>
+		<ActionPeriodIsBase>false</ActionPeriodIsBase>
+	</Item>
 	<Item id="4f1c99bf-6f33-4765-a668-90c035f43c6a">
 		<Name>ЕСВ</Name>
 		<Code>00017     </Code>
@@ -124,12 +130,6 @@
 		<Name>СоцстрахНесчФОТ20050101</Name>
 		<Code>00007     </Code>
 		<Description>Соцстрах от несч. сл.(ФОТ)</Description>
-		<ActionPeriodIsBase>false</ActionPeriodIsBase>
-	</Item>
-	<Item id="e9815df6-b86b-4b6c-92b3-592a434b063d">
-		<Name>ЕСВФОТМобилизованные</Name>
-		<Code>00023     </Code>
-		<Description>ЕСВ (мобилизованные)</Description>
 		<ActionPeriodIsBase>false</ActionPeriodIsBase>
 	</Item>
 </PredefinedData>
