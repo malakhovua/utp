@@ -102,6 +102,11 @@ The configuration has **mixed form mode**:
 ##Правила написання коду
 
 - Всі змінні коментарі пишимо російською мовою.
+- використовувати стиль написання коду для керованих форм 1с 8.3 
+
+### Comments
+Add comments at the end of a block for conditions, loops, procedures, functions. At the end of specific variables. Edits you make with the mark - // + claude
 
 ##Припереносенні функціонала з конфігураціїї 1с 77
 - беремо дані з каталогу /home/alex/Documents/My_projects/conf_old_1c77
+
