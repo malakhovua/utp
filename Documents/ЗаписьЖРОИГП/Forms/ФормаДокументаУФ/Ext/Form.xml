@@ -3,10 +3,6 @@
 	<AutoTime>CurrentOrLast</AutoTime>
 	<UsePostingMode>Auto</UsePostingMode>
 	<RepostOnWrite>false</RepostOnWrite>
-	<Events>
-		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
-		<Event name="AfterWriteAtServer">ПослеЗаписиНаСервере</Event>
-	</Events>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<ChildItems>
 			<Button name="ФормаКомандаЗаполнить" id="121">
@@ -26,6 +22,10 @@
 			</Button>
 		</ChildItems>
 	</AutoCommandBar>
+	<Events>
+		<Event name="AfterWriteAtServer">ПослеЗаписиНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
 	<ChildItems>
 		<UsualGroup name="ГруппаШапка" id="1">
 			<Group>AlwaysHorizontal</Group>
@@ -84,9 +84,6 @@
 			<AutoInsertNewRow>true</AutoInsertNewRow>
 			<DataPath>Объект.ТМЦ</DataPath>
 			<RowFilter xsi:nil="true"/>
-			<Events>
-				<Event name="AfterEditEnd">ТМЦПослеОкончанияРедактирования</Event>
-			</Events>
 			<ContextMenu name="ТМЦКонтекстноеМеню" id="26"/>
 			<AutoCommandBar name="ТМЦКоманднаяПанель" id="27"/>
 			<ExtendedTooltip name="ТМЦРасширеннаяПодсказка" id="28"/>
@@ -286,10 +283,17 @@
 			</ChildItems>
 		</Table>
 	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.ЗаписьЖРОИГП</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
 	<Commands>
 		<Command name="КомандаЗаполнить" id="127">
-			<Action>КомандаЗаполнить</Action>
-			<Representation>Text</Representation>
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -300,10 +304,10 @@
 					<v8:content>Заповнити</v8:content>
 				</v8:item>
 			</Title>
+			<Action>КомандаЗаполнить</Action>
+			<Representation>Text</Representation>
 		</Command>
 		<Command name="КомандаПечать" id="128">
-			<Action>КомандаПечать</Action>
-			<Representation>Text</Representation>
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -314,10 +318,10 @@
 					<v8:content>Друк</v8:content>
 				</v8:item>
 			</Title>
+			<Action>КомандаПечать</Action>
+			<Representation>Text</Representation>
 		</Command>
 		<Command name="КомандаПечатьОбщая" id="129">
-			<Action>КомандаПечатьОбщая</Action>
-			<Representation>Text</Representation>
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -328,15 +332,8 @@
 					<v8:content>Друк загальний</v8:content>
 				</v8:item>
 			</Title>
+			<Action>КомандаПечатьОбщая</Action>
+			<Representation>Text</Representation>
 		</Command>
 	</Commands>
-	<Attributes>
-		<Attribute name="Объект" id="1">
-			<Type>
-				<v8:Type>cfg:DocumentObject.ЗаписьЖРОИГП</v8:Type>
-			</Type>
-			<MainAttribute>true</MainAttribute>
-			<SavedData>true</SavedData>
-		</Attribute>
-	</Attributes>
 </Form>
