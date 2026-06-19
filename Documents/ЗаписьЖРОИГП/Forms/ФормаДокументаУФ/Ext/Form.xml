@@ -3,7 +3,29 @@
 	<AutoTime>CurrentOrLast</AutoTime>
 	<UsePostingMode>Auto</UsePostingMode>
 	<RepostOnWrite>false</RepostOnWrite>
-	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="AfterWriteAtServer">ПослеЗаписиНаСервере</Event>
+	</Events>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаКомандаЗаполнить" id="121">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.КомандаЗаполнить</CommandName>
+				<ExtendedTooltip name="ФормаКомандаЗаполнитьРасширеннаяПодсказка" id="122"/>
+			</Button>
+			<Button name="ФормаКомандаПечать" id="123">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.КомандаПечать</CommandName>
+				<ExtendedTooltip name="ФормаКомандаПечатьРасширеннаяПодсказка" id="124"/>
+			</Button>
+			<Button name="ФормаКомандаПечатьОбщая" id="125">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.КомандаПечатьОбщая</CommandName>
+				<ExtendedTooltip name="ФормаКомандаПечатьОбщаяРасширеннаяПодсказка" id="126"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
 	<ChildItems>
 		<UsualGroup name="ГруппаШапка" id="1">
 			<Group>AlwaysHorizontal</Group>
@@ -57,30 +79,14 @@
 				</UsualGroup>
 			</ChildItems>
 		</UsualGroup>
-		<CommandBar name="КоманднаяПанельПечать" id="119">
-			<ShowTitle>false</ShowTitle>
-			<ExtendedTooltip name="КоманднаяПанельПечатьРасширеннаяПодсказка" id="120"/>
-			<ChildItems>
-				<Button name="КнопкаЗаполнить" id="121">
-					<CommandName>КомандаЗаполнить</CommandName>
-					<ExtendedTooltip name="КнопкаЗаполнитьРасширеннаяПодсказка" id="122"/>
-				</Button>
-				<Button name="КнопкаПечать" id="123">
-					<CommandName>КомандаПечать</CommandName>
-					<ExtendedTooltip name="КнопкаПечатьРасширеннаяПодсказка" id="124"/>
-				</Button>
-				<Button name="КнопкаПечатьОбщая" id="125">
-					<CommandName>КомандаПечатьОбщая</CommandName>
-					<ExtendedTooltip name="КнопкаПечатьОбщаяРасширеннаяПодсказка" id="126"/>
-				</Button>
-			</ChildItems>
-		</CommandBar>
 		<Table name="ТМЦ" id="25">
 			<UseAlternationRowColor>true</UseAlternationRowColor>
 			<AutoInsertNewRow>true</AutoInsertNewRow>
 			<DataPath>Объект.ТМЦ</DataPath>
-			<AfterEditEnd>ТМЦПослеОкончанияРедактирования</AfterEditEnd>
 			<RowFilter xsi:nil="true"/>
+			<Events>
+				<Event name="AfterEditEnd">ТМЦПослеОкончанияРедактирования</Event>
+			</Events>
 			<ContextMenu name="ТМЦКонтекстноеМеню" id="26"/>
 			<AutoCommandBar name="ТМЦКоманднаяПанель" id="27"/>
 			<ExtendedTooltip name="ТМЦРасширеннаяПодсказка" id="28"/>
@@ -118,9 +124,11 @@
 				<InputField name="ТМЦТМЦПоле" id="32">
 					<DataPath>Объект.ТМЦ.ТМЦ</DataPath>
 					<EditMode>EnterOnInput</EditMode>
-					<ChangeEventHandler>ТМЦТМЦПриИзменении</ChangeEventHandler>
 					<ContextMenu name="ТМЦТМЦПолеКонтекстноеМеню" id="33"/>
 					<ExtendedTooltip name="ТМЦТМЦПолеРасширеннаяПодсказка" id="34"/>
+					<Events>
+						<Event name="OnChange">ТМЦТМЦПриИзменении</Event>
+					</Events>
 				</InputField>
 				<InputField name="ТМЦКвоПоле" id="35">
 					<DataPath>Объект.ТМЦ.Кво</DataPath>
@@ -131,9 +139,11 @@
 				<InputField name="ТМЦЕдПоле" id="38">
 					<DataPath>Объект.ТМЦ.Ед</DataPath>
 					<EditMode>EnterOnInput</EditMode>
-					<ChangeEventHandler>ТМЦЕдПриИзменении</ChangeEventHandler>
 					<ContextMenu name="ТМЦЕдПолеКонтекстноеМеню" id="39"/>
 					<ExtendedTooltip name="ТМЦЕдПолеРасширеннаяПодсказка" id="40"/>
+					<Events>
+						<Event name="OnChange">ТМЦЕдПриИзменении</Event>
+					</Events>
 				</InputField>
 				<InputField name="ТМЦКоэффициентПоле" id="41">
 					<DataPath>Объект.ТМЦ.Коэффициент</DataPath>
