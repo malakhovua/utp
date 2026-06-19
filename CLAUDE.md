@@ -104,6 +104,8 @@ The configuration has **mixed form mode**:
 - Всі змінні коментарі пишимо російською мовою.
 - використовувати стиль написання коду для керованих форм 1с 8.3 
 
+##При закінченні завдання комітити та пушити зміни
+
 ### Comments
 Add comments at the end of a block for conditions, loops, procedures, functions. At the end of specific variables. Edits you make with the mark - // + claude
 
