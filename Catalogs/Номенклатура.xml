@@ -2335,7 +2335,7 @@
 			</Attribute>
 			<Attribute uuid="12d2dedc-29bd-41ab-83ee-ef0139dde521">
 				<Properties>
-					<Name>umk_ВидОболочки</Name>
+					<Name>ВидОболочки</Name>
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -2344,7 +2344,7 @@
 					</Synonym>
 					<Comment/>
 					<Type>
-						<v8:Type>cfg:CatalogRef.umk_ВидыОболочки</v8:Type>
+						<v8:Type>cfg:CatalogRef.ВидыОболочки</v8:Type>
 					</Type>
 					<PasswordMode>false</PasswordMode>
 					<Format/>
@@ -2375,7 +2375,7 @@
 			</Attribute>
 			<Attribute uuid="03f8833a-2bc2-4ba7-b713-0beb874d7e00">
 				<Properties>
-					<Name>umk_ВидРамы</Name>
+					<Name>ВидРамы</Name>
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -2384,7 +2384,7 @@
 					</Synonym>
 					<Comment/>
 					<Type>
-						<v8:Type>cfg:CatalogRef.umk_ВидыРам</v8:Type>
+						<v8:Type>cfg:CatalogRef.ВидыРам</v8:Type>
 					</Type>
 					<PasswordMode>false</PasswordMode>
 					<Format/>
@@ -2415,7 +2415,7 @@
 			</Attribute>
 			<Attribute uuid="58aae47d-9d3d-4571-9cca-3505b96b7232">
 				<Properties>
-					<Name>umk_КвоПродукцииНаРаме</Name>
+					<Name>КвоПродукцииНаРаме</Name>
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -2460,7 +2460,7 @@
 			</Attribute>
 			<Attribute uuid="d2187bb7-5e7c-403a-b077-0f31291b184f">
 				<Properties>
-					<Name>umk_БезПрограммыТермообработки</Name>
+					<Name>БезПрограммыТермообработки</Name>
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -2505,17 +2505,17 @@
 			</Attribute>
 			<TabularSection uuid="259b5680-f90a-4356-b4e1-751d38d688de">
 				<InternalInfo>
-					<xr:GeneratedType name="CatalogTabularSection.Номенклатура.umk_ПодпрограммыТермообработки" category="TabularSection">
+					<xr:GeneratedType name="CatalogTabularSection.Номенклатура.ПодпрограммыТермообработки" category="TabularSection">
 						<xr:TypeId>0d9c0513-7828-47b1-ab64-096677f7f532</xr:TypeId>
 						<xr:ValueId>c8d15901-0a3c-4d73-9a11-783cd84f3137</xr:ValueId>
 					</xr:GeneratedType>
-					<xr:GeneratedType name="CatalogTabularSectionRow.Номенклатура.umk_ПодпрограммыТермообработки" category="TabularSectionRow">
+					<xr:GeneratedType name="CatalogTabularSectionRow.Номенклатура.ПодпрограммыТермообработки" category="TabularSectionRow">
 						<xr:TypeId>4551b336-8f35-442f-9fea-5b2d868ab89d</xr:TypeId>
 						<xr:ValueId>30c05201-1c5f-4de8-874f-f178efe7704e</xr:ValueId>
 					</xr:GeneratedType>
 				</InternalInfo>
 				<Properties>
-					<Name>umk_ПодпрограммыТермообработки</Name>
+					<Name>ПодпрограммыТермообработки</Name>
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -2539,7 +2539,7 @@
 							</Synonym>
 							<Comment/>
 							<Type>
-								<v8:Type>cfg:CatalogRef.umk_ПодПрограммыТермообработки</v8:Type>
+								<v8:Type>cfg:CatalogRef.ПодПрограммыТермообработки</v8:Type>
 							</Type>
 							<PasswordMode>false</PasswordMode>
 							<Format/>

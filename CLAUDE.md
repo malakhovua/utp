@@ -98,3 +98,10 @@ The configuration has **mixed form mode**:
 - **Exchange plans**: `ОбменССайтомЗаказами/Товарами` (web store), `ОбменУправлениеТорговымПредприятиемРозничнаяТорговля` (retail), `umk_ПланОбменаУНФ`
 - **Scheduled jobs**: `umk_ПровестиОтложенныеДокументы` (deferred posting), standard exchange/full-text-search jobs
 - **EDIN** (electronic document exchange): `Controller_EDIN`, `EDIN_connect` modules + `EDIN_sessions` information register
+
+##Правила написання коду
+
+- Всі змінні коментарі пишимо російською мовою.
+
+##Припереносенні функціонала з конфігураціїї 1с 77
+- беремо дані з каталогу /home/alex/Documents/My_projects/conf_old_1c77

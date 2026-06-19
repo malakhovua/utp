@@ -2,29 +2,29 @@
 <MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
 	<Catalog uuid="139f2e56-a8b1-4d89-a8a9-61d10682a15a">
 		<InternalInfo>
-			<xr:GeneratedType name="CatalogObject.umk_ВидыОболочки" category="Object">
+			<xr:GeneratedType name="CatalogObject.ВидыОболочки" category="Object">
 				<xr:TypeId>196d7bc6-e4bb-4073-8c75-cda7dfb28393</xr:TypeId>
 				<xr:ValueId>882e28af-544f-4d50-b214-293013b2eeec</xr:ValueId>
 			</xr:GeneratedType>
-			<xr:GeneratedType name="CatalogRef.umk_ВидыОболочки" category="Ref">
+			<xr:GeneratedType name="CatalogRef.ВидыОболочки" category="Ref">
 				<xr:TypeId>ed6b9524-1fb3-4b9e-aca4-6da1b693342c</xr:TypeId>
 				<xr:ValueId>ca5434e6-b154-4665-b969-345b3a67d131</xr:ValueId>
 			</xr:GeneratedType>
-			<xr:GeneratedType name="CatalogSelection.umk_ВидыОболочки" category="Selection">
+			<xr:GeneratedType name="CatalogSelection.ВидыОболочки" category="Selection">
 				<xr:TypeId>04264de9-cce3-4ff5-8256-cb64180f3a4d</xr:TypeId>
 				<xr:ValueId>59772c0b-07c6-45b2-b95b-399e501f6513</xr:ValueId>
 			</xr:GeneratedType>
-			<xr:GeneratedType name="CatalogList.umk_ВидыОболочки" category="List">
+			<xr:GeneratedType name="CatalogList.ВидыОболочки" category="List">
 				<xr:TypeId>dec2036c-b873-44f9-b22c-9df7476154e1</xr:TypeId>
 				<xr:ValueId>b1d15426-ba53-408c-97d6-d23ae1bdea7d</xr:ValueId>
 			</xr:GeneratedType>
-			<xr:GeneratedType name="CatalogManager.umk_ВидыОболочки" category="Manager">
+			<xr:GeneratedType name="CatalogManager.ВидыОболочки" category="Manager">
 				<xr:TypeId>01041c42-9d89-437a-ad7e-8b019ddfd4c9</xr:TypeId>
 				<xr:ValueId>f1834346-6faf-4930-b782-bc08f38592dc</xr:ValueId>
 			</xr:GeneratedType>
 		</InternalInfo>
 		<Properties>
-			<Name>umk_ВидыОболочки</Name>
+			<Name>ВидыОболочки</Name>
 			<Synonym>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -54,8 +54,8 @@
 			<QuickChoice>false</QuickChoice>
 			<ChoiceMode>BothWays</ChoiceMode>
 			<InputByString>
-				<xr:Field>Catalog.umk_ВидыОболочки.StandardAttribute.Description</xr:Field>
-				<xr:Field>Catalog.umk_ВидыОболочки.StandardAttribute.Code</xr:Field>
+				<xr:Field>Catalog.ВидыОболочки.StandardAttribute.Description</xr:Field>
+				<xr:Field>Catalog.ВидыОболочки.StandardAttribute.Code</xr:Field>
 			</InputByString>
 			<SearchStringModeOnInputByString>Begin</SearchStringModeOnInputByString>
 			<FullTextSearchOnInputByString>DontUse</FullTextSearchOnInputByString>

@@ -2,29 +2,29 @@
 <MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
 	<Catalog uuid="388e8acf-bc80-4dce-a68d-5a03f1fa6ee1">
 		<InternalInfo>
-			<xr:GeneratedType name="CatalogObject.umk_ПрограммыТермообработки" category="Object">
+			<xr:GeneratedType name="CatalogObject.ПрограммыТермообработки" category="Object">
 				<xr:TypeId>14fc08fd-b883-4ec1-ae34-c8c80c8c8817</xr:TypeId>
 				<xr:ValueId>9ab1a1bb-df54-4099-8c5b-54e2973ed10e</xr:ValueId>
 			</xr:GeneratedType>
-			<xr:GeneratedType name="CatalogRef.umk_ПрограммыТермообработки" category="Ref">
+			<xr:GeneratedType name="CatalogRef.ПрограммыТермообработки" category="Ref">
 				<xr:TypeId>de59c718-e19d-41f9-9707-444bd6b8b5e0</xr:TypeId>
 				<xr:ValueId>df25fe24-6950-4794-9018-5cf4a7d47163</xr:ValueId>
 			</xr:GeneratedType>
-			<xr:GeneratedType name="CatalogSelection.umk_ПрограммыТермообработки" category="Selection">
+			<xr:GeneratedType name="CatalogSelection.ПрограммыТермообработки" category="Selection">
 				<xr:TypeId>e10f3b26-3c1a-45ee-a7fa-943aab990b20</xr:TypeId>
 				<xr:ValueId>bea7235c-5d36-4ecb-bede-418082fa8e1e</xr:ValueId>
 			</xr:GeneratedType>
-			<xr:GeneratedType name="CatalogList.umk_ПрограммыТермообработки" category="List">
+			<xr:GeneratedType name="CatalogList.ПрограммыТермообработки" category="List">
 				<xr:TypeId>b6dfb509-2df0-49fe-b6b0-7c2486d7db38</xr:TypeId>
 				<xr:ValueId>2e63db87-ca89-413b-a9e1-6e9f3e68e527</xr:ValueId>
 			</xr:GeneratedType>
-			<xr:GeneratedType name="CatalogManager.umk_ПрограммыТермообработки" category="Manager">
+			<xr:GeneratedType name="CatalogManager.ПрограммыТермообработки" category="Manager">
 				<xr:TypeId>4bd9de51-98ca-47cb-abca-6ab7f6ae4b71</xr:TypeId>
 				<xr:ValueId>2556926b-1314-4beb-831d-ad7e7ace73f3</xr:ValueId>
 			</xr:GeneratedType>
 		</InternalInfo>
 		<Properties>
-			<Name>umk_ПрограммыТермообработки</Name>
+			<Name>ПрограммыТермообработки</Name>
 			<Synonym>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -54,8 +54,8 @@
 			<QuickChoice>false</QuickChoice>
 			<ChoiceMode>BothWays</ChoiceMode>
 			<InputByString>
-				<xr:Field>Catalog.umk_ПрограммыТермообработки.StandardAttribute.Description</xr:Field>
-				<xr:Field>Catalog.umk_ПрограммыТермообработки.StandardAttribute.Code</xr:Field>
+				<xr:Field>Catalog.ПрограммыТермообработки.StandardAttribute.Description</xr:Field>
+				<xr:Field>Catalog.ПрограммыТермообработки.StandardAttribute.Code</xr:Field>
 			</InputByString>
 			<SearchStringModeOnInputByString>Begin</SearchStringModeOnInputByString>
 			<FullTextSearchOnInputByString>DontUse</FullTextSearchOnInputByString>

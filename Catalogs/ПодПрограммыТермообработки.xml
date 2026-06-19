@@ -2,29 +2,29 @@
 <MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
 	<Catalog uuid="118e901e-580d-46d0-bd54-8bf5a75e28a4">
 		<InternalInfo>
-			<xr:GeneratedType name="CatalogObject.umk_ПодПрограммыТермообработки" category="Object">
+			<xr:GeneratedType name="CatalogObject.ПодПрограммыТермообработки" category="Object">
 				<xr:TypeId>28324ed4-fb25-4b2b-9186-20cfe29cc3e0</xr:TypeId>
 				<xr:ValueId>a3d9d223-f31c-458d-b190-3f7473204c45</xr:ValueId>
 			</xr:GeneratedType>
-			<xr:GeneratedType name="CatalogRef.umk_ПодПрограммыТермообработки" category="Ref">
+			<xr:GeneratedType name="CatalogRef.ПодПрограммыТермообработки" category="Ref">
 				<xr:TypeId>5aefbdd6-4b31-49ef-98e2-b4b286e10737</xr:TypeId>
 				<xr:ValueId>8f712d22-6b03-436c-b42a-2fe72fce7ef4</xr:ValueId>
 			</xr:GeneratedType>
-			<xr:GeneratedType name="CatalogSelection.umk_ПодПрограммыТермообработки" category="Selection">
+			<xr:GeneratedType name="CatalogSelection.ПодПрограммыТермообработки" category="Selection">
 				<xr:TypeId>3b714dc6-e271-4b64-b70a-fbdb0a886300</xr:TypeId>
 				<xr:ValueId>90176268-7f97-46ce-b97e-ff420877ea3f</xr:ValueId>
 			</xr:GeneratedType>
-			<xr:GeneratedType name="CatalogList.umk_ПодПрограммыТермообработки" category="List">
+			<xr:GeneratedType name="CatalogList.ПодПрограммыТермообработки" category="List">
 				<xr:TypeId>cf54460e-12d9-41b3-b7b9-bafa454ceffe</xr:TypeId>
 				<xr:ValueId>77b152ca-1a7d-4f57-a47b-bc151fbff796</xr:ValueId>
 			</xr:GeneratedType>
-			<xr:GeneratedType name="CatalogManager.umk_ПодПрограммыТермообработки" category="Manager">
+			<xr:GeneratedType name="CatalogManager.ПодПрограммыТермообработки" category="Manager">
 				<xr:TypeId>4b294b44-9be5-4286-b81f-2860db995b54</xr:TypeId>
 				<xr:ValueId>b8c94061-fcaa-41c9-88da-f1bb5c04d4f2</xr:ValueId>
 			</xr:GeneratedType>
 		</InternalInfo>
 		<Properties>
-			<Name>umk_ПодПрограммыТермообработки</Name>
+			<Name>ПодПрограммыТермообработки</Name>
 			<Synonym>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -54,8 +54,8 @@
 			<QuickChoice>false</QuickChoice>
 			<ChoiceMode>BothWays</ChoiceMode>
 			<InputByString>
-				<xr:Field>Catalog.umk_ПодПрограммыТермообработки.StandardAttribute.Description</xr:Field>
-				<xr:Field>Catalog.umk_ПодПрограммыТермообработки.StandardAttribute.Code</xr:Field>
+				<xr:Field>Catalog.ПодПрограммыТермообработки.StandardAttribute.Description</xr:Field>
+				<xr:Field>Catalog.ПодПрограммыТермообработки.StandardAttribute.Code</xr:Field>
 			</InputByString>
 			<SearchStringModeOnInputByString>Begin</SearchStringModeOnInputByString>
 			<FullTextSearchOnInputByString>DontUse</FullTextSearchOnInputByString>
@@ -98,7 +98,7 @@
 					</Synonym>
 					<Comment/>
 					<Type>
-						<v8:Type>cfg:CatalogRef.umk_ПрограммыТермообработки</v8:Type>
+						<v8:Type>cfg:CatalogRef.ПрограммыТермообработки</v8:Type>
 					</Type>
 					<PasswordMode>false</PasswordMode>
 					<Format/>
@@ -218,11 +218,11 @@
 			</Attribute>
 			<TabularSection uuid="4e400fb7-3142-41a2-a97e-cb22d722caa7">
 				<InternalInfo>
-					<xr:GeneratedType name="CatalogTabularSection.umk_ПодПрограммыТермообработки.Процессы" category="TabularSection">
+					<xr:GeneratedType name="CatalogTabularSection.ПодПрограммыТермообработки.Процессы" category="TabularSection">
 						<xr:TypeId>94fcb30a-f4f2-4d30-aa6a-579cf3414836</xr:TypeId>
 						<xr:ValueId>3a4adbf7-9b08-48fd-8609-6fa595146942</xr:ValueId>
 					</xr:GeneratedType>
-					<xr:GeneratedType name="CatalogTabularSectionRow.umk_ПодПрограммыТермообработки.Процессы" category="TabularSectionRow">
+					<xr:GeneratedType name="CatalogTabularSectionRow.ПодПрограммыТермообработки.Процессы" category="TabularSectionRow">
 						<xr:TypeId>c02e6cd1-6d99-4c7a-8637-128eb0c3871e</xr:TypeId>
 						<xr:ValueId>41e46a16-a48d-4030-bd23-e8c5876d29c5</xr:ValueId>
 					</xr:GeneratedType>
@@ -252,7 +252,7 @@
 							</Synonym>
 							<Comment/>
 							<Type>
-								<v8:Type>cfg:CatalogRef.umk_ВидыПроцессов</v8:Type>
+								<v8:Type>cfg:CatalogRef.ВидыПроцессов</v8:Type>
 							</Type>
 							<PasswordMode>false</PasswordMode>
 							<Format/>

@@ -2,7 +2,7 @@
 <MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
 	<Subsystem uuid="e22c834f-6ab5-4c9c-a8a4-47c0e4301c45">
 		<Properties>
-			<Name>umk_Термообработка</Name>
+			<Name>Термообработка</Name>
 			<Synonym>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -15,12 +15,12 @@
 			<Explanation/>
 			<Picture/>
 			<Content>
-				<xr:Item xsi:type="xr:MDObjectRef">Catalog.umk_ВидыОболочки</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Catalog.umk_ВидыРам</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Catalog.umk_КамерыТермообработки</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Catalog.umk_ВидыПроцессов</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Catalog.umk_ПрограммыТермообработки</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Catalog.umk_ПодПрограммыТермообработки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ВидыОболочки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ВидыРам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.КамерыТермообработки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ВидыПроцессов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ПрограммыТермообработки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ПодПрограммыТермообработки</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects/>
