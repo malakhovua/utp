@@ -3,7 +3,25 @@
 	<AutoTime>CurrentOrLast</AutoTime>
 	<UsePostingMode>Auto</UsePostingMode>
 	<RepostOnWrite>false</RepostOnWrite>
-	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаКомандаЗаполнить" id="121">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.КомандаЗаполнить</CommandName>
+				<ExtendedTooltip name="ФормаКомандаЗаполнитьРасширеннаяПодсказка" id="122"/>
+			</Button>
+			<Button name="ФормаКомандаПечать" id="123">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.КомандаПечать</CommandName>
+				<ExtendedTooltip name="ФормаКомандаПечатьРасширеннаяПодсказка" id="124"/>
+			</Button>
+			<Button name="ФормаКомандаПечатьОбщая" id="125">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.КомандаПечатьОбщая</CommandName>
+				<ExtendedTooltip name="ФормаКомандаПечатьОбщаяРасширеннаяПодсказка" id="126"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
 	<Events>
 		<Event name="AfterWriteAtServer">ПослеЗаписиНаСервере</Event>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
@@ -67,15 +85,7 @@
 			<DataPath>Объект.ТМЦ</DataPath>
 			<RowFilter xsi:nil="true"/>
 			<ContextMenu name="ТМЦКонтекстноеМеню" id="26"/>
-			<AutoCommandBar name="ТМЦКоманднаяПанель" id="27">
-				<ChildItems>
-					<Button name="ФормаКомандаЗаполнить" id="121">
-						<Type>CommandBarButton</Type>
-						<CommandName>Form.Command.КомандаЗаполнить</CommandName>
-						<ExtendedTooltip name="ФормаКомандаЗаполнитьРасширеннаяПодсказка" id="122"/>
-					</Button>
-				</ChildItems>
-			</AutoCommandBar>
+			<AutoCommandBar name="ТМЦКоманднаяПанель" id="27"/>
 			<ExtendedTooltip name="ТМЦРасширеннаяПодсказка" id="28"/>
 			<SearchStringAddition name="ТМЦСтрокаПоиска" id="110">
 				<AdditionSource>
@@ -272,34 +282,6 @@
 				</InputField>
 			</ChildItems>
 		</Table>
-		<CommandBar name="ГруппаФутер" id="127">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Группа футер</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Группа футер</v8:content>
-				</v8:item>
-			</ToolTip>
-			<HorizontalLocation>Right</HorizontalLocation>
-			<ExtendedTooltip name="ГруппаФутерРасширеннаяПодсказка" id="128"/>
-			<ChildItems>
-				<Button name="ФормаКомандаПечатьОбщая" id="125">
-					<Type>CommandBarButton</Type>
-					<CommandName>Form.Command.КомандаПечатьОбщая</CommandName>
-					<ExtendedTooltip name="ФормаКомандаПечатьОбщаяРасширеннаяПодсказка" id="126"/>
-				</Button>
-				<Button name="ФормаКомандаПечать" id="123">
-					<Type>CommandBarButton</Type>
-					<CommandName>Form.Command.КомандаПечать</CommandName>
-					<ExtendedTooltip name="ФормаКомандаПечатьРасширеннаяПодсказка" id="124"/>
-				</Button>
-			</ChildItems>
-		</CommandBar>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="Объект" id="1">
