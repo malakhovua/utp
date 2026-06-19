@@ -65,7 +65,7 @@
 			<c>
 				<c>
 					<f>7</f>
-					<parameter>глДатаУкр(ДатаДок)</parameter>
+					<parameter>ДатаУкр</parameter>
 				</c>
 			</c>
 		</row>
@@ -77,7 +77,7 @@
 			<c>
 				<c>
 					<f>8</f>
-					<parameter>Фирма.ПолнНаименование.Получить(ДатаДок)</parameter>
+					<parameter>НазваОрг</parameter>
 				</c>
 			</c>
 			<c>
@@ -89,7 +89,7 @@
 			<c>
 				<c>
 					<f>10</f>
-					<parameter>Фирма.Адрес</parameter>
+					<parameter>АдресОрг</parameter>
 				</c>
 			</c>
 			<c>
@@ -107,7 +107,7 @@
 			<c>
 				<c>
 					<f>7</f>
-					<parameter>Фирма.ЕДРПОУ</parameter>
+					<parameter>ЄДРПОУ</parameter>
 				</c>
 			</c>
 		</row>
@@ -119,24 +119,14 @@
 			<c>
 				<c>
 					<f>12</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>ІПН [Фирма.ИНН.Получить(ДатаДок)]</v8:content>
-						</v8:item>
-					</tl>
+					<parameter>ІПНОрг</parameter>
 				</c>
 			</c>
 			<c>
 				<i>3</i>
 				<c>
 					<f>12</f>
-					<tl>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>тел. [Фирма.Телефоны]</v8:content>
-						</v8:item>
-					</tl>
+					<parameter>ТелефониОрг</parameter>
 				</c>
 			</c>
 			<c>
@@ -154,7 +144,7 @@
 			<c>
 				<c>
 					<f>7</f>
-					<parameter>Фирма.НомерСвидетельства.Получить(ДатаДок)</parameter>
+					<parameter>НомерСвідоцтва</parameter>
 				</c>
 			</c>
 		</row>
@@ -464,55 +454,55 @@
 			<c>
 				<c>
 					<f>28</f>
-					<parameter>ДатаДок#ДДДММГГ</parameter>
+					<parameter>ДатаРядок</parameter>
 				</c>
 			</c>
 			<c>
 				<c>
 					<f>29</f>
-					<parameter>ТМЦ.ПолнНаименование</parameter>
+					<parameter>НазваПродукту</parameter>
 				</c>
 			</c>
 			<c>
 				<c>
 					<f>30</f>
-					<parameter> ПолучитьАтрибут(МассивРеквизитов[1]+Хвост)</parameter>
+					<parameter>Оц1</parameter>
 				</c>
 			</c>
 			<c>
 				<c>
 					<f>30</f>
-					<parameter> ПолучитьАтрибут(МассивРеквизитов[2]+Хвост)</parameter>
+					<parameter>Оц2</parameter>
 				</c>
 			</c>
 			<c>
 				<c>
 					<f>30</f>
-					<parameter> ПолучитьАтрибут(МассивРеквизитов[3]+Хвост)</parameter>
+					<parameter>Оц3</parameter>
 				</c>
 			</c>
 			<c>
 				<c>
 					<f>30</f>
-					<parameter> ПолучитьАтрибут(МассивРеквизитов[4]+Хвост)</parameter>
+					<parameter>Оц4</parameter>
 				</c>
 			</c>
 			<c>
 				<c>
 					<f>30</f>
-					<parameter> ПолучитьАтрибут(МассивРеквизитов[5]+Хвост)</parameter>
+					<parameter>Оц5</parameter>
 				</c>
 			</c>
 			<c>
 				<c>
 					<f>30</f>
-					<parameter> ПолучитьАтрибут(МассивРеквизитов[6]+Хвост)</parameter>
+					<parameter>Оц6</parameter>
 				</c>
 			</c>
 			<c>
 				<c>
 					<f>30</f>
-					<parameter> ПолучитьАтрибут("Сред"+ХвостС)</parameter>
+					<parameter>СредОц</parameter>
 				</c>
 			</c>
 			<c>
