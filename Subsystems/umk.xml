@@ -73,6 +73,7 @@
 			<Subsystem>umk_Администрирование</Subsystem>
 			<Subsystem>umk_Обмен</Subsystem>
 			<Subsystem>umk_Отчеты</Subsystem>
+			<Subsystem>umk_Термообработка</Subsystem>
 		</ChildObjects>
 	</Subsystem>
 </MetaDataObject>

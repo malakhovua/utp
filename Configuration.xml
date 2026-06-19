@@ -1318,14 +1318,20 @@
 			<Catalog>ЦенныеБумаги</Catalog>
 			<Catalog>ЦеновыеГруппы</Catalog>
 			<Catalog>umk_ВидыДокументов</Catalog>
+			<Catalog>umk_ВидыОболочки</Catalog>
+			<Catalog>umk_ВидыПроцессов</Catalog>
+			<Catalog>umk_ВидыРам</Catalog>
 			<Catalog>umk_Экспедитор</Catalog>
 			<Catalog>umk_ФормулаРасчетаЗарплаты</Catalog>
 			<Catalog>umk_Упаковка</Catalog>
 			<Catalog>umk_РегионыКонтрагентов</Catalog>
 			<Catalog>umk_ФормаУдостоверенияКачества</Catalog>
 			<Catalog>umk_СрокГодности</Catalog>
+			<Catalog>umk_КамерыТермообработки</Catalog>
 			<Catalog>umk_КатегорияПродукции</Catalog>
 			<Catalog>umk_ГруппыХарактеристик</Catalog>
+			<Catalog>umk_ПодПрограммыТермообработки</Catalog>
+			<Catalog>umk_ПрограммыТермообработки</Catalog>
 			<Catalog>EDIN_Контрагент</Catalog>
 			<Document>ABCКлассификацияПокупателей</Document>
 			<Document>АвансовыйОтчет</Document>
