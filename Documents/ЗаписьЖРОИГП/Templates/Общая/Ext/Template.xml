@@ -114,14 +114,24 @@
 			<c>
 				<c>
 					<f>11</f>
-					<parameter>ІПНОрг</parameter>
+					<tl>
+						<v8:item>
+							<v8:lang/>
+							<v8:content>ІПНОрг</v8:content>
+						</v8:item>
+					</tl>
 				</c>
 			</c>
 			<c>
 				<i>3</i>
 				<c>
 					<f>11</f>
-					<parameter>ТелефониОрг</parameter>
+					<tl>
+						<v8:item>
+							<v8:lang/>
+							<v8:content>ТелефониОрг</v8:content>
+						</v8:item>
+					</tl>
 				</c>
 			</c>
 			<c>
