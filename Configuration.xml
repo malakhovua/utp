@@ -58,7 +58,7 @@
 			<Version>1.2.76.1</Version>
 			<UpdateCatalogAddress>http://downloads.1c.eu/tmplts/</UpdateCatalogAddress>
 			<IncludeHelpInContents>true</IncludeHelpInContents>
-			<UseManagedFormInOrdinaryApplication>false</UseManagedFormInOrdinaryApplication>
+			<UseManagedFormInOrdinaryApplication>true</UseManagedFormInOrdinaryApplication>
 			<UseOrdinaryFormInManagedApplication>false</UseOrdinaryFormInManagedApplication>
 			<AdditionalFullTextSearchDictionaries/>
 			<CommonSettingsStorage/>

@@ -2663,6 +2663,13 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.ЗаписьЖРОИГП</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Document.НалоговаяНакладная</name>
 		<right>
 			<name>Read</name>
@@ -9014,6 +9021,13 @@
 			<restrictionByCondition>
 				<condition>ГДЕ Ложь</condition>
 			</restrictionByCondition>
+		</right>
+	</object>
+	<object>
+		<name>Subsystem.umk.Subsystem.Термообработка</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
 		</right>
 	</object>
 	<object>

@@ -22,6 +22,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ПрограммыТермообработки</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ПодПрограммыТермообработки</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.ЗаписьЖРОИГП</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">0718d803-9a22-4e25-990b-59d50028b28a</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects/>

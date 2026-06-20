@@ -3,11 +3,7 @@
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
 	<ChildItems>
 		<Table name="Список" id="1">
-			<Representation>List</Representation>
-			<CommandBarLocation>None</CommandBarLocation>
-			<DefaultItem>true</DefaultItem>
 			<UseAlternationRowColor>true</UseAlternationRowColor>
-			<InitialTreeView>ExpandTopLevel</InitialTreeView>
 			<EnableStartDrag>true</EnableStartDrag>
 			<DataPath>Список</DataPath>
 			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
@@ -37,48 +33,74 @@
 				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="6"/>
 				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="7"/>
 			</SearchStringAddition>
-			<ViewStatusAddition name="СписокСостояниеПросмотра" id="23">
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="8">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>ViewStatusRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="24"/>
-				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="25"/>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="9"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="10"/>
 			</ViewStatusAddition>
-			<SearchControlAddition name="СписокУправлениеПоиском" id="26">
+			<SearchControlAddition name="СписокУправлениеПоиском" id="11">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>SearchControl</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="27"/>
-				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="28"/>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="13"/>
 			</SearchControlAddition>
 			<ChildItems>
-				<LabelField name="Дата" id="8">
+				<LabelField name="Дата" id="14">
 					<DataPath>Список.Date</DataPath>
-					<DefaultItem>true</DefaultItem>
-					<ContextMenu name="ДатаКонтекстноеМеню" id="9"/>
-					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="10"/>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="16"/>
 				</LabelField>
-				<LabelField name="Номер" id="11">
+				<CheckBoxField name="ПометкаУдаления" id="17">
+					<DataPath>Список.DeletionMark</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПометкаУдаленияКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="ПометкаУдаленияРасширеннаяПодсказка" id="19"/>
+				</CheckBoxField>
+				<LabelField name="Номер" id="20">
 					<DataPath>Список.Number</DataPath>
-					<ContextMenu name="НомерКонтекстноеМеню" id="12"/>
-					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="13"/>
+					<ContextMenu name="НомерКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="22"/>
 				</LabelField>
-				<LabelField name="Технолог" id="14">
-					<DataPath>Список.Технолог</DataPath>
-					<ContextMenu name="ТехнологКонтекстноеМеню" id="15"/>
-					<ExtendedTooltip name="ТехнологРасширеннаяПодсказка" id="16"/>
+				<CheckBoxField name="Проведен" id="23">
+					<DataPath>Список.Posted</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПроведенКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="ПроведенРасширеннаяПодсказка" id="25"/>
+				</CheckBoxField>
+				<LabelField name="Ссылка" id="26">
+					<DataPath>Список.Ref</DataPath>
+					<ContextMenu name="СсылкаКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="СсылкаРасширеннаяПодсказка" id="28"/>
 				</LabelField>
-				<LabelField name="ВетВрач" id="17">
+				<LabelField name="ВетВрач" id="29">
 					<DataPath>Список.ВетВрач</DataPath>
-					<ContextMenu name="ВетВрачКонтекстноеМеню" id="18"/>
-					<ExtendedTooltip name="ВетВрачРасширеннаяПодсказка" id="19"/>
+					<ContextMenu name="ВетВрачКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="ВетВрачРасширеннаяПодсказка" id="31"/>
 				</LabelField>
-				<LabelField name="Кладовщик" id="20">
+				<LabelField name="Кладовщик" id="32">
 					<DataPath>Список.Кладовщик</DataPath>
-					<ContextMenu name="КладовщикКонтекстноеМеню" id="21"/>
-					<ExtendedTooltip name="КладовщикРасширеннаяПодсказка" id="22"/>
+					<ContextMenu name="КладовщикКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="КладовщикРасширеннаяПодсказка" id="34"/>
+				</LabelField>
+				<LabelField name="ПН" id="35">
+					<DataPath>Список.ПН</DataPath>
+					<ContextMenu name="ПНКонтекстноеМеню" id="36"/>
+					<ExtendedTooltip name="ПНРасширеннаяПодсказка" id="37"/>
+				</LabelField>
+				<LabelField name="Технолог" id="38">
+					<DataPath>Список.Технолог</DataPath>
+					<ContextMenu name="ТехнологКонтекстноеМеню" id="39"/>
+					<ExtendedTooltip name="ТехнологРасширеннаяПодсказка" id="40"/>
+				</LabelField>
+				<LabelField name="СтандартнаяКартинка" id="41">
+					<DataPath>Список.DefaultPicture</DataPath>
+					<ContextMenu name="СтандартнаяКартинкаКонтекстноеМеню" id="42"/>
+					<ExtendedTooltip name="СтандартнаяКартинкаРасширеннаяПодсказка" id="43"/>
 				</LabelField>
 			</ChildItems>
 		</Table>
@@ -90,8 +112,21 @@
 			</Type>
 			<MainAttribute>true</MainAttribute>
 			<Settings xsi:type="DynamicList">
-				<ManualQuery>false</ManualQuery>
+				<ManualQuery>true</ManualQuery>
 				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	ДокументЗаписьЖРОИГП.Ссылка,
+	ДокументЗаписьЖРОИГП.ПометкаУдаления,
+	ДокументЗаписьЖРОИГП.Номер,
+	ДокументЗаписьЖРОИГП.Дата,
+	ДокументЗаписьЖРОИГП.Проведен,
+	ДокументЗаписьЖРОИГП.Технолог,
+	ДокументЗаписьЖРОИГП.ВетВрач,
+	ДокументЗаписьЖРОИГП.Кладовщик,
+	ДокументЗаписьЖРОИГП.ПН,
+	ДокументЗаписьЖРОИГП.МоментВремени
+ИЗ
+	Документ.ЗаписьЖРОИГП КАК ДокументЗаписьЖРОИГП</QueryText>
 				<MainTable>Document.ЗаписьЖРОИГП</MainTable>
 				<ListSettings>
 					<dcsset:filter>

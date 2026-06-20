@@ -3,11 +3,7 @@
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
 	<ChildItems>
 		<Table name="Список" id="1">
-			<Representation>List</Representation>
-			<CommandBarLocation>None</CommandBarLocation>
-			<DefaultItem>true</DefaultItem>
 			<UseAlternationRowColor>true</UseAlternationRowColor>
-			<InitialTreeView>ExpandTopLevel</InitialTreeView>
 			<EnableStartDrag>true</EnableStartDrag>
 			<DataPath>Список</DataPath>
 			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
@@ -56,34 +52,33 @@
 			<ChildItems>
 				<LabelField name="Дата" id="14">
 					<DataPath>Список.Date</DataPath>
-					<DefaultItem>true</DefaultItem>
 					<ContextMenu name="ДатаКонтекстноеМеню" id="15"/>
 					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="16"/>
 				</LabelField>
-				<LabelField name="Номер" id="17">
+				<LabelField name="Номер" id="20">
 					<DataPath>Список.Number</DataPath>
-					<ContextMenu name="НомерКонтекстноеМеню" id="18"/>
-					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="19"/>
+					<ContextMenu name="НомерКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="22"/>
 				</LabelField>
-				<LabelField name="Технолог" id="20">
-					<DataPath>Список.Технолог</DataPath>
-					<ContextMenu name="ТехнологКонтекстноеМеню" id="21"/>
-					<ExtendedTooltip name="ТехнологРасширеннаяПодсказка" id="22"/>
-				</LabelField>
-				<LabelField name="ВетВрач" id="23">
+				<LabelField name="ВетВрач" id="29">
 					<DataPath>Список.ВетВрач</DataPath>
-					<ContextMenu name="ВетВрачКонтекстноеМеню" id="24"/>
-					<ExtendedTooltip name="ВетВрачРасширеннаяПодсказка" id="25"/>
+					<ContextMenu name="ВетВрачКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="ВетВрачРасширеннаяПодсказка" id="31"/>
 				</LabelField>
-				<LabelField name="Кладовщик" id="26">
+				<LabelField name="Кладовщик" id="32">
 					<DataPath>Список.Кладовщик</DataPath>
-					<ContextMenu name="КладовщикКонтекстноеМеню" id="27"/>
-					<ExtendedTooltip name="КладовщикРасширеннаяПодсказка" id="28"/>
+					<ContextMenu name="КладовщикКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="КладовщикРасширеннаяПодсказка" id="34"/>
 				</LabelField>
-				<LabelField name="ПН" id="29">
+				<LabelField name="ПН" id="35">
 					<DataPath>Список.ПН</DataPath>
-					<ContextMenu name="ПНКонтекстноеМеню" id="30"/>
-					<ExtendedTooltip name="ПНРасширеннаяПодсказка" id="31"/>
+					<ContextMenu name="ПНКонтекстноеМеню" id="36"/>
+					<ExtendedTooltip name="ПНРасширеннаяПодсказка" id="37"/>
+				</LabelField>
+				<LabelField name="Технолог" id="38">
+					<DataPath>Список.Технолог</DataPath>
+					<ContextMenu name="ТехнологКонтекстноеМеню" id="39"/>
+					<ExtendedTooltip name="ТехнологРасширеннаяПодсказка" id="40"/>
 				</LabelField>
 			</ChildItems>
 		</Table>
@@ -95,8 +90,20 @@
 			</Type>
 			<MainAttribute>true</MainAttribute>
 			<Settings xsi:type="DynamicList">
-				<ManualQuery>false</ManualQuery>
+				<ManualQuery>true</ManualQuery>
 				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	ДокументЗаписьЖРОИГП.Ссылка,
+	ДокументЗаписьЖРОИГП.ПометкаУдаления,
+	ДокументЗаписьЖРОИГП.Номер,
+	ДокументЗаписьЖРОИГП.Дата,
+	ДокументЗаписьЖРОИГП.Проведен,
+	ДокументЗаписьЖРОИГП.Технолог,
+	ДокументЗаписьЖРОИГП.ВетВрач,
+	ДокументЗаписьЖРОИГП.Кладовщик,
+	ДокументЗаписьЖРОИГП.ПН
+ИЗ
+	Документ.ЗаписьЖРОИГП КАК ДокументЗаписьЖРОИГП</QueryText>
 				<MainTable>Document.ЗаписьЖРОИГП</MainTable>
 				<ListSettings>
 					<dcsset:filter>
