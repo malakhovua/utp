@@ -5,16 +5,71 @@
 	<RepostOnWrite>false</RepostOnWrite>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<ChildItems>
-			<Button name="ФормаКомандаЗаполнить" id="121">
-				<Type>CommandBarButton</Type>
-				<CommandName>Form.Command.КомандаЗаполнить</CommandName>
-				<ExtendedTooltip name="ФормаКомандаЗаполнитьРасширеннаяПодсказка" id="122"/>
-			</Button>
-			<Button name="ФормаКомандаПечать" id="123">
-				<Type>CommandBarButton</Type>
-				<CommandName>Form.Command.КомандаПечать</CommandName>
-				<ExtendedTooltip name="ФормаКомандаПечатьРасширеннаяПодсказка" id="124"/>
-			</Button>
+			<Submenu name="ЗаполнитьПодменю" id="130">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Заполнить</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>uk</v8:lang>
+						<v8:content>Заповнити</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ЗаполнитьПодменюРасширеннаяПодсказка" id="131"/>
+				<ChildItems>
+					<Button name="ФормаКомандаЗаполнитьВсеПо5" id="132">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.КомандаЗаполнитьВсеПо5</CommandName>
+						<ExtendedTooltip name="ФормаКомандаЗаполнитьВсеПо5РасширеннаяПодсказка" id="133"/>
+					</Button>
+					<Button name="ФормаКомандаЗаполнитьТехнолог" id="134">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.КомандаЗаполнитьТехнолог</CommandName>
+						<ExtendedTooltip name="ФормаКомандаЗаполнитьТехнологРасширеннаяПодсказка" id="135"/>
+					</Button>
+					<Button name="ФормаКомандаЗаполнитьВетврач" id="136">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.КомандаЗаполнитьВетврач</CommandName>
+						<ExtendedTooltip name="ФормаКомандаЗаполнитьВетврачРасширеннаяПодсказка" id="137"/>
+					</Button>
+					<Button name="ФормаКомандаЗаполнитьКладовщик" id="138">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.КомандаЗаполнитьКладовщик</CommandName>
+						<ExtendedTooltip name="ФормаКомандаЗаполнитьКладовщикРасширеннаяПодсказка" id="139"/>
+					</Button>
+				</ChildItems>
+			</Submenu>
+			<Submenu name="ПечатьПодменю" id="144">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Печать</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>uk</v8:lang>
+						<v8:content>Друк</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ПечатьПодменюРасширеннаяПодсказка" id="145"/>
+				<ChildItems>
+					<Button name="ФормаКомандаПечатьТехнолог" id="146">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.КомандаПечатьТехнолог</CommandName>
+						<ExtendedTooltip name="ФормаКомандаПечатьТехнологРасширеннаяПодсказка" id="147"/>
+					</Button>
+					<Button name="ФормаКомандаПечатьВетврач" id="148">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.КомандаПечатьВетврач</CommandName>
+						<ExtendedTooltip name="ФормаКомандаПечатьВетврачРасширеннаяПодсказка" id="149"/>
+					</Button>
+					<Button name="ФормаКомандаПечатьКладовщик" id="150">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.КомандаПечатьКладовщик</CommandName>
+						<ExtendedTooltip name="ФормаКомандаПечатьКладовщикРасширеннаяПодсказка" id="151"/>
+					</Button>
+				</ChildItems>
+			</Submenu>
 			<Button name="ФормаКомандаПечатьОбщая" id="125">
 				<Type>CommandBarButton</Type>
 				<CommandName>Form.Command.КомандаПечатьОбщая</CommandName>
@@ -321,40 +376,130 @@
 		</Attribute>
 	</Attributes>
 	<Commands>
-		<Command name="КомандаЗаполнить" id="127">
+		<Command name="КомандаЗаполнитьВсеПо5" id="140">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Заполнить</v8:content>
+					<v8:content>Все по 5</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>uk</v8:lang>
-					<v8:content>Заповнити</v8:content>
+					<v8:content>Всі по 5</v8:content>
 				</v8:item>
 			</Title>
 			<Use>
 				<xr:Common>true</xr:Common>
 				<xr:Value name="Role.ПолныеПрава">true</xr:Value>
 			</Use>
-			<Action>КомандаЗаполнить</Action>
+			<Action>КомандаЗаполнитьВсеПо5</Action>
 			<Representation>Text</Representation>
 		</Command>
-		<Command name="КомандаПечать" id="128">
+		<Command name="КомандаЗаполнитьТехнолог" id="141">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Печать</v8:content>
+					<v8:content>Все по 5 технолог</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>uk</v8:lang>
-					<v8:content>Друк</v8:content>
+					<v8:content>Всі по 5 технолог</v8:content>
 				</v8:item>
 			</Title>
 			<Use>
 				<xr:Common>true</xr:Common>
 				<xr:Value name="Role.ПолныеПрава">true</xr:Value>
 			</Use>
-			<Action>КомандаПечать</Action>
+			<Action>КомандаЗаполнитьТехнолог</Action>
+			<Representation>Text</Representation>
+		</Command>
+		<Command name="КомандаЗаполнитьВетврач" id="142">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Все по 5 ветврач</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Всі по 5 ветлікар</v8:content>
+				</v8:item>
+			</Title>
+			<Use>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.ПолныеПрава">true</xr:Value>
+			</Use>
+			<Action>КомандаЗаполнитьВетврач</Action>
+			<Representation>Text</Representation>
+		</Command>
+		<Command name="КомандаЗаполнитьКладовщик" id="143">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Все по 5 кладовщик</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Всі по 5 комірник</v8:content>
+				</v8:item>
+			</Title>
+			<Use>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.ПолныеПрава">true</xr:Value>
+			</Use>
+			<Action>КомандаЗаполнитьКладовщик</Action>
+			<Representation>Text</Representation>
+		</Command>
+		<Command name="КомандаПечатьТехнолог" id="152">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Технолог</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Технолог</v8:content>
+				</v8:item>
+			</Title>
+			<Use>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.ПолныеПрава">true</xr:Value>
+			</Use>
+			<Action>КомандаПечатьТехнолог</Action>
+			<Representation>Text</Representation>
+		</Command>
+		<Command name="КомандаПечатьВетврач" id="153">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ветврач</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Ветлікар</v8:content>
+				</v8:item>
+			</Title>
+			<Use>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.ПолныеПрава">true</xr:Value>
+			</Use>
+			<Action>КомандаПечатьВетврач</Action>
+			<Representation>Text</Representation>
+		</Command>
+		<Command name="КомандаПечатьКладовщик" id="154">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кладовщик</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Комірник</v8:content>
+				</v8:item>
+			</Title>
+			<Use>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.ПолныеПрава">true</xr:Value>
+			</Use>
+			<Action>КомандаПечатьКладовщик</Action>
 			<Representation>Text</Representation>
 		</Command>
 		<Command name="КомандаПечатьОбщая" id="129">
