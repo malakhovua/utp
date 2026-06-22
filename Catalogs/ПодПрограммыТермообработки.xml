@@ -616,6 +616,9 @@
 					</Attribute>
 				</ChildObjects>
 			</TabularSection>
+			<Form>ФормаЭлементаУФ</Form>
+			<Form>ФормаСпискаУФ</Form>
+			<Form>ФормаВыбораУФ</Form>
 		</ChildObjects>
 	</Catalog>
 </MetaDataObject>
