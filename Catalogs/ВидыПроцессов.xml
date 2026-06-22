@@ -60,10 +60,10 @@
 			<SearchStringModeOnInputByString>Begin</SearchStringModeOnInputByString>
 			<FullTextSearchOnInputByString>DontUse</FullTextSearchOnInputByString>
 			<ChoiceDataGetModeOnInputByString>Directly</ChoiceDataGetModeOnInputByString>
-			<DefaultObjectForm>Catalog.ВидыПроцессов.Form.ФормаЭлементаУФ</DefaultObjectForm>
+			<DefaultObjectForm/>
 			<DefaultFolderForm/>
-			<DefaultListForm>Catalog.ВидыПроцессов.Form.ФормаСпискаУФ</DefaultListForm>
-			<DefaultChoiceForm>Catalog.ВидыПроцессов.Form.ФормаВыбораУФ</DefaultChoiceForm>
+			<DefaultListForm/>
+			<DefaultChoiceForm/>
 			<DefaultFolderChoiceForm/>
 			<AuxiliaryObjectForm/>
 			<AuxiliaryFolderForm/>
@@ -177,9 +177,6 @@
 					<DataHistory>Use</DataHistory>
 				</Properties>
 			</Attribute>
-			<Form>ФормаЭлементаУФ</Form>
-			<Form>ФормаСпискаУФ</Form>
-			<Form>ФормаВыбораУФ</Form>
 		</ChildObjects>
 	</Catalog>
 </MetaDataObject>

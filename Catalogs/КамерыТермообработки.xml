@@ -60,10 +60,10 @@
 			<SearchStringModeOnInputByString>Begin</SearchStringModeOnInputByString>
 			<FullTextSearchOnInputByString>DontUse</FullTextSearchOnInputByString>
 			<ChoiceDataGetModeOnInputByString>Directly</ChoiceDataGetModeOnInputByString>
-			<DefaultObjectForm>Catalog.КамерыТермообработки.Form.ФормаЭлементаУФ</DefaultObjectForm>
+			<DefaultObjectForm/>
 			<DefaultFolderForm/>
-			<DefaultListForm>Catalog.КамерыТермообработки.Form.ФормаСпискаУФ</DefaultListForm>
-			<DefaultChoiceForm>Catalog.КамерыТермообработки.Form.ФормаВыбораУФ</DefaultChoiceForm>
+			<DefaultListForm/>
+			<DefaultChoiceForm/>
 			<DefaultFolderChoiceForm/>
 			<AuxiliaryObjectForm/>
 			<AuxiliaryFolderForm/>
@@ -132,9 +132,6 @@
 					<DataHistory>Use</DataHistory>
 				</Properties>
 			</Attribute>
-			<Form>ФормаЭлементаУФ</Form>
-			<Form>ФормаСпискаУФ</Form>
-			<Form>ФормаВыбораУФ</Form>
 		</ChildObjects>
 	</Catalog>
 </MetaDataObject>

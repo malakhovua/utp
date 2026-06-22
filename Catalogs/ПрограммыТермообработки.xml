@@ -60,10 +60,10 @@
 			<SearchStringModeOnInputByString>Begin</SearchStringModeOnInputByString>
 			<FullTextSearchOnInputByString>DontUse</FullTextSearchOnInputByString>
 			<ChoiceDataGetModeOnInputByString>Directly</ChoiceDataGetModeOnInputByString>
-			<DefaultObjectForm>Catalog.ПрограммыТермообработки.Form.ФормаЭлементаУФ</DefaultObjectForm>
+			<DefaultObjectForm/>
 			<DefaultFolderForm/>
-			<DefaultListForm>Catalog.ПрограммыТермообработки.Form.ФормаСпискаУФ</DefaultListForm>
-			<DefaultChoiceForm>Catalog.ПрограммыТермообработки.Form.ФормаВыбораУФ</DefaultChoiceForm>
+			<DefaultListForm/>
+			<DefaultChoiceForm/>
 			<DefaultFolderChoiceForm/>
 			<AuxiliaryObjectForm/>
 			<AuxiliaryFolderForm/>
@@ -331,9 +331,6 @@
 					</Attribute>
 				</ChildObjects>
 			</TabularSection>
-			<Form>ФормаЭлементаУФ</Form>
-			<Form>ФормаСпискаУФ</Form>
-			<Form>ФормаВыбораУФ</Form>
 		</ChildObjects>
 	</Catalog>
 </MetaDataObject>
