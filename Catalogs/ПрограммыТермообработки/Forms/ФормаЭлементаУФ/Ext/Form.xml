@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="Наименование" id="1">
+			<DataPath>Объект.Description</DataPath>
+			<DefaultItem>true</DefaultItem>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<CheckBox name="ПодписьТермист" id="4">
+			<DataPath>Объект.ПодписьТермист</DataPath>
+			<ContextMenu name="ПодписьТермистКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ПодписьТермистРасширеннаяПодсказка" id="6"/>
+		</CheckBox>
+		<CheckBox name="ПодписьТехнолог" id="7">
+			<DataPath>Объект.ПодписьТехнолог</DataPath>
+			<ContextMenu name="ПодписьТехнологКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ПодписьТехнологРасширеннаяПодсказка" id="9"/>
+		</CheckBox>
+		<CheckBox name="ПодписьВетеринар" id="10">
+			<DataPath>Объект.ПодписьВетеринар</DataPath>
+			<ContextMenu name="ПодписьВетеринарКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="ПодписьВетеринарРасширеннаяПодсказка" id="12"/>
+		</CheckBox>
+		<CheckBox name="ПодписьКладовщик" id="13">
+			<DataPath>Объект.ПодписьКладовщик</DataPath>
+			<ContextMenu name="ПодписьКладовщикКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ПодписьКладовщикРасширеннаяПодсказка" id="15"/>
+		</CheckBox>
+		<CommandBar name="КоманднаяПанельПроцессы" id="16">
+			<ChildItems>
+				<Button name="ДобавитьПроцесс" id="17">
+					<CommandName>ДобавитьПроцесс</CommandName>
+					<ContextMenu name="ДобавитьПроцессКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="ДобавитьПроцессРасширеннаяПодсказка" id="19"/>
+				</Button>
+				<Button name="УдалитьПроцесс" id="20">
+					<CommandName>УдалитьПроцесс</CommandName>
+					<ContextMenu name="УдалитьПроцессКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="УдалитьПроцессРасширеннаяПодсказка" id="22"/>
+				</Button>
+				<Button name="ВверхПроцесс" id="23">
+					<CommandName>ВверхПроцесс</CommandName>
+					<ContextMenu name="ВверхПроцессКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="ВверхПроцессРасширеннаяПодсказка" id="25"/>
+				</Button>
+				<Button name="ВнизПроцесс" id="26">
+					<CommandName>ВнизПроцесс</CommandName>
+					<ContextMenu name="ВнизПроцессКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="ВнизПроцессРасширеннаяПодсказка" id="28"/>
+				</Button>
+			</ChildItems>
+		</CommandBar>
+		<Table name="Процессы" id="29">
+			<DataPath>Объект.Процессы</DataPath>
+			<CommandBarLocation>None</CommandBarLocation>
+			<ContextMenu name="ПроцессыКонтекстноеМеню" id="30"/>
+			<AutoCommandBar name="ПроцессыКоманднаяПанель" id="31">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ПроцессыРасширеннаяПодсказка" id="32"/>
+			<ChildItems>
+				<InputField name="ПроцессыВидПроцесса" id="33">
+					<DataPath>Объект.Процессы.ВидПроцесса</DataPath>
+					<ContextMenu name="ПроцессыВидПроцессаКонтекстноеМеню" id="34"/>
+					<ExtendedTooltip name="ПроцессыВидПроцессаРасширеннаяПодсказка" id="35"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ПрограммыТермообработки</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ДобавитьПроцесс" id="1">
+			<Action>ДобавитьПроцесс</Action>
+			<Representation>Text</Representation>
+			<Title>Добавить</Title>
+		</Command>
+		<Command name="УдалитьПроцесс" id="2">
+			<Action>УдалитьПроцесс</Action>
+			<Representation>Text</Representation>
+			<Title>Удалить</Title>
+		</Command>
+		<Command name="ВверхПроцесс" id="3">
+			<Action>ВверхПроцесс</Action>
+			<Representation>Text</Representation>
+			<Title>Вверх</Title>
+		</Command>
+		<Command name="ВнизПроцесс" id="4">
+			<Action>ВнизПроцесс</Action>
+			<Representation>Text</Representation>
+			<Title>Вниз</Title>
+		</Command>
+	</Commands>
+	<CommandInterface>
+		<NavigationPanel/>
+		<CommandBar/>
+	</CommandInterface>
+</Form>
