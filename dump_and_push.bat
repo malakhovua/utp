@@ -12,14 +12,14 @@ setlocal EnableDelayedExpansion
 set "V8="C:\Program Files\1cv8\8.3.18.1483\bin\1cv8.exe""
 
 :: Тип підключення: FILE або SERVER
-set "CONNECTION_TYPE=FILE"
+set "CONNECTION_TYPE=SERVER"
 
 :: FILE: шлях до файлової бази (для файлового варіанту)
-set "IB_PATH=C:\путь\до\бази"
+set "IB_PATH=C:\utp"
 
 :: SERVER: сервер і ім'я бази (для серверного варіанту)
-set "IB_SERVER=server"
-set "IB_NAME=basename"
+set "IB_SERVER=127.0.0.1"
+set "IB_NAME=utp_dev"
 
 :: Логін і пароль адміністратора конфігуратора (залиште порожніми якщо не потрібно)
 set "IB_USER=Адміністратор"
