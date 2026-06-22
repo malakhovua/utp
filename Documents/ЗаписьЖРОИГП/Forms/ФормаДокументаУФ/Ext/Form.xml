@@ -5,76 +5,75 @@
 	<RepostOnWrite>false</RepostOnWrite>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<ChildItems>
-			<Submenu name="ЗаполнитьПодменю" id="130">
-				<Title>
-					<v8:item>
-						<v8:lang>ru</v8:lang>
-						<v8:content>Заполнить</v8:content>
-					</v8:item>
-					<v8:item>
-						<v8:lang>uk</v8:lang>
-						<v8:content>Заповнити</v8:content>
-					</v8:item>
-				</Title>
-				<ExtendedTooltip name="ЗаполнитьПодменюРасширеннаяПодсказка" id="131"/>
-				<ChildItems>
-					<Button name="ФормаКомандаЗаполнитьВсеПо5" id="132">
-						<Type>CommandBarButton</Type>
-						<CommandName>Form.Command.КомандаЗаполнитьВсеПо5</CommandName>
-						<ExtendedTooltip name="ФормаКомандаЗаполнитьВсеПо5РасширеннаяПодсказка" id="133"/>
-					</Button>
-					<Button name="ФормаКомандаЗаполнитьТехнолог" id="134">
-						<Type>CommandBarButton</Type>
-						<CommandName>Form.Command.КомандаЗаполнитьТехнолог</CommandName>
-						<ExtendedTooltip name="ФормаКомандаЗаполнитьТехнологРасширеннаяПодсказка" id="135"/>
-					</Button>
-					<Button name="ФормаКомандаЗаполнитьВетврач" id="136">
-						<Type>CommandBarButton</Type>
-						<CommandName>Form.Command.КомандаЗаполнитьВетврач</CommandName>
-						<ExtendedTooltip name="ФормаКомандаЗаполнитьВетврачРасширеннаяПодсказка" id="137"/>
-					</Button>
-					<Button name="ФормаКомандаЗаполнитьКладовщик" id="138">
-						<Type>CommandBarButton</Type>
-						<CommandName>Form.Command.КомандаЗаполнитьКладовщик</CommandName>
-						<ExtendedTooltip name="ФормаКомандаЗаполнитьКладовщикРасширеннаяПодсказка" id="139"/>
-					</Button>
-				</ChildItems>
-			</Submenu>
-			<Submenu name="ПечатьПодменю" id="144">
-				<Title>
-					<v8:item>
-						<v8:lang>ru</v8:lang>
-						<v8:content>Печать</v8:content>
-					</v8:item>
-					<v8:item>
-						<v8:lang>uk</v8:lang>
-						<v8:content>Друк</v8:content>
-					</v8:item>
-				</Title>
-				<ExtendedTooltip name="ПечатьПодменюРасширеннаяПодсказка" id="145"/>
-				<ChildItems>
-					<Button name="ФормаКомандаПечатьТехнолог" id="146">
-						<Type>CommandBarButton</Type>
-						<CommandName>Form.Command.КомандаПечатьТехнолог</CommandName>
-						<ExtendedTooltip name="ФормаКомандаПечатьТехнологРасширеннаяПодсказка" id="147"/>
-					</Button>
-					<Button name="ФормаКомандаПечатьВетврач" id="148">
-						<Type>CommandBarButton</Type>
-						<CommandName>Form.Command.КомандаПечатьВетврач</CommandName>
-						<ExtendedTooltip name="ФормаКомандаПечатьВетврачРасширеннаяПодсказка" id="149"/>
-					</Button>
-					<Button name="ФормаКомандаПечатьКладовщик" id="150">
-						<Type>CommandBarButton</Type>
-						<CommandName>Form.Command.КомандаПечатьКладовщик</CommandName>
-						<ExtendedTooltip name="ФормаКомандаПечатьКладовщикРасширеннаяПодсказка" id="151"/>
-					</Button>
-				</ChildItems>
-			</Submenu>
 			<Button name="ФормаКомандаПечатьОбщая" id="125">
 				<Type>CommandBarButton</Type>
 				<CommandName>Form.Command.КомандаПечатьОбщая</CommandName>
 				<ExtendedTooltip name="ФормаКомандаПечатьОбщаяРасширеннаяПодсказка" id="126"/>
 			</Button>
+			<Popup name="ФормаГруппаЗаполнить" id="127">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Заполнить</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Форма группа заполнить</v8:content>
+					</v8:item>
+				</ToolTip>
+				<ExtendedTooltip name="ФормаГруппаЗаполнитьРасширеннаяПодсказка" id="128"/>
+				<ChildItems>
+					<Button name="ФормаКомандаЗаполнитьВсеПо5" id="131">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.КомандаЗаполнитьВсеПо5</CommandName>
+						<ExtendedTooltip name="ФормаКомандаЗаполнитьВсеПо5РасширеннаяПодсказка" id="132"/>
+					</Button>
+					<Button name="ФормаКомандаЗаполнитьКладовщик" id="133">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.КомандаЗаполнитьКладовщик</CommandName>
+						<ExtendedTooltip name="ФормаКомандаЗаполнитьКладовщикРасширеннаяПодсказка" id="134"/>
+					</Button>
+					<Button name="ФормаКомандаЗаполнитьВетврач" id="129">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.КомандаЗаполнитьВетврач</CommandName>
+						<ExtendedTooltip name="ФормаКомандаЗаполнитьВетврачРасширеннаяПодсказка" id="130"/>
+					</Button>
+				</ChildItems>
+			</Popup>
+			<Popup name="ФормаГруппаПечать" id="135">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Печать</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Форма группа печать</v8:content>
+					</v8:item>
+				</ToolTip>
+				<ExtendedTooltip name="ФормаГруппаПечатьРасширеннаяПодсказка" id="136"/>
+				<ChildItems>
+					<Button name="ФормаКомандаПечатьКладовщик" id="139">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.КомандаПечатьКладовщик</CommandName>
+						<ExtendedTooltip name="ФормаКомандаПечатьКладовщикРасширеннаяПодсказка" id="140"/>
+					</Button>
+					<Button name="ФормаКомандаПечатьТехнолог" id="143">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.КомандаПечатьТехнолог</CommandName>
+						<ExtendedTooltip name="ФормаКомандаПечатьТехнологРасширеннаяПодсказка" id="144"/>
+					</Button>
+					<Button name="ФормаКомандаПечатьВетврач" id="137">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.КомандаПечатьВетврач</CommandName>
+						<ExtendedTooltip name="ФормаКомандаПечатьВетврачРасширеннаяПодсказка" id="138"/>
+					</Button>
+				</ChildItems>
+			</Popup>
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
@@ -88,6 +87,8 @@
 			<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="2"/>
 			<ChildItems>
 				<UsualGroup name="ГруппаДатаНомер" id="3">
+					<Width>65</Width>
+					<HorizontalStretch>false</HorizontalStretch>
 					<Group>AlwaysHorizontal</Group>
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="ГруппаДатаНомерРасширеннаяПодсказка" id="4"/>
@@ -100,11 +101,24 @@
 						</InputField>
 						<InputField name="Дата" id="8">
 							<DataPath>Объект.Date</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>от</v8:content>
+								</v8:item>
+							</Title>
 							<ContextMenu name="ДатаКонтекстноеМеню" id="9"/>
 							<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="10"/>
 						</InputField>
 					</ChildItems>
 				</UsualGroup>
+				<InputField name="ПН" id="22">
+					<DataPath>Объект.ПН</DataPath>
+					<Width>50</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ContextMenu name="ПНКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="ПНРасширеннаяПодсказка" id="24"/>
+				</InputField>
 				<UsualGroup name="ГруппаОтветственные" id="11">
 					<Group>AlwaysHorizontal</Group>
 					<ShowTitle>false</ShowTitle>
@@ -124,11 +138,6 @@
 							<DataPath>Объект.Кладовщик</DataPath>
 							<ContextMenu name="КладовщикКонтекстноеМеню" id="20"/>
 							<ExtendedTooltip name="КладовщикРасширеннаяПодсказка" id="21"/>
-						</InputField>
-						<InputField name="ПН" id="22">
-							<DataPath>Объект.ПН</DataPath>
-							<ContextMenu name="ПНКонтекстноеМеню" id="23"/>
-							<ExtendedTooltip name="ПНРасширеннаяПодсказка" id="24"/>
 						</InputField>
 					</ChildItems>
 				</UsualGroup>

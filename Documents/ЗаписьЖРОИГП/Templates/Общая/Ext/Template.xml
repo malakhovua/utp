@@ -114,24 +114,14 @@
 			<c>
 				<c>
 					<f>11</f>
-					<tl>
-						<v8:item>
-							<v8:lang/>
-							<v8:content>ІПНОрг</v8:content>
-						</v8:item>
-					</tl>
+					<parameter>ІПНОрг</parameter>
 				</c>
 			</c>
 			<c>
 				<i>3</i>
 				<c>
 					<f>11</f>
-					<tl>
-						<v8:item>
-							<v8:lang/>
-							<v8:content>ТелефониОрг</v8:content>
-						</v8:item>
-					</tl>
+					<parameter>ТелефониОрг</parameter>
 				</c>
 			</c>
 			<c>
@@ -160,7 +150,7 @@
 			<formatIndex>6</formatIndex>
 			<c>
 				<c>
-					<f>12</f>
+					<f>11</f>
 					<parameter>РеквизитыРС</parameter>
 				</c>
 			</c>
@@ -172,7 +162,7 @@
 			<formatIndex>6</formatIndex>
 			<c>
 				<c>
-					<f>13</f>
+					<f>12</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -183,47 +173,47 @@
 			</c>
 			<c>
 				<c>
-					<f>13</f>
+					<f>12</f>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>13</f>
+					<f>12</f>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>13</f>
+					<f>12</f>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>13</f>
+					<f>12</f>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>13</f>
+					<f>12</f>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>13</f>
+					<f>12</f>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>13</f>
+					<f>12</f>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>13</f>
+					<f>12</f>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>13</f>
+					<f>12</f>
 				</c>
 			</c>
 		</row>
@@ -234,7 +224,7 @@
 			<formatIndex>6</formatIndex>
 			<c>
 				<c>
-					<f>14</f>
+					<f>13</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -258,7 +248,7 @@
 			<c>
 				<i>2</i>
 				<c>
-					<f>15</f>
+					<f>14</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -269,7 +259,17 @@
 			</c>
 			<c>
 				<c>
-					<f>16</f>
+					<f>15</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>15</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>15</f>
 				</c>
 			</c>
 			<c>
@@ -285,16 +285,6 @@
 			<c>
 				<c>
 					<f>17</f>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>17</f>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>18</f>
 					<parameter>ФІОТехнолог</parameter>
 				</c>
 			</c>
@@ -307,12 +297,22 @@
 			<c>
 				<i>2</i>
 				<c>
-					<f>16</f>
+					<f>15</f>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>16</f>
+					<f>15</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>15</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>15</f>
 				</c>
 			</c>
 			<c>
@@ -328,16 +328,6 @@
 			<c>
 				<c>
 					<f>17</f>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>17</f>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>18</f>
 					<parameter>ФІОВетЛікар</parameter>
 				</c>
 			</c>
@@ -346,16 +336,26 @@
 	<rowsItem>
 		<index>8</index>
 		<row>
-			<formatIndex>19</formatIndex>
+			<formatIndex>18</formatIndex>
 			<c>
 				<i>2</i>
 				<c>
-					<f>16</f>
+					<f>15</f>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>16</f>
+					<f>15</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>15</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>15</f>
 				</c>
 			</c>
 			<c>
@@ -371,16 +371,6 @@
 			<c>
 				<c>
 					<f>17</f>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>17</f>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>18</f>
 					<parameter>ФІОКомірник</parameter>
 				</c>
 			</c>
@@ -389,17 +379,17 @@
 	<rowsItem>
 		<index>9</index>
 		<row>
-			<formatIndex>20</formatIndex>
+			<formatIndex>19</formatIndex>
 			<empty>true</empty>
 		</row>
 	</rowsItem>
 	<rowsItem>
 		<index>10</index>
 		<row>
-			<formatIndex>21</formatIndex>
+			<formatIndex>20</formatIndex>
 			<c>
 				<c>
-					<f>22</f>
+					<f>21</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -410,12 +400,12 @@
 			</c>
 			<c>
 				<c>
-					<f>23</f>
+					<f>22</f>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>24</f>
+					<f>23</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -426,7 +416,7 @@
 			</c>
 			<c>
 				<c>
-					<f>25</f>
+					<f>24</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -437,17 +427,22 @@
 			</c>
 			<c>
 				<c>
-					<f>26</f>
+					<f>25</f>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>26</f>
+					<f>25</f>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>26</f>
+					<f>25</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>25</f>
 				</c>
 			</c>
 			<c>
@@ -458,11 +453,6 @@
 			<c>
 				<c>
 					<f>27</f>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>28</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -479,23 +469,43 @@
 			<formatIndex>6</formatIndex>
 			<c>
 				<c>
+					<f>28</f>
+				</c>
+			</c>
+			<c>
+				<c>
 					<f>29</f>
 				</c>
 			</c>
 			<c>
 				<c>
 					<f>30</f>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>31</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
 							<v8:content>оцінка в балах</v8:content>
 						</v8:item>
 					</tl>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>31</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>32</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>32</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>32</f>
 				</c>
 			</c>
 			<c>
@@ -508,26 +518,6 @@
 					<f>33</f>
 				</c>
 			</c>
-			<c>
-				<c>
-					<f>33</f>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>33</f>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>33</f>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>34</f>
-				</c>
-			</c>
 		</row>
 	</rowsItem>
 	<rowsItem>
@@ -536,20 +526,20 @@
 			<formatIndex>6</formatIndex>
 			<c>
 				<c>
-					<f>35</f>
+					<f>34</f>
 					<parameter>НазваПродукту</parameter>
 				</c>
 			</c>
 			<c>
 				<i>2</i>
 				<c>
-					<f>36</f>
+					<f>35</f>
 					<parameter>СредО</parameter>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>37</f>
+					<f>36</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -561,7 +551,7 @@
 			<c>
 				<i>9</i>
 				<c>
-					<f>38</f>
+					<f>37</f>
 				</c>
 			</c>
 		</row>
@@ -569,11 +559,11 @@
 	<rowsItem>
 		<index>13</index>
 		<row>
-			<formatIndex>39</formatIndex>
+			<formatIndex>38</formatIndex>
 			<c>
 				<i>9</i>
 				<c>
-					<f>40</f>
+					<f>39</f>
 				</c>
 			</c>
 		</row>
@@ -719,10 +709,6 @@
 	</format>
 	<format>
 		<horizontalAlignment>Left</horizontalAlignment>
-	</format>
-	<format>
-		<horizontalAlignment>Justify</horizontalAlignment>
-		<fillType>Template</fillType>
 	</format>
 	<format>
 		<horizontalAlignment>Justify</horizontalAlignment>
