@@ -28,38 +28,11 @@
 			<ContextMenu name="ПодписьКладовщикКонтекстноеМеню" id="14"/>
 			<ExtendedTooltip name="ПодписьКладовщикРасширеннаяПодсказка" id="15"/>
 		</InputField>
-		<CommandBar name="КоманднаяПанельПроцессы" id="16">
-			<ChildItems>
-				<Button name="ДобавитьПроцесс" id="17">
-					<CommandName>Form.Command.ДобавитьПроцесс</CommandName>
-					<ContextMenu name="ДобавитьПроцессКонтекстноеМеню" id="18"/>
-					<ExtendedTooltip name="ДобавитьПроцессРасширеннаяПодсказка" id="19"/>
-				</Button>
-				<Button name="УдалитьПроцесс" id="20">
-					<CommandName>Form.Command.УдалитьПроцесс</CommandName>
-					<ContextMenu name="УдалитьПроцессКонтекстноеМеню" id="21"/>
-					<ExtendedTooltip name="УдалитьПроцессРасширеннаяПодсказка" id="22"/>
-				</Button>
-				<Button name="ВверхПроцесс" id="23">
-					<CommandName>Form.Command.ВверхПроцесс</CommandName>
-					<ContextMenu name="ВверхПроцессКонтекстноеМеню" id="24"/>
-					<ExtendedTooltip name="ВверхПроцессРасширеннаяПодсказка" id="25"/>
-				</Button>
-				<Button name="ВнизПроцесс" id="26">
-					<CommandName>Form.Command.ВнизПроцесс</CommandName>
-					<ContextMenu name="ВнизПроцессКонтекстноеМеню" id="27"/>
-					<ExtendedTooltip name="ВнизПроцессРасширеннаяПодсказка" id="28"/>
-				</Button>
-			</ChildItems>
-		</CommandBar>
-		<Table name="Процессы" id="29">
+		<Table name="Процессы" id="16">
 			<DataPath>Объект.Процессы</DataPath>
-			<CommandBarLocation>None</CommandBarLocation>
-			<ContextMenu name="ПроцессыКонтекстноеМеню" id="30"/>
-			<AutoCommandBar name="ПроцессыКоманднаяПанель" id="31">
-				<Autofill>false</Autofill>
-			</AutoCommandBar>
-			<ExtendedTooltip name="ПроцессыРасширеннаяПодсказка" id="32"/>
+			<ContextMenu name="ПроцессыКонтекстноеМеню" id="17"/>
+			<AutoCommandBar name="ПроцессыКоманднаяПанель" id="18"/>
+			<ExtendedTooltip name="ПроцессыРасширеннаяПодсказка" id="19"/>
 			<ChildItems>
 				<InputField name="ПроцессыВидПроцесса" id="33">
 					<DataPath>Объект.Процессы.ВидПроцесса</DataPath>
@@ -78,48 +51,6 @@
 			<SavedData>true</SavedData>
 		</Attribute>
 	</Attributes>
-	<Commands>
-		<Command name="ДобавитьПроцесс" id="1">
-			<Action>ДобавитьПроцесс</Action>
-			<Representation>Text</Representation>
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Добавить</v8:content>
-				</v8:item>
-			</Title>
-		</Command>
-		<Command name="УдалитьПроцесс" id="2">
-			<Action>УдалитьПроцесс</Action>
-			<Representation>Text</Representation>
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Удалить</v8:content>
-				</v8:item>
-			</Title>
-		</Command>
-		<Command name="ВверхПроцесс" id="3">
-			<Action>ВверхПроцесс</Action>
-			<Representation>Text</Representation>
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Вверх</v8:content>
-				</v8:item>
-			</Title>
-		</Command>
-		<Command name="ВнизПроцесс" id="4">
-			<Action>ВнизПроцесс</Action>
-			<Representation>Text</Representation>
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Вниз</v8:content>
-				</v8:item>
-			</Title>
-		</Command>
-	</Commands>
 	<CommandInterface>
 		<NavigationPanel/>
 		<CommandBar/>

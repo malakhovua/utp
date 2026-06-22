@@ -34,11 +34,8 @@
 		</CommandBar>
 		<Table name="Процессы" id="17">
 			<DataPath>Объект.Процессы</DataPath>
-			<CommandBarLocation>None</CommandBarLocation>
 			<ContextMenu name="ПроцессыКонтекстноеМеню" id="18"/>
-			<AutoCommandBar name="ПроцессыКоманднаяПанель" id="19">
-				<Autofill>false</Autofill>
-			</AutoCommandBar>
+			<AutoCommandBar name="ПроцессыКоманднаяПанель" id="19"/>
 			<ExtendedTooltip name="ПроцессыРасширеннаяПодсказка" id="20"/>
 			<ChildItems>
 				<InputField name="ПроцессыВидПроцесса" id="21">
@@ -63,11 +60,11 @@
 				</InputField>
 				<InputField name="ПроцессыДлинаПроцесса" id="33">
 					<DataPath>Объект.Процессы.ДлинаПроцесса</DataPath>
+					<ContextMenu name="ПроцессыДлинаПроцессаКонтекстноеМеню" id="34"/>
+					<ExtendedTooltip name="ПроцессыДлинаПроцессаРасширеннаяПодсказка" id="35"/>
 					<Events>
 						<Event name="OnChange">ПроцессыДлинаПроцессаПриИзменении</Event>
 					</Events>
-					<ContextMenu name="ПроцессыДлинаПроцессаКонтекстноеМеню" id="34"/>
-					<ExtendedTooltip name="ПроцессыДлинаПроцессаРасширеннаяПодсказка" id="35"/>
 				</InputField>
 				<InputField name="ПроцессыТемператураВКамере" id="36">
 					<DataPath>Объект.Процессы.ТемператураВКамере</DataPath>
