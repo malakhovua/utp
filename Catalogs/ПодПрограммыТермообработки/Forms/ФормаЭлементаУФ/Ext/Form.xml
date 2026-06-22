@@ -18,15 +18,15 @@
 			<ContextMenu name="НаименованиеДляСортировкиКонтекстноеМеню" id="8"/>
 			<ExtendedTooltip name="НаименованиеДляСортировкиРасширеннаяПодсказка" id="9"/>
 		</InputField>
-		<CheckBox name="ВнеКамеры" id="10">
+		<InputField name="ВнеКамеры" id="10">
 			<DataPath>Объект.ВнеКамеры</DataPath>
 			<ContextMenu name="ВнеКамерыКонтекстноеМеню" id="11"/>
 			<ExtendedTooltip name="ВнеКамерыРасширеннаяПодсказка" id="12"/>
-		</CheckBox>
+		</InputField>
 		<CommandBar name="КоманднаяПанельПроцессы" id="13">
 			<ChildItems>
 				<Button name="ЗаполнитьПоПрограмме" id="14">
-					<CommandName>ЗаполнитьПоПрограмме</CommandName>
+					<CommandName>Form.Command.ЗаполнитьПоПрограмме</CommandName>
 					<ContextMenu name="ЗаполнитьПоПрограммеКонтекстноеМеню" id="15"/>
 					<ExtendedTooltip name="ЗаполнитьПоПрограммеРасширеннаяПодсказка" id="16"/>
 				</Button>
@@ -63,8 +63,9 @@
 				</InputField>
 				<InputField name="ПроцессыДлинаПроцесса" id="33">
 					<DataPath>Объект.Процессы.ДлинаПроцесса</DataPath>
-					<EditOnChange>true</EditOnChange>
-					<ChangeEventName>ПроцессыДлинаПроцессаПриИзменении</ChangeEventName>
+					<Events>
+						<Event name="OnChange">ПроцессыДлинаПроцессаПриИзменении</Event>
+					</Events>
 					<ContextMenu name="ПроцессыДлинаПроцессаКонтекстноеМеню" id="34"/>
 					<ExtendedTooltip name="ПроцессыДлинаПроцессаРасширеннаяПодсказка" id="35"/>
 				</InputField>
@@ -104,7 +105,12 @@
 		<Command name="ЗаполнитьПоПрограмме" id="1">
 			<Action>ЗаполнитьПоПрограмме</Action>
 			<Representation>Text</Representation>
-			<Title>Заполнить по программе</Title>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить по программе</v8:content>
+				</v8:item>
+			</Title>
 		</Command>
 	</Commands>
 	<CommandInterface>

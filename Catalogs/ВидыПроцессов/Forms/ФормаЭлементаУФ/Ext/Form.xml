@@ -8,16 +8,16 @@
 			<ContextMenu name="НаименованиеКонтекстноеМеню" id="2"/>
 			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="3"/>
 		</InputField>
-		<CheckBox name="ВнеКамеры" id="4">
+		<InputField name="ВнеКамеры" id="4">
 			<DataPath>Объект.ВнеКамеры</DataPath>
 			<ContextMenu name="ВнеКамерыКонтекстноеМеню" id="5"/>
 			<ExtendedTooltip name="ВнеКамерыРасширеннаяПодсказка" id="6"/>
-		</CheckBox>
-		<CheckBox name="ЗанимаетКамеруБезОтчета" id="7">
+		</InputField>
+		<InputField name="ЗанимаетКамеруБезОтчета" id="7">
 			<DataPath>Объект.ЗанимаетКамеруБезОтчета</DataPath>
 			<ContextMenu name="ЗанимаетКамеруБезОтчетаКонтекстноеМеню" id="8"/>
 			<ExtendedTooltip name="ЗанимаетКамеруБезОтчетаРасширеннаяПодсказка" id="9"/>
-		</CheckBox>
+		</InputField>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="Объект" id="1">

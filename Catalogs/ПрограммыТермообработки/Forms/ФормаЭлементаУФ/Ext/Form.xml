@@ -8,45 +8,45 @@
 			<ContextMenu name="НаименованиеКонтекстноеМеню" id="2"/>
 			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="3"/>
 		</InputField>
-		<CheckBox name="ПодписьТермист" id="4">
+		<InputField name="ПодписьТермист" id="4">
 			<DataPath>Объект.ПодписьТермист</DataPath>
 			<ContextMenu name="ПодписьТермистКонтекстноеМеню" id="5"/>
 			<ExtendedTooltip name="ПодписьТермистРасширеннаяПодсказка" id="6"/>
-		</CheckBox>
-		<CheckBox name="ПодписьТехнолог" id="7">
+		</InputField>
+		<InputField name="ПодписьТехнолог" id="7">
 			<DataPath>Объект.ПодписьТехнолог</DataPath>
 			<ContextMenu name="ПодписьТехнологКонтекстноеМеню" id="8"/>
 			<ExtendedTooltip name="ПодписьТехнологРасширеннаяПодсказка" id="9"/>
-		</CheckBox>
-		<CheckBox name="ПодписьВетеринар" id="10">
+		</InputField>
+		<InputField name="ПодписьВетеринар" id="10">
 			<DataPath>Объект.ПодписьВетеринар</DataPath>
 			<ContextMenu name="ПодписьВетеринарКонтекстноеМеню" id="11"/>
 			<ExtendedTooltip name="ПодписьВетеринарРасширеннаяПодсказка" id="12"/>
-		</CheckBox>
-		<CheckBox name="ПодписьКладовщик" id="13">
+		</InputField>
+		<InputField name="ПодписьКладовщик" id="13">
 			<DataPath>Объект.ПодписьКладовщик</DataPath>
 			<ContextMenu name="ПодписьКладовщикКонтекстноеМеню" id="14"/>
 			<ExtendedTooltip name="ПодписьКладовщикРасширеннаяПодсказка" id="15"/>
-		</CheckBox>
+		</InputField>
 		<CommandBar name="КоманднаяПанельПроцессы" id="16">
 			<ChildItems>
 				<Button name="ДобавитьПроцесс" id="17">
-					<CommandName>ДобавитьПроцесс</CommandName>
+					<CommandName>Form.Command.ДобавитьПроцесс</CommandName>
 					<ContextMenu name="ДобавитьПроцессКонтекстноеМеню" id="18"/>
 					<ExtendedTooltip name="ДобавитьПроцессРасширеннаяПодсказка" id="19"/>
 				</Button>
 				<Button name="УдалитьПроцесс" id="20">
-					<CommandName>УдалитьПроцесс</CommandName>
+					<CommandName>Form.Command.УдалитьПроцесс</CommandName>
 					<ContextMenu name="УдалитьПроцессКонтекстноеМеню" id="21"/>
 					<ExtendedTooltip name="УдалитьПроцессРасширеннаяПодсказка" id="22"/>
 				</Button>
 				<Button name="ВверхПроцесс" id="23">
-					<CommandName>ВверхПроцесс</CommandName>
+					<CommandName>Form.Command.ВверхПроцесс</CommandName>
 					<ContextMenu name="ВверхПроцессКонтекстноеМеню" id="24"/>
 					<ExtendedTooltip name="ВверхПроцессРасширеннаяПодсказка" id="25"/>
 				</Button>
 				<Button name="ВнизПроцесс" id="26">
-					<CommandName>ВнизПроцесс</CommandName>
+					<CommandName>Form.Command.ВнизПроцесс</CommandName>
 					<ContextMenu name="ВнизПроцессКонтекстноеМеню" id="27"/>
 					<ExtendedTooltip name="ВнизПроцессРасширеннаяПодсказка" id="28"/>
 				</Button>
@@ -82,22 +82,42 @@
 		<Command name="ДобавитьПроцесс" id="1">
 			<Action>ДобавитьПроцесс</Action>
 			<Representation>Text</Representation>
-			<Title>Добавить</Title>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить</v8:content>
+				</v8:item>
+			</Title>
 		</Command>
 		<Command name="УдалитьПроцесс" id="2">
 			<Action>УдалитьПроцесс</Action>
 			<Representation>Text</Representation>
-			<Title>Удалить</Title>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить</v8:content>
+				</v8:item>
+			</Title>
 		</Command>
 		<Command name="ВверхПроцесс" id="3">
 			<Action>ВверхПроцесс</Action>
 			<Representation>Text</Representation>
-			<Title>Вверх</Title>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вверх</v8:content>
+				</v8:item>
+			</Title>
 		</Command>
 		<Command name="ВнизПроцесс" id="4">
 			<Action>ВнизПроцесс</Action>
 			<Representation>Text</Representation>
-			<Title>Вниз</Title>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вниз</v8:content>
+				</v8:item>
+			</Title>
 		</Command>
 	</Commands>
 	<CommandInterface>
