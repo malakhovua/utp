@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="" id="-1"/>
+	<ChildItems>
+		<InputField name="Код" id="1">
+			<DataPath>Объект.Code</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Наименование" id="4">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<CheckBoxField name="ПодписьТермист" id="7">
+			<DataPath>Объект.ПодписьТермист</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ПодписьТермистКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ПодписьТермистРасширеннаяПодсказка" id="9"/>
+		</CheckBoxField>
+		<CheckBoxField name="ПодписьТехнолог" id="10">
+			<DataPath>Объект.ПодписьТехнолог</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ПодписьТехнологКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="ПодписьТехнологРасширеннаяПодсказка" id="12"/>
+		</CheckBoxField>
+		<CheckBoxField name="ПодписьВетеринар" id="13">
+			<DataPath>Объект.ПодписьВетеринар</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ПодписьВетеринарКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ПодписьВетеринарРасширеннаяПодсказка" id="15"/>
+		</CheckBoxField>
+		<CheckBoxField name="ПодписьКладовщик" id="16">
+			<DataPath>Объект.ПодписьКладовщик</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ПодписьКладовщикКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="ПодписьКладовщикРасширеннаяПодсказка" id="18"/>
+		</CheckBoxField>
+		<Table name="Процессы" id="19">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.Процессы</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ПроцессыКонтекстноеМеню" id="20"/>
+			<AutoCommandBar name="ПроцессыКоманднаяПанель" id="21"/>
+			<ExtendedTooltip name="ПроцессыРасширеннаяПодсказка" id="22"/>
+			<SearchStringAddition name="ПроцессыСтрокаПоиска" id="23">
+				<AdditionSource>
+					<Item>Процессы</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПроцессыСтрокаПоискаКонтекстноеМеню" id="24"/>
+				<ExtendedTooltip name="ПроцессыСтрокаПоискаРасширеннаяПодсказка" id="25"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ПроцессыСостояниеПросмотра" id="26">
+				<AdditionSource>
+					<Item>Процессы</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПроцессыСостояниеПросмотраКонтекстноеМеню" id="27"/>
+				<ExtendedTooltip name="ПроцессыСостояниеПросмотраРасширеннаяПодсказка" id="28"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ПроцессыУправлениеПоиском" id="29">
+				<AdditionSource>
+					<Item>Процессы</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ПроцессыУправлениеПоискомКонтекстноеМеню" id="30"/>
+				<ExtendedTooltip name="ПроцессыУправлениеПоискомРасширеннаяПодсказка" id="31"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="ПроцессыНомерСтроки" id="32">
+					<DataPath>Объект.Процессы.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПроцессыНомерСтрокиКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="ПроцессыНомерСтрокиРасширеннаяПодсказка" id="34"/>
+				</LabelField>
+				<InputField name="ПроцессыВидПроцесса" id="35">
+					<DataPath>Объект.Процессы.ВидПроцесса</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПроцессыВидПроцессаКонтекстноеМеню" id="36"/>
+					<ExtendedTooltip name="ПроцессыВидПроцессаРасширеннаяПодсказка" id="37"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ПрограммыТермообработки</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

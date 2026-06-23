@@ -30,15 +30,25 @@
 						<CommandName>Form.Command.КомандаЗаполнитьВсеПо5</CommandName>
 						<ExtendedTooltip name="ФормаКомандаЗаполнитьВсеПо5РасширеннаяПодсказка" id="132"/>
 					</Button>
-					<Button name="ФормаКомандаЗаполнитьКладовщик" id="133">
+					<Button name="ФормаКомандаЗаполнитьТехнолог" id="145">
 						<Type>CommandBarButton</Type>
-						<CommandName>Form.Command.КомандаЗаполнитьКладовщик</CommandName>
-						<ExtendedTooltip name="ФормаКомандаЗаполнитьКладовщикРасширеннаяПодсказка" id="134"/>
+						<CommandName>Form.Command.КомандаЗаполнитьТехнолог</CommandName>
+						<ExtendedTooltip name="ФормаКомандаЗаполнитьТехнологРасширеннаяПодсказка" id="146"/>
 					</Button>
 					<Button name="ФормаКомандаЗаполнитьВетврач" id="129">
 						<Type>CommandBarButton</Type>
 						<CommandName>Form.Command.КомандаЗаполнитьВетврач</CommandName>
 						<ExtendedTooltip name="ФормаКомандаЗаполнитьВетврачРасширеннаяПодсказка" id="130"/>
+					</Button>
+					<Button name="ФормаКомандаЗаполнитьКладовщик" id="133">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.КомандаЗаполнитьКладовщик</CommandName>
+						<ExtendedTooltip name="ФормаКомандаЗаполнитьКладовщикРасширеннаяПодсказка" id="134"/>
+					</Button>
+					<Button name="ФормаКомандаОчистить" id="147">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.КомандаОчистить</CommandName>
+						<ExtendedTooltip name="ФормаКомандаОчиститьРасширеннаяПодсказка" id="148"/>
 					</Button>
 				</ChildItems>
 			</Popup>
@@ -528,6 +538,21 @@
 			</Use>
 			<Action>КомандаПечатьОбщая</Action>
 			<Representation>Text</Representation>
+		</Command>
+		<Command name="КомандаОчистить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Все очистить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда очистить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаОчистить</Action>
 		</Command>
 	</Commands>
 </Form>

@@ -166,7 +166,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ДокументыВозвратыОтПокупателя</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ДокументыАктыСверки</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommandGroup.ГруппаКомандДокументыПродажи</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Interface.umk_Полный</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Interface.ПолныйИнтерфейсУМК</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.umk_ЗаписатьДопРеквизитыПоПоступлению</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.umk_УстановитьВремяДокумента</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.umk_ПередЗаписьюРегистраДатаЗапретаРедактированияПоДокументам</xr:Item>

@@ -746,8 +746,8 @@
 			<Interface>УправлениеЗапасами</Interface>
 			<Interface>УправлениеПродажами</Interface>
 			<Interface>УправлениеРозничнойТорговлей</Interface>
-			<Interface>umk_Полный</Interface>
-			<Interface>ИнтерфейсКассира_umk</Interface>
+			<Interface>ПолныйИнтерфейсУМК</Interface>
+			<Interface>ИнтерфейсКассираУМК</Interface>
 			<SessionParameter>ВсеУзлыДляОбменаССайтомЗаказами</SessionParameter>
 			<SessionParameter>ВсеУзлыДляОбменаССайтомТоварами</SessionParameter>
 			<SessionParameter>ВсеУзлыОбменаСРозничнойТорговлей</SessionParameter>
@@ -1330,9 +1330,12 @@
 			<Catalog>КамерыТермообработки</Catalog>
 			<Catalog>umk_КатегорияПродукции</Catalog>
 			<Catalog>umk_ГруппыХарактеристик</Catalog>
+			<Catalog>ПодпрограммыНоменклатуры</Catalog>
 			<Catalog>ПодПрограммыТермообработки</Catalog>
 			<Catalog>ПрограммыТермообработки</Catalog>
 			<Catalog>EDIN_Контрагент</Catalog>
+			<Catalog>ПроцессПодПрограммыТермообработки</Catalog>
+			<Catalog>ПроцессПрограммыТермообработки</Catalog>
 			<Document>ABCКлассификацияПокупателей</Document>
 			<Document>АвансовыйОтчет</Document>
 			<Document>АктОбОказанииПроизводственныхУслуг</Document>

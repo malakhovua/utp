@@ -16,7 +16,7 @@
 			<Picture/>
 			<Content>
 				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.umk_ДопРеквизитыНоменклатуры</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Interface.umk_Полный</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Interface.ПолныйИнтерфейсУМК</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.ОтчетПроизводстваЗаСмену</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.umk_ПоказанияСпидометраАвто</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.umk_КоэффКМ</xr:Item>
