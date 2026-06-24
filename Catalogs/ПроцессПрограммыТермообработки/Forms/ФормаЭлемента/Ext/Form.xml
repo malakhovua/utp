@@ -24,10 +24,16 @@
 		</InputField>
 		<InputField name="ВидПроцесса" id="10">
 			<DataPath>Объект.ВидПроцесса</DataPath>
+			<Events>
+				<Event name="OnChange">ВидПроцессаПриИзменении</Event>
+			</Events>
 			<EditMode>EnterOnInput</EditMode>
 			<ContextMenu name="ВидПроцессаКонтекстноеМеню" id="11"/>
 			<ExtendedTooltip name="ВидПроцессаРасширеннаяПодсказка" id="12"/>
 		</InputField>
+		<LabelDecoration name="ВнеКамерыДекорация" id="13">
+			<ExtendedTooltip name="ВнеКамерыДекорацияРасширеннаяПодсказка" id="14"/>
+		</LabelDecoration>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="Объект" id="1">

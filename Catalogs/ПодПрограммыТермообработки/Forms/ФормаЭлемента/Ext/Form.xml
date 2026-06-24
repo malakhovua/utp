@@ -84,24 +84,36 @@
 				</InputField>
 				<InputField name="ПроцессыДлинаПроцесса" id="35">
 					<DataPath>Объект.Процессы.ДлинаПроцесса</DataPath>
+					<Events>
+						<Event name="OnChange">ПроцессыДлинаПроцессаПриИзменении</Event>
+					</Events>
 					<EditMode>EnterOnInput</EditMode>
 					<ContextMenu name="ПроцессыДлинаПроцессаКонтекстноеМеню" id="36"/>
 					<ExtendedTooltip name="ПроцессыДлинаПроцессаРасширеннаяПодсказка" id="37"/>
 				</InputField>
 				<InputField name="ПроцессыДлинаПроцессаЧасов" id="38">
 					<DataPath>Объект.Процессы.ДлинаПроцессаЧасов</DataPath>
+					<Events>
+						<Event name="OnChange">ПроцессыДлинаПроцессаЧасовПриИзменении</Event>
+					</Events>
 					<EditMode>EnterOnInput</EditMode>
 					<ContextMenu name="ПроцессыДлинаПроцессаЧасовКонтекстноеМеню" id="39"/>
 					<ExtendedTooltip name="ПроцессыДлинаПроцессаЧасовРасширеннаяПодсказка" id="40"/>
 				</InputField>
 				<InputField name="ПроцессыДлинаПроцессаМинут" id="41">
 					<DataPath>Объект.Процессы.ДлинаПроцессаМинут</DataPath>
+					<Events>
+						<Event name="OnChange">ПроцессыДлинаПроцессаМинутПриИзменении</Event>
+					</Events>
 					<EditMode>EnterOnInput</EditMode>
 					<ContextMenu name="ПроцессыДлинаПроцессаМинутКонтекстноеМеню" id="42"/>
 					<ExtendedTooltip name="ПроцессыДлинаПроцессаМинутРасширеннаяПодсказка" id="43"/>
 				</InputField>
 				<InputField name="ПроцессыДлинаПроцессаДней" id="44">
 					<DataPath>Объект.Процессы.ДлинаПроцессаДней</DataPath>
+					<Events>
+						<Event name="OnChange">ПроцессыДлинаПроцессаДнейПриИзменении</Event>
+					</Events>
 					<EditMode>EnterOnInput</EditMode>
 					<ContextMenu name="ПроцессыДлинаПроцессаДнейКонтекстноеМеню" id="45"/>
 					<ExtendedTooltip name="ПроцессыДлинаПроцессаДнейРасширеннаяПодсказка" id="46"/>
