@@ -1,4 +1,4 @@
-@echo off
+﻿@echo off
 chcp 65001 > nul
 setlocal EnableDelayedExpansion
 
@@ -16,7 +16,7 @@ set "IB_SERVER=127.0.0.1"
 set "IB_NAME=utp_dev"
 
 :: Логін і пароль адміністратора конфігуратора (залиште порожніми якщо не потрібно)
-set "IB_USER=Адміністратор"
+set "IB_USER="
 set "IB_PASS="
 
 :: Шлях до локального репозиторію (каталог з файлами конфігурації)
