@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>false</RepostOnWrite>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type><v8:Type>cfg:DocumentObject.ЗагрузкаКамеры</v8:Type></Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+	<ChildItems>
+		<UsualGroup name="ГруппаШапка" id="2">
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="3"/>
+			<ChildItems>
+				<InputField name="Дата" id="4">
+					<DataPath>Объект.Date</DataPath>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+				</InputField>
+				<InputField name="Номер" id="7">
+					<DataPath>Объект.Number</DataPath>
+					<ContextMenu name="НомерКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="9"/>
+				</InputField>
+			<InputField name="КамераТермообработки" id="10">
+				<DataPath>Объект.КамераТермообработки</DataPath>
+				<ContextMenu name="КамераТермообработкиКонтекстноеМеню" id="11"/>
+				<ExtendedTooltip name="КамераТермообработкиРасширеннаяПодсказка" id="12"/>
+			</InputField>
+			<InputField name="ПодПрограмма" id="13">
+				<DataPath>Объект.ПодПрограмма</DataPath>
+				<ContextMenu name="ПодПрограммаКонтекстноеМеню" id="14"/>
+				<ExtendedTooltip name="ПодПрограммаРасширеннаяПодсказка" id="15"/>
+			</InputField>
+			<InputField name="ЗагруженаЧасы" id="16">
+				<DataPath>Объект.ЗагруженаЧасы</DataPath>
+				<ContextMenu name="ЗагруженаЧасыКонтекстноеМеню" id="17"/>
+				<ExtendedTooltip name="ЗагруженаЧасыРасширеннаяПодсказка" id="18"/>
+			</InputField>
+			<InputField name="ЗагруженаМинуты" id="19">
+				<DataPath>Объект.ЗагруженаМинуты</DataPath>
+				<ContextMenu name="ЗагруженаМинутыКонтекстноеМеню" id="20"/>
+				<ExtendedTooltip name="ЗагруженаМинутыРасширеннаяПодсказка" id="21"/>
+			</InputField>
+			<InputField name="ЗанятаМинуты" id="22">
+				<DataPath>Объект.ЗанятаМинуты</DataPath>
+				<ContextMenu name="ЗанятаМинутыКонтекстноеМеню" id="23"/>
+				<ExtendedTooltip name="ЗанятаМинутыРасширеннаяПодсказка" id="24"/>
+			</InputField>
+			<InputField name="ДокументОснование" id="25">
+				<DataPath>Объект.ДокументОснование</DataPath>
+				<ContextMenu name="ДокументОснованиеКонтекстноеМеню" id="26"/>
+				<ExtendedTooltip name="ДокументОснованиеРасширеннаяПодсказка" id="27"/>
+			</InputField>
+			<InputField name="СвободнаДата" id="28">
+				<DataPath>Объект.СвободнаДата</DataPath>
+				<ContextMenu name="СвободнаДатаКонтекстноеМеню" id="29"/>
+				<ExtendedTooltip name="СвободнаДатаРасширеннаяПодсказка" id="30"/>
+			</InputField>
+			<InputField name="СвободнаЧасы" id="31">
+				<DataPath>Объект.СвободнаЧасы</DataPath>
+				<ContextMenu name="СвободнаЧасыКонтекстноеМеню" id="32"/>
+				<ExtendedTooltip name="СвободнаЧасыРасширеннаяПодсказка" id="33"/>
+			</InputField>
+			<InputField name="СвободнаМинуты" id="34">
+				<DataPath>Объект.СвободнаМинуты</DataPath>
+				<ContextMenu name="СвободнаМинутыКонтекстноеМеню" id="35"/>
+				<ExtendedTooltip name="СвободнаМинутыРасширеннаяПодсказка" id="36"/>
+			</InputField>
+			<InputField name="ЕстьНеоконченыеПроцессы" id="37">
+				<DataPath>Объект.ЕстьНеоконченыеПроцессы</DataPath>
+				<ContextMenu name="ЕстьНеоконченыеПроцессыКонтекстноеМеню" id="38"/>
+				<ExtendedTooltip name="ЕстьНеоконченыеПроцессыРасширеннаяПодсказка" id="39"/>
+			</InputField>
+			<InputField name="ИтогРамПоДокументу" id="40">
+				<DataPath>Объект.ИтогРамПоДокументу</DataPath>
+				<ContextMenu name="ИтогРамПоДокументуКонтекстноеМеню" id="41"/>
+				<ExtendedTooltip name="ИтогРамПоДокументуРасширеннаяПодсказка" id="42"/>
+			</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="ТМЦ" id="43">
+			<DataPath>Объект.ТМЦ</DataPath>
+			<ChangeRowSet>true</ChangeRowSet>
+			<ExtendedTooltip name="ТМЦРасширеннаяПодсказка" id="44"/>
+			<ChildItems>
+				<InputField name="ТМЦ" id="45">
+					<DataPath>Объект.ТМЦ.ТМЦ</DataPath>
+					<ContextMenu name="ТМЦКонтекстноеМеню" id="46"/>
+					<ExtendedTooltip name="ТМЦРасширеннаяПодсказка" id="47"/>
+				</InputField>
+				<InputField name="ВидРамы" id="48">
+					<DataPath>Объект.ТМЦ.ВидРамы</DataPath>
+					<ContextMenu name="ВидРамыКонтекстноеМеню" id="49"/>
+					<ExtendedTooltip name="ВидРамыРасширеннаяПодсказка" id="50"/>
+				</InputField>
+				<InputField name="Кво" id="51">
+					<DataPath>Объект.ТМЦ.Кво</DataPath>
+					<ContextMenu name="КвоКонтекстноеМеню" id="52"/>
+					<ExtendedTooltip name="КвоРасширеннаяПодсказка" id="53"/>
+				</InputField>
+				<InputField name="КвоРам" id="54">
+					<DataPath>Объект.ТМЦ.КвоРам</DataPath>
+					<ContextMenu name="КвоРамКонтекстноеМеню" id="55"/>
+					<ExtendedTooltip name="КвоРамРасширеннаяПодсказка" id="56"/>
+				</InputField>
+				<InputField name="ОтчетПроизводства" id="57">
+					<DataPath>Объект.ТМЦ.ОтчетПроизводства</DataPath>
+					<ContextMenu name="ОтчетПроизводстваКонтекстноеМеню" id="58"/>
+					<ExtendedTooltip name="ОтчетПроизводстваРасширеннаяПодсказка" id="59"/>
+				</InputField>
+				<InputField name="НачалоТермообработки" id="60">
+					<DataPath>Объект.ТМЦ.НачалоТермообработки</DataPath>
+					<ContextMenu name="НачалоТермообработкиКонтекстноеМеню" id="61"/>
+					<ExtendedTooltip name="НачалоТермообработкиРасширеннаяПодсказка" id="62"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+</Form>

@@ -122,12 +122,12 @@
 						</InputField>
 					</ChildItems>
 				</UsualGroup>
-				<InputField name="ПН" id="22">
-					<DataPath>Объект.ПН</DataPath>
+				<InputField name="ОтчетПроизводства" id="22">
+					<DataPath>Объект.ОтчетПроизводства</DataPath>
 					<Width>50</Width>
 					<HorizontalStretch>false</HorizontalStretch>
-					<ContextMenu name="ПНКонтекстноеМеню" id="23"/>
-					<ExtendedTooltip name="ПНРасширеннаяПодсказка" id="24"/>
+					<ContextMenu name="ОтчетПроизводстваКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="ОтчетПроизводстваРасширеннаяПодсказка" id="24"/>
 				</InputField>
 				<UsualGroup name="ГруппаОтветственные" id="11">
 					<Group>AlwaysHorizontal</Group>

@@ -1363,6 +1363,7 @@
 			<Document>Доверенность</Document>
 			<Document>ДоговорНаВыполнениеРаботСФизЛицом</Document>
 			<Document>ДокументРасчетовСКонтрагентом</Document>
+			<Document>ЗагрузкаКамеры</Document>
 			<Document>ЗаказПокупателя</Document>
 			<Document>ЗаказПоставщику</Document>
 			<Document>ЗакрытиеВнутреннихЗаказов</Document>
@@ -1415,6 +1416,7 @@
 			<Document>МодернизацияНМА</Document>
 			<Document>МодернизацияОС</Document>
 			<Document>НалоговаяНакладная</Document>
+			<Document>НачалоТермообработки</Document>
 			<Document>НачислениеЗарплатыРаботникамОрганизаций</Document>
 			<Document>НачислениеКоммунальногоНалога</Document>
 			<Document>НачислениеОтпускаРаботникамОрганизаций</Document>

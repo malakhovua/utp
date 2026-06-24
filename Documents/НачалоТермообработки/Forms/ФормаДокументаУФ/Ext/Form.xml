@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>false</RepostOnWrite>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type><v8:Type>cfg:DocumentObject.НачалоТермообработки</v8:Type></Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+	<ChildItems>
+		<UsualGroup name="ГруппаШапка" id="2">
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="3"/>
+			<ChildItems>
+				<InputField name="Дата" id="4">
+					<DataPath>Объект.Date</DataPath>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+				</InputField>
+				<InputField name="Номер" id="7">
+					<DataPath>Объект.Number</DataPath>
+					<ContextMenu name="НомерКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="9"/>
+				</InputField>
+			<InputField name="НачалоЧасы" id="10">
+				<DataPath>Объект.НачалоЧасы</DataPath>
+				<ContextMenu name="НачалоЧасыКонтекстноеМеню" id="11"/>
+				<ExtendedTooltip name="НачалоЧасыРасширеннаяПодсказка" id="12"/>
+			</InputField>
+			<InputField name="НачалоМинуты" id="13">
+				<DataPath>Объект.НачалоМинуты</DataPath>
+				<ContextMenu name="НачалоМинутыКонтекстноеМеню" id="14"/>
+				<ExtendedTooltip name="НачалоМинутыРасширеннаяПодсказка" id="15"/>
+			</InputField>
+			<InputField name="ОтчетПроизводства" id="16">
+				<DataPath>Объект.ОтчетПроизводства</DataPath>
+				<ContextMenu name="ОтчетПроизводстваКонтекстноеМеню" id="17"/>
+				<ExtendedTooltip name="ОтчетПроизводстваРасширеннаяПодсказка" id="18"/>
+			</InputField>
+			<InputField name="ПодПрограмма" id="19">
+				<DataPath>Объект.ПодПрограмма</DataPath>
+				<ContextMenu name="ПодПрограммаКонтекстноеМеню" id="20"/>
+				<ExtendedTooltip name="ПодПрограммаРасширеннаяПодсказка" id="21"/>
+			</InputField>
+			<InputField name="МинДата" id="22">
+				<DataPath>Объект.МинДата</DataPath>
+				<ContextMenu name="МинДатаКонтекстноеМеню" id="23"/>
+				<ExtendedTooltip name="МинДатаРасширеннаяПодсказка" id="24"/>
+			</InputField>
+			<InputField name="МаксДата" id="25">
+				<DataPath>Объект.МаксДата</DataPath>
+				<ContextMenu name="МаксДатаКонтекстноеМеню" id="26"/>
+				<ExtendedTooltip name="МаксДатаРасширеннаяПодсказка" id="27"/>
+			</InputField>
+			<InputField name="ДокументЗагрузка" id="28">
+				<DataPath>Объект.ДокументЗагрузка</DataPath>
+				<ContextMenu name="ДокументЗагрузкаКонтекстноеМеню" id="29"/>
+				<ExtendedTooltip name="ДокументЗагрузкаРасширеннаяПодсказка" id="30"/>
+			</InputField>
+			<InputField name="ИтогПоВидамРам" id="31">
+				<DataPath>Объект.ИтогПоВидамРам</DataPath>
+				<ContextMenu name="ИтогПоВидамРамКонтекстноеМеню" id="32"/>
+				<ExtendedTooltip name="ИтогПоВидамРамРасширеннаяПодсказка" id="33"/>
+			</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="ТМЦ" id="34">
+			<DataPath>Объект.ТМЦ</DataPath>
+			<ChangeRowSet>true</ChangeRowSet>
+			<ExtendedTooltip name="ТМЦРасширеннаяПодсказка" id="35"/>
+			<ChildItems>
+				<InputField name="ТМЦ" id="36">
+					<DataPath>Объект.ТМЦ.ТМЦ</DataPath>
+					<ContextMenu name="ТМЦКонтекстноеМеню" id="37"/>
+					<ExtendedTooltip name="ТМЦРасширеннаяПодсказка" id="38"/>
+				</InputField>
+				<InputField name="ВидРамы" id="39">
+					<DataPath>Объект.ТМЦ.ВидРамы</DataPath>
+					<ContextMenu name="ВидРамыКонтекстноеМеню" id="40"/>
+					<ExtendedTooltip name="ВидРамыРасширеннаяПодсказка" id="41"/>
+				</InputField>
+				<InputField name="Кво" id="42">
+					<DataPath>Объект.ТМЦ.Кво</DataPath>
+					<ContextMenu name="КвоКонтекстноеМеню" id="43"/>
+					<ExtendedTooltip name="КвоРасширеннаяПодсказка" id="44"/>
+				</InputField>
+				<InputField name="КвоРам" id="45">
+					<DataPath>Объект.ТМЦ.КвоРам</DataPath>
+					<ContextMenu name="КвоРамКонтекстноеМеню" id="46"/>
+					<ExtendedTooltip name="КвоРамРасширеннаяПодсказка" id="47"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+</Form>

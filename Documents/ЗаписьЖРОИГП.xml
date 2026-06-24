@@ -345,20 +345,20 @@
 			</Attribute>
 			<Attribute uuid="c60d4271-0206-4752-87c2-e2685230cc60">
 				<Properties>
-					<Name>ПН</Name>
+					<Name>ОтчетПроизводства</Name>
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Документ-основание</v8:content>
+							<v8:content>Отчет производства за смену</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>uk</v8:lang>
-							<v8:content>Документ-підстава</v8:content>
+							<v8:content>Звіт виробництва за зміну</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
 					<Type>
-						<v8:Type>cfg:DocumentRef.ПоступлениеТоваровУслуг</v8:Type>
+						<v8:Type>cfg:DocumentRef.ОтчетПроизводстваЗаСмену</v8:Type>
 					</Type>
 					<PasswordMode>false</PasswordMode>
 					<Format/>
