@@ -21,11 +21,17 @@
 				</InputField>
 				<InputField name="НачалоЧасы" id="10">
 					<DataPath>Объект.НачалоЧасы</DataPath>
+					<Events>
+						<Event name="OnChange">НачалоЧасыПриИзменении</Event>
+					</Events>
 					<ContextMenu name="НачалоЧасыКонтекстноеМеню" id="11"/>
 					<ExtendedTooltip name="НачалоЧасыРасширеннаяПодсказка" id="12"/>
 				</InputField>
 				<InputField name="НачалоМинуты" id="13">
 					<DataPath>Объект.НачалоМинуты</DataPath>
+					<Events>
+						<Event name="OnChange">НачалоМинутыПриИзменении</Event>
+					</Events>
 					<ContextMenu name="НачалоМинутыКонтекстноеМеню" id="14"/>
 					<ExtendedTooltip name="НачалоМинутыРасширеннаяПодсказка" id="15"/>
 				</InputField>
@@ -36,9 +42,15 @@
 				</InputField>
 				<InputField name="ПодПрограмма" id="19">
 					<DataPath>Объект.ПодПрограмма</DataPath>
+					<Events>
+						<Event name="OnChange">ПодПрограммаПриИзменении</Event>
+					</Events>
 					<ContextMenu name="ПодПрограммаКонтекстноеМеню" id="20"/>
 					<ExtendedTooltip name="ПодПрограммаРасширеннаяПодсказка" id="21"/>
 				</InputField>
+				<LabelDecoration name="НаименованиеПрограммы" id="59">
+					<ExtendedTooltip name="НаименованиеПрограммыРасширеннаяПодсказка" id="60"/>
+				</LabelDecoration>
 				<InputField name="МинДата" id="22">
 					<DataPath>Объект.МинДата</DataPath>
 					<ContextMenu name="МинДатаКонтекстноеМеню" id="23"/>
@@ -104,6 +116,9 @@
 				</InputField>
 				<InputField name="Кво" id="42">
 					<DataPath>Объект.ТМЦ.Кво</DataPath>
+					<Events>
+						<Event name="OnChange">ТМЦКвоПриИзменении</Event>
+					</Events>
 					<ContextMenu name="КвоКонтекстноеМеню" id="43"/>
 					<ExtendedTooltip name="КвоРасширеннаяПодсказка" id="44"/>
 				</InputField>
