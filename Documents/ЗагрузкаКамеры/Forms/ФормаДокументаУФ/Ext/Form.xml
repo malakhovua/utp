@@ -21,19 +21,19 @@
 				</InputField>
 				<InputField name="КамераТермообработки" id="10">
 					<DataPath>Объект.КамераТермообработки</DataPath>
+					<ContextMenu name="КамераТермообработкиКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="КамераТермообработкиРасширеннаяПодсказка" id="12"/>
 					<Events>
 						<Event name="OnChange">КамераТермообработкиПриИзменении</Event>
 					</Events>
-					<ContextMenu name="КамераТермообработкиКонтекстноеМеню" id="11"/>
-					<ExtendedTooltip name="КамераТермообработкиРасширеннаяПодсказка" id="12"/>
 				</InputField>
 				<InputField name="ПодПрограмма" id="13">
 					<DataPath>Объект.ПодПрограмма</DataPath>
+					<ContextMenu name="ПодПрограммаКонтекстноеМеню" id="14"/>
+					<ExtendedTooltip name="ПодПрограммаРасширеннаяПодсказка" id="15"/>
 					<Events>
 						<Event name="OnChange">ПодПрограммаПриИзменении</Event>
 					</Events>
-					<ContextMenu name="ПодПрограммаКонтекстноеМеню" id="14"/>
-					<ExtendedTooltip name="ПодПрограммаРасширеннаяПодсказка" id="15"/>
 				</InputField>
 				<InputField name="ЗагруженаЧасы" id="16">
 					<DataPath>Объект.ЗагруженаЧасы</DataPath>
@@ -81,12 +81,15 @@
 					<ExtendedTooltip name="ИтогРамПоДокументуРасширеннаяПодсказка" id="42"/>
 				</InputField>
 				<LabelDecoration name="КвоРамВКамере" id="74">
+					<ContextMenu name="КвоРамВКамереКонтекстноеМеню" id="80"/>
 					<ExtendedTooltip name="КвоРамВКамереРасширеннаяПодсказка" id="75"/>
 				</LabelDecoration>
 				<LabelDecoration name="ТекстМногоРам" id="76">
+					<ContextMenu name="ТекстМногоРамКонтекстноеМеню" id="81"/>
 					<ExtendedTooltip name="ТекстМногоРамРасширеннаяПодсказка" id="77"/>
 				</LabelDecoration>
 				<LabelDecoration name="ИтогоКвоТекст" id="78">
+					<ContextMenu name="ИтогоКвоТекстКонтекстноеМеню" id="82"/>
 					<ExtendedTooltip name="ИтогоКвоТекстРасширеннаяПодсказка" id="79"/>
 				</LabelDecoration>
 			</ChildItems>

@@ -3,7 +3,7 @@
 	<AutoTime>CurrentOrLast</AutoTime>
 	<UsePostingMode>Auto</UsePostingMode>
 	<RepostOnWrite>false</RepostOnWrite>
-	<AutoCommandBar name="" id="-1"/>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
 	<ChildItems>
 		<UsualGroup name="ГруппаШапка" id="2">
 			<ShowTitle>false</ShowTitle>
@@ -21,19 +21,19 @@
 				</InputField>
 				<InputField name="НачалоЧасы" id="10">
 					<DataPath>Объект.НачалоЧасы</DataPath>
+					<ContextMenu name="НачалоЧасыКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="НачалоЧасыРасширеннаяПодсказка" id="12"/>
 					<Events>
 						<Event name="OnChange">НачалоЧасыПриИзменении</Event>
 					</Events>
-					<ContextMenu name="НачалоЧасыКонтекстноеМеню" id="11"/>
-					<ExtendedTooltip name="НачалоЧасыРасширеннаяПодсказка" id="12"/>
 				</InputField>
 				<InputField name="НачалоМинуты" id="13">
 					<DataPath>Объект.НачалоМинуты</DataPath>
+					<ContextMenu name="НачалоМинутыКонтекстноеМеню" id="14"/>
+					<ExtendedTooltip name="НачалоМинутыРасширеннаяПодсказка" id="15"/>
 					<Events>
 						<Event name="OnChange">НачалоМинутыПриИзменении</Event>
 					</Events>
-					<ContextMenu name="НачалоМинутыКонтекстноеМеню" id="14"/>
-					<ExtendedTooltip name="НачалоМинутыРасширеннаяПодсказка" id="15"/>
 				</InputField>
 				<InputField name="ОтчетПроизводства" id="16">
 					<DataPath>Объект.ОтчетПроизводства</DataPath>
@@ -42,13 +42,14 @@
 				</InputField>
 				<InputField name="ПодПрограмма" id="19">
 					<DataPath>Объект.ПодПрограмма</DataPath>
+					<ContextMenu name="ПодПрограммаКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="ПодПрограммаРасширеннаяПодсказка" id="21"/>
 					<Events>
 						<Event name="OnChange">ПодПрограммаПриИзменении</Event>
 					</Events>
-					<ContextMenu name="ПодПрограммаКонтекстноеМеню" id="20"/>
-					<ExtendedTooltip name="ПодПрограммаРасширеннаяПодсказка" id="21"/>
 				</InputField>
 				<LabelDecoration name="НаименованиеПрограммы" id="59">
+					<ContextMenu name="НаименованиеПрограммыКонтекстноеМеню" id="61"/>
 					<ExtendedTooltip name="НаименованиеПрограммыРасширеннаяПодсказка" id="60"/>
 				</LabelDecoration>
 				<InputField name="МинДата" id="22">
@@ -116,11 +117,11 @@
 				</InputField>
 				<InputField name="Кво" id="42">
 					<DataPath>Объект.ТМЦ.Кво</DataPath>
+					<ContextMenu name="КвоКонтекстноеМеню" id="43"/>
+					<ExtendedTooltip name="КвоРасширеннаяПодсказка" id="44"/>
 					<Events>
 						<Event name="OnChange">ТМЦКвоПриИзменении</Event>
 					</Events>
-					<ContextMenu name="КвоКонтекстноеМеню" id="43"/>
-					<ExtendedTooltip name="КвоРасширеннаяПодсказка" id="44"/>
 				</InputField>
 				<InputField name="КвоРам" id="45">
 					<DataPath>Объект.ТМЦ.КвоРам</DataPath>

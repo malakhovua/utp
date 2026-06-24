@@ -1548,6 +1548,7 @@
 			<DocumentJournal>СкладскиеДокументы</DocumentJournal>
 			<DocumentJournal>УчетКадровОрганизаций</DocumentJournal>
 			<DocumentJournal>Ценообразование</DocumentJournal>
+			<DocumentJournal>ДокументыТермообработка</DocumentJournal>
 			<Enum>ABCКлассификация</Enum>
 			<Enum>XYZКлассификация</Enum>
 			<Enum>БазаРаспределенияВнутреннихУслуг</Enum>

@@ -18,12 +18,12 @@
 		</InputField>
 		<InputField name="Владелец" id="7">
 			<DataPath>Объект.Owner</DataPath>
-			<Events>
-				<Event name="OnChange">ВладелецПриИзменении</Event>
-			</Events>
 			<EditMode>EnterOnInput</EditMode>
 			<ContextMenu name="ВладелецКонтекстноеМеню" id="8"/>
 			<ExtendedTooltip name="ВладелецРасширеннаяПодсказка" id="9"/>
+			<Events>
+				<Event name="OnChange">ВладелецПриИзменении</Event>
+			</Events>
 		</InputField>
 		<InputField name="Подпрограмма" id="10">
 			<DataPath>Объект.Подпрограмма</DataPath>

@@ -27,6 +27,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ПодпрограммыНоменклатуры</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ПроцессПодПрограммыТермообработки</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ПроцессПрограммыТермообработки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DocumentJournal.ДокументыТермообработка</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects/>

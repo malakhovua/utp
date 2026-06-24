@@ -24,48 +24,48 @@
 		</InputField>
 		<InputField name="ВидПроцесса" id="10">
 			<DataPath>Объект.ВидПроцесса</DataPath>
-			<Events>
-				<Event name="OnChange">ВидПроцессаПриИзменении</Event>
-			</Events>
 			<EditMode>EnterOnInput</EditMode>
 			<ContextMenu name="ВидПроцессаКонтекстноеМеню" id="11"/>
 			<ExtendedTooltip name="ВидПроцессаРасширеннаяПодсказка" id="12"/>
+			<Events>
+				<Event name="OnChange">ВидПроцессаПриИзменении</Event>
+			</Events>
 		</InputField>
 		<InputField name="ДлинаПроцесса" id="13">
 			<DataPath>Объект.ДлинаПроцесса</DataPath>
-			<Events>
-				<Event name="OnChange">ДлинаПроцессаПриИзменении</Event>
-			</Events>
 			<EditMode>EnterOnInput</EditMode>
 			<ContextMenu name="ДлинаПроцессаКонтекстноеМеню" id="14"/>
 			<ExtendedTooltip name="ДлинаПроцессаРасширеннаяПодсказка" id="15"/>
+			<Events>
+				<Event name="OnChange">ДлинаПроцессаПриИзменении</Event>
+			</Events>
 		</InputField>
 		<InputField name="ДлинаПроцессаЧасов" id="16">
 			<DataPath>Объект.ДлинаПроцессаЧасов</DataPath>
-			<Events>
-				<Event name="OnChange">ДлинаПроцессаЧасовПриИзменении</Event>
-			</Events>
 			<EditMode>EnterOnInput</EditMode>
 			<ContextMenu name="ДлинаПроцессаЧасовКонтекстноеМеню" id="17"/>
 			<ExtendedTooltip name="ДлинаПроцессаЧасовРасширеннаяПодсказка" id="18"/>
+			<Events>
+				<Event name="OnChange">ДлинаПроцессаЧасовПриИзменении</Event>
+			</Events>
 		</InputField>
 		<InputField name="ДлинаПроцессаМинут" id="19">
 			<DataPath>Объект.ДлинаПроцессаМинут</DataPath>
-			<Events>
-				<Event name="OnChange">ДлинаПроцессаМинутПриИзменении</Event>
-			</Events>
 			<EditMode>EnterOnInput</EditMode>
 			<ContextMenu name="ДлинаПроцессаМинутКонтекстноеМеню" id="20"/>
 			<ExtendedTooltip name="ДлинаПроцессаМинутРасширеннаяПодсказка" id="21"/>
+			<Events>
+				<Event name="OnChange">ДлинаПроцессаМинутПриИзменении</Event>
+			</Events>
 		</InputField>
 		<InputField name="ДлинаПроцессаДней" id="22">
 			<DataPath>Объект.ДлинаПроцессаДней</DataPath>
-			<Events>
-				<Event name="OnChange">ДлинаПроцессаДнейПриИзменении</Event>
-			</Events>
 			<EditMode>EnterOnInput</EditMode>
 			<ContextMenu name="ДлинаПроцессаДнейКонтекстноеМеню" id="23"/>
 			<ExtendedTooltip name="ДлинаПроцессаДнейРасширеннаяПодсказка" id="24"/>
+			<Events>
+				<Event name="OnChange">ДлинаПроцессаДнейПриИзменении</Event>
+			</Events>
 		</InputField>
 		<InputField name="ТемператураВКамере" id="25">
 			<DataPath>Объект.ТемператураВКамере</DataPath>
@@ -92,6 +92,7 @@
 			<ExtendedTooltip name="ВлажностьРасширеннаяПодсказка" id="36"/>
 		</InputField>
 		<LabelDecoration name="ВнеКамерыДекорация" id="37">
+			<ContextMenu name="ВнеКамерыДекорацияКонтекстноеМеню" id="39"/>
 			<ExtendedTooltip name="ВнеКамерыДекорацияРасширеннаяПодсказка" id="38"/>
 		</LabelDecoration>
 	</ChildItems>
