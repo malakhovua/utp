@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<ChildItems>
@@ -159,20 +159,45 @@
 					</ChildItems>
 				</Table>
 				<Table name="ТаблицаНачал" id="59">
+					<CommandBarLocation>None</CommandBarLocation>
+					<UseAlternationRowColor>true</UseAlternationRowColor>
+					<DataPath>ТаблицаНачал</DataPath>
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
 							<v8:content>Накопление</v8:content>
 						</v8:item>
 					</Title>
-					<CommandBarLocation>None</CommandBarLocation>
-					<UseAlternationRowColor>true</UseAlternationRowColor>
-					<DataPath>ТаблицаНачал</DataPath>
+					<RowFilter xsi:nil="true"/>
 					<ContextMenu name="ТаблицаНачалКонтекстноеМеню" id="60"/>
 					<AutoCommandBar name="ТаблицаНачалКоманднаяПанель" id="61">
 						<Autofill>false</Autofill>
 					</AutoCommandBar>
 					<ExtendedTooltip name="ТаблицаНачалРасширеннаяПодсказка" id="62"/>
+					<SearchStringAddition name="ТаблицаНачалСтрокаПоиска" id="68">
+						<AdditionSource>
+							<Item>ТаблицаНачал</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ТаблицаНачалСтрокаПоискаКонтекстноеМеню" id="69"/>
+						<ExtendedTooltip name="ТаблицаНачалСтрокаПоискаРасширеннаяПодсказка" id="70"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ТаблицаНачалСостояниеПросмотра" id="71">
+						<AdditionSource>
+							<Item>ТаблицаНачал</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ТаблицаНачалСостояниеПросмотраКонтекстноеМеню" id="72"/>
+						<ExtendedTooltip name="ТаблицаНачалСостояниеПросмотраРасширеннаяПодсказка" id="73"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ТаблицаНачалУправлениеПоиском" id="74">
+						<AdditionSource>
+							<Item>ТаблицаНачал</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ТаблицаНачалУправлениеПоискомКонтекстноеМеню" id="75"/>
+						<ExtendedTooltip name="ТаблицаНачалУправлениеПоискомРасширеннаяПодсказка" id="76"/>
+					</SearchControlAddition>
 					<ChildItems>
 						<InputField name="ТаблицаНачалНачало" id="63">
 							<DataPath>ТаблицаНачал.Начало</DataPath>
@@ -197,15 +222,15 @@
 				<ListSettings>
 					<dcsset:filter>
 						<dcsset:viewMode>Normal</dcsset:viewMode>
-						<dcsset:userSettingID>ced6bd7b-cb5c-431b-ba45-9c8d8cfaede6</dcsset:userSettingID>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
 					</dcsset:filter>
 					<dcsset:order>
 						<dcsset:viewMode>Normal</dcsset:viewMode>
-						<dcsset:userSettingID>5fe5fc02-e859-4551-8faa-1fdd57269043</dcsset:userSettingID>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
 					</dcsset:order>
 					<dcsset:conditionalAppearance>
 						<dcsset:viewMode>Normal</dcsset:viewMode>
-						<dcsset:userSettingID>31fa79d6-98f3-4248-9be2-a40fc354746c</dcsset:userSettingID>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
 					</dcsset:conditionalAppearance>
 				</ListSettings>
 			</Settings>
