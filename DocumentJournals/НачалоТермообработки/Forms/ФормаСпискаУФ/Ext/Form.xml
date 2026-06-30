@@ -22,6 +22,11 @@
 				<CommandName>Form.Command.СформироватьЗагрузку</CommandName>
 				<ExtendedTooltip name="КнопкаСформироватьЗагрузкуРасширеннаяПодсказка" id="8"/>
 			</Button>
+			<Button name="КнопкаЗаполнитьНачало" id="66">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ЗаполнитьНачалоТермообработки</CommandName>
+				<ExtendedTooltip name="КнопкаЗаполнитьНачалоРасширеннаяПодсказка" id="67"/>
+			</Button>
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
@@ -315,6 +320,22 @@
 				</v8:item>
 			</ToolTip>
 			<Action>СформироватьЗагрузку</Action>
+			<Representation>Text</Representation>
+		</Command>
+		<Command name="ЗаполнитьНачалоТермообработки" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить начало термообработки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить начало термообработки из Отчетов производства за смену за выбранный период</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьНачалоТермообработки</Action>
 			<Representation>Text</Representation>
 		</Command>
 	</Commands>
