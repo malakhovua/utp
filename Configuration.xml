@@ -1331,8 +1331,8 @@
 			<Catalog>umk_КатегорияПродукции</Catalog>
 			<Catalog>umk_ГруппыХарактеристик</Catalog>
 			<Catalog>ПодпрограммыНоменклатуры</Catalog>
-			<Catalog>ПодПрограммыТермообработки</Catalog>
 			<Catalog>ПрограммыТермообработки</Catalog>
+			<Catalog>ПодПрограммыТермообработки</Catalog>
 			<Catalog>EDIN_Контрагент</Catalog>
 			<Catalog>ПроцессПодПрограммыТермообработки</Catalog>
 			<Catalog>ПроцессПрограммыТермообработки</Catalog>

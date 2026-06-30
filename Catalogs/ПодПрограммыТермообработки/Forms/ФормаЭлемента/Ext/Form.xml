@@ -3,6 +3,9 @@
 	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
 	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
 	<ChildItems>
 		<InputField name="Код" id="1">
 			<DataPath>Объект.Code</DataPath>
@@ -36,14 +39,38 @@
 			<ExtendedTooltip name="ВнеКамерыРасширеннаяПодсказка" id="15"/>
 		</CheckBoxField>
 		<Table name="Процессы" id="16">
-			<Representation>List</Representation>
-			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
 			<EnableStartDrag>true</EnableStartDrag>
-			<EnableDrag>true</EnableDrag>
-			<DataPath>Объект.Процессы</DataPath>
-			<RowFilter xsi:nil="true"/>
+			<DataPath>Процессы</DataPath>
+			<RowPictureDataPath>Процессы.DefaultPicture</RowPictureDataPath>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
 			<ContextMenu name="ПроцессыКонтекстноеМеню" id="17"/>
-			<AutoCommandBar name="ПроцессыКоманднаяПанель" id="18"/>
+			<AutoCommandBar name="ПроцессыКоманднаяПанель" id="18">
+				<ChildItems>
+					<Button name="ПроцессыКомандаРедактировать" id="62">
+						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
+						<CommandName>Form.Command.КомандаРедактировать</CommandName>
+						<Picture>
+							<xr:Ref>StdPicture.Change</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<ExtendedTooltip name="ПроцессыКомандаРедактироватьРасширеннаяПодсказка" id="63"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
 			<ExtendedTooltip name="ПроцессыРасширеннаяПодсказка" id="19"/>
 			<SearchStringAddition name="ПроцессыСтрокаПоиска" id="20">
 				<AdditionSource>
@@ -70,78 +97,128 @@
 				<ExtendedTooltip name="ПроцессыУправлениеПоискомРасширеннаяПодсказка" id="28"/>
 			</SearchControlAddition>
 			<ChildItems>
-				<LabelField name="ПроцессыНомерСтроки" id="29">
-					<DataPath>Объект.Процессы.LineNumber</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="ПроцессыНомерСтрокиКонтекстноеМеню" id="30"/>
-					<ExtendedTooltip name="ПроцессыНомерСтрокиРасширеннаяПодсказка" id="31"/>
+				<InputField name="ПроцессыВидПроцесса" id="29">
+					<DataPath>Процессы.ВидПроцесса</DataPath>
+					<ContextMenu name="ПроцессыВидПроцессаКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="ПроцессыВидПроцессаРасширеннаяПодсказка" id="31"/>
+				</InputField>
+				<CheckBoxField name="ПроцессыВидПроцессаВнеКамеры" id="32">
+					<DataPath>Процессы.ВидПроцессаВнеКамеры</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вне камеры</v8:content>
+						</v8:item>
+					</Title>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПроцессыВидПроцессаВнеКамерыКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="ПроцессыВидПроцессаВнеКамерыРасширеннаяПодсказка" id="34"/>
+				</CheckBoxField>
+				<CheckBoxField name="ПроцессыВидПроцессаЗанимаетКамеруБезОтчета" id="35">
+					<DataPath>Процессы.ВидПроцессаЗанимаетКамеруБезОтчета</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Без отчета</v8:content>
+						</v8:item>
+					</Title>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПроцессыВидПроцессаЗанимаетКамеруБезОтчетаКонтекстноеМеню" id="36"/>
+					<ExtendedTooltip name="ПроцессыВидПроцессаЗанимаетКамеруБезОтчетаРасширеннаяПодсказка" id="37"/>
+				</CheckBoxField>
+				<LabelField name="ПроцессыДлинаПроцессаДней" id="38">
+					<DataPath>Процессы.ДлинаПроцессаДней</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дней</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ПроцессыДлинаПроцессаДнейКонтекстноеМеню" id="39"/>
+					<ExtendedTooltip name="ПроцессыДлинаПроцессаДнейРасширеннаяПодсказка" id="40"/>
 				</LabelField>
-				<InputField name="ПроцессыВидПроцесса" id="32">
-					<DataPath>Объект.Процессы.ВидПроцесса</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="ПроцессыВидПроцессаКонтекстноеМеню" id="33"/>
-					<ExtendedTooltip name="ПроцессыВидПроцессаРасширеннаяПодсказка" id="34"/>
-				</InputField>
-				<InputField name="ПроцессыДлинаПроцесса" id="35">
-					<DataPath>Объект.Процессы.ДлинаПроцесса</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="ПроцессыДлинаПроцессаКонтекстноеМеню" id="36"/>
-					<ExtendedTooltip name="ПроцессыДлинаПроцессаРасширеннаяПодсказка" id="37"/>
-					<Events>
-						<Event name="OnChange">ПроцессыДлинаПроцессаПриИзменении</Event>
-					</Events>
-				</InputField>
-				<InputField name="ПроцессыДлинаПроцессаЧасов" id="38">
-					<DataPath>Объект.Процессы.ДлинаПроцессаЧасов</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="ПроцессыДлинаПроцессаЧасовКонтекстноеМеню" id="39"/>
-					<ExtendedTooltip name="ПроцессыДлинаПроцессаЧасовРасширеннаяПодсказка" id="40"/>
-					<Events>
-						<Event name="OnChange">ПроцессыДлинаПроцессаЧасовПриИзменении</Event>
-					</Events>
-				</InputField>
-				<InputField name="ПроцессыДлинаПроцессаМинут" id="41">
-					<DataPath>Объект.Процессы.ДлинаПроцессаМинут</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="ПроцессыДлинаПроцессаМинутКонтекстноеМеню" id="42"/>
-					<ExtendedTooltip name="ПроцессыДлинаПроцессаМинутРасширеннаяПодсказка" id="43"/>
-					<Events>
-						<Event name="OnChange">ПроцессыДлинаПроцессаМинутПриИзменении</Event>
-					</Events>
-				</InputField>
-				<InputField name="ПроцессыДлинаПроцессаДней" id="44">
-					<DataPath>Объект.Процессы.ДлинаПроцессаДней</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="ПроцессыДлинаПроцессаДнейКонтекстноеМеню" id="45"/>
-					<ExtendedTooltip name="ПроцессыДлинаПроцессаДнейРасширеннаяПодсказка" id="46"/>
-					<Events>
-						<Event name="OnChange">ПроцессыДлинаПроцессаДнейПриИзменении</Event>
-					</Events>
-				</InputField>
-				<InputField name="ПроцессыТемператураВКамере" id="47">
-					<DataPath>Объект.Процессы.ТемператураВКамере</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="ПроцессыТемператураВКамереКонтекстноеМеню" id="48"/>
-					<ExtendedTooltip name="ПроцессыТемператураВКамереРасширеннаяПодсказка" id="49"/>
-				</InputField>
-				<InputField name="ПроцессыТемператураВБатоне" id="50">
-					<DataPath>Объект.Процессы.ТемператураВБатоне</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="ПроцессыТемператураВБатонеКонтекстноеМеню" id="51"/>
-					<ExtendedTooltip name="ПроцессыТемператураВБатонеРасширеннаяПодсказка" id="52"/>
-				</InputField>
-				<InputField name="ПроцессыПШ" id="53">
-					<DataPath>Объект.Процессы.ПШ</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="ПроцессыПШКонтекстноеМеню" id="54"/>
-					<ExtendedTooltip name="ПроцессыПШРасширеннаяПодсказка" id="55"/>
-				</InputField>
-				<InputField name="ПроцессыВлажность" id="56">
-					<DataPath>Объект.Процессы.Влажность</DataPath>
-					<EditMode>EnterOnInput</EditMode>
+				<LabelField name="ПроцессыДлинаПроцессаЧасов" id="41">
+					<DataPath>Процессы.ДлинаПроцессаЧасов</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Часов</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ПроцессыДлинаПроцессаЧасовКонтекстноеМеню" id="42"/>
+					<ExtendedTooltip name="ПроцессыДлинаПроцессаЧасовРасширеннаяПодсказка" id="43"/>
+				</LabelField>
+				<LabelField name="ПроцессыДлинаПроцессаМинут" id="44">
+					<DataPath>Процессы.ДлинаПроцессаМинут</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Минут</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ПроцессыДлинаПроцессаМинутКонтекстноеМеню" id="45"/>
+					<ExtendedTooltip name="ПроцессыДлинаПроцессаМинутРасширеннаяПодсказка" id="46"/>
+				</LabelField>
+				<LabelField name="ПроцессыДлинаПроцесса" id="47">
+					<DataPath>Процессы.ДлинаПроцесса</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Полная длина процесса</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ПроцессыДлинаПроцессаКонтекстноеМеню" id="48"/>
+					<ExtendedTooltip name="ПроцессыДлинаПроцессаРасширеннаяПодсказка" id="49"/>
+				</LabelField>
+				<LabelField name="ПроцессыТемператураВКамере" id="50">
+					<DataPath>Процессы.ТемператураВКамере</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>T камера</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ПроцессыТемператураВКамереКонтекстноеМеню" id="51"/>
+					<ExtendedTooltip name="ПроцессыТемператураВКамереРасширеннаяПодсказка" id="52"/>
+				</LabelField>
+				<LabelField name="ПроцессыТемператураВБатоне" id="53">
+					<DataPath>Процессы.ТемператураВБатоне</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>T батона</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ПроцессыТемператураВБатонеКонтекстноеМеню" id="54"/>
+					<ExtendedTooltip name="ПроцессыТемператураВБатонеРасширеннаяПодсказка" id="55"/>
+				</LabelField>
+				<LabelField name="ПроцессыВлажность" id="56">
+					<DataPath>Процессы.Влажность</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Влажность</v8:content>
+						</v8:item>
+					</Title>
 					<ContextMenu name="ПроцессыВлажностьКонтекстноеМеню" id="57"/>
 					<ExtendedTooltip name="ПроцессыВлажностьРасширеннаяПодсказка" id="58"/>
-				</InputField>
+				</LabelField>
+				<LabelField name="ПроцессыПШ" id="59">
+					<DataPath>Процессы.ПШ</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>pH</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ПроцессыПШКонтекстноеМеню" id="60"/>
+					<ExtendedTooltip name="ПроцессыПШРасширеннаяПодсказка" id="61"/>
+				</LabelField>
+				<LabelField name="ПроцессыСсылка" id="64">
+					<DataPath>Процессы.Ref</DataPath>
+					<ContextMenu name="ПроцессыСсылкаКонтекстноеМеню" id="65"/>
+					<ExtendedTooltip name="ПроцессыСсылкаРасширеннаяПодсказка" id="66"/>
+				</LabelField>
 			</ChildItems>
 		</Table>
 	</ChildItems>
@@ -153,5 +230,69 @@
 			<MainAttribute>true</MainAttribute>
 			<SavedData>true</SavedData>
 		</Attribute>
+		<Attribute name="Процессы" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Процессы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>false</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	ПроцессПодПрограммыТермообработки.ВидПроцесса,
+	ПроцессПодПрограммыТермообработки.ВидПроцесса.ВнеКамеры,
+	ПроцессПодПрограммыТермообработки.ВидПроцесса.ЗанимаетКамеруБезОтчета,
+	ПроцессПодПрограммыТермообработки.ДлинаПроцессаДней,
+	ПроцессПодПрограммыТермообработки.ДлинаПроцессаЧасов,
+	ПроцессПодПрограммыТермообработки.ДлинаПроцессаМинут,
+	ПроцессПодПрограммыТермообработки.ДлинаПроцесса,
+	ПроцессПодПрограммыТермообработки.ТемператураВКамере,
+	ПроцессПодПрограммыТермообработки.ТемператураВБатоне,
+	ПроцессПодПрограммыТермообработки.ПШ,
+	ПроцессПодПрограммыТермообработки.Влажность,
+	ПроцессПодПрограммыТермообработки.Владелец,
+	ПроцессПодПрограммыТермообработки.Ссылка
+ИЗ
+	Справочник.ПроцессПодПрограммыТермообработки КАК ПроцессПодПрограммыТермообработки
+ГДЕ
+	ПроцессПодПрограммыТермообработки.Владелец = &amp;Владелец</QueryText>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+				</ListSettings>
+			</Settings>
+		</Attribute>
 	</Attributes>
+	<Commands>
+		<Command name="КомандаРедактировать" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Редактировать подпроцесс</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда редактировать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаРедактировать</Action>
+		</Command>
+	</Commands>
 </Form>

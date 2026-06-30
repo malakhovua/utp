@@ -2,7 +2,7 @@
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
 	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
 	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
-	<AutoCommandBar name="" id="-1"/>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
 	<ChildItems>
 		<InputField name="Код" id="1">
 			<DataPath>Объект.Code</DataPath>
@@ -21,15 +21,17 @@
 			<EditMode>EnterOnInput</EditMode>
 			<ContextMenu name="ВладелецКонтекстноеМеню" id="8"/>
 			<ExtendedTooltip name="ВладелецРасширеннаяПодсказка" id="9"/>
-			<Events>
-				<Event name="OnChange">ВладелецПриИзменении</Event>
-			</Events>
 		</InputField>
 		<InputField name="Подпрограмма" id="10">
 			<DataPath>Объект.Подпрограмма</DataPath>
 			<EditMode>EnterOnInput</EditMode>
 			<ContextMenu name="ПодпрограммаКонтекстноеМеню" id="11"/>
 			<ExtendedTooltip name="ПодпрограммаРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<InputField name="ПодпрограммаПрограмма" id="13">
+			<DataPath>Объект.Подпрограмма.Программа</DataPath>
+			<ContextMenu name="ПодпрограммаПрограммаКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ПодпрограммаПрограммаРасширеннаяПодсказка" id="15"/>
 		</InputField>
 	</ChildItems>
 	<Attributes>

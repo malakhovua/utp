@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
-	<AutoCommandBar name="" id="-1"/>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
 	<ChildItems>
 		<Table name="Список" id="1">
 			<Representation>List</Representation>
@@ -53,6 +53,9 @@
 				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="12"/>
 				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="13"/>
 			</SearchControlAddition>
+			<Events>
+				<Event name="OnActivateRow">СписокПриАктивизацииСтроки</Event>
+			</Events>
 			<ChildItems>
 				<LabelField name="Наименование" id="14">
 					<DataPath>Список.Description</DataPath>
@@ -91,6 +94,83 @@
 				</CheckBoxField>
 			</ChildItems>
 		</Table>
+		<Table name="Процессы" id="32">
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<EnableStartDrag>true</EnableStartDrag>
+			<DataPath>Процессы</DataPath>
+			<RowPictureDataPath>Процессы.DefaultPicture</RowPictureDataPath>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<ContextMenu name="ПроцессыКонтекстноеМеню" id="33"/>
+			<AutoCommandBar name="ПроцессыКоманднаяПанель" id="34"/>
+			<ExtendedTooltip name="ПроцессыРасширеннаяПодсказка" id="35"/>
+			<SearchStringAddition name="ПроцессыСтрокаПоиска" id="36">
+				<AdditionSource>
+					<Item>Процессы</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПроцессыСтрокаПоискаКонтекстноеМеню" id="37"/>
+				<ExtendedTooltip name="ПроцессыСтрокаПоискаРасширеннаяПодсказка" id="38"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ПроцессыСостояниеПросмотра" id="39">
+				<AdditionSource>
+					<Item>Процессы</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПроцессыСостояниеПросмотраКонтекстноеМеню" id="40"/>
+				<ExtendedTooltip name="ПроцессыСостояниеПросмотраРасширеннаяПодсказка" id="41"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ПроцессыУправлениеПоиском" id="42">
+				<AdditionSource>
+					<Item>Процессы</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ПроцессыУправлениеПоискомКонтекстноеМеню" id="43"/>
+				<ExtendedTooltip name="ПроцессыУправлениеПоискомРасширеннаяПодсказка" id="44"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="ПроцессыВидПроцесса" id="63">
+					<DataPath>Процессы.ВидПроцесса</DataPath>
+					<ContextMenu name="ПроцессыВидПроцессаКонтекстноеМеню" id="64"/>
+					<ExtendedTooltip name="ПроцессыВидПроцессаРасширеннаяПодсказка" id="65"/>
+				</LabelField>
+				<CheckBoxField name="ПроцессыВидПроцессаВнеКамеры" id="66">
+					<DataPath>Процессы.ВидПроцессаВнеКамеры</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вне камеры</v8:content>
+						</v8:item>
+					</Title>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПроцессыВидПроцессаВнеКамерыКонтекстноеМеню" id="67"/>
+					<ExtendedTooltip name="ПроцессыВидПроцессаВнеКамерыРасширеннаяПодсказка" id="68"/>
+				</CheckBoxField>
+				<CheckBoxField name="ПроцессыВидПроцессаЗанимаетКамеруБезОтчета" id="69">
+					<DataPath>Процессы.ВидПроцессаЗанимаетКамеруБезОтчета</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Камера без отчета</v8:content>
+						</v8:item>
+					</Title>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПроцессыВидПроцессаЗанимаетКамеруБезОтчетаКонтекстноеМеню" id="70"/>
+					<ExtendedTooltip name="ПроцессыВидПроцессаЗанимаетКамеруБезОтчетаРасширеннаяПодсказка" id="71"/>
+				</CheckBoxField>
+			</ChildItems>
+		</Table>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="Список" id="1">
@@ -102,6 +182,49 @@
 				<ManualQuery>false</ManualQuery>
 				<DynamicDataRead>true</DynamicDataRead>
 				<MainTable>Catalog.ПрограммыТермообработки</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="Процессы" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Процессы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>false</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	СправочникПроцессПрограммыТермообработки.Ссылка,
+	СправочникПроцессПрограммыТермообработки.ПометкаУдаления,
+	СправочникПроцессПрограммыТермообработки.Предопределенный,
+	СправочникПроцессПрограммыТермообработки.Владелец,
+	СправочникПроцессПрограммыТермообработки.Код,
+	СправочникПроцессПрограммыТермообработки.Наименование,
+	СправочникПроцессПрограммыТермообработки.ВидПроцесса,
+	СправочникПроцессПрограммыТермообработки.ВидПроцесса.ВнеКамеры,
+	СправочникПроцессПрограммыТермообработки.ВидПроцесса.ЗанимаетКамеруБезОтчета
+ИЗ
+	Справочник.ПроцессПрограммыТермообработки КАК СправочникПроцессПрограммыТермообработки
+ГДЕ
+	СправочникПроцессПрограммыТермообработки.Владелец = &amp;Владелец</QueryText>
 				<ListSettings>
 					<dcsset:filter>
 						<dcsset:viewMode>Normal</dcsset:viewMode>

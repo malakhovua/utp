@@ -135,7 +135,7 @@
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Длина процесса в минутах</v8:content>
+							<v8:content>Длина процесса</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment>весь процесс в минутах</Comment>
@@ -405,7 +405,7 @@
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>ПШ</v8:content>
+							<v8:content>pH</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
@@ -450,7 +450,7 @@
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Температура в центре батона</v8:content>
+							<v8:content>Влажность</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>

@@ -2,7 +2,7 @@
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
 	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
 	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
-	<AutoCommandBar name="" id="-1"/>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
 	<ChildItems>
 		<InputField name="Код" id="1">
 			<DataPath>Объект.Code</DataPath>
@@ -10,17 +10,17 @@
 			<ContextMenu name="КодКонтекстноеМеню" id="2"/>
 			<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
 		</InputField>
-		<InputField name="Наименование" id="4">
-			<DataPath>Объект.Description</DataPath>
-			<EditMode>EnterOnInput</EditMode>
-			<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
-			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
-		</InputField>
 		<InputField name="Владелец" id="7">
 			<DataPath>Объект.Owner</DataPath>
 			<EditMode>EnterOnInput</EditMode>
 			<ContextMenu name="ВладелецКонтекстноеМеню" id="8"/>
 			<ExtendedTooltip name="ВладелецРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="Наименование" id="4">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
 		</InputField>
 		<InputField name="ВидПроцесса" id="10">
 			<DataPath>Объект.ВидПроцесса</DataPath>
@@ -40,15 +40,6 @@
 				<Event name="OnChange">ДлинаПроцессаПриИзменении</Event>
 			</Events>
 		</InputField>
-		<InputField name="ДлинаПроцессаЧасов" id="16">
-			<DataPath>Объект.ДлинаПроцессаЧасов</DataPath>
-			<EditMode>EnterOnInput</EditMode>
-			<ContextMenu name="ДлинаПроцессаЧасовКонтекстноеМеню" id="17"/>
-			<ExtendedTooltip name="ДлинаПроцессаЧасовРасширеннаяПодсказка" id="18"/>
-			<Events>
-				<Event name="OnChange">ДлинаПроцессаЧасовПриИзменении</Event>
-			</Events>
-		</InputField>
 		<InputField name="ДлинаПроцессаМинут" id="19">
 			<DataPath>Объект.ДлинаПроцессаМинут</DataPath>
 			<EditMode>EnterOnInput</EditMode>
@@ -56,6 +47,15 @@
 			<ExtendedTooltip name="ДлинаПроцессаМинутРасширеннаяПодсказка" id="21"/>
 			<Events>
 				<Event name="OnChange">ДлинаПроцессаМинутПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="ДлинаПроцессаЧасов" id="16">
+			<DataPath>Объект.ДлинаПроцессаЧасов</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ДлинаПроцессаЧасовКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="ДлинаПроцессаЧасовРасширеннаяПодсказка" id="18"/>
+			<Events>
+				<Event name="OnChange">ДлинаПроцессаЧасовПриИзменении</Event>
 			</Events>
 		</InputField>
 		<InputField name="ДлинаПроцессаДней" id="22">
@@ -75,18 +75,36 @@
 		</InputField>
 		<InputField name="ТемператураВБатоне" id="28">
 			<DataPath>Объект.ТемператураВБатоне</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Температура в батоне</v8:content>
+				</v8:item>
+			</Title>
 			<EditMode>EnterOnInput</EditMode>
 			<ContextMenu name="ТемператураВБатонеКонтекстноеМеню" id="29"/>
 			<ExtendedTooltip name="ТемператураВБатонеРасширеннаяПодсказка" id="30"/>
 		</InputField>
 		<InputField name="ПШ" id="31">
 			<DataPath>Объект.ПШ</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>pH</v8:content>
+				</v8:item>
+			</Title>
 			<EditMode>EnterOnInput</EditMode>
 			<ContextMenu name="ПШКонтекстноеМеню" id="32"/>
 			<ExtendedTooltip name="ПШРасширеннаяПодсказка" id="33"/>
 		</InputField>
 		<InputField name="Влажность" id="34">
 			<DataPath>Объект.Влажность</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Влажность</v8:content>
+				</v8:item>
+			</Title>
 			<EditMode>EnterOnInput</EditMode>
 			<ContextMenu name="ВлажностьКонтекстноеМеню" id="35"/>
 			<ExtendedTooltip name="ВлажностьРасширеннаяПодсказка" id="36"/>

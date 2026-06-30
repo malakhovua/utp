@@ -2,7 +2,10 @@
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
 	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
 	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
-	<AutoCommandBar name="" id="-1"/>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
 	<ChildItems>
 		<InputField name="Код" id="1">
 			<DataPath>Объект.Code</DataPath>
@@ -10,17 +13,17 @@
 			<ContextMenu name="КодКонтекстноеМеню" id="2"/>
 			<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
 		</InputField>
-		<InputField name="Наименование" id="4">
-			<DataPath>Объект.Description</DataPath>
-			<EditMode>EnterOnInput</EditMode>
-			<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
-			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
-		</InputField>
 		<InputField name="Владелец" id="7">
 			<DataPath>Объект.Owner</DataPath>
 			<EditMode>EnterOnInput</EditMode>
 			<ContextMenu name="ВладелецКонтекстноеМеню" id="8"/>
 			<ExtendedTooltip name="ВладелецРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="Наименование" id="4">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
 		</InputField>
 		<InputField name="ВидПроцесса" id="10">
 			<DataPath>Объект.ВидПроцесса</DataPath>
@@ -31,10 +34,18 @@
 				<Event name="OnChange">ВидПроцессаПриИзменении</Event>
 			</Events>
 		</InputField>
-		<LabelDecoration name="ВнеКамерыДекорация" id="13">
-			<ContextMenu name="ВнеКамерыДекорацияКонтекстноеМеню" id="15"/>
-			<ExtendedTooltip name="ВнеКамерыДекорацияРасширеннаяПодсказка" id="14"/>
-		</LabelDecoration>
+		<CheckBoxField name="ВидПроцессаЗанимаетКамеруБезОтчета" id="19">
+			<DataPath>Объект.ВидПроцесса.ЗанимаетКамеруБезОтчета</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ВидПроцессаЗанимаетКамеруБезОтчетаКонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="ВидПроцессаЗанимаетКамеруБезОтчетаРасширеннаяПодсказка" id="21"/>
+		</CheckBoxField>
+		<CheckBoxField name="ВидПроцессаВнеКамеры" id="16">
+			<DataPath>Объект.ВидПроцесса.ВнеКамеры</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ВидПроцессаВнеКамерыКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="ВидПроцессаВнеКамерыРасширеннаяПодсказка" id="18"/>
+		</CheckBoxField>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="Объект" id="1">
@@ -45,4 +56,11 @@
 			<SavedData>true</SavedData>
 		</Attribute>
 	</Attributes>
+	<Parameters>
+		<Parameter name="Владелец">
+			<Type>
+				<v8:Type>cfg:CatalogRef.ПрограммыТермообработки</v8:Type>
+			</Type>
+		</Parameter>
+	</Parameters>
 </Form>
