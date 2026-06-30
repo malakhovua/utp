@@ -1,50 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
-	<AutoCommandBar name="" id="-1"/>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="КнопкаДобавитьВсе" id="1">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ДокументыВТаблицу</CommandName>
+				<ExtendedTooltip name="КнопкаДобавитьВсеРасширеннаяПодсказка" id="2"/>
+			</Button>
+			<Button name="КнопкаДобавитьТекущий" id="3">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ТекущийВТаблицу</CommandName>
+				<ExtendedTooltip name="КнопкаДобавитьТекущийРасширеннаяПодсказка" id="4"/>
+			</Button>
+			<Button name="КнопкаУдалить" id="5">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.УдалитьСтрокуТаблицыНачал</CommandName>
+				<ExtendedTooltip name="КнопкаУдалитьРасширеннаяПодсказка" id="6"/>
+			</Button>
+			<Button name="КнопкаСформироватьЗагрузку" id="7">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.СформироватьЗагрузку</CommandName>
+				<ExtendedTooltip name="КнопкаСформироватьЗагрузкуРасширеннаяПодсказка" id="8"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+	</Events>
 	<ChildItems>
-		<!-- Группа фильтра: дата и подпрограмма -->
-		<Group name="ГруппаФильтр" id="1">
-			<Group name="" id="2">
-				<Horizontal>true</Horizontal>
-			</Group>
+		<UsualGroup name="ГруппаФильтр" id="9">
+			<Group>AlwaysHorizontal</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаФильтрРасширеннаяПодсказка" id="10"/>
 			<ChildItems>
-				<Label name="ЛейблДата" id="3">
-					<Title>Дата</Title>
-				</Label>
-				<InputField name="ВыбДата" id="4">
+				<InputField name="ВыбДата" id="11">
 					<DataPath>ВыбДата</DataPath>
-					<ContextMenu name="ВыбДатаКонтекстноеМеню" id="5"/>
-					<ExtendedTooltip name="ВыбДатаРасширеннаяПодсказка" id="6"/>
+					<ContextMenu name="ВыбДатаКонтекстноеМеню" id="12"/>
+					<ExtendedTooltip name="ВыбДатаРасширеннаяПодсказка" id="13"/>
 					<Events>
-						<Event name="OnChange">
-							<Action>ВыбДатаПриИзменении</Action>
-						</Event>
+						<Event name="OnChange">ВыбДатаПриИзменении</Event>
 					</Events>
 				</InputField>
-				<Label name="ЛейблПодпрограмма" id="7">
-					<Title>Подпрограмма</Title>
-				</Label>
-				<InputField name="ВыбПодпрограмма" id="8">
+				<InputField name="ВыбПодпрограмма" id="14">
 					<DataPath>ВыбПодпрограмма</DataPath>
-					<ContextMenu name="ВыбПодпрограммаКонтекстноеМеню" id="9"/>
-					<ExtendedTooltip name="ВыбПодпрограммаРасширеннаяПодсказка" id="10"/>
+					<ContextMenu name="ВыбПодпрограммаКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="ВыбПодпрограммаРасширеннаяПодсказка" id="16"/>
 					<Events>
-						<Event name="OnChange">
-							<Action>ВыбПодпрограммаПриИзменении</Action>
-						</Event>
+						<Event name="OnChange">ВыбПодпрограммаПриИзменении</Event>
 					</Events>
 				</InputField>
 			</ChildItems>
-		</Group>
-		<!-- Основная горизонтальная группа: список и таблица накопления -->
-		<Group name="ГруппаОсновная" id="11">
-			<Group name="" id="12">
-				<Horizontal>true</Horizontal>
-			</Group>
+		</UsualGroup>
+		<UsualGroup name="ГруппаОсновная" id="17">
+			<Group>AlwaysHorizontal</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОсновнаяРасширеннаяПодсказка" id="18"/>
 			<ChildItems>
-				<!-- Левая часть: DynamicList журнала -->
-				<Table name="Список" id="13">
-					<Title>Начало термообработки</Title>
+				<Table name="Список" id="19">
 					<Representation>List</Representation>
 					<CommandBarLocation>None</CommandBarLocation>
 					<DefaultItem>true</DefaultItem>
@@ -63,144 +75,109 @@
 					<ShowRoot>true</ShowRoot>
 					<AllowRootChoice>false</AllowRootChoice>
 					<UpdateOnDataChange>Auto</UpdateOnDataChange>
-					<ContextMenu name="СписокКонтекстноеМеню" id="14"/>
-					<AutoCommandBar name="СписокКоманднаяПанель" id="15">
+					<ContextMenu name="СписокКонтекстноеМеню" id="20"/>
+					<AutoCommandBar name="СписокКоманднаяПанель" id="21">
 						<Autofill>false</Autofill>
 					</AutoCommandBar>
-					<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="16"/>
-					<SearchStringAddition name="СписокСтрокаПоиска" id="17">
+					<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="22"/>
+					<SearchStringAddition name="СписокСтрокаПоиска" id="23">
 						<AdditionSource>
 							<Item>Список</Item>
 							<Type>SearchStringRepresentation</Type>
 						</AdditionSource>
-						<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="18"/>
-						<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="19"/>
+						<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="24"/>
+						<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="25"/>
 					</SearchStringAddition>
-					<ViewStatusAddition name="СписокСостояниеПросмотра" id="20">
+					<ViewStatusAddition name="СписокСостояниеПросмотра" id="26">
 						<AdditionSource>
 							<Item>Список</Item>
 							<Type>ViewStatusRepresentation</Type>
 						</AdditionSource>
-						<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="21"/>
-						<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="22"/>
+						<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="27"/>
+						<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="28"/>
 					</ViewStatusAddition>
-					<SearchControlAddition name="СписокУправлениеПоиском" id="23">
+					<SearchControlAddition name="СписокУправлениеПоиском" id="29">
 						<AdditionSource>
 							<Item>Список</Item>
 							<Type>SearchControl</Type>
 						</AdditionSource>
-						<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="24"/>
-						<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="25"/>
+						<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="30"/>
+						<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="31"/>
 					</SearchControlAddition>
 					<ChildItems>
-						<LabelField name="Дата" id="26">
+						<LabelField name="Дата" id="32">
 							<DataPath>Список.Date</DataPath>
-							<ContextMenu name="ДатаКонтекстноеМеню" id="27"/>
-							<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="28"/>
+							<ContextMenu name="ДатаКонтекстноеМеню" id="33"/>
+							<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="34"/>
 						</LabelField>
-						<LabelField name="Номер" id="29">
+						<LabelField name="Номер" id="35">
 							<DataPath>Список.Number</DataPath>
-							<ContextMenu name="НомерКонтекстноеМеню" id="30"/>
-							<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="31"/>
+							<ContextMenu name="НомерКонтекстноеМеню" id="36"/>
+							<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="37"/>
 						</LabelField>
-						<LabelField name="ПодПрограмма" id="32">
+						<LabelField name="ПодПрограмма" id="38">
 							<DataPath>Список.ПодПрограмма</DataPath>
 							<DefaultItem>true</DefaultItem>
-							<ContextMenu name="ПодПрограммаКонтекстноеМеню" id="33"/>
-							<ExtendedTooltip name="ПодПрограммаРасширеннаяПодсказка" id="34"/>
+							<ContextMenu name="ПодПрограммаКонтекстноеМеню" id="39"/>
+							<ExtendedTooltip name="ПодПрограммаРасширеннаяПодсказка" id="40"/>
 						</LabelField>
-						<LabelField name="МаксДата" id="35">
+						<LabelField name="МаксДата" id="41">
 							<DataPath>Список.МаксДата</DataPath>
-							<ContextMenu name="МаксДатаКонтекстноеМеню" id="36"/>
-							<ExtendedTooltip name="МаксДатаРасширеннаяПодсказка" id="37"/>
+							<ContextMenu name="МаксДатаКонтекстноеМеню" id="42"/>
+							<ExtendedTooltip name="МаксДатаРасширеннаяПодсказка" id="43"/>
 						</LabelField>
-						<LabelField name="МаксЧасы" id="38">
+						<LabelField name="МаксЧасы" id="44">
 							<DataPath>Список.МаксЧасы</DataPath>
-							<ContextMenu name="МаксЧасыКонтекстноеМеню" id="39"/>
-							<ExtendedTooltip name="МаксЧасыРасширеннаяПодсказка" id="40"/>
+							<ContextMenu name="МаксЧасыКонтекстноеМеню" id="45"/>
+							<ExtendedTooltip name="МаксЧасыРасширеннаяПодсказка" id="46"/>
 						</LabelField>
-						<LabelField name="МаксМинуты" id="41">
+						<LabelField name="МаксМинуты" id="47">
 							<DataPath>Список.МаксМинуты</DataPath>
-							<ContextMenu name="МаксМинутыКонтекстноеМеню" id="42"/>
-							<ExtendedTooltip name="МаксМинутыРасширеннаяПодсказка" id="43"/>
+							<ContextMenu name="МаксМинутыКонтекстноеМеню" id="48"/>
+							<ExtendedTooltip name="МаксМинутыРасширеннаяПодсказка" id="49"/>
 						</LabelField>
-						<LabelField name="ОтчетПроизводства" id="44">
+						<LabelField name="ОтчетПроизводства" id="50">
 							<DataPath>Список.ОтчетПроизводства</DataPath>
-							<ContextMenu name="ОтчетПроизводстваКонтекстноеМеню" id="45"/>
-							<ExtendedTooltip name="ОтчетПроизводстваРасширеннаяПодсказка" id="46"/>
+							<ContextMenu name="ОтчетПроизводстваКонтекстноеМеню" id="51"/>
+							<ExtendedTooltip name="ОтчетПроизводстваРасширеннаяПодсказка" id="52"/>
 						</LabelField>
-						<LabelField name="ИтогПоВидамРам" id="47">
+						<LabelField name="ИтогПоВидамРам" id="53">
 							<DataPath>Список.ИтогПоВидамРам</DataPath>
-							<ContextMenu name="ИтогПоВидамРамКонтекстноеМеню" id="48"/>
-							<ExtendedTooltip name="ИтогПоВидамРамРасширеннаяПодсказка" id="49"/>
+							<ContextMenu name="ИтогПоВидамРамКонтекстноеМеню" id="54"/>
+							<ExtendedTooltip name="ИтогПоВидамРамРасширеннаяПодсказка" id="55"/>
 						</LabelField>
-						<LabelField name="ДокументЗагрузка" id="50">
+						<LabelField name="ДокументЗагрузка" id="56">
 							<DataPath>Список.ДокументЗагрузка</DataPath>
-							<ContextMenu name="ДокументЗагрузкаКонтекстноеМеню" id="51"/>
-							<ExtendedTooltip name="ДокументЗагрузкаРасширеннаяПодсказка" id="52"/>
+							<ContextMenu name="ДокументЗагрузкаКонтекстноеМеню" id="57"/>
+							<ExtendedTooltip name="ДокументЗагрузкаРасширеннаяПодсказка" id="58"/>
 						</LabelField>
 					</ChildItems>
 				</Table>
-				<!-- Правая часть: таблица накопления + кнопки -->
-				<Group name="ГруппаПрава" id="53">
-					<Group name="" id="54">
-						<Horizontal>false</Horizontal>
-					</Group>
+				<Table name="ТаблицаНачал" id="59">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Накопление</v8:content>
+						</v8:item>
+					</Title>
+					<CommandBarLocation>None</CommandBarLocation>
+					<UseAlternationRowColor>true</UseAlternationRowColor>
+					<DataPath>ТаблицаНачал</DataPath>
+					<ContextMenu name="ТаблицаНачалКонтекстноеМеню" id="60"/>
+					<AutoCommandBar name="ТаблицаНачалКоманднаяПанель" id="61">
+						<Autofill>false</Autofill>
+					</AutoCommandBar>
+					<ExtendedTooltip name="ТаблицаНачалРасширеннаяПодсказка" id="62"/>
 					<ChildItems>
-						<Table name="ТаблицаНачал" id="55">
-							<Title>Накопление</Title>
-							<CommandBarLocation>None</CommandBarLocation>
-							<UseAlternationRowColor>true</UseAlternationRowColor>
-							<DataPath>ТаблицаНачал</DataPath>
-							<ContextMenu name="ТаблицаНачалКонтекстноеМеню" id="56"/>
-							<AutoCommandBar name="ТаблицаНачалКоманднаяПанель" id="57">
-								<Autofill>false</Autofill>
-							</AutoCommandBar>
-							<ExtendedTooltip name="ТаблицаНачалРасширеннаяПодсказка" id="58"/>
-							<ChildItems>
-								<InputField name="ТаблицаНачалНачало" id="59">
-									<DataPath>ТаблицаНачал.Начало</DataPath>
-									<ContextMenu name="ТаблицаНачалНачалоКонтекстноеМеню" id="60"/>
-									<ExtendedTooltip name="ТаблицаНачалНачалоРасширеннаяПодсказка" id="61"/>
-								</InputField>
-							</ChildItems>
-						</Table>
-						<!-- Кнопки управления таблицей накопления -->
-						<Group name="ГруппаКнопки" id="62">
-							<Group name="" id="63">
-								<Horizontal>true</Horizontal>
-							</Group>
-							<ChildItems>
-								<Button name="КнопкаДобавитьВсе" id="64">
-									<CommandName>ДокументыВТаблицу</CommandName>
-									<Title>Добавить все</Title>
-									<ContextMenu name="КнопкаДобавитьВсеКонтекстноеМеню" id="65"/>
-									<ExtendedTooltip name="КнопкаДобавитьВсеРасширеннаяПодсказка" id="66"/>
-								</Button>
-								<Button name="КнопкаДобавитьТекущий" id="67">
-									<CommandName>ТекущийВТаблицу</CommandName>
-									<Title>Добавить текущий</Title>
-									<ContextMenu name="КнопкаДобавитьТекущийКонтекстноеМеню" id="68"/>
-									<ExtendedTooltip name="КнопкаДобавитьТекущийРасширеннаяПодсказка" id="69"/>
-								</Button>
-								<Button name="КнопкаУдалить" id="70">
-									<CommandName>УдалитьСтрокуТаблицыНачал</CommandName>
-									<Title>Удалить</Title>
-									<ContextMenu name="КнопкаУдалитьКонтекстноеМеню" id="71"/>
-									<ExtendedTooltip name="КнопкаУдалитьРасширеннаяПодсказка" id="72"/>
-								</Button>
-								<Button name="КнопкаСформироватьЗагрузку" id="73">
-									<CommandName>СформироватьЗагрузку</CommandName>
-									<Title>Сформировать загрузку</Title>
-									<ContextMenu name="КнопкаСформироватьЗагрузкуКонтекстноеМеню" id="74"/>
-									<ExtendedTooltip name="КнопкаСформироватьЗагрузкуРасширеннаяПодсказка" id="75"/>
-								</Button>
-							</ChildItems>
-						</Group>
+						<InputField name="ТаблицаНачалНачало" id="63">
+							<DataPath>ТаблицаНачал.Начало</DataPath>
+							<ContextMenu name="ТаблицаНачалНачалоКонтекстноеМеню" id="64"/>
+							<ExtendedTooltip name="ТаблицаНачалНачалоРасширеннаяПодсказка" id="65"/>
+						</InputField>
 					</ChildItems>
-				</Group>
+				</Table>
 			</ChildItems>
-		</Group>
+		</UsualGroup>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="Список" id="1">
@@ -228,7 +205,6 @@
 				</ListSettings>
 			</Settings>
 		</Attribute>
-		<!-- Атрибут: дата фильтра -->
 		<Attribute name="ВыбДата" id="2">
 			<Type>
 				<v8:Type>xs:dateTime</v8:Type>
@@ -237,31 +213,23 @@
 				</v8:DateQualifiers>
 			</Type>
 		</Attribute>
-		<!-- Атрибут: подпрограмма фильтра -->
 		<Attribute name="ВыбПодпрограмма" id="3">
 			<Type>
 				<v8:Type>cfg:CatalogRef.ПодПрограммыТермообработки</v8:Type>
 			</Type>
 		</Attribute>
-		<!-- Таблица накопления документов начала термообработки -->
 		<Attribute name="ТаблицаНачал" id="4">
 			<Type>
 				<v8:Type>v8:ValueTable</v8:Type>
 			</Type>
-			<View xsi:type="FormTable">
-				<Columns>
-					<Column name="Начало" id="5">
-						<DataPath>ТаблицаНачал.Начало</DataPath>
-						<Title>№</Title>
-					</Column>
-					<Column name="Ссылка" id="6">
-						<DataPath>ТаблицаНачал.Ссылка</DataPath>
-						<Visible>false</Visible>
-					</Column>
-				</Columns>
-			</View>
-			<ChildAttributes>
-				<Attribute name="Начало" id="5">
+			<Columns>
+				<Column name="Начало" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>№</v8:content>
+						</v8:item>
+					</Title>
 					<Type>
 						<v8:Type>xs:string</v8:Type>
 						<v8:StringQualifiers>
@@ -269,35 +237,85 @@
 							<v8:AllowedLength>Variable</v8:AllowedLength>
 						</v8:StringQualifiers>
 					</Type>
-				</Attribute>
-				<Attribute name="Ссылка" id="6">
+				</Column>
+				<Column name="Ссылка" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ссылка</v8:content>
+						</v8:item>
+					</Title>
 					<Type>
 						<v8:Type>cfg:DocumentRef.НачалоТермообработки</v8:Type>
 					</Type>
-				</Attribute>
-			</ChildAttributes>
+				</Column>
+			</Columns>
 		</Attribute>
 	</Attributes>
 	<Commands>
 		<Command name="ДокументыВТаблицу" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить все</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить все документы за дату и подпрограмму</v8:content>
+				</v8:item>
+			</ToolTip>
 			<Action>ДокументыВТаблицу</Action>
-			<Title>Добавить все</Title>
-			<ToolTip>Добавить все документы за дату и подпрограмму</ToolTip>
+			<Representation>Text</Representation>
 		</Command>
 		<Command name="ТекущийВТаблицу" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить текущий</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить выделенный документ в таблицу накопления</v8:content>
+				</v8:item>
+			</ToolTip>
 			<Action>ТекущийВТаблицу</Action>
-			<Title>Добавить текущий</Title>
-			<ToolTip>Добавить выделенный документ в таблицу</ToolTip>
+			<Representation>Text</Representation>
 		</Command>
 		<Command name="УдалитьСтрокуТаблицыНачал" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить строку из таблицы накопления</v8:content>
+				</v8:item>
+			</ToolTip>
 			<Action>УдалитьСтрокуТаблицыНачал</Action>
-			<Title>Удалить</Title>
-			<ToolTip>Удалить строку из таблицы накопления</ToolTip>
+			<Representation>Text</Representation>
 		</Command>
 		<Command name="СформироватьЗагрузку" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать загрузку</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать документ Загрузка камеры</v8:content>
+				</v8:item>
+			</ToolTip>
 			<Action>СформироватьЗагрузку</Action>
-			<Title>Сформировать загрузку</Title>
-			<ToolTip>Сформировать документ Загрузка камеры</ToolTip>
+			<Representation>Text</Representation>
 		</Command>
 	</Commands>
 </Form>
