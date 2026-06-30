@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<DocumentJournal uuid="37c929b2-bf63-43a0-b4c1-f7afaf5481f1">
+		<InternalInfo>
+			<xr:GeneratedType name="DocumentJournalSelection.НачалоТермообработки" category="Selection">
+				<xr:TypeId>6ad9e6f5-a2db-441a-b1df-63ec8b7b3400</xr:TypeId>
+				<xr:ValueId>5c3a78f0-a5c2-405e-84a3-20c27c83ab9e</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DocumentJournalList.НачалоТермообработки" category="List">
+				<xr:TypeId>af3e1c71-6453-40c2-b47a-b79f51cc5b3d</xr:TypeId>
+				<xr:ValueId>7718985e-7dda-44fe-91b2-0a89591d1569</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DocumentJournalManager.НачалоТермообработки" category="Manager">
+				<xr:TypeId>2d6ca3e4-2eb5-46bc-be9a-5f8a861831e4</xr:TypeId>
+				<xr:ValueId>a77badfa-4ba4-42ae-ac69-9f2a2e446c1a</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>НачалоТермообработки</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Начало термообработки</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Початок термообробки</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<DefaultForm>DocumentJournal.НачалоТермообработки.Form.ФормаСпискаУФ</DefaultForm>
+			<AuxiliaryForm/>
+			<UseStandardCommands>true</UseStandardCommands>
+			<RegisteredDocuments>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.НачалоТермообработки</xr:Item>
+			</RegisteredDocuments>
+			<IncludeHelpInContents>false</IncludeHelpInContents>
+			<ListPresentation/>
+			<ExtendedListPresentation/>
+			<Explanation/>
+		</Properties>
+		<ChildObjects>
+			<Column uuid="bb3261d2-4167-4e6a-b29c-aa8cd61e1d75">
+				<Properties>
+					<Name>ПодПрограмма</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подпрограмма</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ПодПрограммыТермообработки</v8:Type>
+					</Type>
+					<DocumentFields>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.НачалоТермообработки.Attribute.ПодПрограмма</xr:Item>
+					</DocumentFields>
+				</Properties>
+			</Column>
+			<Column uuid="ce46df2c-e26b-4802-af74-55b2b8df2c97">
+				<Properties>
+					<Name>МаксДата</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Макс. дата</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+					<DocumentFields>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.НачалоТермообработки.Attribute.МаксДата</xr:Item>
+					</DocumentFields>
+				</Properties>
+			</Column>
+			<Column uuid="172ff13e-a1b2-46a9-9e48-b355b1ab68ae">
+				<Properties>
+					<Name>МаксЧасы</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Макс. часы</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>2</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+					<DocumentFields>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.НачалоТермообработки.Attribute.МаксЧасы</xr:Item>
+					</DocumentFields>
+				</Properties>
+			</Column>
+			<Column uuid="b85befdd-1eaa-4f11-a83c-6932c6cc2047">
+				<Properties>
+					<Name>МаксМинуты</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Макс. минуты</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>2</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+					<DocumentFields>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.НачалоТермообработки.Attribute.МаксМинуты</xr:Item>
+					</DocumentFields>
+				</Properties>
+			</Column>
+			<Column uuid="fc20f340-f800-45b3-b6f1-3f305d85bd0c">
+				<Properties>
+					<Name>ОтчетПроизводства</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отчет производства за смену</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Type>
+						<v8:Type>cfg:DocumentRef.ОтчетПроизводстваЗаСмену</v8:Type>
+					</Type>
+					<DocumentFields>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.НачалоТермообработки.Attribute.ОтчетПроизводства</xr:Item>
+					</DocumentFields>
+				</Properties>
+			</Column>
+			<Column uuid="fb2d8c44-e287-4135-9257-79df2e458e91">
+				<Properties>
+					<Name>ИтогПоВидамРам</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Итог по видам рам</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>100</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+					<DocumentFields>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.НачалоТермообработки.Attribute.ИтогПоВидамРам</xr:Item>
+					</DocumentFields>
+				</Properties>
+			</Column>
+			<Column uuid="8290d97b-8542-44cf-971a-6a116e733f8a">
+				<Properties>
+					<Name>ДокументЗагрузка</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Документ загрузки</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Type>
+						<v8:Type>cfg:DocumentRef.ЗагрузкаКамеры</v8:Type>
+					</Type>
+					<DocumentFields>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.НачалоТермообработки.Attribute.ДокументЗагрузка</xr:Item>
+					</DocumentFields>
+				</Properties>
+			</Column>
+			<Form>ФормаСпискаУФ</Form>
+		</ChildObjects>
+	</DocumentJournal>
+</MetaDataObject>
