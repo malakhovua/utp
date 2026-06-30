@@ -50,12 +50,10 @@
 						</v8:item>
 					</Synonym>
 					<Comment/>
-					<Type>
-						<v8:Type>cfg:CatalogRef.ПодПрограммыТермообработки</v8:Type>
-					</Type>
-					<DocumentFields>
+					<Indexing>DontIndex</Indexing>
+					<References>
 						<xr:Item xsi:type="xr:MDObjectRef">Document.НачалоТермообработки.Attribute.ПодПрограмма</xr:Item>
-					</DocumentFields>
+					</References>
 				</Properties>
 			</Column>
 			<Column uuid="ce46df2c-e26b-4802-af74-55b2b8df2c97">
@@ -68,15 +66,10 @@
 						</v8:item>
 					</Synonym>
 					<Comment/>
-					<Type>
-						<v8:Type>xs:dateTime</v8:Type>
-						<v8:DateQualifiers>
-							<v8:DateFractions>Date</v8:DateFractions>
-						</v8:DateQualifiers>
-					</Type>
-					<DocumentFields>
+					<Indexing>DontIndex</Indexing>
+					<References>
 						<xr:Item xsi:type="xr:MDObjectRef">Document.НачалоТермообработки.Attribute.МаксДата</xr:Item>
-					</DocumentFields>
+					</References>
 				</Properties>
 			</Column>
 			<Column uuid="172ff13e-a1b2-46a9-9e48-b355b1ab68ae">
@@ -89,17 +82,10 @@
 						</v8:item>
 					</Synonym>
 					<Comment/>
-					<Type>
-						<v8:Type>xs:decimal</v8:Type>
-						<v8:NumberQualifiers>
-							<v8:Digits>2</v8:Digits>
-							<v8:FractionDigits>0</v8:FractionDigits>
-							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
-						</v8:NumberQualifiers>
-					</Type>
-					<DocumentFields>
+					<Indexing>DontIndex</Indexing>
+					<References>
 						<xr:Item xsi:type="xr:MDObjectRef">Document.НачалоТермообработки.Attribute.МаксЧасы</xr:Item>
-					</DocumentFields>
+					</References>
 				</Properties>
 			</Column>
 			<Column uuid="b85befdd-1eaa-4f11-a83c-6932c6cc2047">
@@ -112,17 +98,10 @@
 						</v8:item>
 					</Synonym>
 					<Comment/>
-					<Type>
-						<v8:Type>xs:decimal</v8:Type>
-						<v8:NumberQualifiers>
-							<v8:Digits>2</v8:Digits>
-							<v8:FractionDigits>0</v8:FractionDigits>
-							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
-						</v8:NumberQualifiers>
-					</Type>
-					<DocumentFields>
+					<Indexing>DontIndex</Indexing>
+					<References>
 						<xr:Item xsi:type="xr:MDObjectRef">Document.НачалоТермообработки.Attribute.МаксМинуты</xr:Item>
-					</DocumentFields>
+					</References>
 				</Properties>
 			</Column>
 			<Column uuid="fc20f340-f800-45b3-b6f1-3f305d85bd0c">
@@ -135,12 +114,10 @@
 						</v8:item>
 					</Synonym>
 					<Comment/>
-					<Type>
-						<v8:Type>cfg:DocumentRef.ОтчетПроизводстваЗаСмену</v8:Type>
-					</Type>
-					<DocumentFields>
+					<Indexing>DontIndex</Indexing>
+					<References>
 						<xr:Item xsi:type="xr:MDObjectRef">Document.НачалоТермообработки.Attribute.ОтчетПроизводства</xr:Item>
-					</DocumentFields>
+					</References>
 				</Properties>
 			</Column>
 			<Column uuid="fb2d8c44-e287-4135-9257-79df2e458e91">
@@ -153,16 +130,10 @@
 						</v8:item>
 					</Synonym>
 					<Comment/>
-					<Type>
-						<v8:Type>xs:string</v8:Type>
-						<v8:StringQualifiers>
-							<v8:Length>100</v8:Length>
-							<v8:AllowedLength>Variable</v8:AllowedLength>
-						</v8:StringQualifiers>
-					</Type>
-					<DocumentFields>
+					<Indexing>DontIndex</Indexing>
+					<References>
 						<xr:Item xsi:type="xr:MDObjectRef">Document.НачалоТермообработки.Attribute.ИтогПоВидамРам</xr:Item>
-					</DocumentFields>
+					</References>
 				</Properties>
 			</Column>
 			<Column uuid="8290d97b-8542-44cf-971a-6a116e733f8a">
@@ -175,12 +146,10 @@
 						</v8:item>
 					</Synonym>
 					<Comment/>
-					<Type>
-						<v8:Type>cfg:DocumentRef.ЗагрузкаКамеры</v8:Type>
-					</Type>
-					<DocumentFields>
+					<Indexing>DontIndex</Indexing>
+					<References>
 						<xr:Item xsi:type="xr:MDObjectRef">Document.НачалоТермообработки.Attribute.ДокументЗагрузка</xr:Item>
-					</DocumentFields>
+					</References>
 				</Properties>
 			</Column>
 			<Form>ФормаСпискаУФ</Form>
