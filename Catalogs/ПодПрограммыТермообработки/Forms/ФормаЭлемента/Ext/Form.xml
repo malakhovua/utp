@@ -103,7 +103,7 @@
 					<ExtendedTooltip name="ПроцессыВидПроцессаРасширеннаяПодсказка" id="31"/>
 				</InputField>
 				<CheckBoxField name="ПроцессыВидПроцессаВнеКамеры" id="32">
-					<DataPath>Процессы.ВидПроцессаВнеКамеры</DataPath>
+					<DataPath>Процессы.ВидПроцесса.ВнеКамеры</DataPath>
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -115,7 +115,7 @@
 					<ExtendedTooltip name="ПроцессыВидПроцессаВнеКамерыРасширеннаяПодсказка" id="34"/>
 				</CheckBoxField>
 				<CheckBoxField name="ПроцессыВидПроцессаЗанимаетКамеруБезОтчета" id="35">
-					<DataPath>Процессы.ВидПроцессаЗанимаетКамеруБезОтчета</DataPath>
+					<DataPath>Процессы.ВидПроцесса.ЗанимаетКамеруБезОтчета</DataPath>
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
