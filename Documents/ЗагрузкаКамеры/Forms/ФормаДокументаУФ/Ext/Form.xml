@@ -3,7 +3,7 @@
 	<AutoTime>CurrentOrLast</AutoTime>
 	<UsePostingMode>Auto</UsePostingMode>
 	<RepostOnWrite>false</RepostOnWrite>
-	<AutoCommandBar name="" id="-1"/>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
 	<ChildItems>
 		<UsualGroup name="ГруппаШапка" id="2">
 			<ShowTitle>false</ShowTitle>
@@ -94,66 +94,81 @@
 				</LabelDecoration>
 			</ChildItems>
 		</UsualGroup>
-		<Table name="ТМЦ" id="43">
+		<Table name="ТМЦ" id="83">
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
 			<DataPath>Объект.ТМЦ</DataPath>
 			<RowFilter xsi:nil="true"/>
-			<ContextMenu name="ТМЦКонтекстноеМеню" id="63"/>
-			<AutoCommandBar name="ТМЦКоманднаяПанель" id="64"/>
-			<ExtendedTooltip name="ТМЦРасширеннаяПодсказка" id="44"/>
-			<SearchStringAddition name="ТМЦСтрокаПоиска" id="65">
+			<ContextMenu name="ТМЦКонтекстноеМеню" id="84"/>
+			<AutoCommandBar name="ТМЦКоманднаяПанель" id="85"/>
+			<ExtendedTooltip name="ТМЦРасширеннаяПодсказка" id="86"/>
+			<SearchStringAddition name="ТМЦСтрокаПоиска" id="87">
 				<AdditionSource>
 					<Item>ТМЦ</Item>
 					<Type>SearchStringRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="ТМЦСтрокаПоискаКонтекстноеМеню" id="66"/>
-				<ExtendedTooltip name="ТМЦСтрокаПоискаРасширеннаяПодсказка" id="67"/>
+				<ContextMenu name="ТМЦСтрокаПоискаКонтекстноеМеню" id="88"/>
+				<ExtendedTooltip name="ТМЦСтрокаПоискаРасширеннаяПодсказка" id="89"/>
 			</SearchStringAddition>
-			<ViewStatusAddition name="ТМЦСостояниеПросмотра" id="68">
+			<ViewStatusAddition name="ТМЦСостояниеПросмотра" id="90">
 				<AdditionSource>
 					<Item>ТМЦ</Item>
 					<Type>ViewStatusRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="ТМЦСостояниеПросмотраКонтекстноеМеню" id="69"/>
-				<ExtendedTooltip name="ТМЦСостояниеПросмотраРасширеннаяПодсказка" id="70"/>
+				<ContextMenu name="ТМЦСостояниеПросмотраКонтекстноеМеню" id="91"/>
+				<ExtendedTooltip name="ТМЦСостояниеПросмотраРасширеннаяПодсказка" id="92"/>
 			</ViewStatusAddition>
-			<SearchControlAddition name="ТМЦУправлениеПоиском" id="71">
+			<SearchControlAddition name="ТМЦУправлениеПоиском" id="93">
 				<AdditionSource>
 					<Item>ТМЦ</Item>
 					<Type>SearchControl</Type>
 				</AdditionSource>
-				<ContextMenu name="ТМЦУправлениеПоискомКонтекстноеМеню" id="72"/>
-				<ExtendedTooltip name="ТМЦУправлениеПоискомРасширеннаяПодсказка" id="73"/>
+				<ContextMenu name="ТМЦУправлениеПоискомКонтекстноеМеню" id="94"/>
+				<ExtendedTooltip name="ТМЦУправлениеПоискомРасширеннаяПодсказка" id="95"/>
 			</SearchControlAddition>
 			<ChildItems>
-				<InputField name="ТМЦ" id="45">
+				<LabelField name="ТМЦНомерСтроки" id="96">
+					<DataPath>Объект.ТМЦ.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТМЦНомерСтрокиКонтекстноеМеню" id="97"/>
+					<ExtendedTooltip name="ТМЦНомерСтрокиРасширеннаяПодсказка" id="98"/>
+				</LabelField>
+				<InputField name="ТМЦТМЦ" id="99">
 					<DataPath>Объект.ТМЦ.ТМЦ</DataPath>
-					<ContextMenu name="ТМЦКонтекстноеМеню" id="46"/>
-					<ExtendedTooltip name="ТМЦРасширеннаяПодсказка" id="47"/>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТМЦТМЦКонтекстноеМеню" id="100"/>
+					<ExtendedTooltip name="ТМЦТМЦРасширеннаяПодсказка" id="101"/>
 				</InputField>
-				<InputField name="ВидРамы" id="48">
+				<InputField name="ТМЦВидРамы" id="102">
 					<DataPath>Объект.ТМЦ.ВидРамы</DataPath>
-					<ContextMenu name="ВидРамыКонтекстноеМеню" id="49"/>
-					<ExtendedTooltip name="ВидРамыРасширеннаяПодсказка" id="50"/>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТМЦВидРамыКонтекстноеМеню" id="103"/>
+					<ExtendedTooltip name="ТМЦВидРамыРасширеннаяПодсказка" id="104"/>
 				</InputField>
-				<InputField name="Кво" id="51">
+				<InputField name="ТМЦКво" id="105">
 					<DataPath>Объект.ТМЦ.Кво</DataPath>
-					<ContextMenu name="КвоКонтекстноеМеню" id="52"/>
-					<ExtendedTooltip name="КвоРасширеннаяПодсказка" id="53"/>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТМЦКвоКонтекстноеМеню" id="106"/>
+					<ExtendedTooltip name="ТМЦКвоРасширеннаяПодсказка" id="107"/>
 				</InputField>
-				<InputField name="КвоРам" id="54">
+				<InputField name="ТМЦКвоРам" id="108">
 					<DataPath>Объект.ТМЦ.КвоРам</DataPath>
-					<ContextMenu name="КвоРамКонтекстноеМеню" id="55"/>
-					<ExtendedTooltip name="КвоРамРасширеннаяПодсказка" id="56"/>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТМЦКвоРамКонтекстноеМеню" id="109"/>
+					<ExtendedTooltip name="ТМЦКвоРамРасширеннаяПодсказка" id="110"/>
 				</InputField>
-				<InputField name="ОтчетПроизводства" id="57">
+				<InputField name="ТМЦОтчетПроизводства" id="111">
 					<DataPath>Объект.ТМЦ.ОтчетПроизводства</DataPath>
-					<ContextMenu name="ОтчетПроизводстваКонтекстноеМеню" id="58"/>
-					<ExtendedTooltip name="ОтчетПроизводстваРасширеннаяПодсказка" id="59"/>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТМЦОтчетПроизводстваКонтекстноеМеню" id="112"/>
+					<ExtendedTooltip name="ТМЦОтчетПроизводстваРасширеннаяПодсказка" id="113"/>
 				</InputField>
-				<InputField name="НачалоТермообработки" id="60">
+				<InputField name="ТМЦНачалоТермообработки" id="114">
 					<DataPath>Объект.ТМЦ.НачалоТермообработки</DataPath>
-					<ContextMenu name="НачалоТермообработкиКонтекстноеМеню" id="61"/>
-					<ExtendedTooltip name="НачалоТермообработкиРасширеннаяПодсказка" id="62"/>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТМЦНачалоТермообработкиКонтекстноеМеню" id="115"/>
+					<ExtendedTooltip name="ТМЦНачалоТермообработкиРасширеннаяПодсказка" id="116"/>
 				</InputField>
 			</ChildItems>
 		</Table>
