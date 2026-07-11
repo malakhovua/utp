@@ -20542,8 +20542,8 @@
 			<Metadata name="DocumentJournal.НачалоТермообработки.Column.ИтогПоВидамРам" id="fb2d8c44-e287-4135-9257-79df2e458e91"/>
 			<Metadata name="DocumentJournal.НачалоТермообработки.Column.ОтчетПроизводства" id="fc20f340-f800-45b3-b6f1-3f305d85bd0c"/>
 		</Metadata>
-		<Metadata name="DocumentJournal.НачалоТермообработки.Form.ФормаСпискаУФ" id="402216c0-2a50-43b2-8595-b4db640d478f" configVersion="443e2a69306d994d9547963de2fec27000000000"/>
-		<Metadata name="DocumentJournal.НачалоТермообработки.Form.ФормаСпискаУФ.Form" id="402216c0-2a50-43b2-8595-b4db640d478f.0" configVersion="a18866ece071034495835e80f22d0d4c00000000"/>
+		<Metadata name="DocumentJournal.НачалоТермообработки.Form.ФормаСпискаУФ" id="402216c0-2a50-43b2-8595-b4db640d478f" configVersion="1b867b092c587e4ca5151ff456cc47fd00000000"/>
+		<Metadata name="DocumentJournal.НачалоТермообработки.Form.ФормаСпискаУФ.Form" id="402216c0-2a50-43b2-8595-b4db640d478f.0" configVersion="6a9aa6e2ba7f8a47bcdb0a8708a11a8c00000000"/>
 		<Metadata name="DocumentJournal.РасчетныеДокументыБанк" id="57f87918-a121-4db5-94cc-d6aeaa723f42" configVersion="06374c46b90f514996cbeb483835ff2200000000">
 			<Metadata name="DocumentJournal.РасчетныеДокументыБанк.Column.ВидОперации" id="038b290e-6b0e-4add-a99e-f2976d0fdb57"/>
 			<Metadata name="DocumentJournal.РасчетныеДокументыБанк.Column.Комментарий" id="0588f476-d9ab-417e-a1e8-0eb620a62e5c"/>
