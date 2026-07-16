@@ -2175,6 +2175,7 @@
 			<DataProcessor>ЗаполнениеСинонимовОбъектов</DataProcessor>
 			<DataProcessor>ЗначенияСвойствОбъекта</DataProcessor>
 			<DataProcessor>ИдентификацияШтрихкодов</DataProcessor>
+			<DataProcessor>ИерархияДокументовДерево</DataProcessor>
 			<DataProcessor>КалендарныйПланЗакупок</DataProcessor>
 			<DataProcessor>КартаМаршрутаБизнесПроцесса</DataProcessor>
 			<DataProcessor>КатегорииОбъекта</DataProcessor>
@@ -2280,6 +2281,7 @@
 			<DataProcessor>ЭкспортИмпортКонтактныхДанныхОбъектов</DataProcessor>
 			<DataProcessor>ИнтерфесКассира</DataProcessor>
 			<DataProcessor>ОбработкаСписанныхТоваровИзВозвратныхНакладных</DataProcessor>
+			<DataProcessor>ПечатьТерможурнала</DataProcessor>
 			<InformationRegister>ABCКлассификацияПокупателей</InformationRegister>
 			<InformationRegister>АвансыРаботникамОрганизаций</InformationRegister>
 			<InformationRegister>АрхивДанныхРегламентированнойОтчетности</InformationRegister>
