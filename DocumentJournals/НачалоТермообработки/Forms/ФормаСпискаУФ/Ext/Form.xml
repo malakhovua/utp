@@ -12,6 +12,11 @@
 				<CommandName>Form.Command.ЗаполнитьНачалоТермообработки</CommandName>
 				<ExtendedTooltip name="КнопкаЗаполнитьНачалоРасширеннаяПодсказка" id="67"/>
 			</Button>
+			<Button name="КнопкаСтруктураПодчиненности" id="95">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.СтруктураПодчиненности</CommandName>
+				<ExtendedTooltip name="КнопкаСтруктураПодчиненностиРасширеннаяПодсказка" id="96"/>
+			</Button>
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
@@ -240,6 +245,12 @@
 								<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="31"/>
 							</SearchControlAddition>
 							<ChildItems>
+								<PictureField name="СтандартнаяКартинка" id="92">
+									<DataPath>Список.DefaultPicture</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="СтандартнаяКартинкаКонтекстноеМеню" id="93"/>
+									<ExtendedTooltip name="СтандартнаяКартинкаРасширеннаяПодсказка" id="94"/>
+								</PictureField>
 								<LabelField name="Ссылка" id="77">
 									<DataPath>Список.Ref</DataPath>
 									<ContextMenu name="СсылкаКонтекстноеМеню" id="78"/>
@@ -477,8 +488,12 @@
 					<v8:content>Заполнить начало термообработки из Отчетов производства за смену за выбранный период</v8:content>
 				</v8:item>
 			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.ExpandAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
 			<Action>ЗаполнитьНачалоТермообработки</Action>
-			<Representation>Text</Representation>
+			<Representation>TextPicture</Representation>
 		</Command>
 		<Command name="КомандаОчиститьТабНачал" id="6">
 			<Title>
@@ -500,6 +515,30 @@
 			<Action>КомандаОчиститьТабНачал</Action>
 			<Representation>TextPicture</Representation>
 			<AssociatedTableElementId xsi:type="xs:string">ТаблицаНачал</AssociatedTableElementId>
+		</Command>
+		<Command name="СтруктураПодчиненности" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дерево</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Структура підпорядкованості (дерево)</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дерево подчиненных документов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.HierarchicalView</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СтруктураПодчиненности</Action>
+			<Representation>TextPicture</Representation>
 		</Command>
 	</Commands>
 </Form>
