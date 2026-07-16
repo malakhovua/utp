@@ -47,6 +47,12 @@
 				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="20"/>
 			</SearchControlAddition>
 			<ChildItems>
+				<PictureField name="СтандартнаяКартинка" id="21">
+					<DataPath>Список.DefaultPicture</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<ContextMenu name="СтандартнаяКартинкаКонтекстноеМеню" id="22"/>
+					<ExtendedTooltip name="СтандартнаяКартинкаРасширеннаяПодсказка" id="23"/>
+				</PictureField>
 				<InputField name="Дата" id="4">
 					<DataPath>Список.Date</DataPath>
 					<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>

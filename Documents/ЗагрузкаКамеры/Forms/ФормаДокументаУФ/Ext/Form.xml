@@ -3,15 +3,7 @@
 	<AutoTime>CurrentOrLast</AutoTime>
 	<UsePostingMode>Auto</UsePostingMode>
 	<RepostOnWrite>false</RepostOnWrite>
-	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
-		<ChildItems>
-			<Button name="ФормаПечатьТерможурнала" id="117">
-				<Type>CommandBarButton</Type>
-				<CommandName>Form.Command.ПечатьТерможурнала</CommandName>
-				<ExtendedTooltip name="ФормаПечатьТерможурналаРасширеннаяПодсказка" id="118"/>
-			</Button>
-		</ChildItems>
-	</AutoCommandBar>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
 	<ChildItems>
 		<UsualGroup name="ГруппаШапка" id="2">
 			<ShowTitle>false</ShowTitle>
@@ -190,26 +182,4 @@
 			<SavedData>true</SavedData>
 		</Attribute>
 	</Attributes>
-	<Commands>
-		<Command name="ПечатьТерможурнала" id="1">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Печать терможурнала</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>uk</v8:lang>
-					<v8:content>Друк терможурналу</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Печать терможурнала по текущему документу</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Action>ПечатьТерможурнала</Action>
-			<Representation>Text</Representation>
-		</Command>
-	</Commands>
 </Form>

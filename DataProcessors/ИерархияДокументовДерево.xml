@@ -39,7 +39,7 @@
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Структура подчиненности (дерево)</v8:content>
+							<v8:content>Дерево</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>uk</v8:lang>
@@ -49,9 +49,9 @@
 					<Comment/>
 					<Group>FormCommandBarImportant</Group>
 					<CommandParameterType>
+						<v8:Type>cfg:DocumentRef.ЗагрузкаКамеры</v8:Type>
 						<v8:Type>cfg:DocumentRef.ЗаписьЖРОИГП</v8:Type>
 						<v8:Type>cfg:DocumentRef.НачалоТермообработки</v8:Type>
-						<v8:Type>cfg:DocumentRef.ЗагрузкаКамеры</v8:Type>
 					</CommandParameterType>
 					<ParameterUseMode>Single</ParameterUseMode>
 					<ModifiesData>false</ModifiesData>
@@ -63,7 +63,7 @@
 						</v8:item>
 					</ToolTip>
 					<Picture>
-						<xr:Ref>StdPicture.HierarchicalList</xr:Ref>
+						<xr:Ref>StdPicture.HierarchicalView</xr:Ref>
 						<xr:LoadTransparent>true</xr:LoadTransparent>
 					</Picture>
 					<Shortcut/>

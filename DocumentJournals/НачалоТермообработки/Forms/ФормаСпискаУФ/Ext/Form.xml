@@ -40,7 +40,7 @@
 				<InputField name="ВыбПодпрограмма" id="14">
 					<DataPath>ВыбПодпрограмма</DataPath>
 					<ClearButton>true</ClearButton>
-					<ChoiceForm>Catalog.ПодПрограммыТермообработки.Form.ФормаСписка</ChoiceForm>
+					<ChoiceForm>Catalog.ПодПрограммыТермообработки.Form.ФормаВыбора</ChoiceForm>
 					<ContextMenu name="ВыбПодпрограммаКонтекстноеМеню" id="15"/>
 					<ExtendedTooltip name="ВыбПодпрограммаРасширеннаяПодсказка" id="16"/>
 					<Events>
@@ -140,10 +140,11 @@
 								<ExtendedTooltip name="ТаблицаНачалУправлениеПоискомРасширеннаяПодсказка" id="76"/>
 							</SearchControlAddition>
 							<ChildItems>
-								<InputField name="ТаблицаНачалНачало" id="63">
-									<DataPath>ТаблицаНачал.Начало</DataPath>
-									<ContextMenu name="ТаблицаНачалНачалоКонтекстноеМеню" id="64"/>
-									<ExtendedTooltip name="ТаблицаНачалНачалоРасширеннаяПодсказка" id="65"/>
+								<InputField name="ТаблицаНачалСсылка" id="97">
+									<DataPath>ТаблицаНачал.Ссылка</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТаблицаНачалСсылкаКонтекстноеМеню" id="98"/>
+									<ExtendedTooltip name="ТаблицаНачалСсылкаРасширеннаяПодсказка" id="99"/>
 								</InputField>
 							</ChildItems>
 						</Table>
