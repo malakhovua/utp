@@ -775,11 +775,17 @@
 		<border>0</border>
 		<verticalAlignment>Top</verticalAlignment>
 		<fillType>Parameter</fillType>
+		<format>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>ДФ=dd.MM.yyyy</v8:content>
+			</v8:item>
+		</format>
 	</format>
 	<format>
 		<font>4</font>
 		<border>0</border>
-		<horizontalAlignment>Justify</horizontalAlignment>
+		<horizontalAlignment>Auto</horizontalAlignment>
 		<verticalAlignment>Top</verticalAlignment>
 		<textPlacement>Wrap</textPlacement>
 		<fillType>Parameter</fillType>

@@ -50,12 +50,6 @@
 				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="13"/>
 			</SearchControlAddition>
 			<ChildItems>
-				<PictureField name="СтандартнаяКартинка1" id="44">
-					<DataPath>Список.DefaultPicture</DataPath>
-					<TitleLocation>None</TitleLocation>
-					<ContextMenu name="СтандартнаяКартинка1КонтекстноеМеню" id="45"/>
-					<ExtendedTooltip name="СтандартнаяКартинка1РасширеннаяПодсказка" id="46"/>
-				</PictureField>
 				<LabelField name="Дата" id="14">
 					<DataPath>Список.Date</DataPath>
 					<ContextMenu name="ДатаКонтекстноеМеню" id="15"/>
@@ -102,11 +96,6 @@
 					<DataPath>Список.Технолог</DataPath>
 					<ContextMenu name="ТехнологКонтекстноеМеню" id="39"/>
 					<ExtendedTooltip name="ТехнологРасширеннаяПодсказка" id="40"/>
-				</LabelField>
-				<LabelField name="СтандартнаяКартинка" id="41">
-					<DataPath>Список.DefaultPicture</DataPath>
-					<ContextMenu name="СтандартнаяКартинкаКонтекстноеМеню" id="42"/>
-					<ExtendedTooltip name="СтандартнаяКартинкаРасширеннаяПодсказка" id="43"/>
 				</LabelField>
 			</ChildItems>
 		</Table>
