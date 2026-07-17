@@ -356,6 +356,11 @@
 				</InputField>
 			</ChildItems>
 		</Table>
+		<InputField name="Комментарий" id="149">
+			<DataPath>Объект.Комментарий</DataPath>
+			<ContextMenu name="КомментарийКонтекстноеМеню" id="150"/>
+			<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="151"/>
+		</InputField>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="Объект" id="1">

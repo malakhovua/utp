@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
 	<AutoTime>CurrentOrLast</AutoTime>
 	<UsePostingMode>Auto</UsePostingMode>
@@ -28,25 +28,36 @@
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Загрузка камеры №</v8:content>
+									<v8:content>№</v8:content>
 								</v8:item>
 							</Title>
 							<ContextMenu name="НомерКонтекстноеМеню" id="8"/>
 							<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="9"/>
 						</InputField>
-						<InputField name="ДокументОснование" id="25">
-							<DataPath>Объект.ДокументОснование</DataPath>
+						<InputField name="Дата1" id="190">
+							<DataPath>Объект.Date</DataPath>
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Док. основание</v8:content>
+									<v8:content>от</v8:content>
 								</v8:item>
 							</Title>
-							<ContextMenu name="ДокументОснованиеКонтекстноеМеню" id="26"/>
-							<ExtendedTooltip name="ДокументОснованиеРасширеннаяПодсказка" id="27"/>
+							<ContextMenu name="Дата1КонтекстноеМеню" id="191"/>
+							<ExtendedTooltip name="Дата1РасширеннаяПодсказка" id="192"/>
 						</InputField>
 					</ChildItems>
 				</UsualGroup>
+				<InputField name="ДокументОснование" id="25">
+					<DataPath>Объект.ДокументОснование</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Док. основание</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДокументОснованиеКонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="ДокументОснованиеРасширеннаяПодсказка" id="27"/>
+				</InputField>
 				<UsualGroup name="ГруппаЗагрузка" id="172">
 					<Title>
 						<v8:item>
@@ -54,14 +65,13 @@
 							<v8:content>Загрузка</v8:content>
 						</v8:item>
 					</Title>
+					<Width>41</Width>
 					<HorizontalStretch>false</HorizontalStretch>
 					<Group>AlwaysHorizontal</Group>
-					<ShowTitle>true</ShowTitle>
 					<ExtendedTooltip name="ГруппаЗагрузкаРасширеннаяПодсказка" id="173"/>
 					<ChildItems>
 						<InputField name="Дата" id="4">
 							<DataPath>Объект.Date</DataPath>
-							<TitleLocation>None</TitleLocation>
 							<Width>14</Width>
 							<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
 							<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
@@ -104,39 +114,6 @@
 						</InputField>
 					</ChildItems>
 				</UsualGroup>
-				<UsualGroup name="ГруппаПодпрограмма" id="177">
-					<HorizontalStretch>false</HorizontalStretch>
-					<Group>AlwaysHorizontal</Group>
-					<ShowTitle>false</ShowTitle>
-					<ExtendedTooltip name="ГруппаПодпрограммаРасширеннаяПодсказка" id="178"/>
-					<ChildItems>
-						<InputField name="ПодПрограмма" id="13">
-							<DataPath>Объект.ПодПрограмма</DataPath>
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Подпрограмма</v8:content>
-								</v8:item>
-							</Title>
-							<ContextMenu name="ПодПрограммаКонтекстноеМеню" id="14"/>
-							<ExtendedTooltip name="ПодПрограммаРасширеннаяПодсказка" id="15"/>
-							<Events>
-								<Event name="OnChange">ПодПрограммаПриИзменении</Event>
-							</Events>
-						</InputField>
-						<InputField name="ЗанятаМинуты" id="22">
-							<DataPath>Объект.ЗанятаМинуты</DataPath>
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Время процессов (мин)</v8:content>
-								</v8:item>
-							</Title>
-							<ContextMenu name="ЗанятаМинутыКонтекстноеМеню" id="23"/>
-							<ExtendedTooltip name="ЗанятаМинутыРасширеннаяПодсказка" id="24"/>
-						</InputField>
-					</ChildItems>
-				</UsualGroup>
 				<UsualGroup name="ГруппаОсвобождение" id="179">
 					<Title>
 						<v8:item>
@@ -144,9 +121,9 @@
 							<v8:content>Освобождение камеры</v8:content>
 						</v8:item>
 					</Title>
+					<Width>41</Width>
 					<HorizontalStretch>false</HorizontalStretch>
 					<Group>AlwaysHorizontal</Group>
-					<ShowTitle>true</ShowTitle>
 					<ExtendedTooltip name="ГруппаОсвобождениеРасширеннаяПодсказка" id="180"/>
 					<ChildItems>
 						<InputField name="СвободнаДата" id="28">
@@ -187,6 +164,39 @@
 							<TitleLocation>None</TitleLocation>
 							<ContextMenu name="СвободнаМинутыКонтекстноеМеню" id="35"/>
 							<ExtendedTooltip name="СвободнаМинутыРасширеннаяПодсказка" id="36"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаПодпрограмма" id="177">
+					<HorizontalStretch>false</HorizontalStretch>
+					<Group>AlwaysHorizontal</Group>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПодпрограммаРасширеннаяПодсказка" id="178"/>
+					<ChildItems>
+						<InputField name="ПодПрограмма" id="13">
+							<DataPath>Объект.ПодПрограмма</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Подпрограмма</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ПодПрограммаКонтекстноеМеню" id="14"/>
+							<ExtendedTooltip name="ПодПрограммаРасширеннаяПодсказка" id="15"/>
+							<Events>
+								<Event name="OnChange">ПодПрограммаПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="ЗанятаМинуты" id="22">
+							<DataPath>Объект.ЗанятаМинуты</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Время процессов (мин)</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ЗанятаМинутыКонтекстноеМеню" id="23"/>
+							<ExtendedTooltip name="ЗанятаМинутыРасширеннаяПодсказка" id="24"/>
 						</InputField>
 					</ChildItems>
 				</UsualGroup>
@@ -432,6 +442,11 @@
 				</LabelDecoration>
 			</ChildItems>
 		</UsualGroup>
+		<InputField name="Комментарий" id="193">
+			<DataPath>Объект.Комментарий</DataPath>
+			<ContextMenu name="КомментарийКонтекстноеМеню" id="194"/>
+			<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="195"/>
+		</InputField>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="Объект" id="1">
