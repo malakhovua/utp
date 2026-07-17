@@ -119,7 +119,7 @@ The configuration has **mixed form mode**:
       /LoadConfigFromFiles "/home/alex/Documents/My_projects/utp" /UpdateDBCfg \
       /DisableStartupDialogs /Out /home/alex/.cache/1c_load.log
   ```
-  Команда може тривати кілька хвилин — запускати у фоні. Після виконання перевірити код повернення та `/home/alex/.cache/1c_load.log`.
+  Команда може тривати кілька хвилин — запускати у фоні. На старті вивести користувачу повідомлення "Завантаження конфігурації в базу…", по завершенню обов'язково повідомити результат: код повернення, підсумок з `/home/alex/.cache/1c_load.log` (успіх — рядок `Configuration successfully updated`) та наявність помилок у лозі.
 - **Лише за явною командою користувача** ("вивантаж cf", "вивантаження конфігурації в файли") вивантажувати конфігурацію з бази в файли проєкту:
   ```bash
   distrobox enter 1c-ubuntu1804 -- /opt/1cv8/x86_64/8.3.18.1483/1cv8 DESIGNER \
