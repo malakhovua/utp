@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
 	<AutoTime>CurrentOrLast</AutoTime>
 	<UsePostingMode>Auto</UsePostingMode>
@@ -17,105 +17,402 @@
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="3"/>
 			<ChildItems>
-				<InputField name="Дата" id="4">
-					<DataPath>Объект.Date</DataPath>
-					<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
-					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
-					<Events>
-						<Event name="OnChange">ДатаПриИзменении</Event>
-					</Events>
-				</InputField>
-				<InputField name="Номер" id="7">
-					<DataPath>Объект.Number</DataPath>
-					<ContextMenu name="НомерКонтекстноеМеню" id="8"/>
-					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="9"/>
-				</InputField>
-				<InputField name="КамераТермообработки" id="10">
-					<DataPath>Объект.КамераТермообработки</DataPath>
-					<ContextMenu name="КамераТермообработкиКонтекстноеМеню" id="11"/>
-					<ExtendedTooltip name="КамераТермообработкиРасширеннаяПодсказка" id="12"/>
-					<Events>
-						<Event name="OnChange">КамераТермообработкиПриИзменении</Event>
-					</Events>
-				</InputField>
-				<LabelDecoration name="ВнеКамерыТекст" id="120">
-					<TextColor>web:Red</TextColor>
-					<Title formatted="false">
+				<UsualGroup name="ГруппаНомер" id="170">
+					<HorizontalStretch>false</HorizontalStretch>
+					<Group>AlwaysHorizontal</Group>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаНомерРасширеннаяПодсказка" id="171"/>
+					<ChildItems>
+						<InputField name="Номер" id="7">
+							<DataPath>Объект.Number</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Загрузка камеры №</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="НомерКонтекстноеМеню" id="8"/>
+							<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="9"/>
+						</InputField>
+						<InputField name="ДокументОснование" id="25">
+							<DataPath>Объект.ДокументОснование</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Док. основание</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДокументОснованиеКонтекстноеМеню" id="26"/>
+							<ExtendedTooltip name="ДокументОснованиеРасширеннаяПодсказка" id="27"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаЗагрузка" id="172">
+					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>ВНЕ КАМЕРЫ</v8:content>
+							<v8:content>Загрузка</v8:content>
 						</v8:item>
 					</Title>
-					<ContextMenu name="ВнеКамерыТекстКонтекстноеМеню" id="121"/>
-					<ExtendedTooltip name="ВнеКамерыТекстРасширеннаяПодсказка" id="122"/>
-				</LabelDecoration>
-				<InputField name="ПодПрограмма" id="13">
-					<DataPath>Объект.ПодПрограмма</DataPath>
-					<ContextMenu name="ПодПрограммаКонтекстноеМеню" id="14"/>
-					<ExtendedTooltip name="ПодПрограммаРасширеннаяПодсказка" id="15"/>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Group>AlwaysHorizontal</Group>
+					<ShowTitle>true</ShowTitle>
+					<ExtendedTooltip name="ГруппаЗагрузкаРасширеннаяПодсказка" id="173"/>
+					<ChildItems>
+						<InputField name="Дата" id="4">
+							<DataPath>Объект.Date</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<Width>14</Width>
+							<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+							<Events>
+								<Event name="OnChange">ДатаПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="ЗагруженаЧасы" id="16">
+							<DataPath>Объект.ЗагруженаЧасы</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Время</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ЗагруженаЧасыКонтекстноеМеню" id="17"/>
+							<ExtendedTooltip name="ЗагруженаЧасыРасширеннаяПодсказка" id="18"/>
+							<Events>
+								<Event name="OnChange">ЗагруженаЧасыПриИзменении</Event>
+							</Events>
+						</InputField>
+						<LabelDecoration name="ДвоеточиеЗагрузка" id="174">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>:</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДвоеточиеЗагрузкаКонтекстноеМеню" id="175"/>
+							<ExtendedTooltip name="ДвоеточиеЗагрузкаРасширеннаяПодсказка" id="176"/>
+						</LabelDecoration>
+						<InputField name="ЗагруженаМинуты" id="19">
+							<DataPath>Объект.ЗагруженаМинуты</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<ContextMenu name="ЗагруженаМинутыКонтекстноеМеню" id="20"/>
+							<ExtendedTooltip name="ЗагруженаМинутыРасширеннаяПодсказка" id="21"/>
+							<Events>
+								<Event name="OnChange">ЗагруженаМинутыПриИзменении</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаПодпрограмма" id="177">
+					<HorizontalStretch>false</HorizontalStretch>
+					<Group>AlwaysHorizontal</Group>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПодпрограммаРасширеннаяПодсказка" id="178"/>
+					<ChildItems>
+						<InputField name="ПодПрограмма" id="13">
+							<DataPath>Объект.ПодПрограмма</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Подпрограмма</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ПодПрограммаКонтекстноеМеню" id="14"/>
+							<ExtendedTooltip name="ПодПрограммаРасширеннаяПодсказка" id="15"/>
+							<Events>
+								<Event name="OnChange">ПодПрограммаПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="ЗанятаМинуты" id="22">
+							<DataPath>Объект.ЗанятаМинуты</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Время процессов (мин)</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ЗанятаМинутыКонтекстноеМеню" id="23"/>
+							<ExtendedTooltip name="ЗанятаМинутыРасширеннаяПодсказка" id="24"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаОсвобождение" id="179">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Освобождение камеры</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Group>AlwaysHorizontal</Group>
+					<ShowTitle>true</ShowTitle>
+					<ExtendedTooltip name="ГруппаОсвобождениеРасширеннаяПодсказка" id="180"/>
+					<ChildItems>
+						<InputField name="СвободнаДата" id="28">
+							<DataPath>Объект.СвободнаДата</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Дата</v8:content>
+								</v8:item>
+							</Title>
+							<Width>14</Width>
+							<ContextMenu name="СвободнаДатаКонтекстноеМеню" id="29"/>
+							<ExtendedTooltip name="СвободнаДатаРасширеннаяПодсказка" id="30"/>
+						</InputField>
+						<InputField name="СвободнаЧасы" id="31">
+							<DataPath>Объект.СвободнаЧасы</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Время</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="СвободнаЧасыКонтекстноеМеню" id="32"/>
+							<ExtendedTooltip name="СвободнаЧасыРасширеннаяПодсказка" id="33"/>
+						</InputField>
+						<LabelDecoration name="ДвоеточиеСвободна" id="181">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>:</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДвоеточиеСвободнаКонтекстноеМеню" id="182"/>
+							<ExtendedTooltip name="ДвоеточиеСвободнаРасширеннаяПодсказка" id="183"/>
+						</LabelDecoration>
+						<InputField name="СвободнаМинуты" id="34">
+							<DataPath>Объект.СвободнаМинуты</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<ContextMenu name="СвободнаМинутыКонтекстноеМеню" id="35"/>
+							<ExtendedTooltip name="СвободнаМинутыРасширеннаяПодсказка" id="36"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаКамера" id="184">
+					<HorizontalStretch>false</HorizontalStretch>
+					<Group>AlwaysHorizontal</Group>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаКамераРасширеннаяПодсказка" id="185"/>
+					<ChildItems>
+						<InputField name="КамераТермообработки" id="10">
+							<DataPath>Объект.КамераТермообработки</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Термокамера</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="КамераТермообработкиКонтекстноеМеню" id="11"/>
+							<ExtendedTooltip name="КамераТермообработкиРасширеннаяПодсказка" id="12"/>
+							<Events>
+								<Event name="OnChange">КамераТермообработкиПриИзменении</Event>
+							</Events>
+						</InputField>
+						<LabelDecoration name="ВнеКамерыТекст" id="120">
+							<TextColor>web:Red</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ВНЕ КАМЕРЫ</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ВнеКамерыТекстКонтекстноеМеню" id="121"/>
+							<ExtendedTooltip name="ВнеКамерыТекстРасширеннаяПодсказка" id="122"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаТаблицы" id="186">
+			<Group>AlwaysHorizontal</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаТаблицыРасширеннаяПодсказка" id="187"/>
+			<ChildItems>
+				<Table name="СвободныеКамеры" id="126">
+					<ReadOnly>true</ReadOnly>
+					<ChangeRowSet>false</ChangeRowSet>
+					<DataPath>СвободныеКамеры</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Время загрузки камеры</v8:content>
+						</v8:item>
+					</Title>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="СвободныеКамерыКонтекстноеМеню" id="127"/>
+					<AutoCommandBar name="СвободныеКамерыКоманднаяПанель" id="128">
+						<Autofill>false</Autofill>
+						<ChildItems>
+							<Button name="КнопкаОбновитьСписокСвободных" id="129">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ОбновитьСписокСвободных</CommandName>
+								<ExtendedTooltip name="КнопкаОбновитьСписокСвободныхРасширеннаяПодсказка" id="130"/>
+							</Button>
+							<Button name="КнопкаВыбратьВремяВнутриДня" id="131">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ВыбратьВремяВнутриДня</CommandName>
+								<ExtendedTooltip name="КнопкаВыбратьВремяВнутриДняРасширеннаяПодсказка" id="132"/>
+							</Button>
+						</ChildItems>
+					</AutoCommandBar>
+					<ExtendedTooltip name="СвободныеКамерыРасширеннаяПодсказка" id="133"/>
+					<SearchStringAddition name="СвободныеКамерыСтрокаПоиска" id="160">
+						<AdditionSource>
+							<Item>СвободныеКамеры</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="СвободныеКамерыСтрокаПоискаКонтекстноеМеню" id="161"/>
+						<ExtendedTooltip name="СвободныеКамерыСтрокаПоискаРасширеннаяПодсказка" id="162"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="СвободныеКамерыСостояниеПросмотра" id="163">
+						<AdditionSource>
+							<Item>СвободныеКамеры</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="СвободныеКамерыСостояниеПросмотраКонтекстноеМеню" id="164"/>
+						<ExtendedTooltip name="СвободныеКамерыСостояниеПросмотраРасширеннаяПодсказка" id="165"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="СвободныеКамерыУправлениеПоиском" id="166">
+						<AdditionSource>
+							<Item>СвободныеКамеры</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="СвободныеКамерыУправлениеПоискомКонтекстноеМеню" id="167"/>
+						<ExtendedTooltip name="СвободныеКамерыУправлениеПоискомРасширеннаяПодсказка" id="168"/>
+					</SearchControlAddition>
 					<Events>
-						<Event name="OnChange">ПодПрограммаПриИзменении</Event>
+						<Event name="Selection">СвободныеКамерыВыбор</Event>
 					</Events>
-				</InputField>
-				<InputField name="ЗагруженаЧасы" id="16">
-					<DataPath>Объект.ЗагруженаЧасы</DataPath>
-					<ContextMenu name="ЗагруженаЧасыКонтекстноеМеню" id="17"/>
-					<ExtendedTooltip name="ЗагруженаЧасыРасширеннаяПодсказка" id="18"/>
-					<Events>
-						<Event name="OnChange">ЗагруженаЧасыПриИзменении</Event>
-					</Events>
-				</InputField>
-				<InputField name="ЗагруженаМинуты" id="19">
-					<DataPath>Объект.ЗагруженаМинуты</DataPath>
-					<ContextMenu name="ЗагруженаМинутыКонтекстноеМеню" id="20"/>
-					<ExtendedTooltip name="ЗагруженаМинутыРасширеннаяПодсказка" id="21"/>
-					<Events>
-						<Event name="OnChange">ЗагруженаМинутыПриИзменении</Event>
-					</Events>
-				</InputField>
-				<InputField name="ЗанятаМинуты" id="22">
-					<DataPath>Объект.ЗанятаМинуты</DataPath>
-					<ContextMenu name="ЗанятаМинутыКонтекстноеМеню" id="23"/>
-					<ExtendedTooltip name="ЗанятаМинутыРасширеннаяПодсказка" id="24"/>
-				</InputField>
-				<InputField name="ДокументОснование" id="25">
-					<DataPath>Объект.ДокументОснование</DataPath>
-					<ContextMenu name="ДокументОснованиеКонтекстноеМеню" id="26"/>
-					<ExtendedTooltip name="ДокументОснованиеРасширеннаяПодсказка" id="27"/>
-				</InputField>
-				<InputField name="СвободнаДата" id="28">
-					<DataPath>Объект.СвободнаДата</DataPath>
-					<ContextMenu name="СвободнаДатаКонтекстноеМеню" id="29"/>
-					<ExtendedTooltip name="СвободнаДатаРасширеннаяПодсказка" id="30"/>
-				</InputField>
-				<InputField name="СвободнаЧасы" id="31">
-					<DataPath>Объект.СвободнаЧасы</DataPath>
-					<ContextMenu name="СвободнаЧасыКонтекстноеМеню" id="32"/>
-					<ExtendedTooltip name="СвободнаЧасыРасширеннаяПодсказка" id="33"/>
-				</InputField>
-				<InputField name="СвободнаМинуты" id="34">
-					<DataPath>Объект.СвободнаМинуты</DataPath>
-					<ContextMenu name="СвободнаМинутыКонтекстноеМеню" id="35"/>
-					<ExtendedTooltip name="СвободнаМинутыРасширеннаяПодсказка" id="36"/>
-				</InputField>
-				<InputField name="ЕстьНеоконченыеПроцессы" id="37">
-					<DataPath>Объект.ЕстьНеоконченыеПроцессы</DataPath>
-					<ContextMenu name="ЕстьНеоконченыеПроцессыКонтекстноеМеню" id="38"/>
-					<ExtendedTooltip name="ЕстьНеоконченыеПроцессыРасширеннаяПодсказка" id="39"/>
-				</InputField>
-				<InputField name="ИтогРамПоДокументу" id="40">
-					<DataPath>Объект.ИтогРамПоДокументу</DataPath>
-					<ContextMenu name="ИтогРамПоДокументуКонтекстноеМеню" id="41"/>
-					<ExtendedTooltip name="ИтогРамПоДокументуРасширеннаяПодсказка" id="42"/>
-				</InputField>
-				<LabelDecoration name="КвоРамВКамере" id="74">
-					<ContextMenu name="КвоРамВКамереКонтекстноеМеню" id="80"/>
-					<ExtendedTooltip name="КвоРамВКамереРасширеннаяПодсказка" id="75"/>
-				</LabelDecoration>
-				<LabelDecoration name="ТекстМногоРам" id="76">
-					<ContextMenu name="ТекстМногоРамКонтекстноеМеню" id="81"/>
-					<ExtendedTooltip name="ТекстМногоРамРасширеннаяПодсказка" id="77"/>
-				</LabelDecoration>
+					<ChildItems>
+						<LabelField name="СвободныеКамерыКамера" id="134">
+							<DataPath>СвободныеКамеры.Камера</DataPath>
+							<ContextMenu name="СвободныеКамерыКамераКонтекстноеМеню" id="135"/>
+							<ExtendedTooltip name="СвободныеКамерыКамераРасширеннаяПодсказка" id="136"/>
+						</LabelField>
+						<LabelField name="СвободныеКамерыРазмер" id="137">
+							<DataPath>СвободныеКамеры.Размер</DataPath>
+							<ContextMenu name="СвободныеКамерыРазмерКонтекстноеМеню" id="138"/>
+							<ExtendedTooltip name="СвободныеКамерыРазмерРасширеннаяПодсказка" id="139"/>
+						</LabelField>
+						<LabelField name="СвободныеКамерыЗагруженаДата" id="140">
+							<DataPath>СвободныеКамеры.ЗагруженаДата</DataPath>
+							<ContextMenu name="СвободныеКамерыЗагруженаДатаКонтекстноеМеню" id="141"/>
+							<ExtendedTooltip name="СвободныеКамерыЗагруженаДатаРасширеннаяПодсказка" id="142"/>
+						</LabelField>
+						<LabelField name="СвободныеКамерыЗагруженаЧасы" id="143">
+							<DataPath>СвободныеКамеры.ЗагруженаЧасы</DataPath>
+							<ContextMenu name="СвободныеКамерыЗагруженаЧасыКонтекстноеМеню" id="144"/>
+							<ExtendedTooltip name="СвободныеКамерыЗагруженаЧасыРасширеннаяПодсказка" id="145"/>
+						</LabelField>
+						<LabelField name="СвободныеКамерыЗагруженаМинуты" id="146">
+							<DataPath>СвободныеКамеры.ЗагруженаМинуты</DataPath>
+							<ContextMenu name="СвободныеКамерыЗагруженаМинутыКонтекстноеМеню" id="147"/>
+							<ExtendedTooltip name="СвободныеКамерыЗагруженаМинутыРасширеннаяПодсказка" id="148"/>
+						</LabelField>
+						<LabelField name="СвободныеКамерыСвободнаДата" id="149">
+							<DataPath>СвободныеКамеры.СвободнаДата</DataPath>
+							<ContextMenu name="СвободныеКамерыСвободнаДатаКонтекстноеМеню" id="150"/>
+							<ExtendedTooltip name="СвободныеКамерыСвободнаДатаРасширеннаяПодсказка" id="151"/>
+						</LabelField>
+						<LabelField name="СвободныеКамерыСвободнаЧасы" id="152">
+							<DataPath>СвободныеКамеры.СвободнаЧасы</DataPath>
+							<ContextMenu name="СвободныеКамерыСвободнаЧасыКонтекстноеМеню" id="153"/>
+							<ExtendedTooltip name="СвободныеКамерыСвободнаЧасыРасширеннаяПодсказка" id="154"/>
+						</LabelField>
+						<LabelField name="СвободныеКамерыСвободнаМинуты" id="155">
+							<DataPath>СвободныеКамеры.СвободнаМинуты</DataPath>
+							<ContextMenu name="СвободныеКамерыСвободнаМинутыКонтекстноеМеню" id="156"/>
+							<ExtendedTooltip name="СвободныеКамерыСвободнаМинутыРасширеннаяПодсказка" id="157"/>
+						</LabelField>
+					</ChildItems>
+				</Table>
+				<Table name="ТМЦ" id="83">
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<DataPath>Объект.ТМЦ</DataPath>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="ТМЦКонтекстноеМеню" id="84"/>
+					<AutoCommandBar name="ТМЦКоманднаяПанель" id="85"/>
+					<ExtendedTooltip name="ТМЦРасширеннаяПодсказка" id="86"/>
+					<SearchStringAddition name="ТМЦСтрокаПоиска" id="87">
+						<AdditionSource>
+							<Item>ТМЦ</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ТМЦСтрокаПоискаКонтекстноеМеню" id="88"/>
+						<ExtendedTooltip name="ТМЦСтрокаПоискаРасширеннаяПодсказка" id="89"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ТМЦСостояниеПросмотра" id="90">
+						<AdditionSource>
+							<Item>ТМЦ</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ТМЦСостояниеПросмотраКонтекстноеМеню" id="91"/>
+						<ExtendedTooltip name="ТМЦСостояниеПросмотраРасширеннаяПодсказка" id="92"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ТМЦУправлениеПоиском" id="93">
+						<AdditionSource>
+							<Item>ТМЦ</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ТМЦУправлениеПоискомКонтекстноеМеню" id="94"/>
+						<ExtendedTooltip name="ТМЦУправлениеПоискомРасширеннаяПодсказка" id="95"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<LabelField name="ТМЦНомерСтроки" id="96">
+							<DataPath>Объект.ТМЦ.LineNumber</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТМЦНомерСтрокиКонтекстноеМеню" id="97"/>
+							<ExtendedTooltip name="ТМЦНомерСтрокиРасширеннаяПодсказка" id="98"/>
+						</LabelField>
+						<InputField name="ТМЦТМЦ" id="99">
+							<DataPath>Объект.ТМЦ.ТМЦ</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТМЦТМЦКонтекстноеМеню" id="100"/>
+							<ExtendedTooltip name="ТМЦТМЦРасширеннаяПодсказка" id="101"/>
+						</InputField>
+						<InputField name="ТМЦВидРамы" id="102">
+							<DataPath>Объект.ТМЦ.ВидРамы</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТМЦВидРамыКонтекстноеМеню" id="103"/>
+							<ExtendedTooltip name="ТМЦВидРамыРасширеннаяПодсказка" id="104"/>
+						</InputField>
+						<InputField name="ТМЦКво" id="105">
+							<DataPath>Объект.ТМЦ.Кво</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТМЦКвоКонтекстноеМеню" id="106"/>
+							<ExtendedTooltip name="ТМЦКвоРасширеннаяПодсказка" id="107"/>
+						</InputField>
+						<InputField name="ТМЦКвоРам" id="108">
+							<DataPath>Объект.ТМЦ.КвоРам</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТМЦКвоРамКонтекстноеМеню" id="109"/>
+							<ExtendedTooltip name="ТМЦКвоРамРасширеннаяПодсказка" id="110"/>
+						</InputField>
+						<InputField name="ТМЦОтчетПроизводства" id="111">
+							<DataPath>Объект.ТМЦ.ОтчетПроизводства</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТМЦОтчетПроизводстваКонтекстноеМеню" id="112"/>
+							<ExtendedTooltip name="ТМЦОтчетПроизводстваРасширеннаяПодсказка" id="113"/>
+						</InputField>
+						<InputField name="ТМЦНачалоТермообработки" id="114">
+							<DataPath>Объект.ТМЦ.НачалоТермообработки</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТМЦНачалоТермообработкиКонтекстноеМеню" id="115"/>
+							<ExtendedTooltip name="ТМЦНачалоТермообработкиРасширеннаяПодсказка" id="116"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаИтоги" id="188">
+			<Group>AlwaysHorizontal</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаИтогиРасширеннаяПодсказка" id="189"/>
+			<ChildItems>
 				<LabelDecoration name="ИтогоКвоТекст" id="78">
 					<ContextMenu name="ИтогоКвоТекстКонтекстноеМеню" id="82"/>
 					<ExtendedTooltip name="ИтогоКвоТекстРасширеннаяПодсказка" id="79"/>
@@ -124,184 +421,17 @@
 					<ContextMenu name="ИтогоКвоРамТекстКонтекстноеМеню" id="124"/>
 					<ExtendedTooltip name="ИтогоКвоРамТекстРасширеннаяПодсказка" id="125"/>
 				</LabelDecoration>
+				<LabelDecoration name="КвоРамВКамере" id="74">
+					<ContextMenu name="КвоРамВКамереКонтекстноеМеню" id="80"/>
+					<ExtendedTooltip name="КвоРамВКамереРасширеннаяПодсказка" id="75"/>
+				</LabelDecoration>
+				<LabelDecoration name="ТекстМногоРам" id="76">
+					<TextColor>web:Red</TextColor>
+					<ContextMenu name="ТекстМногоРамКонтекстноеМеню" id="81"/>
+					<ExtendedTooltip name="ТекстМногоРамРасширеннаяПодсказка" id="77"/>
+				</LabelDecoration>
 			</ChildItems>
 		</UsualGroup>
-		<Table name="СвободныеКамеры" id="126">
-			<ReadOnly>true</ReadOnly>
-			<ChangeRowSet>false</ChangeRowSet>
-			<DataPath>СвободныеКамеры</DataPath>
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Время загрузки камеры</v8:content>
-				</v8:item>
-			</Title>
-			<RowFilter xsi:nil="true"/>
-			<ContextMenu name="СвободныеКамерыКонтекстноеМеню" id="127"/>
-			<AutoCommandBar name="СвободныеКамерыКоманднаяПанель" id="128">
-				<Autofill>false</Autofill>
-				<ChildItems>
-					<Button name="КнопкаОбновитьСписокСвободных" id="129">
-						<Type>CommandBarButton</Type>
-						<CommandName>Form.Command.ОбновитьСписокСвободных</CommandName>
-						<ExtendedTooltip name="КнопкаОбновитьСписокСвободныхРасширеннаяПодсказка" id="130"/>
-					</Button>
-					<Button name="КнопкаВыбратьВремяВнутриДня" id="131">
-						<Type>CommandBarButton</Type>
-						<CommandName>Form.Command.ВыбратьВремяВнутриДня</CommandName>
-						<ExtendedTooltip name="КнопкаВыбратьВремяВнутриДняРасширеннаяПодсказка" id="132"/>
-					</Button>
-				</ChildItems>
-			</AutoCommandBar>
-			<ExtendedTooltip name="СвободныеКамерыРасширеннаяПодсказка" id="133"/>
-			<SearchStringAddition name="СвободныеКамерыСтрокаПоиска" id="160">
-				<AdditionSource>
-					<Item>СвободныеКамеры</Item>
-					<Type>SearchStringRepresentation</Type>
-				</AdditionSource>
-				<ContextMenu name="СвободныеКамерыСтрокаПоискаКонтекстноеМеню" id="161"/>
-				<ExtendedTooltip name="СвободныеКамерыСтрокаПоискаРасширеннаяПодсказка" id="162"/>
-			</SearchStringAddition>
-			<ViewStatusAddition name="СвободныеКамерыСостояниеПросмотра" id="163">
-				<AdditionSource>
-					<Item>СвободныеКамеры</Item>
-					<Type>ViewStatusRepresentation</Type>
-				</AdditionSource>
-				<ContextMenu name="СвободныеКамерыСостояниеПросмотраКонтекстноеМеню" id="164"/>
-				<ExtendedTooltip name="СвободныеКамерыСостояниеПросмотраРасширеннаяПодсказка" id="165"/>
-			</ViewStatusAddition>
-			<SearchControlAddition name="СвободныеКамерыУправлениеПоиском" id="166">
-				<AdditionSource>
-					<Item>СвободныеКамеры</Item>
-					<Type>SearchControl</Type>
-				</AdditionSource>
-				<ContextMenu name="СвободныеКамерыУправлениеПоискомКонтекстноеМеню" id="167"/>
-				<ExtendedTooltip name="СвободныеКамерыУправлениеПоискомРасширеннаяПодсказка" id="168"/>
-			</SearchControlAddition>
-			<Events>
-				<Event name="Selection">СвободныеКамерыВыбор</Event>
-			</Events>
-			<ChildItems>
-				<LabelField name="СвободныеКамерыКамера" id="134">
-					<DataPath>СвободныеКамеры.Камера</DataPath>
-					<ContextMenu name="СвободныеКамерыКамераКонтекстноеМеню" id="135"/>
-					<ExtendedTooltip name="СвободныеКамерыКамераРасширеннаяПодсказка" id="136"/>
-				</LabelField>
-				<LabelField name="СвободныеКамерыРазмер" id="137">
-					<DataPath>СвободныеКамеры.Размер</DataPath>
-					<ContextMenu name="СвободныеКамерыРазмерКонтекстноеМеню" id="138"/>
-					<ExtendedTooltip name="СвободныеКамерыРазмерРасширеннаяПодсказка" id="139"/>
-				</LabelField>
-				<LabelField name="СвободныеКамерыЗагруженаДата" id="140">
-					<DataPath>СвободныеКамеры.ЗагруженаДата</DataPath>
-					<ContextMenu name="СвободныеКамерыЗагруженаДатаКонтекстноеМеню" id="141"/>
-					<ExtendedTooltip name="СвободныеКамерыЗагруженаДатаРасширеннаяПодсказка" id="142"/>
-				</LabelField>
-				<LabelField name="СвободныеКамерыЗагруженаЧасы" id="143">
-					<DataPath>СвободныеКамеры.ЗагруженаЧасы</DataPath>
-					<ContextMenu name="СвободныеКамерыЗагруженаЧасыКонтекстноеМеню" id="144"/>
-					<ExtendedTooltip name="СвободныеКамерыЗагруженаЧасыРасширеннаяПодсказка" id="145"/>
-				</LabelField>
-				<LabelField name="СвободныеКамерыЗагруженаМинуты" id="146">
-					<DataPath>СвободныеКамеры.ЗагруженаМинуты</DataPath>
-					<ContextMenu name="СвободныеКамерыЗагруженаМинутыКонтекстноеМеню" id="147"/>
-					<ExtendedTooltip name="СвободныеКамерыЗагруженаМинутыРасширеннаяПодсказка" id="148"/>
-				</LabelField>
-				<LabelField name="СвободныеКамерыСвободнаДата" id="149">
-					<DataPath>СвободныеКамеры.СвободнаДата</DataPath>
-					<ContextMenu name="СвободныеКамерыСвободнаДатаКонтекстноеМеню" id="150"/>
-					<ExtendedTooltip name="СвободныеКамерыСвободнаДатаРасширеннаяПодсказка" id="151"/>
-				</LabelField>
-				<LabelField name="СвободныеКамерыСвободнаЧасы" id="152">
-					<DataPath>СвободныеКамеры.СвободнаЧасы</DataPath>
-					<ContextMenu name="СвободныеКамерыСвободнаЧасыКонтекстноеМеню" id="153"/>
-					<ExtendedTooltip name="СвободныеКамерыСвободнаЧасыРасширеннаяПодсказка" id="154"/>
-				</LabelField>
-				<LabelField name="СвободныеКамерыСвободнаМинуты" id="155">
-					<DataPath>СвободныеКамеры.СвободнаМинуты</DataPath>
-					<ContextMenu name="СвободныеКамерыСвободнаМинутыКонтекстноеМеню" id="156"/>
-					<ExtendedTooltip name="СвободныеКамерыСвободнаМинутыРасширеннаяПодсказка" id="157"/>
-				</LabelField>
-			</ChildItems>
-		</Table>
-		<Table name="ТМЦ" id="83">
-			<AutoInsertNewRow>true</AutoInsertNewRow>
-			<EnableStartDrag>true</EnableStartDrag>
-			<EnableDrag>true</EnableDrag>
-			<DataPath>Объект.ТМЦ</DataPath>
-			<RowFilter xsi:nil="true"/>
-			<ContextMenu name="ТМЦКонтекстноеМеню" id="84"/>
-			<AutoCommandBar name="ТМЦКоманднаяПанель" id="85"/>
-			<ExtendedTooltip name="ТМЦРасширеннаяПодсказка" id="86"/>
-			<SearchStringAddition name="ТМЦСтрокаПоиска" id="87">
-				<AdditionSource>
-					<Item>ТМЦ</Item>
-					<Type>SearchStringRepresentation</Type>
-				</AdditionSource>
-				<ContextMenu name="ТМЦСтрокаПоискаКонтекстноеМеню" id="88"/>
-				<ExtendedTooltip name="ТМЦСтрокаПоискаРасширеннаяПодсказка" id="89"/>
-			</SearchStringAddition>
-			<ViewStatusAddition name="ТМЦСостояниеПросмотра" id="90">
-				<AdditionSource>
-					<Item>ТМЦ</Item>
-					<Type>ViewStatusRepresentation</Type>
-				</AdditionSource>
-				<ContextMenu name="ТМЦСостояниеПросмотраКонтекстноеМеню" id="91"/>
-				<ExtendedTooltip name="ТМЦСостояниеПросмотраРасширеннаяПодсказка" id="92"/>
-			</ViewStatusAddition>
-			<SearchControlAddition name="ТМЦУправлениеПоиском" id="93">
-				<AdditionSource>
-					<Item>ТМЦ</Item>
-					<Type>SearchControl</Type>
-				</AdditionSource>
-				<ContextMenu name="ТМЦУправлениеПоискомКонтекстноеМеню" id="94"/>
-				<ExtendedTooltip name="ТМЦУправлениеПоискомРасширеннаяПодсказка" id="95"/>
-			</SearchControlAddition>
-			<ChildItems>
-				<LabelField name="ТМЦНомерСтроки" id="96">
-					<DataPath>Объект.ТМЦ.LineNumber</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="ТМЦНомерСтрокиКонтекстноеМеню" id="97"/>
-					<ExtendedTooltip name="ТМЦНомерСтрокиРасширеннаяПодсказка" id="98"/>
-				</LabelField>
-				<InputField name="ТМЦТМЦ" id="99">
-					<DataPath>Объект.ТМЦ.ТМЦ</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="ТМЦТМЦКонтекстноеМеню" id="100"/>
-					<ExtendedTooltip name="ТМЦТМЦРасширеннаяПодсказка" id="101"/>
-				</InputField>
-				<InputField name="ТМЦВидРамы" id="102">
-					<DataPath>Объект.ТМЦ.ВидРамы</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="ТМЦВидРамыКонтекстноеМеню" id="103"/>
-					<ExtendedTooltip name="ТМЦВидРамыРасширеннаяПодсказка" id="104"/>
-				</InputField>
-				<InputField name="ТМЦКво" id="105">
-					<DataPath>Объект.ТМЦ.Кво</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="ТМЦКвоКонтекстноеМеню" id="106"/>
-					<ExtendedTooltip name="ТМЦКвоРасширеннаяПодсказка" id="107"/>
-				</InputField>
-				<InputField name="ТМЦКвоРам" id="108">
-					<DataPath>Объект.ТМЦ.КвоРам</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="ТМЦКвоРамКонтекстноеМеню" id="109"/>
-					<ExtendedTooltip name="ТМЦКвоРамРасширеннаяПодсказка" id="110"/>
-				</InputField>
-				<InputField name="ТМЦОтчетПроизводства" id="111">
-					<DataPath>Объект.ТМЦ.ОтчетПроизводства</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="ТМЦОтчетПроизводстваКонтекстноеМеню" id="112"/>
-					<ExtendedTooltip name="ТМЦОтчетПроизводстваРасширеннаяПодсказка" id="113"/>
-				</InputField>
-				<InputField name="ТМЦНачалоТермообработки" id="114">
-					<DataPath>Объект.ТМЦ.НачалоТермообработки</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="ТМЦНачалоТермообработкиКонтекстноеМеню" id="115"/>
-					<ExtendedTooltip name="ТМЦНачалоТермообработкиРасширеннаяПодсказка" id="116"/>
-				</InputField>
-			</ChildItems>
-		</Table>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="Объект" id="1">
