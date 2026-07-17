@@ -57,10 +57,30 @@
 					<ContextMenu name="МинДатаКонтекстноеМеню" id="23"/>
 					<ExtendedTooltip name="МинДатаРасширеннаяПодсказка" id="24"/>
 				</InputField>
+				<InputField name="МинЧасы" id="90">
+					<DataPath>Объект.МинЧасы</DataPath>
+					<ContextMenu name="МинЧасыКонтекстноеМеню" id="91"/>
+					<ExtendedTooltip name="МинЧасыРасширеннаяПодсказка" id="92"/>
+				</InputField>
+				<InputField name="МинМинуты" id="93">
+					<DataPath>Объект.МинМинуты</DataPath>
+					<ContextMenu name="МинМинутыКонтекстноеМеню" id="94"/>
+					<ExtendedTooltip name="МинМинутыРасширеннаяПодсказка" id="95"/>
+				</InputField>
 				<InputField name="МаксДата" id="25">
 					<DataPath>Объект.МаксДата</DataPath>
 					<ContextMenu name="МаксДатаКонтекстноеМеню" id="26"/>
 					<ExtendedTooltip name="МаксДатаРасширеннаяПодсказка" id="27"/>
+				</InputField>
+				<InputField name="МаксЧасы" id="96">
+					<DataPath>Объект.МаксЧасы</DataPath>
+					<ContextMenu name="МаксЧасыКонтекстноеМеню" id="97"/>
+					<ExtendedTooltip name="МаксЧасыРасширеннаяПодсказка" id="98"/>
+				</InputField>
+				<InputField name="МаксМинуты" id="99">
+					<DataPath>Объект.МаксМинуты</DataPath>
+					<ContextMenu name="МаксМинутыКонтекстноеМеню" id="100"/>
+					<ExtendedTooltip name="МаксМинутыРасширеннаяПодсказка" id="101"/>
 				</InputField>
 				<InputField name="ДокументЗагрузка" id="28">
 					<DataPath>Объект.ДокументЗагрузка</DataPath>

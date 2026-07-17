@@ -3,7 +3,15 @@
 	<AutoTime>CurrentOrLast</AutoTime>
 	<UsePostingMode>Auto</UsePostingMode>
 	<RepostOnWrite>false</RepostOnWrite>
-	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="КнопкаПечатьТерможурнала" id="158">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ПечатьТерможурнала</CommandName>
+				<ExtendedTooltip name="КнопкаПечатьТерможурналаРасширеннаяПодсказка" id="159"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
 	<ChildItems>
 		<UsualGroup name="ГруппаШапка" id="2">
 			<ShowTitle>false</ShowTitle>
@@ -13,6 +21,9 @@
 					<DataPath>Объект.Date</DataPath>
 					<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
 					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+					<Events>
+						<Event name="OnChange">ДатаПриИзменении</Event>
+					</Events>
 				</InputField>
 				<InputField name="Номер" id="7">
 					<DataPath>Объект.Number</DataPath>
@@ -27,6 +38,17 @@
 						<Event name="OnChange">КамераТермообработкиПриИзменении</Event>
 					</Events>
 				</InputField>
+				<LabelDecoration name="ВнеКамерыТекст" id="120">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ВНЕ КАМЕРЫ</v8:content>
+						</v8:item>
+					</Title>
+					<TextColor>web:Red</TextColor>
+					<ContextMenu name="ВнеКамерыТекстКонтекстноеМеню" id="121"/>
+					<ExtendedTooltip name="ВнеКамерыТекстРасширеннаяПодсказка" id="122"/>
+				</LabelDecoration>
 				<InputField name="ПодПрограмма" id="13">
 					<DataPath>Объект.ПодПрограмма</DataPath>
 					<ContextMenu name="ПодПрограммаКонтекстноеМеню" id="14"/>
@@ -39,11 +61,17 @@
 					<DataPath>Объект.ЗагруженаЧасы</DataPath>
 					<ContextMenu name="ЗагруженаЧасыКонтекстноеМеню" id="17"/>
 					<ExtendedTooltip name="ЗагруженаЧасыРасширеннаяПодсказка" id="18"/>
+					<Events>
+						<Event name="OnChange">ЗагруженаЧасыПриИзменении</Event>
+					</Events>
 				</InputField>
 				<InputField name="ЗагруженаМинуты" id="19">
 					<DataPath>Объект.ЗагруженаМинуты</DataPath>
 					<ContextMenu name="ЗагруженаМинутыКонтекстноеМеню" id="20"/>
 					<ExtendedTooltip name="ЗагруженаМинутыРасширеннаяПодсказка" id="21"/>
+					<Events>
+						<Event name="OnChange">ЗагруженаМинутыПриИзменении</Event>
+					</Events>
 				</InputField>
 				<InputField name="ЗанятаМинуты" id="22">
 					<DataPath>Объект.ЗанятаМинуты</DataPath>
@@ -92,8 +120,85 @@
 					<ContextMenu name="ИтогоКвоТекстКонтекстноеМеню" id="82"/>
 					<ExtendedTooltip name="ИтогоКвоТекстРасширеннаяПодсказка" id="79"/>
 				</LabelDecoration>
+				<LabelDecoration name="ИтогоКвоРамТекст" id="123">
+					<ContextMenu name="ИтогоКвоРамТекстКонтекстноеМеню" id="124"/>
+					<ExtendedTooltip name="ИтогоКвоРамТекстРасширеннаяПодсказка" id="125"/>
+				</LabelDecoration>
 			</ChildItems>
 		</UsualGroup>
+		<Table name="СвободныеКамеры" id="126">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Время загрузки камеры</v8:content>
+				</v8:item>
+			</Title>
+			<DataPath>СвободныеКамеры</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<ChangeRowSet>false</ChangeRowSet>
+			<ContextMenu name="СвободныеКамерыКонтекстноеМеню" id="127"/>
+			<AutoCommandBar name="СвободныеКамерыКоманднаяПанель" id="128">
+				<Autofill>false</Autofill>
+				<ChildItems>
+					<Button name="КнопкаОбновитьСписокСвободных" id="129">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ОбновитьСписокСвободных</CommandName>
+						<ExtendedTooltip name="КнопкаОбновитьСписокСвободныхРасширеннаяПодсказка" id="130"/>
+					</Button>
+					<Button name="КнопкаВыбратьВремяВнутриДня" id="131">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ВыбратьВремяВнутриДня</CommandName>
+						<ExtendedTooltip name="КнопкаВыбратьВремяВнутриДняРасширеннаяПодсказка" id="132"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СвободныеКамерыРасширеннаяПодсказка" id="133"/>
+			<Events>
+				<Event name="Selection">СвободныеКамерыВыбор</Event>
+			</Events>
+			<ChildItems>
+				<LabelField name="СвободныеКамерыКамера" id="134">
+					<DataPath>СвободныеКамеры.Камера</DataPath>
+					<ContextMenu name="СвободныеКамерыКамераКонтекстноеМеню" id="135"/>
+					<ExtendedTooltip name="СвободныеКамерыКамераРасширеннаяПодсказка" id="136"/>
+				</LabelField>
+				<LabelField name="СвободныеКамерыРазмер" id="137">
+					<DataPath>СвободныеКамеры.Размер</DataPath>
+					<ContextMenu name="СвободныеКамерыРазмерКонтекстноеМеню" id="138"/>
+					<ExtendedTooltip name="СвободныеКамерыРазмерРасширеннаяПодсказка" id="139"/>
+				</LabelField>
+				<LabelField name="СвободныеКамерыЗагруженаДата" id="140">
+					<DataPath>СвободныеКамеры.ЗагруженаДата</DataPath>
+					<ContextMenu name="СвободныеКамерыЗагруженаДатаКонтекстноеМеню" id="141"/>
+					<ExtendedTooltip name="СвободныеКамерыЗагруженаДатаРасширеннаяПодсказка" id="142"/>
+				</LabelField>
+				<LabelField name="СвободныеКамерыЗагруженаЧасы" id="143">
+					<DataPath>СвободныеКамеры.ЗагруженаЧасы</DataPath>
+					<ContextMenu name="СвободныеКамерыЗагруженаЧасыКонтекстноеМеню" id="144"/>
+					<ExtendedTooltip name="СвободныеКамерыЗагруженаЧасыРасширеннаяПодсказка" id="145"/>
+				</LabelField>
+				<LabelField name="СвободныеКамерыЗагруженаМинуты" id="146">
+					<DataPath>СвободныеКамеры.ЗагруженаМинуты</DataPath>
+					<ContextMenu name="СвободныеКамерыЗагруженаМинутыКонтекстноеМеню" id="147"/>
+					<ExtendedTooltip name="СвободныеКамерыЗагруженаМинутыРасширеннаяПодсказка" id="148"/>
+				</LabelField>
+				<LabelField name="СвободныеКамерыСвободнаДата" id="149">
+					<DataPath>СвободныеКамеры.СвободнаДата</DataPath>
+					<ContextMenu name="СвободныеКамерыСвободнаДатаКонтекстноеМеню" id="150"/>
+					<ExtendedTooltip name="СвободныеКамерыСвободнаДатаРасширеннаяПодсказка" id="151"/>
+				</LabelField>
+				<LabelField name="СвободныеКамерыСвободнаЧасы" id="152">
+					<DataPath>СвободныеКамеры.СвободнаЧасы</DataPath>
+					<ContextMenu name="СвободныеКамерыСвободнаЧасыКонтекстноеМеню" id="153"/>
+					<ExtendedTooltip name="СвободныеКамерыСвободнаЧасыРасширеннаяПодсказка" id="154"/>
+				</LabelField>
+				<LabelField name="СвободныеКамерыСвободнаМинуты" id="155">
+					<DataPath>СвободныеКамеры.СвободнаМинуты</DataPath>
+					<ContextMenu name="СвободныеКамерыСвободнаМинутыКонтекстноеМеню" id="156"/>
+					<ExtendedTooltip name="СвободныеКамерыСвободнаМинутыРасширеннаяПодсказка" id="157"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
 		<Table name="ТМЦ" id="83">
 			<AutoInsertNewRow>true</AutoInsertNewRow>
 			<EnableStartDrag>true</EnableStartDrag>
@@ -181,5 +286,195 @@
 			<MainAttribute>true</MainAttribute>
 			<SavedData>true</SavedData>
 		</Attribute>
+		<Attribute name="СвободныеКамеры" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Время загрузки камеры</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Камера" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Камера</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.КамерыТермообработки</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Размер" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>камер</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>2</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЗагруженаДата" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>дата Зг</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЗагруженаЧасы" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>час Зг</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>2</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЗагруженаМинуты" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>минуты Зг</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>2</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="СвободнаДата" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>дата Св</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="СвободнаЧасы" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>час Св</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>2</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="СвободнаМинуты" id="10">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>минуты Св</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>2</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
 	</Attributes>
+	<Commands>
+		<Command name="ПечатьТерможурнала" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Печать терможурнала</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Печать терможурнала по текущему документу</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Print</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПечатьТерможурнала</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ОбновитьСписокСвободных" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить список свободных</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить таблицу занятости камер термообработки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОбновитьСписокСвободных</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ВыбратьВремяВнутриДня" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Время загрузки камеры</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать свободный интервал времени загрузки выбранной камеры</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыбратьВремяВнутриДня</Action>
+			<Representation>Text</Representation>
+		</Command>
+	</Commands>
 </Form>
