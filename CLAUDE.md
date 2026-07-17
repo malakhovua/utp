@@ -108,6 +108,25 @@ The configuration has **mixed form mode**:
 
 ##При закінченні завдання комітити та пушити зміни
 
+## Робота з базою 1С (сервер 192.168.122.65)
+
+Серверна база: `192.168.122.65\utp_dev` (Windows-ВМ, там же репозиторій `C:\utp` і батники `pull_and_load.bat` / `dump_and_push.bat`). Клієнт 1С для Linux очікується в `/opt/1cv8/x86_64/8.3.18.1483/1cv8`.
+
+- **Після закінчення завдання** (після коміту та пушу) завантажувати файли проєкту в конфігурацію бази:
+  ```bash
+  /opt/1cv8/x86_64/8.3.18.1483/1cv8 DESIGNER /S"192.168.122.65\utp_dev" \
+      /LoadConfigFromFiles "/home/alex/Documents/My_projects/utp" /UpdateDBCfg \
+      /DisableStartupDialogs /Out /tmp/1c_load.log
+  ```
+  Після виконання перевірити `/tmp/1c_load.log`. Якщо клієнт 1С для Linux не встановлено — повідомити про це та запропонувати запустити `pull_and_load.bat` на Windows-машині.
+- **Лише за явною командою користувача** ("вивантаж cf", "вивантаження конфігурації в файли") вивантажувати конфігурацію з бази в файли проєкту:
+  ```bash
+  /opt/1cv8/x86_64/8.3.18.1483/1cv8 DESIGNER /S"192.168.122.65\utp_dev" \
+      /DumpConfigToFiles "/home/alex/Documents/My_projects/utp" \
+      /DisableStartupDialogs /Out /tmp/1c_dump.log
+  ```
+  Після вивантаження показати `git status`/`git diff` і далі комітити за загальними правилами. Без команди користувача вивантаження не запускати.
+
 ##Версія платформи длч проєкту 1С:Предприятие 8.3 (8.3.18.1483)
 
 ### Comments
