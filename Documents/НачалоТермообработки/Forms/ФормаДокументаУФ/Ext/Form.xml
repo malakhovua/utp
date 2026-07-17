@@ -1,26 +1,64 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
 	<AutoTime>CurrentOrLast</AutoTime>
 	<UsePostingMode>Auto</UsePostingMode>
 	<RepostOnWrite>false</RepostOnWrite>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
 	<ChildItems>
 		<UsualGroup name="ГруппаШапка" id="2">
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="3"/>
 			<ChildItems>
-				<InputField name="Номер" id="7">
-					<DataPath>Объект.Number</DataPath>
+				<UsualGroup name="ГруппаДатаНомер" id="136">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Начало обработки №</v8:content>
+							<v8:content>Группа дата номер</v8:content>
 						</v8:item>
 					</Title>
-					<ContextMenu name="НомерКонтекстноеМеню" id="8"/>
-					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="9"/>
-				</InputField>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа дата номер</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Group>AlwaysHorizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаДатаНомерРасширеннаяПодсказка" id="137"/>
+					<ChildItems>
+						<InputField name="Номер" id="7">
+							<DataPath>Объект.Number</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>№</v8:content>
+								</v8:item>
+							</Title>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>10</MaxWidth>
+							<ContextMenu name="НомерКонтекстноеМеню" id="8"/>
+							<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="9"/>
+						</InputField>
+						<InputField name="ДатаДок" id="133">
+							<DataPath>Объект.Date</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>от</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДатаДокКонтекстноеМеню" id="134"/>
+							<ExtendedTooltip name="ДатаДокРасширеннаяПодсказка" id="135"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
 				<UsualGroup name="ГруппаМинВремя" id="110">
+					<HorizontalStretch>false</HorizontalStretch>
 					<Group>AlwaysHorizontal</Group>
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="ГруппаМинВремяРасширеннаяПодсказка" id="111"/>
@@ -30,9 +68,10 @@
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Минимальная дата\время загрузки</v8:content>
+									<v8:content>Миним. дата\время загр.</v8:content>
 								</v8:item>
 							</Title>
+							<Width>14</Width>
 							<ContextMenu name="МинДатаКонтекстноеМеню" id="23"/>
 							<ExtendedTooltip name="МинДатаРасширеннаяПодсказка" id="24"/>
 						</InputField>
@@ -48,7 +87,7 @@
 							<ExtendedTooltip name="МинЧасыРасширеннаяПодсказка" id="92"/>
 						</InputField>
 						<LabelDecoration name="ДвоеточиеМин" id="112">
-							<Title>
+							<Title formatted="false">
 								<v8:item>
 									<v8:lang>ru</v8:lang>
 									<v8:content>:</v8:content>
@@ -66,20 +105,25 @@
 					</ChildItems>
 				</UsualGroup>
 				<UsualGroup name="ГруппаВремяЗагрузки" id="114">
+					<HorizontalStretch>false</HorizontalStretch>
 					<Group>AlwaysHorizontal</Group>
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="ГруппаВремяЗагрузкиРасширеннаяПодсказка" id="115"/>
 					<ChildItems>
 						<InputField name="Дата" id="4">
-							<DataPath>Объект.Date</DataPath>
+							<DataPath>Дата</DataPath>
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>дата\время загрузки</v8:content>
+									<v8:content>Текущ. дата\время загр. </v8:content>
 								</v8:item>
 							</Title>
+							<Width>14</Width>
 							<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
 							<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+							<Events>
+								<Event name="OnChange">ДатаПриИзменении</Event>
+							</Events>
 						</InputField>
 						<InputField name="НачалоЧасы" id="10">
 							<DataPath>Объект.НачалоЧасы</DataPath>
@@ -96,7 +140,7 @@
 							</Events>
 						</InputField>
 						<LabelDecoration name="ДвоеточиеНачало" id="116">
-							<Title>
+							<Title formatted="false">
 								<v8:item>
 									<v8:lang>ru</v8:lang>
 									<v8:content>:</v8:content>
@@ -128,6 +172,7 @@
 					</ChildItems>
 				</UsualGroup>
 				<UsualGroup name="ГруппаМаксВремя" id="118">
+					<HorizontalStretch>false</HorizontalStretch>
 					<Group>AlwaysHorizontal</Group>
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="ГруппаМаксВремяРасширеннаяПодсказка" id="119"/>
@@ -137,9 +182,10 @@
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Максимальная дата\время загрузки</v8:content>
+									<v8:content>Макс. дата\время загр.   </v8:content>
 								</v8:item>
 							</Title>
+							<Width>14</Width>
 							<ContextMenu name="МаксДатаКонтекстноеМеню" id="26"/>
 							<ExtendedTooltip name="МаксДатаРасширеннаяПодсказка" id="27"/>
 						</InputField>
@@ -155,7 +201,7 @@
 							<ExtendedTooltip name="МаксЧасыРасширеннаяПодсказка" id="98"/>
 						</InputField>
 						<LabelDecoration name="ДвоеточиеМакс" id="120">
-							<Title>
+							<Title formatted="false">
 								<v8:item>
 									<v8:lang>ru</v8:lang>
 									<v8:content>:</v8:content>
@@ -196,11 +242,12 @@
 					<ContextMenu name="ОтчетПроизводстваКонтекстноеМеню" id="17"/>
 					<ExtendedTooltip name="ОтчетПроизводстваРасширеннаяПодсказка" id="18"/>
 				</InputField>
-				<InputField name="ИтогПоВидамРам" id="31">
+				<LabelField name="ИтогПоВидамРам" id="31">
 					<DataPath>Объект.ИтогПоВидамРам</DataPath>
+					<TextColor>style:ЦветГиперссылки</TextColor>
 					<ContextMenu name="ИтогПоВидамРамКонтекстноеМеню" id="32"/>
 					<ExtendedTooltip name="ИтогПоВидамРамРасширеннаяПодсказка" id="33"/>
-				</InputField>
+				</LabelField>
 			</ChildItems>
 		</UsualGroup>
 		<Table name="ТМЦ" id="62">
@@ -279,6 +326,20 @@
 				<v8:Type>cfg:DocumentObject.НачалоТермообработки</v8:Type>
 			</Type>
 			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="Дата" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
 		</Attribute>
 	</Attributes>
 </Form>

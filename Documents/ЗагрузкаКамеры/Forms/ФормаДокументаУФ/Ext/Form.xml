@@ -39,13 +39,13 @@
 					</Events>
 				</InputField>
 				<LabelDecoration name="ВнеКамерыТекст" id="120">
-					<Title>
+					<TextColor>web:Red</TextColor>
+					<Title formatted="false">
 						<v8:item>
 							<v8:lang>ru</v8:lang>
 							<v8:content>ВНЕ КАМЕРЫ</v8:content>
 						</v8:item>
 					</Title>
-					<TextColor>web:Red</TextColor>
 					<ContextMenu name="ВнеКамерыТекстКонтекстноеМеню" id="121"/>
 					<ExtendedTooltip name="ВнеКамерыТекстРасширеннаяПодсказка" id="122"/>
 				</LabelDecoration>
@@ -127,15 +127,16 @@
 			</ChildItems>
 		</UsualGroup>
 		<Table name="СвободныеКамеры" id="126">
+			<ReadOnly>true</ReadOnly>
+			<ChangeRowSet>false</ChangeRowSet>
+			<DataPath>СвободныеКамеры</DataPath>
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Время загрузки камеры</v8:content>
 				</v8:item>
 			</Title>
-			<DataPath>СвободныеКамеры</DataPath>
-			<ReadOnly>true</ReadOnly>
-			<ChangeRowSet>false</ChangeRowSet>
+			<RowFilter xsi:nil="true"/>
 			<ContextMenu name="СвободныеКамерыКонтекстноеМеню" id="127"/>
 			<AutoCommandBar name="СвободныеКамерыКоманднаяПанель" id="128">
 				<Autofill>false</Autofill>
@@ -153,6 +154,30 @@
 				</ChildItems>
 			</AutoCommandBar>
 			<ExtendedTooltip name="СвободныеКамерыРасширеннаяПодсказка" id="133"/>
+			<SearchStringAddition name="СвободныеКамерыСтрокаПоиска" id="160">
+				<AdditionSource>
+					<Item>СвободныеКамеры</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СвободныеКамерыСтрокаПоискаКонтекстноеМеню" id="161"/>
+				<ExtendedTooltip name="СвободныеКамерыСтрокаПоискаРасширеннаяПодсказка" id="162"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СвободныеКамерыСостояниеПросмотра" id="163">
+				<AdditionSource>
+					<Item>СвободныеКамеры</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СвободныеКамерыСостояниеПросмотраКонтекстноеМеню" id="164"/>
+				<ExtendedTooltip name="СвободныеКамерыСостояниеПросмотраРасширеннаяПодсказка" id="165"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СвободныеКамерыУправлениеПоиском" id="166">
+				<AdditionSource>
+					<Item>СвободныеКамеры</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СвободныеКамерыУправлениеПоискомКонтекстноеМеню" id="167"/>
+				<ExtendedTooltip name="СвободныеКамерыУправлениеПоискомРасширеннаяПодсказка" id="168"/>
+			</SearchControlAddition>
 			<Events>
 				<Event name="Selection">СвободныеКамерыВыбор</Event>
 			</Events>
