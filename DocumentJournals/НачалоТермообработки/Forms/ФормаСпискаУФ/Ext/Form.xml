@@ -17,6 +17,11 @@
 				<CommandName>Form.Command.СтруктураПодчиненности</CommandName>
 				<ExtendedTooltip name="КнопкаСтруктураПодчиненностиРасширеннаяПодсказка" id="96"/>
 			</Button>
+			<Button name="КнопкаУдалитьНачалоТермообработки" id="100">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.УдалитьНачалоТермообработки</CommandName>
+				<ExtendedTooltip name="КнопкаУдалитьНачалоТермообработкиРасширеннаяПодсказка" id="101"/>
+			</Button>
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
@@ -539,6 +544,30 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>СтруктураПодчиненности</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="УдалитьНачалоТермообработки" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить за период</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Видалити за період</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить документы Начало термообработки за период вместе со ссылающимися на них документами</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Delete</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>УдалитьНачалоТермообработки</Action>
 			<Representation>TextPicture</Representation>
 		</Command>
 	</Commands>
