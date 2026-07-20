@@ -12,15 +12,15 @@
 				<CommandName>Form.Command.ЗаполнитьНачалоТермообработки</CommandName>
 				<ExtendedTooltip name="КнопкаЗаполнитьНачалоРасширеннаяПодсказка" id="67"/>
 			</Button>
+			<Button name="ФормаУдалитьНачалоТермообработки" id="102">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.УдалитьНачалоТермообработки</CommandName>
+				<ExtendedTooltip name="ФормаУдалитьНачалоТермообработкиРасширеннаяПодсказка" id="103"/>
+			</Button>
 			<Button name="КнопкаСтруктураПодчиненности" id="95">
 				<Type>CommandBarButton</Type>
 				<CommandName>Form.Command.СтруктураПодчиненности</CommandName>
 				<ExtendedTooltip name="КнопкаСтруктураПодчиненностиРасширеннаяПодсказка" id="96"/>
-			</Button>
-			<Button name="КнопкаУдалитьНачалоТермообработки" id="100">
-				<Type>CommandBarButton</Type>
-				<CommandName>Form.Command.УдалитьНачалоТермообработки</CommandName>
-				<ExtendedTooltip name="КнопкаУдалитьНачалоТермообработкиРасширеннаяПодсказка" id="101"/>
 			</Button>
 		</ChildItems>
 	</AutoCommandBar>
