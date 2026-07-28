@@ -941,7 +941,7 @@
 		<leftBorder>1</leftBorder>
 		<topBorder>0</topBorder>
 		<bottomBorder>1</bottomBorder>
-		<horizontalAlignment>Center</horizontalAlignment>
+		<horizontalAlignment>Justify</horizontalAlignment>
 		<verticalAlignment>Center</verticalAlignment>
 		<fillType>Parameter</fillType>
 		<bySelectedColumns>true</bySelectedColumns>
@@ -950,7 +950,7 @@
 		<font>2</font>
 		<topBorder>0</topBorder>
 		<bottomBorder>1</bottomBorder>
-		<horizontalAlignment>Center</horizontalAlignment>
+		<horizontalAlignment>Justify</horizontalAlignment>
 		<verticalAlignment>Center</verticalAlignment>
 		<fillType>Parameter</fillType>
 		<bySelectedColumns>true</bySelectedColumns>
@@ -960,7 +960,7 @@
 		<topBorder>0</topBorder>
 		<rightBorder>2</rightBorder>
 		<bottomBorder>1</bottomBorder>
-		<horizontalAlignment>Center</horizontalAlignment>
+		<horizontalAlignment>Justify</horizontalAlignment>
 		<verticalAlignment>Center</verticalAlignment>
 		<fillType>Parameter</fillType>
 		<bySelectedColumns>true</bySelectedColumns>
