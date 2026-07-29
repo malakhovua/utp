@@ -1640,6 +1640,33 @@
 			</TabularSection>
 			<Template>ДекЛист</Template>
 			<Template>Общая</Template>
+			<Command uuid="2586f0c7-8b61-4b51-beff-12486fdd1209">
+				<Properties>
+					<Name>ПечатьЖурналОИГП</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Печать журнала регистрации ОИГП</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Друк журналу реєстрації ОІГП</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Group>CommandGroup.ГруппаПечатьЗаписьЖРОИГП</Group>
+					<CommandParameterType>
+						<v8:Type>cfg:DocumentRef.ЗаписьЖРОИГП</v8:Type>
+					</CommandParameterType>
+					<ParameterUseMode>Multiple</ParameterUseMode>
+					<ModifiesData>false</ModifiesData>
+					<Representation>PictureAndText</Representation>
+					<ToolTip/>
+					<Picture/>
+					<Shortcut/>
+					<OnMainServerUnavalableBehavior>Auto</OnMainServerUnavalableBehavior>
+				</Properties>
+			</Command>
 			<Command uuid="665e44ef-a7d6-4015-8575-f4a0ee6b1ec2">
 				<Properties>
 					<Name>ПечатьДекЛистТехнолог</Name>
@@ -1654,18 +1681,15 @@
 						</v8:item>
 					</Synonym>
 					<Comment/>
-					<Group>FormCommandBarImportant</Group>
+					<Group>CommandGroup.ГруппаПечатьЗаписьЖРОИГП</Group>
 					<CommandParameterType>
 						<v8:Type>cfg:DocumentRef.ЗаписьЖРОИГП</v8:Type>
 					</CommandParameterType>
-					<ParameterUseMode>Single</ParameterUseMode>
+					<ParameterUseMode>Multiple</ParameterUseMode>
 					<ModifiesData>false</ModifiesData>
 					<Representation>PictureAndText</Representation>
 					<ToolTip/>
-					<Picture>
-						<xr:Ref>StdPicture.Print</xr:Ref>
-						<xr:LoadTransparent>true</xr:LoadTransparent>
-					</Picture>
+					<Picture/>
 					<Shortcut/>
 					<OnMainServerUnavalableBehavior>Auto</OnMainServerUnavalableBehavior>
 				</Properties>
@@ -1684,18 +1708,15 @@
 						</v8:item>
 					</Synonym>
 					<Comment/>
-					<Group>FormCommandBarImportant</Group>
+					<Group>CommandGroup.ГруппаПечатьЗаписьЖРОИГП</Group>
 					<CommandParameterType>
 						<v8:Type>cfg:DocumentRef.ЗаписьЖРОИГП</v8:Type>
 					</CommandParameterType>
-					<ParameterUseMode>Single</ParameterUseMode>
+					<ParameterUseMode>Multiple</ParameterUseMode>
 					<ModifiesData>false</ModifiesData>
 					<Representation>PictureAndText</Representation>
 					<ToolTip/>
-					<Picture>
-						<xr:Ref>StdPicture.Print</xr:Ref>
-						<xr:LoadTransparent>true</xr:LoadTransparent>
-					</Picture>
+					<Picture/>
 					<Shortcut/>
 					<OnMainServerUnavalableBehavior>Auto</OnMainServerUnavalableBehavior>
 				</Properties>
@@ -1714,48 +1735,15 @@
 						</v8:item>
 					</Synonym>
 					<Comment/>
-					<Group>FormCommandBarImportant</Group>
+					<Group>CommandGroup.ГруппаПечатьЗаписьЖРОИГП</Group>
 					<CommandParameterType>
 						<v8:Type>cfg:DocumentRef.ЗаписьЖРОИГП</v8:Type>
 					</CommandParameterType>
-					<ParameterUseMode>Single</ParameterUseMode>
+					<ParameterUseMode>Multiple</ParameterUseMode>
 					<ModifiesData>false</ModifiesData>
 					<Representation>PictureAndText</Representation>
 					<ToolTip/>
-					<Picture>
-						<xr:Ref>StdPicture.Print</xr:Ref>
-						<xr:LoadTransparent>true</xr:LoadTransparent>
-					</Picture>
-					<Shortcut/>
-					<OnMainServerUnavalableBehavior>Auto</OnMainServerUnavalableBehavior>
-				</Properties>
-			</Command>
-			<Command uuid="2586f0c7-8b61-4b51-beff-12486fdd1209">
-				<Properties>
-					<Name>ПечатьЖурналОИГП</Name>
-					<Synonym>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Печать журнала регистрации ОИГП</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>uk</v8:lang>
-							<v8:content>Друк журналу реєстрації ОІГП</v8:content>
-						</v8:item>
-					</Synonym>
-					<Comment/>
-					<Group>FormCommandBarImportant</Group>
-					<CommandParameterType>
-						<v8:Type>cfg:DocumentRef.ЗаписьЖРОИГП</v8:Type>
-					</CommandParameterType>
-					<ParameterUseMode>Single</ParameterUseMode>
-					<ModifiesData>false</ModifiesData>
-					<Representation>PictureAndText</Representation>
-					<ToolTip/>
-					<Picture>
-						<xr:Ref>StdPicture.Print</xr:Ref>
-						<xr:LoadTransparent>true</xr:LoadTransparent>
-					</Picture>
+					<Picture/>
 					<Shortcut/>
 					<OnMainServerUnavalableBehavior>Auto</OnMainServerUnavalableBehavior>
 				</Properties>

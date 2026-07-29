@@ -85,17 +85,17 @@
 						</InputField>
 					</ChildItems>
 				</UsualGroup>
+				<InputField name="Организация" id="155">
+					<DataPath>Объект.Организация</DataPath>
+					<ContextMenu name="ОрганизацияКонтекстноеМеню" id="156"/>
+					<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="157"/>
+				</InputField>
 				<InputField name="ОтчетПроизводства" id="22">
 					<DataPath>Объект.ОтчетПроизводства</DataPath>
 					<Width>50</Width>
 					<HorizontalStretch>false</HorizontalStretch>
 					<ContextMenu name="ОтчетПроизводстваКонтекстноеМеню" id="23"/>
 					<ExtendedTooltip name="ОтчетПроизводстваРасширеннаяПодсказка" id="24"/>
-				</InputField>
-				<InputField name="Организация" id="155">
-					<DataPath>Объект.Организация</DataPath>
-					<ContextMenu name="ОрганизацияКонтекстноеМеню" id="156"/>
-					<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="157"/>
 				</InputField>
 				<UsualGroup name="ГруппаОтветственные" id="11">
 					<Group>AlwaysHorizontal</Group>
@@ -185,60 +185,60 @@
 					</Title>
 					<ExtendedTooltip name="ТМЦГруппаТехнологРасширеннаяПодсказка" id="159"/>
 					<ChildItems>
-					<InputField name="ТМЦВНПоле" id="44">
-						<DataPath>Объект.ТМЦ.ВН</DataPath>
-						<EditMode>EnterOnInput</EditMode>
-						<ContextMenu name="ТМЦВНПолеКонтекстноеМеню" id="45"/>
-						<ExtendedTooltip name="ТМЦВНПолеРасширеннаяПодсказка" id="46"/>
-						<Events>
-							<Event name="OnChange">ОценкаТехнологПриИзменении</Event>
-						</Events>
-					</InputField>
-					<InputField name="ТМЦЦПоле" id="53">
-						<DataPath>Объект.ТМЦ.Ц</DataPath>
-						<EditMode>EnterOnInput</EditMode>
-						<ContextMenu name="ТМЦЦПолеКонтекстноеМеню" id="54"/>
-						<ExtendedTooltip name="ТМЦЦПолеРасширеннаяПодсказка" id="55"/>
-						<Events>
-							<Event name="OnChange">ОценкаТехнологПриИзменении</Event>
-						</Events>
-					</InputField>
-					<InputField name="ТМЦЗПоле" id="62">
-						<DataPath>Объект.ТМЦ.З</DataPath>
-						<EditMode>EnterOnInput</EditMode>
-						<ContextMenu name="ТМЦЗПолеКонтекстноеМеню" id="63"/>
-						<ExtendedTooltip name="ТМЦЗПолеРасширеннаяПодсказка" id="64"/>
-						<Events>
-							<Event name="OnChange">ОценкаТехнологПриИзменении</Event>
-						</Events>
-					</InputField>
-					<InputField name="ТМЦКПоле" id="71">
-						<DataPath>Объект.ТМЦ.К</DataPath>
-						<EditMode>EnterOnInput</EditMode>
-						<ContextMenu name="ТМЦКПолеКонтекстноеМеню" id="72"/>
-						<ExtendedTooltip name="ТМЦКПолеРасширеннаяПодсказка" id="73"/>
-						<Events>
-							<Event name="OnChange">ОценкаТехнологПриИзменении</Event>
-						</Events>
-					</InputField>
-					<InputField name="ТМЦВПоле" id="80">
-						<DataPath>Объект.ТМЦ.В</DataPath>
-						<EditMode>EnterOnInput</EditMode>
-						<ContextMenu name="ТМЦВПолеКонтекстноеМеню" id="81"/>
-						<ExtendedTooltip name="ТМЦВПолеРасширеннаяПодсказка" id="82"/>
-						<Events>
-							<Event name="OnChange">ОценкаТехнологПриИзменении</Event>
-						</Events>
-					</InputField>
-					<InputField name="ТМЦСПоле" id="89">
-						<DataPath>Объект.ТМЦ.С</DataPath>
-						<EditMode>EnterOnInput</EditMode>
-						<ContextMenu name="ТМЦСПолеКонтекстноеМеню" id="90"/>
-						<ExtendedTooltip name="ТМЦСПолеРасширеннаяПодсказка" id="91"/>
-						<Events>
-							<Event name="OnChange">ОценкаТехнологПриИзменении</Event>
-						</Events>
-					</InputField>
+						<InputField name="ТМЦВНПоле" id="44">
+							<DataPath>Объект.ТМЦ.ВН</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТМЦВНПолеКонтекстноеМеню" id="45"/>
+							<ExtendedTooltip name="ТМЦВНПолеРасширеннаяПодсказка" id="46"/>
+							<Events>
+								<Event name="OnChange">ОценкаТехнологПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="ТМЦЦПоле" id="53">
+							<DataPath>Объект.ТМЦ.Ц</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТМЦЦПолеКонтекстноеМеню" id="54"/>
+							<ExtendedTooltip name="ТМЦЦПолеРасширеннаяПодсказка" id="55"/>
+							<Events>
+								<Event name="OnChange">ОценкаТехнологПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="ТМЦЗПоле" id="62">
+							<DataPath>Объект.ТМЦ.З</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТМЦЗПолеКонтекстноеМеню" id="63"/>
+							<ExtendedTooltip name="ТМЦЗПолеРасширеннаяПодсказка" id="64"/>
+							<Events>
+								<Event name="OnChange">ОценкаТехнологПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="ТМЦКПоле" id="71">
+							<DataPath>Объект.ТМЦ.К</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТМЦКПолеКонтекстноеМеню" id="72"/>
+							<ExtendedTooltip name="ТМЦКПолеРасширеннаяПодсказка" id="73"/>
+							<Events>
+								<Event name="OnChange">ОценкаТехнологПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="ТМЦВПоле" id="80">
+							<DataPath>Объект.ТМЦ.В</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТМЦВПолеКонтекстноеМеню" id="81"/>
+							<ExtendedTooltip name="ТМЦВПолеРасширеннаяПодсказка" id="82"/>
+							<Events>
+								<Event name="OnChange">ОценкаТехнологПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="ТМЦСПоле" id="89">
+							<DataPath>Объект.ТМЦ.С</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТМЦСПолеКонтекстноеМеню" id="90"/>
+							<ExtendedTooltip name="ТМЦСПолеРасширеннаяПодсказка" id="91"/>
+							<Events>
+								<Event name="OnChange">ОценкаТехнологПриИзменении</Event>
+							</Events>
+						</InputField>
 					</ChildItems>
 				</ColumnGroup>
 				<ColumnGroup name="ТМЦГруппаВетВрач" id="160">
@@ -254,60 +254,60 @@
 					</Title>
 					<ExtendedTooltip name="ТМЦГруппаВетВрачРасширеннаяПодсказка" id="161"/>
 					<ChildItems>
-					<InputField name="ТМЦВНВПоле" id="47">
-						<DataPath>Объект.ТМЦ.ВНВ</DataPath>
-						<EditMode>EnterOnInput</EditMode>
-						<ContextMenu name="ТМЦВНВПолеКонтекстноеМеню" id="48"/>
-						<ExtendedTooltip name="ТМЦВНВПолеРасширеннаяПодсказка" id="49"/>
-						<Events>
-							<Event name="OnChange">ОценкаВетврачПриИзменении</Event>
-						</Events>
-					</InputField>
-					<InputField name="ТМЦЦВПоле" id="56">
-						<DataPath>Объект.ТМЦ.ЦВ</DataPath>
-						<EditMode>EnterOnInput</EditMode>
-						<ContextMenu name="ТМЦЦВПолеКонтекстноеМеню" id="57"/>
-						<ExtendedTooltip name="ТМЦЦВПолеРасширеннаяПодсказка" id="58"/>
-						<Events>
-							<Event name="OnChange">ОценкаВетврачПриИзменении</Event>
-						</Events>
-					</InputField>
-					<InputField name="ТМЦЗВПоле" id="65">
-						<DataPath>Объект.ТМЦ.ЗВ</DataPath>
-						<EditMode>EnterOnInput</EditMode>
-						<ContextMenu name="ТМЦЗВПолеКонтекстноеМеню" id="66"/>
-						<ExtendedTooltip name="ТМЦЗВПолеРасширеннаяПодсказка" id="67"/>
-						<Events>
-							<Event name="OnChange">ОценкаВетврачПриИзменении</Event>
-						</Events>
-					</InputField>
-					<InputField name="ТМЦКВПоле" id="74">
-						<DataPath>Объект.ТМЦ.КВ</DataPath>
-						<EditMode>EnterOnInput</EditMode>
-						<ContextMenu name="ТМЦКВПолеКонтекстноеМеню" id="75"/>
-						<ExtendedTooltip name="ТМЦКВПолеРасширеннаяПодсказка" id="76"/>
-						<Events>
-							<Event name="OnChange">ОценкаВетврачПриИзменении</Event>
-						</Events>
-					</InputField>
-					<InputField name="ТМЦВВПоле" id="83">
-						<DataPath>Объект.ТМЦ.ВВ</DataPath>
-						<EditMode>EnterOnInput</EditMode>
-						<ContextMenu name="ТМЦВВПолеКонтекстноеМеню" id="84"/>
-						<ExtendedTooltip name="ТМЦВВПолеРасширеннаяПодсказка" id="85"/>
-						<Events>
-							<Event name="OnChange">ОценкаВетврачПриИзменении</Event>
-						</Events>
-					</InputField>
-					<InputField name="ТМЦСВПоле" id="92">
-						<DataPath>Объект.ТМЦ.СВ</DataPath>
-						<EditMode>EnterOnInput</EditMode>
-						<ContextMenu name="ТМЦСВПолеКонтекстноеМеню" id="93"/>
-						<ExtendedTooltip name="ТМЦСВПолеРасширеннаяПодсказка" id="94"/>
-						<Events>
-							<Event name="OnChange">ОценкаВетврачПриИзменении</Event>
-						</Events>
-					</InputField>
+						<InputField name="ТМЦВНВПоле" id="47">
+							<DataPath>Объект.ТМЦ.ВНВ</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТМЦВНВПолеКонтекстноеМеню" id="48"/>
+							<ExtendedTooltip name="ТМЦВНВПолеРасширеннаяПодсказка" id="49"/>
+							<Events>
+								<Event name="OnChange">ОценкаВетврачПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="ТМЦЦВПоле" id="56">
+							<DataPath>Объект.ТМЦ.ЦВ</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТМЦЦВПолеКонтекстноеМеню" id="57"/>
+							<ExtendedTooltip name="ТМЦЦВПолеРасширеннаяПодсказка" id="58"/>
+							<Events>
+								<Event name="OnChange">ОценкаВетврачПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="ТМЦЗВПоле" id="65">
+							<DataPath>Объект.ТМЦ.ЗВ</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТМЦЗВПолеКонтекстноеМеню" id="66"/>
+							<ExtendedTooltip name="ТМЦЗВПолеРасширеннаяПодсказка" id="67"/>
+							<Events>
+								<Event name="OnChange">ОценкаВетврачПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="ТМЦКВПоле" id="74">
+							<DataPath>Объект.ТМЦ.КВ</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТМЦКВПолеКонтекстноеМеню" id="75"/>
+							<ExtendedTooltip name="ТМЦКВПолеРасширеннаяПодсказка" id="76"/>
+							<Events>
+								<Event name="OnChange">ОценкаВетврачПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="ТМЦВВПоле" id="83">
+							<DataPath>Объект.ТМЦ.ВВ</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТМЦВВПолеКонтекстноеМеню" id="84"/>
+							<ExtendedTooltip name="ТМЦВВПолеРасширеннаяПодсказка" id="85"/>
+							<Events>
+								<Event name="OnChange">ОценкаВетврачПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="ТМЦСВПоле" id="92">
+							<DataPath>Объект.ТМЦ.СВ</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТМЦСВПолеКонтекстноеМеню" id="93"/>
+							<ExtendedTooltip name="ТМЦСВПолеРасширеннаяПодсказка" id="94"/>
+							<Events>
+								<Event name="OnChange">ОценкаВетврачПриИзменении</Event>
+							</Events>
+						</InputField>
 					</ChildItems>
 				</ColumnGroup>
 				<ColumnGroup name="ТМЦГруппаКладовщик" id="162">
@@ -323,60 +323,60 @@
 					</Title>
 					<ExtendedTooltip name="ТМЦГруппаКладовщикРасширеннаяПодсказка" id="163"/>
 					<ChildItems>
-					<InputField name="ТМЦВНКПоле" id="50">
-						<DataPath>Объект.ТМЦ.ВНК</DataPath>
-						<EditMode>EnterOnInput</EditMode>
-						<ContextMenu name="ТМЦВНКПолеКонтекстноеМеню" id="51"/>
-						<ExtendedTooltip name="ТМЦВНКПолеРасширеннаяПодсказка" id="52"/>
-						<Events>
-							<Event name="OnChange">ОценкаКладовщикПриИзменении</Event>
-						</Events>
-					</InputField>
-					<InputField name="ТМЦЦКПоле" id="59">
-						<DataPath>Объект.ТМЦ.ЦК</DataPath>
-						<EditMode>EnterOnInput</EditMode>
-						<ContextMenu name="ТМЦЦКПолеКонтекстноеМеню" id="60"/>
-						<ExtendedTooltip name="ТМЦЦКПолеРасширеннаяПодсказка" id="61"/>
-						<Events>
-							<Event name="OnChange">ОценкаКладовщикПриИзменении</Event>
-						</Events>
-					</InputField>
-					<InputField name="ТМЦЗКПоле" id="68">
-						<DataPath>Объект.ТМЦ.ЗК</DataPath>
-						<EditMode>EnterOnInput</EditMode>
-						<ContextMenu name="ТМЦЗКПолеКонтекстноеМеню" id="69"/>
-						<ExtendedTooltip name="ТМЦЗКПолеРасширеннаяПодсказка" id="70"/>
-						<Events>
-							<Event name="OnChange">ОценкаКладовщикПриИзменении</Event>
-						</Events>
-					</InputField>
-					<InputField name="ТМЦККПоле" id="77">
-						<DataPath>Объект.ТМЦ.КК</DataPath>
-						<EditMode>EnterOnInput</EditMode>
-						<ContextMenu name="ТМЦККПолеКонтекстноеМеню" id="78"/>
-						<ExtendedTooltip name="ТМЦККПолеРасширеннаяПодсказка" id="79"/>
-						<Events>
-							<Event name="OnChange">ОценкаКладовщикПриИзменении</Event>
-						</Events>
-					</InputField>
-					<InputField name="ТМЦВКПоле" id="86">
-						<DataPath>Объект.ТМЦ.ВК</DataPath>
-						<EditMode>EnterOnInput</EditMode>
-						<ContextMenu name="ТМЦВКПолеКонтекстноеМеню" id="87"/>
-						<ExtendedTooltip name="ТМЦВКПолеРасширеннаяПодсказка" id="88"/>
-						<Events>
-							<Event name="OnChange">ОценкаКладовщикПриИзменении</Event>
-						</Events>
-					</InputField>
-					<InputField name="ТМЦСКПоле" id="95">
-						<DataPath>Объект.ТМЦ.СК</DataPath>
-						<EditMode>EnterOnInput</EditMode>
-						<ContextMenu name="ТМЦСКПолеКонтекстноеМеню" id="96"/>
-						<ExtendedTooltip name="ТМЦСКПолеРасширеннаяПодсказка" id="97"/>
-						<Events>
-							<Event name="OnChange">ОценкаКладовщикПриИзменении</Event>
-						</Events>
-					</InputField>
+						<InputField name="ТМЦВНКПоле" id="50">
+							<DataPath>Объект.ТМЦ.ВНК</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТМЦВНКПолеКонтекстноеМеню" id="51"/>
+							<ExtendedTooltip name="ТМЦВНКПолеРасширеннаяПодсказка" id="52"/>
+							<Events>
+								<Event name="OnChange">ОценкаКладовщикПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="ТМЦЦКПоле" id="59">
+							<DataPath>Объект.ТМЦ.ЦК</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТМЦЦКПолеКонтекстноеМеню" id="60"/>
+							<ExtendedTooltip name="ТМЦЦКПолеРасширеннаяПодсказка" id="61"/>
+							<Events>
+								<Event name="OnChange">ОценкаКладовщикПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="ТМЦЗКПоле" id="68">
+							<DataPath>Объект.ТМЦ.ЗК</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТМЦЗКПолеКонтекстноеМеню" id="69"/>
+							<ExtendedTooltip name="ТМЦЗКПолеРасширеннаяПодсказка" id="70"/>
+							<Events>
+								<Event name="OnChange">ОценкаКладовщикПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="ТМЦККПоле" id="77">
+							<DataPath>Объект.ТМЦ.КК</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТМЦККПолеКонтекстноеМеню" id="78"/>
+							<ExtendedTooltip name="ТМЦККПолеРасширеннаяПодсказка" id="79"/>
+							<Events>
+								<Event name="OnChange">ОценкаКладовщикПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="ТМЦВКПоле" id="86">
+							<DataPath>Объект.ТМЦ.ВК</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТМЦВКПолеКонтекстноеМеню" id="87"/>
+							<ExtendedTooltip name="ТМЦВКПолеРасширеннаяПодсказка" id="88"/>
+							<Events>
+								<Event name="OnChange">ОценкаКладовщикПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="ТМЦСКПоле" id="95">
+							<DataPath>Объект.ТМЦ.СК</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТМЦСКПолеКонтекстноеМеню" id="96"/>
+							<ExtendedTooltip name="ТМЦСКПолеРасширеннаяПодсказка" id="97"/>
+							<Events>
+								<Event name="OnChange">ОценкаКладовщикПриИзменении</Event>
+							</Events>
+						</InputField>
 					</ChildItems>
 				</ColumnGroup>
 				<InputField name="ТМЦСредТПоле" id="98">

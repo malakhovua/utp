@@ -1003,6 +1003,7 @@
 			<CommonCommand>ДокументыВозвратыОтПокупателя</CommonCommand>
 			<CommonCommand>ДокументыАктыСверки</CommonCommand>
 			<CommandGroup>ГруппаКомандДокументыПродажи</CommandGroup>
+			<CommandGroup>ГруппаПечатьЗаписьЖРОИГП</CommandGroup>
 			<Constant>ВалютаРегламентированногоУчета</Constant>
 			<Constant>ВалютаУправленческогоУчета</Constant>
 			<Constant>ВидАдресаКонтрагента</Constant>

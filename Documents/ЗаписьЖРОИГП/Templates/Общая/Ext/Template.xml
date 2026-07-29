@@ -677,6 +677,7 @@
 	<font faceName="Arial" height="9.8" bold="true" italic="false" underline="false" strikeout="false" kind="Absolute"/>
 	<font faceName="Arial" height="9.8" bold="false" italic="false" underline="false" strikeout="false" kind="Absolute"/>
 	<font faceName="Times New Roman" height="12" bold="false" italic="false" underline="false" strikeout="false" kind="Absolute"/>
+	<font faceName="Arial" height="8" bold="false" italic="false" underline="false" strikeout="false" kind="Absolute"/>
 	<format>
 		<width>73</width>
 	</format>
@@ -845,22 +846,22 @@
 		<bottomBorder>0</bottomBorder>
 	</format>
 	<format>
-		<font>4</font>
+		<font>6</font>
 		<border>0</border>
-		<horizontalAlignment>Auto</horizontalAlignment>
+		<horizontalAlignment>Justify</horizontalAlignment>
 		<verticalAlignment>Top</verticalAlignment>
 		<fillType>Parameter</fillType>
 		<bySelectedColumns>true</bySelectedColumns>
 	</format>
 	<format>
-		<font>4</font>
+		<font>6</font>
 		<border>0</border>
 		<horizontalAlignment>Right</horizontalAlignment>
 		<verticalAlignment>Top</verticalAlignment>
 		<fillType>Parameter</fillType>
 	</format>
 	<format>
-		<font>4</font>
+		<font>6</font>
 		<border>0</border>
 		<horizontalAlignment>Justify</horizontalAlignment>
 		<verticalAlignment>Top</verticalAlignment>
