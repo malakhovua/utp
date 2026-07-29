@@ -216,6 +216,49 @@
 			<ExecuteAfterWriteDataHistoryVersionProcessing>false</ExecuteAfterWriteDataHistoryVersionProcessing>
 		</Properties>
 		<ChildObjects>
+			<Attribute uuid="d0512e6e-9d8b-43e3-96c8-80122ceb315f">
+				<Properties>
+					<Name>Организация</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Организация</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Організація</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>(Общ)</Comment>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+					</Type>
+					<PasswordMode>false</PasswordMode>
+					<Format/>
+					<EditFormat/>
+					<ToolTip/>
+					<MarkNegatives>false</MarkNegatives>
+					<Mask/>
+					<MultiLine>false</MultiLine>
+					<ExtendedEdit>false</ExtendedEdit>
+					<MinValue xsi:nil="true"/>
+					<MaxValue xsi:nil="true"/>
+					<FillFromFillingValue>false</FillFromFillingValue>
+					<FillValue xsi:nil="true"/>
+					<FillChecking>DontCheck</FillChecking>
+					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+					<ChoiceParameterLinks/>
+					<ChoiceParameters/>
+					<QuickChoice>Auto</QuickChoice>
+					<CreateOnInput>Auto</CreateOnInput>
+					<ChoiceForm/>
+					<LinkByType/>
+					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+					<Indexing>DontIndex</Indexing>
+					<FullTextSearch>Use</FullTextSearch>
+					<DataHistory>Use</DataHistory>
+				</Properties>
+			</Attribute>
 			<Attribute uuid="ff4c6082-0566-4f33-885c-8b367c0813ac">
 				<Properties>
 					<Name>Технолог</Name>
@@ -581,104 +624,17 @@
 							<DataHistory>Use</DataHistory>
 						</Properties>
 					</Attribute>
-					<Attribute uuid="2a47c894-7ac7-4669-99c1-134424e9d97c">
-						<Properties>
-							<Name>Ед</Name>
-							<Synonym>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Ед</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>uk</v8:lang>
-									<v8:content>Од</v8:content>
-								</v8:item>
-							</Synonym>
-							<Comment/>
-							<Type>
-								<v8:Type>cfg:CatalogRef.ЕдиницыИзмерения</v8:Type>
-							</Type>
-							<PasswordMode>false</PasswordMode>
-							<Format/>
-							<EditFormat/>
-							<ToolTip/>
-							<MarkNegatives>false</MarkNegatives>
-							<Mask/>
-							<MultiLine>false</MultiLine>
-							<ExtendedEdit>false</ExtendedEdit>
-							<MinValue xsi:nil="true"/>
-							<MaxValue xsi:nil="true"/>
-							<FillChecking>DontCheck</FillChecking>
-							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
-							<ChoiceParameterLinks/>
-							<ChoiceParameters/>
-							<QuickChoice>Auto</QuickChoice>
-							<CreateOnInput>Auto</CreateOnInput>
-							<ChoiceForm/>
-							<LinkByType/>
-							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
-							<Indexing>DontIndex</Indexing>
-							<FullTextSearch>Use</FullTextSearch>
-							<DataHistory>Use</DataHistory>
-						</Properties>
-					</Attribute>
-					<Attribute uuid="6e25d2c3-28cf-4c19-85b8-15a92366bdd7">
-						<Properties>
-							<Name>Коэффициент</Name>
-							<Synonym>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Коэффициент</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>uk</v8:lang>
-									<v8:content>Коефіцієнт</v8:content>
-								</v8:item>
-							</Synonym>
-							<Comment/>
-							<Type>
-								<v8:Type>xs:decimal</v8:Type>
-								<v8:NumberQualifiers>
-									<v8:Digits>10</v8:Digits>
-									<v8:FractionDigits>3</v8:FractionDigits>
-									<v8:AllowedSign>Nonnegative</v8:AllowedSign>
-								</v8:NumberQualifiers>
-							</Type>
-							<PasswordMode>false</PasswordMode>
-							<Format/>
-							<EditFormat/>
-							<ToolTip/>
-							<MarkNegatives>false</MarkNegatives>
-							<Mask/>
-							<MultiLine>false</MultiLine>
-							<ExtendedEdit>false</ExtendedEdit>
-							<MinValue xsi:nil="true"/>
-							<MaxValue xsi:nil="true"/>
-							<FillChecking>DontCheck</FillChecking>
-							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
-							<ChoiceParameterLinks/>
-							<ChoiceParameters/>
-							<QuickChoice>Auto</QuickChoice>
-							<CreateOnInput>Auto</CreateOnInput>
-							<ChoiceForm/>
-							<LinkByType/>
-							<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
-							<Indexing>DontIndex</Indexing>
-							<FullTextSearch>Use</FullTextSearch>
-							<DataHistory>Use</DataHistory>
-						</Properties>
-					</Attribute>
 					<Attribute uuid="38663851-6ec6-403a-a4f4-88576ef3ecf2">
 						<Properties>
 							<Name>ВН</Name>
 							<Synonym>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>ВН</v8:content>
+									<v8:content>Внешний вид</v8:content>
 								</v8:item>
 								<v8:item>
 									<v8:lang>uk</v8:lang>
-									<v8:content>ВН</v8:content>
+									<v8:content>Зовнішній вигляд</v8:content>
 								</v8:item>
 							</Synonym>
 							<Comment/>
@@ -720,11 +676,11 @@
 							<Synonym>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>ВНВ</v8:content>
+									<v8:content>Внешний вид</v8:content>
 								</v8:item>
 								<v8:item>
 									<v8:lang>uk</v8:lang>
-									<v8:content>ВНВ</v8:content>
+									<v8:content>Зовнішній вигляд</v8:content>
 								</v8:item>
 							</Synonym>
 							<Comment/>
@@ -766,11 +722,11 @@
 							<Synonym>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>ВНК</v8:content>
+									<v8:content>Внешний вид</v8:content>
 								</v8:item>
 								<v8:item>
 									<v8:lang>uk</v8:lang>
-									<v8:content>ВНК</v8:content>
+									<v8:content>Зовнішній вигляд</v8:content>
 								</v8:item>
 							</Synonym>
 							<Comment/>
@@ -812,11 +768,11 @@
 							<Synonym>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Ц</v8:content>
+									<v8:content>Цвет</v8:content>
 								</v8:item>
 								<v8:item>
 									<v8:lang>uk</v8:lang>
-									<v8:content>Ц</v8:content>
+									<v8:content>Колір</v8:content>
 								</v8:item>
 							</Synonym>
 							<Comment/>
@@ -858,11 +814,11 @@
 							<Synonym>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>ЦВ</v8:content>
+									<v8:content>Цвет</v8:content>
 								</v8:item>
 								<v8:item>
 									<v8:lang>uk</v8:lang>
-									<v8:content>ЦВ</v8:content>
+									<v8:content>Колір</v8:content>
 								</v8:item>
 							</Synonym>
 							<Comment/>
@@ -904,11 +860,11 @@
 							<Synonym>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>ЦК</v8:content>
+									<v8:content>Цвет</v8:content>
 								</v8:item>
 								<v8:item>
 									<v8:lang>uk</v8:lang>
-									<v8:content>ЦК</v8:content>
+									<v8:content>Колір</v8:content>
 								</v8:item>
 							</Synonym>
 							<Comment/>
@@ -950,11 +906,11 @@
 							<Synonym>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>З</v8:content>
+									<v8:content>Запах</v8:content>
 								</v8:item>
 								<v8:item>
 									<v8:lang>uk</v8:lang>
-									<v8:content>З</v8:content>
+									<v8:content>Запах</v8:content>
 								</v8:item>
 							</Synonym>
 							<Comment/>
@@ -996,11 +952,11 @@
 							<Synonym>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>ЗВ</v8:content>
+									<v8:content>Запах</v8:content>
 								</v8:item>
 								<v8:item>
 									<v8:lang>uk</v8:lang>
-									<v8:content>ЗВ</v8:content>
+									<v8:content>Запах</v8:content>
 								</v8:item>
 							</Synonym>
 							<Comment/>
@@ -1042,11 +998,11 @@
 							<Synonym>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>ЗК</v8:content>
+									<v8:content>Запах</v8:content>
 								</v8:item>
 								<v8:item>
 									<v8:lang>uk</v8:lang>
-									<v8:content>ЗК</v8:content>
+									<v8:content>Запах</v8:content>
 								</v8:item>
 							</Synonym>
 							<Comment/>
@@ -1088,11 +1044,11 @@
 							<Synonym>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>К</v8:content>
+									<v8:content>Консистенция</v8:content>
 								</v8:item>
 								<v8:item>
 									<v8:lang>uk</v8:lang>
-									<v8:content>К</v8:content>
+									<v8:content>Консистенція</v8:content>
 								</v8:item>
 							</Synonym>
 							<Comment/>
@@ -1134,11 +1090,11 @@
 							<Synonym>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>КВ</v8:content>
+									<v8:content>Консистенция</v8:content>
 								</v8:item>
 								<v8:item>
 									<v8:lang>uk</v8:lang>
-									<v8:content>КВ</v8:content>
+									<v8:content>Консистенція</v8:content>
 								</v8:item>
 							</Synonym>
 							<Comment/>
@@ -1180,11 +1136,11 @@
 							<Synonym>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>КК</v8:content>
+									<v8:content>Консистенция</v8:content>
 								</v8:item>
 								<v8:item>
 									<v8:lang>uk</v8:lang>
-									<v8:content>КК</v8:content>
+									<v8:content>Консистенція</v8:content>
 								</v8:item>
 							</Synonym>
 							<Comment/>
@@ -1226,11 +1182,11 @@
 							<Synonym>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>В</v8:content>
+									<v8:content>Вкус</v8:content>
 								</v8:item>
 								<v8:item>
 									<v8:lang>uk</v8:lang>
-									<v8:content>В</v8:content>
+									<v8:content>Смак</v8:content>
 								</v8:item>
 							</Synonym>
 							<Comment/>
@@ -1272,11 +1228,11 @@
 							<Synonym>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>ВВ</v8:content>
+									<v8:content>Вкус</v8:content>
 								</v8:item>
 								<v8:item>
 									<v8:lang>uk</v8:lang>
-									<v8:content>ВВ</v8:content>
+									<v8:content>Смак</v8:content>
 								</v8:item>
 							</Synonym>
 							<Comment/>
@@ -1318,11 +1274,11 @@
 							<Synonym>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>ВК</v8:content>
+									<v8:content>Вкус</v8:content>
 								</v8:item>
 								<v8:item>
 									<v8:lang>uk</v8:lang>
-									<v8:content>ВК</v8:content>
+									<v8:content>Смак</v8:content>
 								</v8:item>
 							</Synonym>
 							<Comment/>
@@ -1364,11 +1320,11 @@
 							<Synonym>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>С</v8:content>
+									<v8:content>Сочность</v8:content>
 								</v8:item>
 								<v8:item>
 									<v8:lang>uk</v8:lang>
-									<v8:content>С</v8:content>
+									<v8:content>Соковитість</v8:content>
 								</v8:item>
 							</Synonym>
 							<Comment/>
@@ -1410,11 +1366,11 @@
 							<Synonym>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>СВ</v8:content>
+									<v8:content>Сочность</v8:content>
 								</v8:item>
 								<v8:item>
 									<v8:lang>uk</v8:lang>
-									<v8:content>СВ</v8:content>
+									<v8:content>Соковитість</v8:content>
 								</v8:item>
 							</Synonym>
 							<Comment/>
@@ -1456,11 +1412,11 @@
 							<Synonym>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>СК</v8:content>
+									<v8:content>Сочность</v8:content>
 								</v8:item>
 								<v8:item>
 									<v8:lang>uk</v8:lang>
-									<v8:content>СК</v8:content>
+									<v8:content>Соковитість</v8:content>
 								</v8:item>
 							</Synonym>
 							<Comment/>
@@ -1502,11 +1458,11 @@
 							<Synonym>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>СредТ</v8:content>
+									<v8:content>Средняя (технолог)</v8:content>
 								</v8:item>
 								<v8:item>
 									<v8:lang>uk</v8:lang>
-									<v8:content>СерТ</v8:content>
+									<v8:content>Середня (технолог)</v8:content>
 								</v8:item>
 							</Synonym>
 							<Comment/>
@@ -1548,11 +1504,11 @@
 							<Synonym>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>СредВ</v8:content>
+									<v8:content>Средняя (вет.врач)</v8:content>
 								</v8:item>
 								<v8:item>
 									<v8:lang>uk</v8:lang>
-									<v8:content>СерВ</v8:content>
+									<v8:content>Середня (вет.лікар)</v8:content>
 								</v8:item>
 							</Synonym>
 							<Comment/>
@@ -1594,11 +1550,11 @@
 							<Synonym>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>СредК</v8:content>
+									<v8:content>Средняя (кладовщик)</v8:content>
 								</v8:item>
 								<v8:item>
 									<v8:lang>uk</v8:lang>
-									<v8:content>СерК</v8:content>
+									<v8:content>Середня (комірник)</v8:content>
 								</v8:item>
 							</Synonym>
 							<Comment/>
@@ -1640,11 +1596,11 @@
 							<Synonym>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>СредО</v8:content>
+									<v8:content>Средняя общая</v8:content>
 								</v8:item>
 								<v8:item>
 									<v8:lang>uk</v8:lang>
-									<v8:content>СерО</v8:content>
+									<v8:content>Середня загальна</v8:content>
 								</v8:item>
 							</Synonym>
 							<Comment/>
@@ -1684,6 +1640,126 @@
 			</TabularSection>
 			<Template>ДекЛист</Template>
 			<Template>Общая</Template>
+			<Command uuid="665e44ef-a7d6-4015-8575-f4a0ee6b1ec2">
+				<Properties>
+					<Name>ПечатьДекЛистТехнолог</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Печать дегустационного листа (технолог)</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Друк дегустаційного листа (технолог)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Group>FormCommandBarImportant</Group>
+					<CommandParameterType>
+						<v8:Type>cfg:DocumentRef.ЗаписьЖРОИГП</v8:Type>
+					</CommandParameterType>
+					<ParameterUseMode>Single</ParameterUseMode>
+					<ModifiesData>false</ModifiesData>
+					<Representation>PictureAndText</Representation>
+					<ToolTip/>
+					<Picture>
+						<xr:Ref>StdPicture.Print</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<Shortcut/>
+					<OnMainServerUnavalableBehavior>Auto</OnMainServerUnavalableBehavior>
+				</Properties>
+			</Command>
+			<Command uuid="28dea434-089b-46ab-9cf7-845fb52d6a5b">
+				<Properties>
+					<Name>ПечатьДекЛистВетврач</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Печать дегустационного листа (вет. врач)</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Друк дегустаційного листа (вет. лікар)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Group>FormCommandBarImportant</Group>
+					<CommandParameterType>
+						<v8:Type>cfg:DocumentRef.ЗаписьЖРОИГП</v8:Type>
+					</CommandParameterType>
+					<ParameterUseMode>Single</ParameterUseMode>
+					<ModifiesData>false</ModifiesData>
+					<Representation>PictureAndText</Representation>
+					<ToolTip/>
+					<Picture>
+						<xr:Ref>StdPicture.Print</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<Shortcut/>
+					<OnMainServerUnavalableBehavior>Auto</OnMainServerUnavalableBehavior>
+				</Properties>
+			</Command>
+			<Command uuid="8680731c-46cc-426e-b5f3-48148ee542af">
+				<Properties>
+					<Name>ПечатьДекЛистКладовщик</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Печать дегустационного листа (кладовщик)</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Друк дегустаційного листа (комірник)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Group>FormCommandBarImportant</Group>
+					<CommandParameterType>
+						<v8:Type>cfg:DocumentRef.ЗаписьЖРОИГП</v8:Type>
+					</CommandParameterType>
+					<ParameterUseMode>Single</ParameterUseMode>
+					<ModifiesData>false</ModifiesData>
+					<Representation>PictureAndText</Representation>
+					<ToolTip/>
+					<Picture>
+						<xr:Ref>StdPicture.Print</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<Shortcut/>
+					<OnMainServerUnavalableBehavior>Auto</OnMainServerUnavalableBehavior>
+				</Properties>
+			</Command>
+			<Command uuid="2586f0c7-8b61-4b51-beff-12486fdd1209">
+				<Properties>
+					<Name>ПечатьЖурналОИГП</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Печать журнала регистрации ОИГП</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Друк журналу реєстрації ОІГП</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Group>FormCommandBarImportant</Group>
+					<CommandParameterType>
+						<v8:Type>cfg:DocumentRef.ЗаписьЖРОИГП</v8:Type>
+					</CommandParameterType>
+					<ParameterUseMode>Single</ParameterUseMode>
+					<ModifiesData>false</ModifiesData>
+					<Representation>PictureAndText</Representation>
+					<ToolTip/>
+					<Picture>
+						<xr:Ref>StdPicture.Print</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<Shortcut/>
+					<OnMainServerUnavalableBehavior>Auto</OnMainServerUnavalableBehavior>
+				</Properties>
+			</Command>
 		</ChildObjects>
 	</Document>
 </MetaDataObject>
