@@ -371,6 +371,10 @@
 						<ContextMenu name="ТМЦУправлениеПоискомКонтекстноеМеню" id="94"/>
 						<ExtendedTooltip name="ТМЦУправлениеПоискомРасширеннаяПодсказка" id="95"/>
 					</SearchControlAddition>
+					<Events>
+						<Event name="AfterDeleteRow">ТМЦПослеУдаления</Event>
+						<Event name="OnChange">ТМЦПриИзменении</Event>
+					</Events>
 					<ChildItems>
 						<LabelField name="ТМЦНомерСтроки" id="96">
 							<DataPath>Объект.ТМЦ.LineNumber</DataPath>
@@ -384,23 +388,28 @@
 							<ContextMenu name="ТМЦТМЦКонтекстноеМеню" id="100"/>
 							<ExtendedTooltip name="ТМЦТМЦРасширеннаяПодсказка" id="101"/>
 						</InputField>
+						<ColumnGroup name="ТМЦГруппа1" id="196">
+							<ExtendedTooltip name="ТМЦГруппа1РасширеннаяПодсказка" id="197"/>
+							<ChildItems>
+								<InputField name="ТМЦКво" id="105">
+									<DataPath>Объект.ТМЦ.Кво</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТМЦКвоКонтекстноеМеню" id="106"/>
+									<ExtendedTooltip name="ТМЦКвоРасширеннаяПодсказка" id="107"/>
+								</InputField>
+								<InputField name="ТМЦКвоРам" id="108">
+									<DataPath>Объект.ТМЦ.КвоРам</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТМЦКвоРамКонтекстноеМеню" id="109"/>
+									<ExtendedTooltip name="ТМЦКвоРамРасширеннаяПодсказка" id="110"/>
+								</InputField>
+							</ChildItems>
+						</ColumnGroup>
 						<InputField name="ТМЦВидРамы" id="102">
 							<DataPath>Объект.ТМЦ.ВидРамы</DataPath>
 							<EditMode>EnterOnInput</EditMode>
 							<ContextMenu name="ТМЦВидРамыКонтекстноеМеню" id="103"/>
 							<ExtendedTooltip name="ТМЦВидРамыРасширеннаяПодсказка" id="104"/>
-						</InputField>
-						<InputField name="ТМЦКво" id="105">
-							<DataPath>Объект.ТМЦ.Кво</DataPath>
-							<EditMode>EnterOnInput</EditMode>
-							<ContextMenu name="ТМЦКвоКонтекстноеМеню" id="106"/>
-							<ExtendedTooltip name="ТМЦКвоРасширеннаяПодсказка" id="107"/>
-						</InputField>
-						<InputField name="ТМЦКвоРам" id="108">
-							<DataPath>Объект.ТМЦ.КвоРам</DataPath>
-							<EditMode>EnterOnInput</EditMode>
-							<ContextMenu name="ТМЦКвоРамКонтекстноеМеню" id="109"/>
-							<ExtendedTooltip name="ТМЦКвоРамРасширеннаяПодсказка" id="110"/>
 						</InputField>
 						<InputField name="ТМЦОтчетПроизводства" id="111">
 							<DataPath>Объект.ТМЦ.ОтчетПроизводства</DataPath>
