@@ -179,7 +179,6 @@
 			<Characteristics/>
 			<BasedOn>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.НачалоТермообработки</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Document.ЗагрузкаКамеры</xr:Item>
 			</BasedOn>
 			<InputByString>
 				<xr:Field>Document.ЗагрузкаКамеры.StandardAttribute.Number</xr:Field>
@@ -1372,6 +1371,38 @@
 					</Attribute>
 				</ChildObjects>
 			</TabularSection>
+			<Command uuid="3a00a76c-758e-4f53-87e9-c24e287cb891">
+				<Properties>
+					<Name>ПродолжитьЗагрузку</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Продолжить в следующую камеру</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Продовжити в наступну камеру</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Group>FormCommandBarImportant</Group>
+					<CommandParameterType>
+						<v8:Type>cfg:DocumentRef.ЗагрузкаКамеры</v8:Type>
+					</CommandParameterType>
+					<ParameterUseMode>Single</ParameterUseMode>
+					<ModifiesData>false</ModifiesData>
+					<Representation>PictureAndText</Representation>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Создать документ Загрузка камеры на основании текущего — продолжение обработки в следующей камере/подпрограмме</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Picture/>
+					<Shortcut/>
+					<OnMainServerUnavalableBehavior>Auto</OnMainServerUnavalableBehavior>
+				</Properties>
+			</Command>
 		</ChildObjects>
 	</Document>
 </MetaDataObject>
