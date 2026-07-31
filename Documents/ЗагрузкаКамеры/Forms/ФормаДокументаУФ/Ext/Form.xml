@@ -10,6 +10,11 @@
 				<CommandName>Form.Command.ПечатьТерможурнала</CommandName>
 				<ExtendedTooltip name="КнопкаПечатьТерможурналаРасширеннаяПодсказка" id="159"/>
 			</Button>
+			<Button name="КнопкаПродолжитьЗагрузку" id="160">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ПродолжитьЗагрузку</CommandName>
+				<ExtendedTooltip name="КнопкаПродолжитьЗагрузкуРасширеннаяПодсказка" id="161"/>
+			</Button>
 		</ChildItems>
 	</AutoCommandBar>
 	<ChildItems>
@@ -654,6 +659,22 @@
 			</ToolTip>
 			<Action>ВыбратьВремяВнутриДня</Action>
 			<Representation>Text</Representation>
+		</Command>
+		<Command name="ПродолжитьЗагрузку" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Продолжить в следующую камеру</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать документ Загрузка камеры на основании текущего — продолжение обработки в следующей камере/подпрограмме</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПродолжитьЗагрузку</Action>
+			<Representation>TextPicture</Representation>
 		</Command>
 	</Commands>
 </Form>
