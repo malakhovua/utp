@@ -2,8 +2,11 @@
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
 	<ChildItems>
-		<Table name="Список" id="2">
+		<Table name="Список" id="1">
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<EnableStartDrag>true</EnableStartDrag>
 			<DataPath>Список</DataPath>
+			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
 			<AutoRefresh>false</AutoRefresh>
 			<AutoRefreshPeriod>60</AutoRefreshPeriod>
 			<Period>
@@ -17,64 +20,278 @@
 			<ShowRoot>true</ShowRoot>
 			<AllowRootChoice>false</AllowRootChoice>
 			<UpdateOnDataChange>Auto</UpdateOnDataChange>
-			<ContextMenu name="СписокКонтекстноеМеню" id="10"/>
-			<AutoCommandBar name="СписокКоманднаяПанель" id="11">
+			<ContextMenu name="СписокКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="3">
 				<Autofill>false</Autofill>
 			</AutoCommandBar>
-			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="3"/>
-			<SearchStringAddition name="СписокСтрокаПоиска" id="12">
+			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="4"/>
+			<SearchStringAddition name="СписокСтрокаПоиска" id="5">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>SearchStringRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="13"/>
-				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="14"/>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="6"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="7"/>
 			</SearchStringAddition>
-			<ViewStatusAddition name="СписокСостояниеПросмотра" id="15">
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="8">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>ViewStatusRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="16"/>
-				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="17"/>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="9"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="10"/>
 			</ViewStatusAddition>
-			<SearchControlAddition name="СписокУправлениеПоиском" id="18">
+			<SearchControlAddition name="СписокУправлениеПоиском" id="11">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>SearchControl</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="19"/>
-				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="20"/>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="13"/>
 			</SearchControlAddition>
 			<ChildItems>
-				<PictureField name="СтандартнаяКартинка" id="21">
+				<PictureField name="СтандартнаяКартинка" id="14">
 					<DataPath>Список.DefaultPicture</DataPath>
 					<TitleLocation>None</TitleLocation>
-					<ContextMenu name="СтандартнаяКартинкаКонтекстноеМеню" id="22"/>
-					<ExtendedTooltip name="СтандартнаяКартинкаРасширеннаяПодсказка" id="23"/>
+					<ContextMenu name="СтандартнаяКартинкаКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="СтандартнаяКартинкаРасширеннаяПодсказка" id="16"/>
 				</PictureField>
-				<InputField name="Дата" id="4">
-					<DataPath>Список.Date</DataPath>
-					<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
-					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
-				</InputField>
-				<InputField name="Номер" id="7">
+				<LabelField name="Номер" id="17">
 					<DataPath>Список.Number</DataPath>
-					<ContextMenu name="НомерКонтекстноеМеню" id="8"/>
-					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="9"/>
-				</InputField>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>№ документа</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="НомерКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="19"/>
+				</LabelField>
+				<LabelField name="Дата" id="20">
+					<DataPath>Список.Date</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="22"/>
+				</LabelField>
+				<LabelField name="ЗагруженаЧасы" id="26">
+					<DataPath>Список.ЗагруженаЧасы</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Часы загрузки</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ЗагруженаЧасыКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="ЗагруженаЧасыРасширеннаяПодсказка" id="28"/>
+				</LabelField>
+				<LabelField name="ЗагруженаМинуты" id="29">
+					<DataPath>Список.ЗагруженаМинуты</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Минуты загрузки</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ЗагруженаМинутыКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="ЗагруженаМинутыРасширеннаяПодсказка" id="31"/>
+				</LabelField>
+				<CheckBoxField name="ЕстьРазницаВремени" id="32">
+					<DataPath>Список.ЕстьРазницаВремени</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Разница времени</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ЕстьРазницаВремениКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="ЕстьРазницаВремениРасширеннаяПодсказка" id="34"/>
+				</CheckBoxField>
+				<LabelField name="СвободнаДата" id="35">
+					<DataPath>Список.СвободнаДата</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата освобождения</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="СвободнаДатаКонтекстноеМеню" id="36"/>
+					<ExtendedTooltip name="СвободнаДатаРасширеннаяПодсказка" id="37"/>
+				</LabelField>
+				<LabelField name="СвободнаЧасы" id="38">
+					<DataPath>Список.СвободнаЧасы</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Часы освобождения</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="СвободнаЧасыКонтекстноеМеню" id="39"/>
+					<ExtendedTooltip name="СвободнаЧасыРасширеннаяПодсказка" id="40"/>
+				</LabelField>
+				<LabelField name="СвободнаМинуты" id="41">
+					<DataPath>Список.СвободнаМинуты</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Минуты освобождения</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="СвободнаМинутыКонтекстноеМеню" id="42"/>
+					<ExtendedTooltip name="СвободнаМинутыРасширеннаяПодсказка" id="43"/>
+				</LabelField>
+				<LabelField name="КамераТермообработки" id="44">
+					<DataPath>Список.КамераТермообработки</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Камера</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="КамераТермообработкиКонтекстноеМеню" id="45"/>
+					<ExtendedTooltip name="КамераТермообработкиРасширеннаяПодсказка" id="46"/>
+				</LabelField>
+				<LabelField name="КвоРамКамеры" id="47">
+					<DataPath>Список.КвоРамКамеры</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>К-во рам в камере</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="КвоРамКамерыКонтекстноеМеню" id="48"/>
+					<ExtendedTooltip name="КвоРамКамерыРасширеннаяПодсказка" id="49"/>
+				</LabelField>
+				<LabelField name="ИтогРамПоДокументу" id="50">
+					<DataPath>Список.ИтогРамПоДокументу</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Итог рам по документу</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ИтогРамПоДокументуКонтекстноеМеню" id="51"/>
+					<ExtendedTooltip name="ИтогРамПоДокументуРасширеннаяПодсказка" id="52"/>
+				</LabelField>
+				<LabelField name="ПодПрограмма" id="53">
+					<DataPath>Список.ПодПрограмма</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подпрограмма</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ПодПрограммаКонтекстноеМеню" id="54"/>
+					<ExtendedTooltip name="ПодПрограммаРасширеннаяПодсказка" id="55"/>
+				</LabelField>
+				<CheckBoxField name="ЕстьНеоконченыеПроцессы" id="56">
+					<DataPath>Список.ЕстьНеоконченыеПроцессы</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Неоконченные процессы</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ЕстьНеоконченыеПроцессыКонтекстноеМеню" id="57"/>
+					<ExtendedTooltip name="ЕстьНеоконченыеПроцессыРасширеннаяПодсказка" id="58"/>
+				</CheckBoxField>
+				<CheckBoxField name="ВсеЭтапыЗавершены" id="59">
+					<DataPath>Список.ВсеЭтапыЗавершены</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Все этапы</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ВсеЭтапыЗавершеныКонтекстноеМеню" id="60"/>
+					<ExtendedTooltip name="ВсеЭтапыЗавершеныРасширеннаяПодсказка" id="61"/>
+				</CheckBoxField>
+				<LabelField name="ПодпрограммаОснования" id="62">
+					<DataPath>Список.ПодпрограммаОснования</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подпрограмма основания</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ПодпрограммаОснованияКонтекстноеМеню" id="63"/>
+					<ExtendedTooltip name="ПодпрограммаОснованияРасширеннаяПодсказка" id="64"/>
+				</LabelField>
+				<LabelField name="ЗагрузкаОснование" id="65">
+					<DataPath>Список.ЗагрузкаОснование</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Загрузка.Основание</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ЗагрузкаОснованиеКонтекстноеМеню" id="66"/>
+					<ExtendedTooltip name="ЗагрузкаОснованиеРасширеннаяПодсказка" id="67"/>
+				</LabelField>
+				<LabelField name="Комментарий" id="68">
+					<DataPath>Список.Комментарий</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Примечание</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="КомментарийКонтекстноеМеню" id="69"/>
+					<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="70"/>
+				</LabelField>
 			</ChildItems>
 		</Table>
 	</ChildItems>
 	<Attributes>
-		<Attribute name="Список" id="1">
+		<Attribute name="Список" id="100">
 			<Type>
 				<v8:Type>cfg:DynamicList</v8:Type>
 			</Type>
 			<MainAttribute>true</MainAttribute>
 			<Settings xsi:type="DynamicList">
-				<ManualQuery>false</ManualQuery>
+				<ManualQuery>true</ManualQuery>
 				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	ЗагрузкаКамеры.Ссылка,
+	ЗагрузкаКамеры.ПометкаУдаления,
+	ЗагрузкаКамеры.Проведен,
+	ЗагрузкаКамеры.Номер,
+	ЗагрузкаКамеры.Дата,
+	ЗагрузкаКамеры.ЗагруженаЧасы,
+	ЗагрузкаКамеры.ЗагруженаМинуты,
+	ЗагрузкаКамеры.СвободнаДата,
+	ЗагрузкаКамеры.СвободнаЧасы,
+	ЗагрузкаКамеры.СвободнаМинуты,
+	ЗагрузкаКамеры.КамераТермообработки,
+	ЗагрузкаКамеры.КамераТермообработки.КоличествоРам КАК КвоРамКамеры,
+	ЗагрузкаКамеры.ИтогРамПоДокументу,
+	ЗагрузкаКамеры.ПодПрограмма,
+	ЗагрузкаКамеры.Комментарий,
+	ЗагрузкаКамеры.ЕстьНеоконченыеПроцессы,
+	НЕ ЗагрузкаКамеры.ЕстьНеоконченыеПроцессы КАК ВсеЭтапыЗавершены,
+	ВЫБОР
+		КОГДА ЧАС(ЗагрузкаКамеры.Дата) &lt;&gt; ЗагрузкаКамеры.ЗагруженаЧасы
+			ИЛИ МИНУТА(ЗагрузкаКамеры.Дата) &lt;&gt; ЗагрузкаКамеры.ЗагруженаМинуты
+		ТОГДА ИСТИНА
+		ИНАЧЕ ЛОЖЬ
+	КОНЕЦ КАК ЕстьРазницаВремени,
+	ВЫБОР
+		КОГДА ЗагрузкаКамеры.ДокументОснование ССЫЛКА Документ.ЗагрузкаКамеры
+			ТОГДА ЗагрузкаКамеры.ДокументОснование.ПодПрограмма
+	КОНЕЦ КАК ПодпрограммаОснования,
+	ВЫБОР
+		КОГДА ЗагрузкаКамеры.ДокументОснование ССЫЛКА Документ.ЗагрузкаКамеры
+			ТОГДА ЗагрузкаКамеры.ДокументОснование
+	КОНЕЦ КАК ЗагрузкаОснование
+ИЗ
+	Документ.ЗагрузкаКамеры КАК ЗагрузкаКамеры</QueryText>
 				<MainTable>Document.ЗагрузкаКамеры</MainTable>
 				<ListSettings>
 					<dcsset:filter>

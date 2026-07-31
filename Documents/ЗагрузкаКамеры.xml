@@ -463,6 +463,7 @@
 					<Comment/>
 					<Type>
 						<v8:Type>cfg:DocumentRef.НачалоТермообработки</v8:Type>
+						<v8:Type>cfg:DocumentRef.ЗагрузкаКамеры</v8:Type>
 					</Type>
 					<PasswordMode>false</PasswordMode>
 					<Format/>
