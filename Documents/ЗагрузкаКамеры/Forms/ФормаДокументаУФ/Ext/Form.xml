@@ -600,6 +600,11 @@
 				</Column>
 			</Columns>
 		</Attribute>
+		<Attribute name="ЗатронутоеОснование" id="198">
+			<Type>
+				<v8:Type>cfg:DocumentRef.ЗагрузкаКамеры</v8:Type>
+			</Type>
+		</Attribute>
 	</Attributes>
 	<Commands>
 		<Command name="ПечатьТерможурнала" id="1">
