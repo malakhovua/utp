@@ -110,12 +110,12 @@ The configuration has **mixed form mode**:
 
 ## Робота з базою 1С (сервер 192.168.122.65)
 
-Серверна база: `192.168.122.65\utp_dev` (Windows-ВМ, там же репозиторій `C:\utp` і батники `pull_and_load.bat` / `dump_and_push.bat`). Клієнт 1С для Linux встановлено в distrobox-контейнері **`1c-ubuntu1804`** (Ubuntu 18.04), шлях всередині контейнера: `/opt/1cv8/x86_64/8.3.18.1483/1cv8`. Домашній каталог спільний з хостом, тому шляхи репозиторію однакові.
+Серверна база: `192.168.122.65\utp` (Windows-ВМ, там же репозиторій `C:\utp` і батники `pull_and_load.bat` / `dump_and_push.bat`). Клієнт 1С для Linux встановлено в distrobox-контейнері **`1c-ubuntu1804`** (Ubuntu 18.04), шлях всередині контейнера: `/opt/1cv8/x86_64/8.3.18.1483/1cv8`. Домашній каталог спільний з хостом, тому шляхи репозиторію однакові.
 
 - **Після закінчення завдання** (після коміту та пушу) завантажувати файли проєкту в конфігурацію бази:
   ```bash
   distrobox enter 1c-ubuntu1804 -- /opt/1cv8/x86_64/8.3.18.1483/1cv8 DESIGNER \
-      /S"192.168.122.65\utp_dev" \
+      /S"192.168.122.65\utp" \
       /LoadConfigFromFiles "/home/alex/Documents/My_projects/utp" /UpdateDBCfg \
       /DisableStartupDialogs /Out /home/alex/.cache/1c_load.log
   ```
@@ -123,7 +123,7 @@ The configuration has **mixed form mode**:
 - **Лише за явною командою користувача** ("вивантаж cf", "вивантаження конфігурації в файли") вивантажувати конфігурацію з бази в файли проєкту:
   ```bash
   distrobox enter 1c-ubuntu1804 -- /opt/1cv8/x86_64/8.3.18.1483/1cv8 DESIGNER \
-      /S"192.168.122.65\utp_dev" \
+      /S"192.168.122.65\utp" \
       /DumpConfigToFiles "/home/alex/Documents/My_projects/utp" \
       /DisableStartupDialogs /Out /home/alex/.cache/1c_dump.log
   ```

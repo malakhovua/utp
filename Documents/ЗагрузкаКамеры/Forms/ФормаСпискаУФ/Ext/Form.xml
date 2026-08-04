@@ -109,6 +109,7 @@
 							<v8:content>Разница времени</v8:content>
 						</v8:item>
 					</Title>
+					<CheckBoxType>Auto</CheckBoxType>
 					<ContextMenu name="ЕстьРазницаВремениКонтекстноеМеню" id="33"/>
 					<ExtendedTooltip name="ЕстьРазницаВремениРасширеннаяПодсказка" id="34"/>
 				</CheckBoxField>
@@ -198,6 +199,7 @@
 							<v8:content>Неоконченные процессы</v8:content>
 						</v8:item>
 					</Title>
+					<CheckBoxType>Auto</CheckBoxType>
 					<ContextMenu name="ЕстьНеоконченыеПроцессыКонтекстноеМеню" id="57"/>
 					<ExtendedTooltip name="ЕстьНеоконченыеПроцессыРасширеннаяПодсказка" id="58"/>
 				</CheckBoxField>
@@ -210,6 +212,7 @@
 							<v8:content>Все этапы</v8:content>
 						</v8:item>
 					</Title>
+					<CheckBoxType>Auto</CheckBoxType>
 					<ContextMenu name="ВсеЭтапыЗавершеныКонтекстноеМеню" id="60"/>
 					<ExtendedTooltip name="ВсеЭтапыЗавершеныРасширеннаяПодсказка" id="61"/>
 				</CheckBoxField>

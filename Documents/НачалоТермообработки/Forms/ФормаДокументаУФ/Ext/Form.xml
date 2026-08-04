@@ -302,21 +302,26 @@
 					<ContextMenu name="ТМЦВидРамыКонтекстноеМеню" id="82"/>
 					<ExtendedTooltip name="ТМЦВидРамыРасширеннаяПодсказка" id="83"/>
 				</InputField>
-				<InputField name="ТМЦКво" id="84">
-					<DataPath>Объект.ТМЦ.Кво</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="ТМЦКвоКонтекстноеМеню" id="85"/>
-					<ExtendedTooltip name="ТМЦКвоРасширеннаяПодсказка" id="86"/>
-					<Events>
-						<Event name="OnChange">ТМЦКвоПриИзменении</Event>
-					</Events>
-				</InputField>
-				<InputField name="ТМЦКвоРам" id="87">
-					<DataPath>Объект.ТМЦ.КвоРам</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="ТМЦКвоРамКонтекстноеМеню" id="88"/>
-					<ExtendedTooltip name="ТМЦКвоРамРасширеннаяПодсказка" id="89"/>
-				</InputField>
+				<ColumnGroup name="ТМЦГруппа1" id="141">
+					<ExtendedTooltip name="ТМЦГруппа1РасширеннаяПодсказка" id="142"/>
+					<ChildItems>
+						<InputField name="ТМЦКво" id="84">
+							<DataPath>Объект.ТМЦ.Кво</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТМЦКвоКонтекстноеМеню" id="85"/>
+							<ExtendedTooltip name="ТМЦКвоРасширеннаяПодсказка" id="86"/>
+							<Events>
+								<Event name="OnChange">ТМЦКвоПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="ТМЦКвоРам" id="87">
+							<DataPath>Объект.ТМЦ.КвоРам</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТМЦКвоРамКонтекстноеМеню" id="88"/>
+							<ExtendedTooltip name="ТМЦКвоРамРасширеннаяПодсказка" id="89"/>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
 			</ChildItems>
 		</Table>
 		<InputField name="Комментарий" id="138">

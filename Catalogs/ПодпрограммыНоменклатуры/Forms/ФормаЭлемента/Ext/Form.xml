@@ -25,6 +25,7 @@
 		<InputField name="Подпрограмма" id="10">
 			<DataPath>Объект.Подпрограмма</DataPath>
 			<EditMode>EnterOnInput</EditMode>
+			<ChoiceForm>Catalog.ПодПрограммыТермообработки.Form.ФормаВыбора</ChoiceForm>
 			<ContextMenu name="ПодпрограммаКонтекстноеМеню" id="11"/>
 			<ExtendedTooltip name="ПодпрограммаРасширеннаяПодсказка" id="12"/>
 		</InputField>

@@ -523,23 +523,23 @@
 	<rowsItem>
 		<index>12</index>
 		<row>
-			<formatIndex>6</formatIndex>
+			<formatIndex>34</formatIndex>
 			<c>
 				<c>
-					<f>34</f>
+					<f>35</f>
 					<parameter>НазваПродукту</parameter>
 				</c>
 			</c>
 			<c>
 				<i>2</i>
 				<c>
-					<f>35</f>
+					<f>36</f>
 					<parameter>СредО</parameter>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>36</f>
+					<f>37</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -551,7 +551,7 @@
 			<c>
 				<i>9</i>
 				<c>
-					<f>37</f>
+					<f>38</f>
 				</c>
 			</c>
 		</row>
@@ -559,11 +559,11 @@
 	<rowsItem>
 		<index>13</index>
 		<row>
-			<formatIndex>38</formatIndex>
+			<formatIndex>39</formatIndex>
 			<c>
 				<i>9</i>
 				<c>
-					<f>39</f>
+					<f>40</f>
 				</c>
 			</c>
 		</row>
@@ -682,16 +682,16 @@
 		<width>73</width>
 	</format>
 	<format>
-		<width>310</width>
+		<width>442</width>
 	</format>
 	<format>
-		<width>98</width>
+		<width>77</width>
 	</format>
 	<format>
-		<width>219</width>
+		<width>186</width>
 	</format>
 	<format>
-		<width>149</width>
+		<width>118</width>
 	</format>
 	<format/>
 	<format>
@@ -846,9 +846,13 @@
 		<bottomBorder>0</bottomBorder>
 	</format>
 	<format>
+		<height>96</height>
+		<bySelectedColumns>true</bySelectedColumns>
+	</format>
+	<format>
 		<font>6</font>
 		<border>0</border>
-		<horizontalAlignment>Justify</horizontalAlignment>
+		<horizontalAlignment>Auto</horizontalAlignment>
 		<verticalAlignment>Top</verticalAlignment>
 		<fillType>Parameter</fillType>
 		<bySelectedColumns>true</bySelectedColumns>
@@ -859,11 +863,12 @@
 		<horizontalAlignment>Right</horizontalAlignment>
 		<verticalAlignment>Top</verticalAlignment>
 		<fillType>Parameter</fillType>
+		<bySelectedColumns>true</bySelectedColumns>
 	</format>
 	<format>
 		<font>6</font>
 		<border>0</border>
-		<horizontalAlignment>Justify</horizontalAlignment>
+		<horizontalAlignment>Auto</horizontalAlignment>
 		<verticalAlignment>Top</verticalAlignment>
 		<textPlacement>Wrap</textPlacement>
 		<fillType>Text</fillType>
@@ -876,7 +881,8 @@
 		<rightBorder>0</rightBorder>
 		<bottomBorder>1</bottomBorder>
 		<verticalAlignment>Top</verticalAlignment>
-		<fillType>Parameter</fillType>
+		<fillType>Text</fillType>
+		<bySelectedColumns>true</bySelectedColumns>
 	</format>
 	<format>
 		<height>45</height>

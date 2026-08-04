@@ -785,10 +785,11 @@
 	<format>
 		<font>4</font>
 		<border>0</border>
-		<horizontalAlignment>Justify</horizontalAlignment>
+		<horizontalAlignment>Auto</horizontalAlignment>
 		<verticalAlignment>Top</verticalAlignment>
 		<textPlacement>Wrap</textPlacement>
 		<fillType>Parameter</fillType>
+		<bySelectedColumns>true</bySelectedColumns>
 	</format>
 	<format>
 		<font>5</font>
