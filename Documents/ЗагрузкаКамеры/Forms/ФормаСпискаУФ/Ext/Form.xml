@@ -49,6 +49,9 @@
 				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="12"/>
 				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="13"/>
 			</SearchControlAddition>
+			<Events>
+				<Event name="OnGetDataAtServer">СписокПриПолученииДанныхНаСервере</Event>
+			</Events>
 			<ChildItems>
 				<PictureField name="СтандартнаяКартинка" id="14">
 					<DataPath>Список.DefaultPicture</DataPath>
@@ -250,9 +253,6 @@
 					<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="70"/>
 				</LabelField>
 			</ChildItems>
-			<Events>
-				<Event name="OnGetDataAtServer">СписокПриПолученииДанныхНаСервере</Event>
-			</Events>
 		</Table>
 	</ChildItems>
 	<Attributes>
