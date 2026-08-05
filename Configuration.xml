@@ -1550,7 +1550,6 @@
 			<DocumentJournal>УчетКадровОрганизаций</DocumentJournal>
 			<DocumentJournal>Ценообразование</DocumentJournal>
 			<DocumentJournal>ДокументыТермообработка</DocumentJournal>
-			<DocumentJournal>НачалоТермообработки</DocumentJournal>
 			<Enum>ABCКлассификация</Enum>
 			<Enum>XYZКлассификация</Enum>
 			<Enum>БазаРаспределенияВнутреннихУслуг</Enum>
