@@ -32,6 +32,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ПечатьТерможурнала</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ИерархияДокументовДерево</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommandGroup.ГруппаПечатьЗаписьЖРОИГП</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ЗагрузкаКамерыДопЗначения</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects/>

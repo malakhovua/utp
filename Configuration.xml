@@ -2546,6 +2546,7 @@
 			<InformationRegister>Штрихкоды</InformationRegister>
 			<InformationRegister>ОплатаВходящаяБК</InformationRegister>
 			<InformationRegister>ПараметрыПодключенияWEB</InformationRegister>
+			<InformationRegister>ЗагрузкаКамерыДопЗначения</InformationRegister>
 			<AccumulationRegister>БракВПроизводстве</AccumulationRegister>
 			<AccumulationRegister>ВзаиморасчетыПоВзносамВФонды</AccumulationRegister>
 			<AccumulationRegister>ВзаиморасчетыПоНачислениямЗаСчетФСС</AccumulationRegister>

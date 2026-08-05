@@ -63,6 +63,19 @@
 					<ContextMenu name="НомерКонтекстноеМеню" id="8"/>
 					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="9"/>
 				</InputField>
+				<CheckBoxField name="ВсеЭтапыЗавершены" id="22">
+					<DataPath>Список.ВсеЭтапыЗавершены</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Все этапы</v8:content>
+						</v8:item>
+					</Title>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ВсеЭтапыЗавершеныКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="ВсеЭтапыЗавершеныРасширеннаяПодсказка" id="24"/>
+				</CheckBoxField>
 			</ChildItems>
 		</Table>
 	</ChildItems>
@@ -73,8 +86,20 @@
 			</Type>
 			<MainAttribute>true</MainAttribute>
 			<Settings xsi:type="DynamicList">
-				<ManualQuery>false</ManualQuery>
+				<ManualQuery>true</ManualQuery>
 				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	НачалоТермообработки.Ссылка,
+	НачалоТермообработки.ПометкаУдаления,
+	НачалоТермообработки.Проведен,
+	НачалоТермообработки.Дата,
+	НачалоТермообработки.Номер,
+	НачалоТермообработки.ДокументЗагрузка,
+	ЕСТЬNULL(ЗагрузкаКамерыДопЗначения.ВсеЭтапыЗавершены, ЛОЖЬ) КАК ВсеЭтапыЗавершены
+ИЗ
+	Документ.НачалоТермообработки КАК НачалоТермообработки
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ЗагрузкаКамерыДопЗначения КАК ЗагрузкаКамерыДопЗначения
+		ПО ЗагрузкаКамерыДопЗначения.Документ = НачалоТермообработки.ДокументЗагрузка</QueryText>
 				<MainTable>Document.НачалоТермообработки</MainTable>
 				<ListSettings>
 					<dcsset:filter>
