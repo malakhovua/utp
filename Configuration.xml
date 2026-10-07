@@ -1164,6 +1164,7 @@
 			<CommonForm>umk_ФормаСоответствий</CommonForm>
 			<CommonForm>umk_ФормаКонстант</CommonForm>
 			<CommonForm>umk_ПечатьДокументов</CommonForm>
+			<CommonForm>ФормаЗагрузкиДанныхИз1С77</CommonForm>
 			<Catalog>Банки</Catalog>
 			<Catalog>БанковскиеСчета</Catalog>
 			<Catalog>БиологическиеАктивы</Catalog>

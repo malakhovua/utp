@@ -4015,7 +4015,7 @@
 				<d3p1:text>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Серия 1</v8:content>
+						<v8:content>Series 1</v8:content>
 					</v8:item>
 				</d3p1:text>
 				<d3p1:strIsChanged>false</d3p1:strIsChanged>
@@ -4033,7 +4033,7 @@
 				<d3p1:text>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Серия 2</v8:content>
+						<v8:content>Series 2</v8:content>
 					</v8:item>
 				</d3p1:text>
 				<d3p1:strIsChanged>false</d3p1:strIsChanged>
@@ -4051,7 +4051,7 @@
 				<d3p1:text>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Сводная</v8:content>
+						<v8:content>Pivot</v8:content>
 					</v8:item>
 				</d3p1:text>
 				<d3p1:strIsChanged>false</d3p1:strIsChanged>
@@ -4069,7 +4069,7 @@
 				<d3p1:text>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Точка 1</v8:content>
+						<v8:content>Point 1</v8:content>
 					</v8:item>
 				</d3p1:text>
 				<d3p1:strIsChanged>false</d3p1:strIsChanged>
@@ -4085,7 +4085,7 @@
 				<d3p1:text>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Точка 2</v8:content>
+						<v8:content>Point 2</v8:content>
 					</v8:item>
 				</d3p1:text>
 				<d3p1:strIsChanged>false</d3p1:strIsChanged>
@@ -4271,18 +4271,6 @@
 				</d3p1:titleArea>
 				<d3p1:labelOrientation>Horizontal</d3p1:labelOrientation>
 			</d3p1:pointsScale>
-			<d3p1:valuesScale>
-				<d3p1:titleArea>
-					<d3p1:font kind="AutoFont"/>
-					<d3p1:textColor>auto</d3p1:textColor>
-					<d3p1:backColor>auto</d3p1:backColor>
-					<d3p1:border width="1">
-						<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
-					</d3p1:border>
-					<d3p1:borderColor>auto</d3p1:borderColor>
-				</d3p1:titleArea>
-				<d3p1:gridLinesShowMode>Show</d3p1:gridLinesShowMode>
-			</d3p1:valuesScale>
 			<d3p1:legendPlacement>UseCoordinates</d3p1:legendPlacement>
 			<d3p1:plotAreaPlacement>UseCoordinates</d3p1:plotAreaPlacement>
 			<d3p1:titleAreaPlacement>UseCoordinates</d3p1:titleAreaPlacement>
@@ -4321,7 +4309,7 @@
 				<d3p1:text>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Серия 1</v8:content>
+						<v8:content>Series 1</v8:content>
 					</v8:item>
 				</d3p1:text>
 				<d3p1:strIsChanged>false</d3p1:strIsChanged>
@@ -4339,7 +4327,7 @@
 				<d3p1:text>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Серия 2</v8:content>
+						<v8:content>Series 2</v8:content>
 					</v8:item>
 				</d3p1:text>
 				<d3p1:strIsChanged>false</d3p1:strIsChanged>
@@ -4357,7 +4345,7 @@
 				<d3p1:text>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Серия 3</v8:content>
+						<v8:content>Series 3</v8:content>
 					</v8:item>
 				</d3p1:text>
 				<d3p1:strIsChanged>false</d3p1:strIsChanged>
@@ -4375,7 +4363,7 @@
 				<d3p1:text>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Серия 4</v8:content>
+						<v8:content>Series 4</v8:content>
 					</v8:item>
 				</d3p1:text>
 				<d3p1:strIsChanged>false</d3p1:strIsChanged>
@@ -4393,7 +4381,7 @@
 				<d3p1:text>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Сводная</v8:content>
+						<v8:content>Pivot</v8:content>
 					</v8:item>
 				</d3p1:text>
 				<d3p1:strIsChanged>false</d3p1:strIsChanged>
@@ -4411,7 +4399,7 @@
 				<d3p1:text>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Точка 1</v8:content>
+						<v8:content>Point 1</v8:content>
 					</v8:item>
 				</d3p1:text>
 				<d3p1:strIsChanged>false</d3p1:strIsChanged>
@@ -4427,7 +4415,7 @@
 				<d3p1:text>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Точка 2</v8:content>
+						<v8:content>Point 2</v8:content>
 					</v8:item>
 				</d3p1:text>
 				<d3p1:strIsChanged>false</d3p1:strIsChanged>
@@ -4443,7 +4431,7 @@
 				<d3p1:text>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Точка 3</v8:content>
+						<v8:content>Point 3</v8:content>
 					</v8:item>
 				</d3p1:text>
 				<d3p1:strIsChanged>false</d3p1:strIsChanged>
@@ -4459,7 +4447,7 @@
 				<d3p1:text>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Точка 4</v8:content>
+						<v8:content>Point 4</v8:content>
 					</v8:item>
 				</d3p1:text>
 				<d3p1:strIsChanged>false</d3p1:strIsChanged>
@@ -4705,18 +4693,6 @@
 				</d3p1:titleArea>
 				<d3p1:labelOrientation>Horizontal</d3p1:labelOrientation>
 			</d3p1:pointsScale>
-			<d3p1:valuesScale>
-				<d3p1:titleArea>
-					<d3p1:font kind="AutoFont"/>
-					<d3p1:textColor>auto</d3p1:textColor>
-					<d3p1:backColor>auto</d3p1:backColor>
-					<d3p1:border width="1">
-						<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
-					</d3p1:border>
-					<d3p1:borderColor>auto</d3p1:borderColor>
-				</d3p1:titleArea>
-				<d3p1:gridLinesShowMode>Show</d3p1:gridLinesShowMode>
-			</d3p1:valuesScale>
 			<d3p1:legendPlacement>UseCoordinates</d3p1:legendPlacement>
 			<d3p1:plotAreaPlacement>UseCoordinates</d3p1:plotAreaPlacement>
 			<d3p1:titleAreaPlacement>None</d3p1:titleAreaPlacement>
@@ -4755,7 +4731,7 @@
 				<d3p1:text>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Серия 1</v8:content>
+						<v8:content>Series 1</v8:content>
 					</v8:item>
 				</d3p1:text>
 				<d3p1:strIsChanged>false</d3p1:strIsChanged>
@@ -4773,7 +4749,7 @@
 				<d3p1:text>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Серия 2</v8:content>
+						<v8:content>Series 2</v8:content>
 					</v8:item>
 				</d3p1:text>
 				<d3p1:strIsChanged>false</d3p1:strIsChanged>
@@ -4791,7 +4767,7 @@
 				<d3p1:text>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Серия 3</v8:content>
+						<v8:content>Series 3</v8:content>
 					</v8:item>
 				</d3p1:text>
 				<d3p1:strIsChanged>false</d3p1:strIsChanged>
@@ -4809,7 +4785,7 @@
 				<d3p1:text>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Серия 4</v8:content>
+						<v8:content>Series 4</v8:content>
 					</v8:item>
 				</d3p1:text>
 				<d3p1:strIsChanged>false</d3p1:strIsChanged>
@@ -4827,7 +4803,7 @@
 				<d3p1:text>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Сводная</v8:content>
+						<v8:content>Pivot</v8:content>
 					</v8:item>
 				</d3p1:text>
 				<d3p1:strIsChanged>false</d3p1:strIsChanged>
@@ -4845,7 +4821,7 @@
 				<d3p1:text>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Точка 1</v8:content>
+						<v8:content>Point 1</v8:content>
 					</v8:item>
 				</d3p1:text>
 				<d3p1:strIsChanged>false</d3p1:strIsChanged>
@@ -4861,7 +4837,7 @@
 				<d3p1:text>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Точка 2</v8:content>
+						<v8:content>Point 2</v8:content>
 					</v8:item>
 				</d3p1:text>
 				<d3p1:strIsChanged>false</d3p1:strIsChanged>
@@ -4877,7 +4853,7 @@
 				<d3p1:text>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Точка 3</v8:content>
+						<v8:content>Point 3</v8:content>
 					</v8:item>
 				</d3p1:text>
 				<d3p1:strIsChanged>false</d3p1:strIsChanged>
@@ -4893,7 +4869,7 @@
 				<d3p1:text>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Точка 4</v8:content>
+						<v8:content>Point 4</v8:content>
 					</v8:item>
 				</d3p1:text>
 				<d3p1:strIsChanged>false</d3p1:strIsChanged>
@@ -5134,18 +5110,6 @@
 				</d3p1:titleArea>
 				<d3p1:labelOrientation>Horizontal</d3p1:labelOrientation>
 			</d3p1:pointsScale>
-			<d3p1:valuesScale>
-				<d3p1:titleArea>
-					<d3p1:font kind="AutoFont"/>
-					<d3p1:textColor>auto</d3p1:textColor>
-					<d3p1:backColor>auto</d3p1:backColor>
-					<d3p1:border width="1">
-						<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
-					</d3p1:border>
-					<d3p1:borderColor>auto</d3p1:borderColor>
-				</d3p1:titleArea>
-				<d3p1:gridLinesShowMode>Show</d3p1:gridLinesShowMode>
-			</d3p1:valuesScale>
 			<d3p1:legendPlacement>UseCoordinates</d3p1:legendPlacement>
 			<d3p1:plotAreaPlacement>UseCoordinates</d3p1:plotAreaPlacement>
 			<d3p1:titleAreaPlacement>UseCoordinates</d3p1:titleAreaPlacement>
@@ -5184,7 +5148,7 @@
 				<d3p1:text>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Серия 1</v8:content>
+						<v8:content>Series 1</v8:content>
 					</v8:item>
 				</d3p1:text>
 				<d3p1:strIsChanged>false</d3p1:strIsChanged>
@@ -5202,7 +5166,7 @@
 				<d3p1:text>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Серия 2</v8:content>
+						<v8:content>Series 2</v8:content>
 					</v8:item>
 				</d3p1:text>
 				<d3p1:strIsChanged>false</d3p1:strIsChanged>
@@ -5220,7 +5184,7 @@
 				<d3p1:text>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Серия 3</v8:content>
+						<v8:content>Series 3</v8:content>
 					</v8:item>
 				</d3p1:text>
 				<d3p1:strIsChanged>false</d3p1:strIsChanged>
@@ -5238,7 +5202,7 @@
 				<d3p1:text>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Серия 4</v8:content>
+						<v8:content>Series 4</v8:content>
 					</v8:item>
 				</d3p1:text>
 				<d3p1:strIsChanged>false</d3p1:strIsChanged>
@@ -5256,7 +5220,7 @@
 				<d3p1:text>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Сводная</v8:content>
+						<v8:content>Pivot</v8:content>
 					</v8:item>
 				</d3p1:text>
 				<d3p1:strIsChanged>false</d3p1:strIsChanged>
@@ -5274,7 +5238,7 @@
 				<d3p1:text>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Точка 1</v8:content>
+						<v8:content>Point 1</v8:content>
 					</v8:item>
 				</d3p1:text>
 				<d3p1:strIsChanged>false</d3p1:strIsChanged>
@@ -5290,7 +5254,7 @@
 				<d3p1:text>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Точка 2</v8:content>
+						<v8:content>Point 2</v8:content>
 					</v8:item>
 				</d3p1:text>
 				<d3p1:strIsChanged>false</d3p1:strIsChanged>
@@ -5306,7 +5270,7 @@
 				<d3p1:text>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Точка 3</v8:content>
+						<v8:content>Point 3</v8:content>
 					</v8:item>
 				</d3p1:text>
 				<d3p1:strIsChanged>false</d3p1:strIsChanged>
@@ -5322,7 +5286,7 @@
 				<d3p1:text>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Точка 4</v8:content>
+						<v8:content>Point 4</v8:content>
 					</v8:item>
 				</d3p1:text>
 				<d3p1:strIsChanged>false</d3p1:strIsChanged>
@@ -5563,18 +5527,6 @@
 				</d3p1:titleArea>
 				<d3p1:labelOrientation>Horizontal</d3p1:labelOrientation>
 			</d3p1:pointsScale>
-			<d3p1:valuesScale>
-				<d3p1:titleArea>
-					<d3p1:font kind="AutoFont"/>
-					<d3p1:textColor>auto</d3p1:textColor>
-					<d3p1:backColor>auto</d3p1:backColor>
-					<d3p1:border width="1">
-						<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
-					</d3p1:border>
-					<d3p1:borderColor>auto</d3p1:borderColor>
-				</d3p1:titleArea>
-				<d3p1:gridLinesShowMode>Show</d3p1:gridLinesShowMode>
-			</d3p1:valuesScale>
 			<d3p1:legendPlacement>UseCoordinates</d3p1:legendPlacement>
 			<d3p1:plotAreaPlacement>UseCoordinates</d3p1:plotAreaPlacement>
 			<d3p1:titleAreaPlacement>UseCoordinates</d3p1:titleAreaPlacement>
@@ -5613,7 +5565,7 @@
 				<d3p1:text>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Серия 1</v8:content>
+						<v8:content>Series 1</v8:content>
 					</v8:item>
 				</d3p1:text>
 				<d3p1:strIsChanged>false</d3p1:strIsChanged>
@@ -5631,7 +5583,7 @@
 				<d3p1:text>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Серия 2</v8:content>
+						<v8:content>Series 2</v8:content>
 					</v8:item>
 				</d3p1:text>
 				<d3p1:strIsChanged>false</d3p1:strIsChanged>
@@ -5649,7 +5601,7 @@
 				<d3p1:text>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Серия 3</v8:content>
+						<v8:content>Series 3</v8:content>
 					</v8:item>
 				</d3p1:text>
 				<d3p1:strIsChanged>false</d3p1:strIsChanged>
@@ -5667,7 +5619,7 @@
 				<d3p1:text>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Серия 4</v8:content>
+						<v8:content>Series 4</v8:content>
 					</v8:item>
 				</d3p1:text>
 				<d3p1:strIsChanged>false</d3p1:strIsChanged>
@@ -5685,7 +5637,7 @@
 				<d3p1:text>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Сводная</v8:content>
+						<v8:content>Pivot</v8:content>
 					</v8:item>
 				</d3p1:text>
 				<d3p1:strIsChanged>false</d3p1:strIsChanged>
@@ -5703,7 +5655,7 @@
 				<d3p1:text>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Точка 1</v8:content>
+						<v8:content>Point 1</v8:content>
 					</v8:item>
 				</d3p1:text>
 				<d3p1:strIsChanged>false</d3p1:strIsChanged>
@@ -5719,7 +5671,7 @@
 				<d3p1:text>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Точка 2</v8:content>
+						<v8:content>Point 2</v8:content>
 					</v8:item>
 				</d3p1:text>
 				<d3p1:strIsChanged>false</d3p1:strIsChanged>
@@ -5735,7 +5687,7 @@
 				<d3p1:text>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Точка 3</v8:content>
+						<v8:content>Point 3</v8:content>
 					</v8:item>
 				</d3p1:text>
 				<d3p1:strIsChanged>false</d3p1:strIsChanged>
@@ -5751,7 +5703,7 @@
 				<d3p1:text>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Точка 4</v8:content>
+						<v8:content>Point 4</v8:content>
 					</v8:item>
 				</d3p1:text>
 				<d3p1:strIsChanged>false</d3p1:strIsChanged>
@@ -5992,18 +5944,6 @@
 				</d3p1:titleArea>
 				<d3p1:labelOrientation>Horizontal</d3p1:labelOrientation>
 			</d3p1:pointsScale>
-			<d3p1:valuesScale>
-				<d3p1:titleArea>
-					<d3p1:font kind="AutoFont"/>
-					<d3p1:textColor>auto</d3p1:textColor>
-					<d3p1:backColor>auto</d3p1:backColor>
-					<d3p1:border width="1">
-						<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
-					</d3p1:border>
-					<d3p1:borderColor>auto</d3p1:borderColor>
-				</d3p1:titleArea>
-				<d3p1:gridLinesShowMode>Show</d3p1:gridLinesShowMode>
-			</d3p1:valuesScale>
 			<d3p1:legendPlacement>UseCoordinates</d3p1:legendPlacement>
 			<d3p1:plotAreaPlacement>UseCoordinates</d3p1:plotAreaPlacement>
 			<d3p1:titleAreaPlacement>UseCoordinates</d3p1:titleAreaPlacement>
@@ -6042,7 +5982,7 @@
 				<d3p1:text>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Серия 1</v8:content>
+						<v8:content>Series 1</v8:content>
 					</v8:item>
 				</d3p1:text>
 				<d3p1:strIsChanged>false</d3p1:strIsChanged>
@@ -6060,7 +6000,7 @@
 				<d3p1:text>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Серия 2</v8:content>
+						<v8:content>Series 2</v8:content>
 					</v8:item>
 				</d3p1:text>
 				<d3p1:strIsChanged>false</d3p1:strIsChanged>
@@ -6078,7 +6018,7 @@
 				<d3p1:text>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Серия 3</v8:content>
+						<v8:content>Series 3</v8:content>
 					</v8:item>
 				</d3p1:text>
 				<d3p1:strIsChanged>false</d3p1:strIsChanged>
@@ -6096,7 +6036,7 @@
 				<d3p1:text>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Серия 4</v8:content>
+						<v8:content>Series 4</v8:content>
 					</v8:item>
 				</d3p1:text>
 				<d3p1:strIsChanged>false</d3p1:strIsChanged>
@@ -6114,7 +6054,7 @@
 				<d3p1:text>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Сводная</v8:content>
+						<v8:content>Pivot</v8:content>
 					</v8:item>
 				</d3p1:text>
 				<d3p1:strIsChanged>false</d3p1:strIsChanged>
@@ -6132,7 +6072,7 @@
 				<d3p1:text>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Точка 1</v8:content>
+						<v8:content>Point 1</v8:content>
 					</v8:item>
 				</d3p1:text>
 				<d3p1:strIsChanged>false</d3p1:strIsChanged>
@@ -6148,7 +6088,7 @@
 				<d3p1:text>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Точка 2</v8:content>
+						<v8:content>Point 2</v8:content>
 					</v8:item>
 				</d3p1:text>
 				<d3p1:strIsChanged>false</d3p1:strIsChanged>
@@ -6164,7 +6104,7 @@
 				<d3p1:text>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Точка 3</v8:content>
+						<v8:content>Point 3</v8:content>
 					</v8:item>
 				</d3p1:text>
 				<d3p1:strIsChanged>false</d3p1:strIsChanged>
@@ -6180,7 +6120,7 @@
 				<d3p1:text>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Точка 4</v8:content>
+						<v8:content>Point 4</v8:content>
 					</v8:item>
 				</d3p1:text>
 				<d3p1:strIsChanged>false</d3p1:strIsChanged>
@@ -6421,18 +6361,6 @@
 				</d3p1:titleArea>
 				<d3p1:labelOrientation>Horizontal</d3p1:labelOrientation>
 			</d3p1:pointsScale>
-			<d3p1:valuesScale>
-				<d3p1:titleArea>
-					<d3p1:font kind="AutoFont"/>
-					<d3p1:textColor>auto</d3p1:textColor>
-					<d3p1:backColor>auto</d3p1:backColor>
-					<d3p1:border width="1">
-						<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
-					</d3p1:border>
-					<d3p1:borderColor>auto</d3p1:borderColor>
-				</d3p1:titleArea>
-				<d3p1:gridLinesShowMode>Show</d3p1:gridLinesShowMode>
-			</d3p1:valuesScale>
 			<d3p1:legendPlacement>UseCoordinates</d3p1:legendPlacement>
 			<d3p1:plotAreaPlacement>UseCoordinates</d3p1:plotAreaPlacement>
 			<d3p1:titleAreaPlacement>UseCoordinates</d3p1:titleAreaPlacement>

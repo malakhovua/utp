@@ -667,8 +667,12 @@
 					<v8:content>Выбрать свободный интервал времени загрузки выбранной камеры</v8:content>
 				</v8:item>
 			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.SetTime</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
 			<Action>ВыбратьВремяВнутриДня</Action>
-			<Representation>Text</Representation>
+			<Representation>TextPicture</Representation>
 		</Command>
 	</Commands>
 </Form>
