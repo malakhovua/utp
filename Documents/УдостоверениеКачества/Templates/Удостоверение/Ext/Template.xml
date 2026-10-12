@@ -248,7 +248,7 @@
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>                   ДЕКЛАРАЦІЯ ВИРОБНИКА № [Номер] від [Дата]  (стор. [Страница] з [Страниц] )</v8:content>
+							<v8:content>                   ДЕКЛАРАЦІЯ ВИРОБНИКА № [Номер] від [Дата] </v8:content>
 						</v8:item>
 					</tl>
 				</c>
@@ -380,6 +380,18 @@
 					</tl>
 				</c>
 			</c>
+			<c>
+				<i>18</i>
+				<c>
+					<f>14</f>
+					<tl>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content> (стор. [Страница] з [Страниц] )</v8:content>
+						</v8:item>
+					</tl>
+				</c>
+			</c>
 		</row>
 	</rowsItem>
 	<rowsItem>
@@ -387,7 +399,7 @@
 		<row>
 			<c>
 				<c>
-					<f>14</f>
+					<f>15</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -398,7 +410,7 @@
 			</c>
 			<c>
 				<c>
-					<f>14</f>
+					<f>15</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -410,7 +422,7 @@
 			<c>
 				<i>5</i>
 				<c>
-					<f>15</f>
+					<f>16</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -421,7 +433,7 @@
 			</c>
 			<c>
 				<c>
-					<f>15</f>
+					<f>16</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -433,7 +445,7 @@
 			<c>
 				<i>8</i>
 				<c>
-					<f>14</f>
+					<f>15</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -445,14 +457,14 @@
 			<c>
 				<i>10</i>
 				<c>
-					<f>16</f>
+					<f>17</f>
 					<parameter>СрокГодностиЗаголовок</parameter>
 				</c>
 			</c>
 			<c>
 				<i>15</i>
 				<c>
-					<f>14</f>
+					<f>15</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -570,7 +582,7 @@
 		<row>
 			<c>
 				<c>
-					<f>17</f>
+					<f>18</f>
 					<parameter>КатегорияПродукции</parameter>
 				</c>
 			</c>
@@ -674,16 +686,16 @@
 	<rowsItem>
 		<index>13</index>
 		<row>
-			<formatIndex>18</formatIndex>
+			<formatIndex>19</formatIndex>
 			<c>
 				<c>
-					<f>19</f>
+					<f>20</f>
 					<parameter>нпп</parameter>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>20</f>
+					<f>21</f>
 					<parameter>Наименование</parameter>
 					<detailParameter>КодС</detailParameter>
 				</c>
@@ -691,33 +703,33 @@
 			<c>
 				<i>5</i>
 				<c>
-					<f>19</f>
+					<f>20</f>
 					<parameter>сорт</parameter>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>19</f>
+					<f>20</f>
 					<parameter>оболочка</parameter>
 				</c>
 			</c>
 			<c>
 				<i>8</i>
 				<c>
-					<f>19</f>
+					<f>20</f>
 					<parameter>ДатаИзготовления</parameter>
 				</c>
 			</c>
 			<c>
 				<i>10</i>
 				<c>
-					<f>21</f>
+					<f>22</f>
 				</c>
 			</c>
 			<c>
 				<i>15</i>
 				<c>
-					<f>19</f>
+					<f>20</f>
 					<parameter>ДСТУ</parameter>
 				</c>
 			</c>
@@ -950,7 +962,7 @@
 		<row>
 			<c>
 				<c>
-					<f>22</f>
+					<f>23</f>
 					<parameter>ТекстПодвала</parameter>
 				</c>
 			</c>
@@ -1149,7 +1161,7 @@
 	<rowsItem>
 		<index>21</index>
 		<row>
-			<formatIndex>23</formatIndex>
+			<formatIndex>24</formatIndex>
 			<c>
 				<c>
 					<f>9</f>
@@ -1190,7 +1202,7 @@
 			</c>
 			<c>
 				<c>
-					<f>24</f>
+					<f>25</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -1201,64 +1213,64 @@
 			</c>
 			<c>
 				<c>
-					<f>25</f>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>25</f>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>25</f>
-				</c>
-			</c>
-			<c>
-				<c>
-					<f>25</f>
+					<f>26</f>
 				</c>
 			</c>
 			<c>
 				<c>
 					<f>26</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>26</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>26</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>27</f>
 					<parameter>Ответственный</parameter>
 				</c>
 			</c>
 			<c>
 				<i>20</i>
 				<c>
-					<f>24</f>
+					<f>25</f>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>24</f>
+					<f>25</f>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>24</f>
+					<f>25</f>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>24</f>
+					<f>25</f>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>24</f>
+					<f>25</f>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>24</f>
+					<f>25</f>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>24</f>
+					<f>25</f>
 				</c>
 			</c>
 		</row>
@@ -1318,7 +1330,7 @@
 			</c>
 			<c>
 				<c>
-					<f>27</f>
+					<f>28</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -1535,7 +1547,7 @@
 		<row>
 			<c>
 				<c>
-					<f>28</f>
+					<f>29</f>
 				</c>
 			</c>
 			<c>
@@ -1549,10 +1561,10 @@
 	<rowsItem>
 		<index>25</index>
 		<row>
-			<formatIndex>29</formatIndex>
+			<formatIndex>30</formatIndex>
 			<c>
 				<c>
-					<f>28</f>
+					<f>29</f>
 				</c>
 			</c>
 			<c>
@@ -1568,7 +1580,7 @@
 		<row>
 			<c>
 				<c>
-					<f>30</f>
+					<f>31</f>
 					<parameter>ДанныеКонтрагента</parameter>
 				</c>
 			</c>
@@ -1613,7 +1625,7 @@
 	<rowsItem>
 		<index>27</index>
 		<row>
-			<formatIndex>29</formatIndex>
+			<formatIndex>30</formatIndex>
 			<c>
 				<c>
 					<f>9</f>
@@ -10994,7 +11006,12 @@
 	<merge>
 		<r>5</r>
 		<c>0</c>
-		<w>19</w>
+		<w>17</w>
+	</merge>
+	<merge>
+		<r>5</r>
+		<c>18</c>
+		<w>2</w>
 	</merge>
 	<merge>
 		<r>6</r>
@@ -11111,7 +11128,7 @@
 		<area>
 			<type>Rows</type>
 			<beginRow>0</beginRow>
-			<endRow>5</endRow>
+			<endRow>4</endRow>
 			<beginColumn>-1</beginColumn>
 			<endColumn>-1</endColumn>
 		</area>
@@ -11180,7 +11197,7 @@
 		<name>ШапкаТаблицы</name>
 		<area>
 			<type>Rows</type>
-			<beginRow>6</beginRow>
+			<beginRow>5</beginRow>
 			<endRow>9</endRow>
 			<beginColumn>-1</beginColumn>
 			<endColumn>-1</endColumn>
@@ -11270,6 +11287,11 @@
 	<format>
 		<font>3</font>
 		<width>72</width>
+		<horizontalAlignment>Left</horizontalAlignment>
+		<fillType>Template</fillType>
+	</format>
+	<format>
+		<font>3</font>
 		<horizontalAlignment>Left</horizontalAlignment>
 		<fillType>Template</fillType>
 	</format>
