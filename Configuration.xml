@@ -2163,6 +2163,7 @@
 			<DataProcessor>ВыпискаБанка</DataProcessor>
 			<DataProcessor>ВыплатаЗарплатыРасходнымиОрдерами</DataProcessor>
 			<DataProcessor>ГрупповаяОбработкаСправочниковИДокументов</DataProcessor>
+			<DataProcessor>ГрупповаяПечатьДокументов</DataProcessor>
 			<DataProcessor>ГрупповоеПерепроведениеДокументов</DataProcessor>
 			<DataProcessor>ДополнительнаяИнформация</DataProcessor>
 			<DataProcessor>ЗагрузкаДанныхCommerceML</DataProcessor>
