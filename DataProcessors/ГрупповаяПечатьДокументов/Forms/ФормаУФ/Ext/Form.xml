@@ -24,6 +24,11 @@
 				<CommandName>Form.Command.ПечатьСводнойНакладной</CommandName>
 				<ExtendedTooltip name="ФормаПечатьСводнойНакладнойРасширеннаяПодсказка" id="4"/>
 			</Button>
+			<Button name="ФормаВыгрузкаПланаПоставкиCSV" id="72">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ВыгрузкаПланаПоставкиCSV</CommandName>
+				<ExtendedTooltip name="ФормаВыгрузкаПланаПоставкиCSVРасширеннаяПодсказка" id="73"/>
+			</Button>
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
@@ -629,6 +634,34 @@
 			</Title>
 			<Action>ВыбратьПериод</Action>
 			<Representation>Text</Representation>
+		</Command>
+		<Command name="ВыгрузкаПланаПоставкиCSV" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузка в CSV (план поставки)</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Вивантаження в CSV (план поставки)</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить отмеченные накладные в файл DeliveryPlan_IDCode_дд_мм_гггг.csv (план поставки для ПП "Галактика")</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Вивантажити позначені накладні у файл DeliveryPlan_IDCode_дд_мм_рррр.csv (план поставки для ПП "Галактика")</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.SaveFile</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ВыгрузкаПланаПоставкиCSV</Action>
+			<Representation>TextPicture</Representation>
 		</Command>
 	</Commands>
 </Form>
