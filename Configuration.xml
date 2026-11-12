@@ -2150,9 +2150,29 @@
 			<Report>ШтатнаяРасстановкаОрганизаций</Report>
 			<Report>ШтатноеРасписаниеОрганизаций</Report>
 			<Report>ОборотыСчетаБУ</Report>
+			<DataProcessor>umk_ВыпискаБанка</DataProcessor>
+			<DataProcessor>umk_ЗагрузкаДанныхИз1С77_Склад</DataProcessor>
+			<DataProcessor>umk_ЗагрузкаДанныхИзКБ</DataProcessor>
+			<DataProcessor>umk_ИмпортЦенИз77</DataProcessor>
+			<DataProcessor>umk_КонсольЗаданий</DataProcessor>
+			<DataProcessor>umk_КонсольЗапросов</DataProcessor>
+			<DataProcessor>umk_ОбработкаТабличнойЧастиТовары</DataProcessor>
+			<DataProcessor>umk_ПечатьТТН</DataProcessor>
+			<DataProcessor>umk_ПорядокДействийПриЗакрытииМесяца</DataProcessor>
+			<DataProcessor>umk_ПроведениеДокументов</DataProcessor>
+			<DataProcessor>umk_СоздатьКомпелекты</DataProcessor>
+			<DataProcessor>umk_СформироватьНалоговыеНакладные</DataProcessor>
+			<DataProcessor>umk_УбратьКопейки_6432</DataProcessor>
+			<DataProcessor>umk_УбратьКопейки_6811</DataProcessor>
+			<DataProcessor>umk_УдалениеПомеченныхОбъектов</DataProcessor>
+			<DataProcessor>umk_УсановкаПлановыхЦенПродукции</DataProcessor>
+			<DataProcessor>umk_ФормированиеНалоговыхНакладных</DataProcessor>
+			<DataProcessor>umk_ШаблонНастроекПользователя</DataProcessor>
+			<DataProcessor>umk_Эталон</DataProcessor>
 			<DataProcessor>АвтоОбменДанными</DataProcessor>
 			<DataProcessor>АвтоПолучениеОтправкаЭлектронныхПисем</DataProcessor>
 			<DataProcessor>АдреснаяКнига</DataProcessor>
+			<DataProcessor>АнализДанныхВБазеУТП_и_1с77_производство</DataProcessor>
 			<DataProcessor>БлокировкаСоединенийСИнформационнойБазой</DataProcessor>
 			<DataProcessor>БухгалтерскиеИтоги</DataProcessor>
 			<DataProcessor>БыстроеОсвоение</DataProcessor>
@@ -2166,6 +2186,7 @@
 			<DataProcessor>ГрупповаяПечатьДокументов</DataProcessor>
 			<DataProcessor>ГрупповоеПерепроведениеДокументов</DataProcessor>
 			<DataProcessor>ДополнительнаяИнформация</DataProcessor>
+			<DataProcessor>ЗагрузитьДанныеСтрокНН_Дод2</DataProcessor>
 			<DataProcessor>ЗагрузкаДанныхCommerceML</DataProcessor>
 			<DataProcessor>ЗагрузкаДанныхИзТабличногоДокумента</DataProcessor>
 			<DataProcessor>ЗагрузкаКурсовВалютФинансУА</DataProcessor>
@@ -2178,6 +2199,7 @@
 			<DataProcessor>ЗначенияСвойствОбъекта</DataProcessor>
 			<DataProcessor>ИдентификацияШтрихкодов</DataProcessor>
 			<DataProcessor>ИерархияДокументовДерево</DataProcessor>
+			<DataProcessor>ИнтерфесКассира</DataProcessor>
 			<DataProcessor>КалендарныйПланЗакупок</DataProcessor>
 			<DataProcessor>КартаМаршрутаБизнесПроцесса</DataProcessor>
 			<DataProcessor>КатегорииОбъекта</DataProcessor>
@@ -2199,6 +2221,7 @@
 			<DataProcessor>ОбновлениеКонфигурации</DataProcessor>
 			<DataProcessor>ОбновлениеРегламентированнойОтчетности</DataProcessor>
 			<DataProcessor>Обозреватель</DataProcessor>
+			<DataProcessor>ОбработкаСписанныхТоваровИзВозвратныхНакладных</DataProcessor>
 			<DataProcessor>ОбработкаТабличнойЧастиТовары</DataProcessor>
 			<DataProcessor>ОбщиеОбъектыРегламентированнойОтчетности</DataProcessor>
 			<DataProcessor>ОпендатаботНастройка</DataProcessor>
@@ -2210,6 +2233,7 @@
 			<DataProcessor>ПечатьПрайсЛиста</DataProcessor>
 			<DataProcessor>ПечатьРаскладкиНоменклатурыПоМестамХранения</DataProcessor>
 			<DataProcessor>ПечатьСерийныхНомеров</DataProcessor>
+			<DataProcessor>ПечатьТерможурнала</DataProcessor>
 			<DataProcessor>ПечатьТТН</DataProcessor>
 			<DataProcessor>ПечатьЦенников</DataProcessor>
 			<DataProcessor>ПечатьЭтикеток</DataProcessor>
@@ -2235,6 +2259,7 @@
 			<DataProcessor>РегистрацияИзмененийДляОбмена</DataProcessor>
 			<DataProcessor>РедактированиеДанныхНезарегистрированныхКонтрагентов</DataProcessor>
 			<DataProcessor>РедактированиеКонтактнойИнформации</DataProcessor>
+			<DataProcessor>СвернутьСчет_БУ_Субконто_3</DataProcessor>
 			<DataProcessor>СообщенияВыполняемыхДействий</DataProcessor>
 			<DataProcessor>СоставНабора</DataProcessor>
 			<DataProcessor>СписокПользователейИБ</DataProcessor>
@@ -2252,38 +2277,13 @@
 			<DataProcessor>УниверсальныйЖурналДокументов</DataProcessor>
 			<DataProcessor>УниверсальныйОбменДаннымиXML</DataProcessor>
 			<DataProcessor>УниверсальныйПоискОбъектов</DataProcessor>
-			<DataProcessor>umk_ВыпискаБанка</DataProcessor>
-			<DataProcessor>umk_ЗагрузкаДанныхИзКБ</DataProcessor>
-			<DataProcessor>umk_ПечатьТТН</DataProcessor>
-			<DataProcessor>umk_ФормированиеНалоговыхНакладных</DataProcessor>
-			<DataProcessor>umk_ОбработкаТабличнойЧастиТовары</DataProcessor>
-			<DataProcessor>umk_КонсольЗаданий</DataProcessor>
-			<DataProcessor>umk_СоздатьКомпелекты</DataProcessor>
-			<DataProcessor>umk_УсановкаПлановыхЦенПродукции</DataProcessor>
-			<DataProcessor>umk_ПроведениеДокументов</DataProcessor>
-			<DataProcessor>umk_ЗагрузкаДанныхИз1С77_Склад</DataProcessor>
-			<DataProcessor>umk_УдалениеПомеченныхОбъектов</DataProcessor>
-			<DataProcessor>umk_СформироватьНалоговыеНакладные</DataProcessor>
-			<DataProcessor>umk_КонсольЗапросов</DataProcessor>
-			<DataProcessor>umk_ПорядокДействийПриЗакрытииМесяца</DataProcessor>
-			<DataProcessor>umk_ШаблонНастроекПользователя</DataProcessor>
-			<DataProcessor>umk_УбратьКопейки_6432</DataProcessor>
-			<DataProcessor>umk_УбратьКопейки_6811</DataProcessor>
-			<DataProcessor>umk_ИмпортЦенИз77</DataProcessor>
-			<DataProcessor>umk_Эталон</DataProcessor>
 			<DataProcessor>ФормаИнформацииОРаботниках</DataProcessor>
 			<DataProcessor>ФормированиеНалоговыхНакладных</DataProcessor>
 			<DataProcessor>ФормированиеНалоговыхНакладныхПоРознице</DataProcessor>
 			<DataProcessor>ФормированиеНалоговыхНакладныхПоРозницеБезНоменклатурногоСостава</DataProcessor>
 			<DataProcessor>ФормированиеСпискаРаботников</DataProcessor>
-			<DataProcessor>АнализДанныхВБазеУТП_и_1с77_производство</DataProcessor>
 			<DataProcessor>ФормированиеЦен</DataProcessor>
-			<DataProcessor>ЗагрузитьДанныеСтрокНН_Дод2</DataProcessor>
-			<DataProcessor>СвернутьСчет_БУ_Субконто_3</DataProcessor>
 			<DataProcessor>ЭкспортИмпортКонтактныхДанныхОбъектов</DataProcessor>
-			<DataProcessor>ИнтерфесКассира</DataProcessor>
-			<DataProcessor>ОбработкаСписанныхТоваровИзВозвратныхНакладных</DataProcessor>
-			<DataProcessor>ПечатьТерможурнала</DataProcessor>
 			<InformationRegister>ABCКлассификацияПокупателей</InformationRegister>
 			<InformationRegister>АвансыРаботникамОрганизаций</InformationRegister>
 			<InformationRegister>АрхивДанныхРегламентированнойОтчетности</InformationRegister>
