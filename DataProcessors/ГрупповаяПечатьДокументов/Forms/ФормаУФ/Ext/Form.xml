@@ -29,6 +29,11 @@
 				<CommandName>Form.Command.ВыгрузкаПланаПоставкиCSV</CommandName>
 				<ExtendedTooltip name="ФормаВыгрузкаПланаПоставкиCSVРасширеннаяПодсказка" id="73"/>
 			</Button>
+			<Button name="ФормаВыгрузкаРегионовКонтрагентов" id="74">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ВыгрузкаРегионовКонтрагентов</CommandName>
+				<ExtendedTooltip name="ФормаВыгрузкаРегионовКонтрагентовРасширеннаяПодсказка" id="75"/>
+			</Button>
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
@@ -661,6 +666,34 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>ВыгрузкаПланаПоставкиCSV</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ВыгрузкаРегионовКонтрагентов" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузка регионов контрагентов</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Вивантаження регіонів контрагентів</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить справочник "Регионы контрагентов" в файл Excel (Контрагент, ЕДРПОУ, Регион, Код адреса, Адрес)</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Вивантажити довідник "Регіони контрагентів" у файл Excel (Контрагент, ЄДРПОУ, Регіон, Код адреси, Адреса)</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.SaveFile</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ВыгрузкаРегионовКонтрагентов</Action>
 			<Representation>TextPicture</Representation>
 		</Command>
 	</Commands>
